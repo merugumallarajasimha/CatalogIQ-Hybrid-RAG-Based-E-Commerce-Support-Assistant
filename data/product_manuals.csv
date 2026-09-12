@@ -1,0 +1,327 @@
+sku,product_name,category,doc_type,title,content,last_updated,version
+CHAIR-ERG-X99,ErgoFlex Pro Office Chair,Furniture/Seating,troubleshooting_guide,ErgoFlex Pro Office Chair - Troubleshooting Guide,"TROUBLESHOOTING GUIDE - ErgoFlex Pro Office Chair (SKU: CHAIR-ERG-X99)
+
+COMMON ISSUES AND RESOLUTIONS:
+
+1. RECLINE SQUEAKING NOISE
+Symptom: Audible squeaking when leaning back in the chair.
+Root Cause: Loose screw set S-4012-SCRW under base P-9913-BASE or worn pivot bearings.
+Resolution:
+  a) Turn chair upside down on protective surface.
+  b) Locate screw set S-4012-SCRW (4 screws) securing base P-9913-BASE to seat frame.
+  c) Tighten all 4 screws to 12.5 Nm torque using 5mm hex key.
+  d) If squeaking persists, inspect pivot bearings P-9912-ARM for wear.
+  e) Replace worn bearings with part number P-9912-ARM (2 per chair).
+
+2. HEIGHT ADJUSTMENT FAILURE
+Symptom: Chair sinks slowly or will not hold height position.
+Root Cause: Gas lift cylinder C-7721-GL internal seal failure.
+Resolution:
+  a) Remove base P-9913-BASE by unscrewing 5 bolts B-3301-BLT.
+  b) Extract gas lift cylinder C-7721-GL from column.
+  c) Replace with new cylinder C-7721-GL.
+  d) Reassemble in reverse order. Torque bolts B-3301-BLT to 15 Nm.
+
+3. ARMREST WOBBLE
+Symptom: Excessive lateral movement in armrests.
+Root Cause: Loose armrest mounting brackets P-9912-ARM.
+Resolution:
+  a) Remove armrest caps to access mounting bolts.
+  b) Tighten bracket bolts B-3301-BLT to 8 Nm.
+  c) If brackets are cracked, replace P-9912-ARM (left and right specific).
+
+4. CASTER REPLACEMENT
+Symptom: Damaged or non-rolling casters.
+Root Cause: Debris buildup or wheel fracture.
+Resolution:
+  a) Pull caster C-5500-CAST straight out from base P-9913-BASE.
+  b) Insert new caster C-5500-CAST until audible click.
+  c) Test all 5 casters for smooth rotation.
+
+PART NUMBERS REFERENCED:
+- P-9913-BASE (Chair base assembly)
+- P-9912-ARM (Armrest bracket, left/right)
+- S-4012-SCRW (M6x20 socket head cap screw, qty 4)
+- C-7721-GL (Gas lift cylinder, 120mm stroke)
+- B-3301-BLT (M8x25 flange bolt, qty 5)
+- C-5500-CAST (60mm nylon caster, qty 5)
+
+WARRANTY: 5-year structural, 2-year moving parts. Contact support with SKU CHAIR-ERG-X99 and serial number.",2026-03-15,v2.1
+DESK-STD-MOTO,Motorized Standing Desk Standard,Furniture/Desks,troubleshooting_guide,Motorized Standing Desk Standard - Troubleshooting Guide,"TROUBLESHOOTING GUIDE - Motorized Standing Desk Standard (SKU: DESK-STD-MOTO)
+
+COMMON ISSUES AND RESOLUTIONS:
+
+1. DESK WON'T MOVE UP/DOWN
+Symptom: Control panel shows error E01 or no response.
+Root Cause: Motor M-8841-MOT overload or control box CB-2201-CTL fault.
+Resolution:
+  a) Unplug desk for 60 seconds (hard reset).
+  b) Check all cable connections at control box CB-2201-CTL.
+  c) Verify motor M-8841-MOT cables not pinched.
+  d) Run calibration: Hold DOWN button 10 seconds until display shows CAL.
+  e) If error persists, replace control box CB-2201-CTL.
+
+2. UNEVEN LIFTING (ONE SIDE LAGS)
+Symptom: Left or right leg moves slower, desk becomes unlevel.
+Root Cause: Spindle SP-4402-SPND binding or motor M-8841-MOT synchronization lost.
+Resolution:
+  a) Inspect spindle SP-4402-SPND for debris or damage.
+  b) Lubricate spindle with PTFE grease (part GR-9901-GRS).
+  c) Re-run calibration procedure.
+  d) If persistent, replace spindle SP-4402-SPND on affected side.
+
+3. CONTROL PANEL ERROR CODES
+E01: Motor overload - reduce load, check for obstructions
+E02: Control box fault - replace CB-2201-CTL
+E03: Height sensor error - check sensor SN-1101-HGT wiring
+E04: Anti-collision triggered - clear obstruction, reset
+E05: Motor sync lost - run full calibration
+
+4. MEMORY PRESET NOT WORKING
+Symptom: Saved positions not recalling correctly.
+Root Cause: Control box CB-2201-CTL memory corruption.
+Resolution:
+  a) Clear all presets: Hold M button 5 seconds.
+  b) Re-program positions using UP/DOWN then M + number.
+  c) If fails, replace control box CB-2201-CTL.
+
+PART NUMBERS REFERENCED:
+- M-8841-MOT (Dual motor kit, 24V DC)
+- CB-2201-CTL (Control box with Bluetooth)
+- SP-4402-SPND (Lifting spindle, 600mm)
+- SN-1101-HGT (Hall effect height sensor)
+- B-3301-BLT (M8x30 mounting bolt, qty 8)
+- GR-9901-GRS (PTFE spindle grease, 50g tube)
+
+SPECIFICATIONS:
+- Height range: 620mm - 1270mm
+- Load capacity: 100kg
+- Speed: 32mm/s
+- Duty cycle: 2 min on / 18 min off
+
+WARRANTY: 7-year frame, 3-year electronics. SKU DESK-STD-MOTO.",2026-02-28,v1.4
+MON-ARM-DUAL,Dual Monitor Arm Heavy Duty,Furniture/Mounts,installation_manual,Dual Monitor Arm Heavy Duty - Installation & Troubleshooting,"INSTALLATION & TROUBLESHOOTING - Dual Monitor Arm Heavy Duty (SKU: MON-ARM-DUAL)
+
+INSTALLATION STEPS:
+1. Choose mounting method: C-clamp (desk thickness 10-85mm) or Grommet (hole 8-10mm).
+2. For C-clamp: Attach base plate BP-6601-BP using clamp CM-7701-CMP.
+3. For Grommet: Insert bolt GM-8801-GMT through desk, secure with nut.
+3. Mount vertical pole VP-5501-VP to base plate BP-6601-BP.
+4. Attach monitor brackets MB-4401-MB to VESA 75x75 or 100x100 patterns.
+5. Slide brackets onto pole VP-5501-VP, set height, tighten knobs KN-2201-KNB.
+6. Route cables through cable management clips CM-3301-CMC.
+
+TROUBLESHOOTING:
+
+1. MONITOR SAGS OVER TIME
+Symptom: Monitor slowly tilts down after adjustment.
+Root Cause: Gas spring GS-9901-GSP losing pressure or knob KN-2201-KNB loose.
+Resolution:
+  a) Tighten tension adjustment knob KN-2201-KNB clockwise.
+  b) If monitor > 8kg, verify gas spring GS-9901-GSP rating (supports 2-9kg per arm).
+  c) Replace gas spring GS-9901-GSP if internal pressure lost.
+
+2. ARM WON'T STAY IN POSITION
+Symptom: Joints drift, monitor moves unintentionally.
+Root Cause: Pivot bolts PT-1101-PVT loose or worn.
+Resolution:
+  a) Tighten all pivot bolts PT-1101-PVT to 5 Nm.
+  b) Apply thread locker (blue) to PT-1101-PVT threads.
+  c) If bolts stripped, replace pivot assembly PT-1101-PVT.
+
+3. VESA BRACKET MISALIGNMENT
+Symptom: Monitor sits crooked or bracket doesn't align.
+Root Cause: VESA adapter AD-2202-ADP incorrect orientation.
+Resolution:
+  a) Remove bracket MB-4401-MB.
+  b) Rotate VESA adapter AD-2202-ADP 90 degrees.
+  c) Reattach and verify level.
+
+PART NUMBERS REFERENCED:
+- BP-6601-BP (Base plate, steel)
+- CM-7701-CMP (C-clamp assembly)
+- GM-8801-GMT (Grommet mount bolt)
+- VP-5501-VP (Vertical pole, 400mm)
+- MB-4401-MB (Monitor bracket, VESA 75/100)
+- KN-2201-KNB (Tension adjustment knob)
+- GS-9901-GSP (Gas spring, 2-9kg range)
+- PT-1101-PVT (Pivot bolt, M6)
+- AD-2202-ADP (VESA adapter plate)
+- CM-3301-CMC (Cable management clip, qty 4)
+
+LOAD RATING: 9kg per arm (18kg total). VESA 75x75 / 100x100.
+WARRANTY: 3-year mechanical. SKU MON-ARM-DUAL.",2026-01-20,v3.0
+KB-ERGO-SPLIT,ErgoSplit Mechanical Keyboard,Peripherals/Keyboards,troubleshooting_guide,ErgoSplit Mechanical Keyboard - Troubleshooting Guide,"TROUBLESHOOTING GUIDE - ErgoSplit Mechanical Keyboard (SKU: KB-ERGO-SPLIT)
+
+COMMON ISSUES AND RESOLUTIONS:
+
+1. KEY CHATTER / DOUBLE INPUT
+Symptom: Single keypress registers multiple times.
+Root Cause: Switch debounce failure or dirty switch contacts.
+Resolution:
+  a) Remove keycap using puller KP-1101-PUL.
+  b) Use compressed air to clean switch SW-2201-SWT.
+  c) If persistent, desolder and replace switch SW-2201-SWT (Cherry MX compatible).
+  d) Update firmware to v2.3+ for improved debounce algorithm.
+
+2. LEFT/RIGHT HALF NOT CONNECTING
+Symptom: One half unpaired, LED flashing red.
+Root Cause: TRRS cable CB-3301-CBL damaged or wireless module WM-4401-WLS fault.
+Resolution:
+  a) Inspect TRRS cable CB-3301-CBL for bent pins or cuts.
+  b) Test with known good cable CB-3301-CBL.
+  c) For wireless: Re-pair by holding PAIR button 3s on both halves.
+  d) Replace wireless module WM-4401-WLS if pairing fails.
+
+3. RGB LIGHTING ISSUES
+Symptom: LEDs stuck, wrong colors, or not responding.
+Root Cause: LED driver LD-5501-LDR fault or firmware bug.
+Resolution:
+  a) Reset to default: Hold FN + ESC 5 seconds.
+  b) Update firmware via USB to latest version.
+  c) If hardware fault, replace PCB PC-6601-PCB (left or right specific).
+
+4. KEYCAP STEM BREAKAGE
+Symptom: Keycap loose or falls off.
+Root Cause: Stem fracture on keycap KP-1101-KCP.
+Resolution:
+  a) Replace keycap KP-1101-KCP (standard MX stem).
+  b) Available in sets: KP-1101-KCP-SET (base), KP-1101-KCP-MOD (modifiers).
+
+PART NUMBERS REFERENCED:
+- SW-2201-SWT (Cherry MX Brown switch, qty 70)
+- SW-2201-SWT-RED (Cherry MX Red switch, qty 70)
+- SW-2201-SWT-BLU (Cherry MX Blue switch, qty 70)
+- CB-3301-CBL (TRRS interconnect cable, 300mm)
+- WM-4401-WLS (Wireless module, Bluetooth 5.0/2.4GHz)
+- LD-5501-LDR (LED driver IC, WS2812B compatible)
+- PC-6601-PCB-L (Left half PCB)
+- PC-6601-PCB-R (Right half PCB)
+- KP-1101-KCP (Keycap, PBT, Cherry profile)
+- KP-1101-PUL (Keycap puller, wire type)
+- BT-7701-BAT (Li-ion battery, 2000mAh, per half)
+
+FIRMWARE: QMK compatible. Latest: v2.4.1
+WARRANTY: 2-year electronics. SKU KB-ERGO-SPLIT.",2026-03-10,v2.4
+MOUSE-VERT-PRO,Vertical Ergonomic Mouse Pro,Peripherals/Mice,troubleshooting_guide,Vertical Ergonomic Mouse Pro - Troubleshooting Guide,"TROUBLESHOOTING GUIDE - Vertical Ergonomic Mouse Pro (SKU: MOUSE-VERT-PRO)
+
+COMMON ISSUES AND RESOLUTIONS:
+
+1. CURSOR JITTER / ERRATIC MOVEMENT
+Symptom: Cursor jumps, stutters, or moves randomly.
+Root Cause: Sensor lens dirty, surface incompatibility, or sensor SN-8801-SNS fault.
+Resolution:
+  a) Clean sensor lens with microfiber cloth (no liquids).
+  b) Use on non-reflective mouse pad MP-9901-MPD.
+  c) Adjust DPI via button or software (400-26000 DPI).
+  d) If persistent, sensor SN-8801-SNS (PixArt PAW3395) may need replacement.
+
+2. WIRELESS DISCONNECTIONS
+Symptom: Mouse disconnects frequently, LED blinks amber.
+Root Cause: 2.4GHz dongle DG-1101-DGL interference or battery BT-2201-BAT low.
+Resolution:
+  a) Move dongle DG-1101-DGL to front USB port (use extension if needed).
+  b) Replace battery BT-2201-BAT (AA, 1.5V alkaline or NiMH).
+  c) Re-pair: Hold DPI + RIGHT click 3s, plug dongle.
+  d) Update firmware via manufacturer software.
+
+3. BUTTON DOUBLE-CLICK ISSUE
+Symptom: Single click registers as double-click.
+Root Cause: Switch SW-3301-SWT (Omron 50M) contact bounce.
+Resolution:
+  a) Update firmware for improved debounce (v1.2+).
+  b) If hardware fault, replace switch SW-3301-SWT (requires soldering).
+  c) Contact support for RMA if under warranty.
+
+4. CHARGING NOT WORKING (WIRELESS MODEL)
+Symptom: No charging indicator, battery drains fast.
+Root Cause: USB-C port PT-4401-PRT damaged or charging IC CH-5501-CHG fault.
+Resolution:
+  a) Test with known good USB-C cable CB-6601-CBL.
+  b) Clean port PT-4401-PRT with compressed air.
+  c) If no charge, replace charging board CH-5501-CHG.
+
+PART NUMBERS REFERENCED:
+- SN-8801-SNS (PixArt PAW3395 optical sensor)
+- SW-3301-SWT (Omron 50M switch, left/right/main)
+- DG-1101-DGL (2.4GHz USB dongle)
+- BT-2201-BAT (AA battery compartment)
+- PT-4401-PRT (USB-C charging port)
+- CH-5501-CHG (Charging controller IC)
+- CB-6601-CBL (USB-C to USB-A cable, 1.8m)
+- MP-9901-MPD (Mouse pad, cloth, 300x250mm)
+- SK-7701-SKT (PTFE mouse feet, set of 4)
+
+SPECIFICATIONS:
+- Sensor: PixArt PAW3395
+- DPI: 400-26000 (50 DPI steps)
+- Polling: 1000Hz (wired/2.4GHz), 125Hz (Bluetooth)
+- Battery: 70 hours (2.4GHz), 120 hours (Bluetooth)
+- Weight: 78g (without battery)
+
+WARRANTY: 2-year. SKU MOUSE-VERT-PRO.",2026-02-14,v1.8
+HEADSET-WL-PRO,Wireless Pro Headset,Peripherals/Audio,troubleshooting_guide,Wireless Pro Headset - Troubleshooting Guide,"TROUBLESHOOTING GUIDE - Wireless Pro Headset (SKU: HEADSET-WL-PRO)
+
+COMMON ISSUES AND RESOLUTIONS:
+
+1. NO AUDIO / ONE SIDE ONLY
+Symptom: No sound or only left/right channel working.
+Root Cause: Audio cable AC-1101-CBL loose, driver DR-2201-DRV failure, or wireless interference.
+Resolution:
+  a) For wired mode: Check 3.5mm cable AC-1101-CBL connection.
+  b) For wireless: Re-pair dongle DG-2201-DGL (hold power 5s).
+  c) Test on another device to isolate.
+  d) If one driver dead, replace driver unit DR-2201-DRV (40mm dynamic).
+
+2. MICROPHONE NOT WORKING
+Symptom: Mic muted, low volume, or static.
+Root Cause: Mic boom MB-3301-BM not seated, mic capsule MC-4401-MIC fault, or software settings.
+Resolution:
+  a) Ensure mic boom MB-3301-BM fully inserted (click feel).
+  b) Check mute switch on left earcup (LED red = muted).
+  c) In OS sound settings, select HEADSET-WL-PRO mic, set level 80%.
+  d) If static persists, replace mic capsule MC-4401-MIC (unidirectional).
+
+3. WIRELESS RANGE / DROPOUTS
+Symptom: Audio cuts out beyond 3m or near WiFi router.
+Root Cause: 2.4GHz congestion or dongle DG-2201-DGL placement.
+Resolution:
+  a) Use USB extension to move dongle DG-2201-DGL away from PC case.
+  b) Switch WiFi to 5GHz band.
+  c) Update headset firmware (addresses coexistence).
+  d) Try Bluetooth mode (lower latency tolerance).
+
+4. EARPAD DETERIORATION
+Symptom: Peeling, cracking, or comfort loss.
+Root Cause: Protein leather wear.
+Resolution:
+  a) Replace earpads EP-5501-EPD (protein leather) or EP-5501-EPD-VEL (velour).
+  b) Pull old pads off, align new pads, press firmly.
+
+5. BATTERY LIFE DEGRADATION
+Symptom: Runtime significantly reduced from rated 40h.
+Root Cause: Battery BT-6601-BAT aging.
+Resolution:
+  a) Full discharge/charge cycle 3x to recalibrate gauge.
+  b) If < 50% rated life, replace battery BT-6601-BAT (service center only).
+
+PART NUMBERS REFERENCED:
+- DR-2201-DRV (40mm dynamic driver, 32 ohm)
+- MC-4401-MIC (Unidirectional mic capsule)
+- DG-2201-DGL (2.4GHz USB-C dongle)
+- MB-3301-BM (Detachable mic boom)
+- EP-5501-EPD (Earpads, protein leather, pair)
+- EP-5501-EPD-VEL (Earpads, velour, pair)
+- BT-6601-BAT (Li-ion battery, 1200mAh)
+- AC-1101-CBL (3.5mm audio cable, 1.5m)
+- CB-7701-CBL (USB-C charging cable, 1.2m)
+- HD-8801-HDB (Headband padding replacement)
+
+SPECIFICATIONS:
+- Driver: 40mm dynamic, 20Hz-20kHz
+- Mic: Unidirectional, -38dB sensitivity
+- Wireless: 2.4GHz (dongle) + Bluetooth 5.3
+- Battery: 40h (2.4GHz), 50h (Bluetooth)
+- Weight: 298g
+
+WARRANTY: 2-year. SKU HEADSET-WL-PRO.",2026-03-01,v2.0

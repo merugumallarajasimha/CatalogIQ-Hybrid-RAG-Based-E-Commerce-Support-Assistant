@@ -1,0 +1,216 @@
+[
+  {
+    "ticket_id": "TKT-2026-001234",
+    "sku": "CHAIR-ERG-X99",
+    "part_numbers": ["P-9913-BASE", "S-4012-SCRW"],
+    "product_name": "ErgoFlex Pro Office Chair",
+    "category": "Furniture/Seating",
+    "issue_type": "squeaking_noise",
+    "customer_description": "Chair makes loud squeaking sound when I lean back. Started about 2 weeks ago. Very annoying during meetings.",
+    "agent_resolution": "Identified loose screw set S-4012-SCRW under base P-9913-BASE. Instructed customer to tighten 4 screws to 12.5 Nm torque using 5mm hex key. Issue resolved.",
+    "resolution_steps": [
+      "Turn chair upside down on protective surface",
+      "Locate screw set S-4012-SCRW (4 screws) securing base P-9913-BASE",
+      "Tighten all 4 screws to 12.5 Nm torque using 5mm hex key",
+      "Test recline motion for noise"
+    ],
+    "parts_used": ["S-4012-SCRW"],
+    "status": "resolved",
+    "created_date": "2026-03-10",
+    "resolved_date": "2026-03-10",
+    "agent_id": "AGT-7742"
+  },
+  {
+    "ticket_id": "TKT-2026-001256",
+    "sku": "CHAIR-ERG-X99",
+    "part_numbers": ["C-7721-GL", "B-3301-BLT"],
+    "product_name": "ErgoFlex Pro Office Chair",
+    "category": "Furniture/Seating",
+    "issue_type": "height_adjustment_failure",
+    "customer_description": "Chair slowly sinks down throughout the day. Have to pump it up every hour. Gas lift seems broken.",
+    "agent_resolution": "Diagnosed gas lift cylinder C-7721-GL internal seal failure. Shipped replacement cylinder C-7721-GL. Customer replaced following guide: remove base bolts B-3301-BLT, swap cylinder, reassemble.",
+    "resolution_steps": [
+      "Remove base P-9913-BASE by unscrewing 5 bolts B-3301-BLT",
+      "Extract gas lift cylinder C-7721-GL from column",
+      "Replace with new cylinder C-7721-GL",
+      "Reassemble in reverse order, torque bolts B-3301-BLT to 15 Nm"
+    ],
+    "parts_used": ["C-7721-GL"],
+    "status": "resolved",
+    "created_date": "2026-03-12",
+    "resolved_date": "2026-03-15",
+    "agent_id": "AGT-7742"
+  },
+  {
+    "ticket_id": "TKT-2026-001289",
+    "sku": "DESK-STD-MOTO",
+    "part_numbers": ["CB-2201-CTL", "M-8841-MOT"],
+    "product_name": "Motorized Standing Desk Standard",
+    "category": "Furniture/Desks",
+    "issue_type": "control_box_fault",
+    "customer_description": "Desk shows error E02 on control panel. Won't move up or down. Tried unplugging for a minute but error comes back.",
+    "agent_resolution": "Error E02 indicates control box CB-2201-CTL fault. Shipped replacement control box. Customer swapped unit and re-paired Bluetooth app.",
+    "resolution_steps": [
+      "Unplug all cables from control box CB-2201-CTL",
+      "Unmount control box from desk frame",
+      "Install replacement control box CB-2201-CTL",
+      "Reconnect all motor and sensor cables",
+      "Re-pair with mobile app via Bluetooth"
+    ],
+    "parts_used": ["CB-2201-CTL"],
+    "status": "resolved",
+    "created_date": "2026-03-08",
+    "resolved_date": "2026-03-12",
+    "agent_id": "AGT-8891"
+  },
+  {
+    "ticket_id": "TKT-2026-001301",
+    "sku": "DESK-STD-MOTO",
+    "part_numbers": ["SP-4402-SPND", "GR-9901-GRS"],
+    "product_name": "Motorized Standing Desk Standard",
+    "category": "Furniture/Desks",
+    "issue_type": "uneven_lifting",
+    "customer_description": "Left side of desk lags behind right side. Desk gets crooked when raising. Makes grinding noise on left side.",
+    "agent_resolution": "Left spindle SP-4402-SPND binding. Instructed customer to lubricate with PTFE grease GR-9901-GRS and run calibration. If persistent, replace spindle.",
+    "resolution_steps": [
+      "Lower desk fully",
+      "Apply PTFE grease GR-9901-GRS to left spindle SP-4402-SPND threads",
+      "Run calibration: hold DOWN button 10 seconds until CAL appears",
+      "Test full up/down cycle for even movement"
+    ],
+    "parts_used": ["GR-9901-GRS"],
+    "status": "resolved",
+    "created_date": "2026-03-05",
+    "resolved_date": "2026-03-05",
+    "agent_id": "AGT-8891"
+  },
+  {
+    "ticket_id": "TKT-2026-001322",
+    "sku": "MON-ARM-DUAL",
+    "part_numbers": ["GS-9901-GSP", "PT-1101-PVT"],
+    "product_name": "Dual Monitor Arm Heavy Duty",
+    "category": "Furniture/Mounts",
+    "issue_type": "monitor_sag",
+    "customer_description": "Right monitor slowly tilts downward over the course of the day. Have to readjust every morning. Monitor weighs about 7kg.",
+    "agent_resolution": "Gas spring GS-9901-GSP losing pressure on right arm. 7kg is within 2-9kg range but spring may be defective. Shipped replacement GS-9901-GSP. Customer replaced pivot bolts PT-1101-PVT at same time.",
+    "resolution_steps": [
+      "Support monitor weight while working",
+      "Remove pivot bolts PT-1101-PVT (M6) on right arm",
+      "Swap gas spring GS-9901-GSP",
+      "Reinstall pivot bolts PT-1101-PVT with blue thread locker, torque 5 Nm",
+      "Adjust tension knob KN-2201-KNB for monitor weight"
+    ],
+    "parts_used": ["GS-9901-GSP", "PT-1101-PVT"],
+    "status": "resolved",
+    "created_date": "2026-02-28",
+    "resolved_date": "2026-03-03",
+    "agent_id": "AGT-5523"
+  },
+  {
+    "ticket_id": "TKT-2026-001345",
+    "sku": "KB-ERGO-SPLIT",
+    "part_numbers": ["SW-2201-SWT", "CB-3301-CBL"],
+    "product_name": "ErgoSplit Mechanical Keyboard",
+    "category": "Peripherals/Keyboards",
+    "issue_type": "key_chatter",
+    "customer_description": "E key on left half registering double presses. Makes typing very difficult. Tried cleaning with air but no change.",
+    "agent_resolution": "Switch SW-2201-SWT (Cherry MX Brown) on E key showing chatter. Firmware v2.3+ has improved debounce. Advised firmware update first, then switch replacement if needed.",
+    "resolution_steps": [
+      "Update firmware to v2.4.1 via USB",
+      "Test E key for chatter",
+      "If persistent: remove keycap with KP-1101-PUL",
+      "Desolder switch SW-2201-SWT, solder replacement",
+      "Test with firmware debounce enabled"
+    ],
+    "parts_used": ["SW-2201-SWT"],
+    "status": "resolved",
+    "created_date": "2026-03-01",
+    "resolved_date": "2026-03-02",
+    "agent_id": "AGT-9904"
+  },
+  {
+    "ticket_id": "TKT-2026-001367",
+    "sku": "KB-ERGO-SPLIT",
+    "part_numbers": ["WM-4401-WLS", "BT-7701-BAT"],
+    "product_name": "ErgoSplit Mechanical Keyboard",
+    "category": "Peripherals/Keyboards",
+    "issue_type": "half_disconnect",
+    "customer_description": "Right half of keyboard randomly disconnects. LED flashes red. Have to unplug/replug TRRS cable to reconnect. Happens 3-4 times per day.",
+    "agent_resolution": "Wireless module WM-4401-WLS on right half showing intermittent connectivity. Battery BT-7701-BAT also tested low. Replaced both wireless module and battery on right half.",
+    "resolution_steps": [
+      "Test with wired TRRS cable CB-3301-CBL to isolate wireless",
+      "Right half fails wireless, works wired",
+      "Desolder wireless module WM-4401-WLS (4 pads)",
+      "Replace battery BT-7701-BAT",
+      "Solder new WM-4401-WLS, re-pair halves"
+    ],
+    "parts_used": ["WM-4401-WLS", "BT-7701-BAT"],
+    "status": "resolved",
+    "created_date": "2026-02-25",
+    "resolved_date": "2026-03-01",
+    "agent_id": "AGT-9904"
+  },
+  {
+    "ticket_id": "TKT-2026-001389",
+    "sku": "MOUSE-VERT-PRO",
+    "part_numbers": ["SN-8801-SNS", "DG-1101-DGL"],
+    "product_name": "Vertical Ergonomic Mouse Pro",
+    "category": "Peripherals/Mice",
+    "issue_type": "cursor_jitter",
+    "customer_description": "Cursor jumps around randomly, especially on my glass desk. Works fine on mousepad but I prefer using directly on desk.",
+    "agent_resolution": "Sensor SN-8801-SNS (PAW3395) has issues on reflective surfaces. Recommended mouse pad MP-9901-MPD. Also updated firmware for better surface adaptation.",
+    "resolution_steps": [
+      "Clean sensor lens with microfiber cloth",
+      "Use on cloth mouse pad MP-9901-MPD (not glass/reflective)",
+      "Update firmware to v1.3+ for improved surface tracking",
+      "Lower DPI to 1600 for better stability"
+    ],
+    "parts_used": [],
+    "status": "resolved",
+    "created_date": "2026-03-03",
+    "resolved_date": "2026-03-03",
+    "agent_id": "AGT-1122"
+  },
+  {
+    "ticket_id": "TKT-2026-001402",
+    "sku": "MOUSE-VERT-PRO",
+    "part_numbers": ["SW-3301-SWT", "CH-5501-CHG"],
+    "product_name": "Vertical Ergonomic Mouse Pro",
+    "category": "Peripherals/Mice",
+    "issue_type": "double_click",
+    "customer_description": "Left mouse button registering double clicks when I only click once. Very frustrating for drag operations and gaming.",
+    "agent_resolution": "Omron switch SW-3301-SWT contact bounce. Firmware v1.2+ has software debounce. Advised firmware update first. If hardware fault, RMA for switch replacement.",
+    "resolution_steps": [
+      "Update firmware to v1.4 via manufacturer software",
+      "Test left button for double-click",
+      "If persistent: initiate RMA for switch SW-3301-SWT replacement",
+      "Note: requires soldering, not user-serviceable"
+    ],
+    "parts_used": [],
+    "status": "escalated",
+    "created_date": "2026-03-07",
+    "resolved_date": null,
+    "agent_id": "AGT-1122"
+  },
+  {
+    "ticket_id": "TKT-2026-001421",
+    "sku": "HEADSET-WL-PRO",
+    "part_numbers": ["MC-4401-MIC", "DG-2201-DGL"],
+    "product_name": "Wireless Pro Headset",
+    "category": "Peripherals/Audio",
+    "issue_type": "mic_not_working",
+    "customer_description": "Teammates can't hear me on Discord. Mic shows as connected but no input. Mute light is off (white).",
+    "agent_resolution": "Mic boom MB-3301-BM not fully seated - needs firm click. Also verified mic capsule MC-4401-MIC functional. Dongle DG-2201-DGL re-paired.",
+    "resolution_steps": [
+      "Remove and firmly re-insert mic boom MB-3301-BM until click",
+      "Verify mute switch shows white (not red)",
+      "In Discord/OS: select HEADSET-WL-PRO as input, set volume 80%",
+      "Re-pair dongle DG-2201-DGL: hold power 5 seconds"
+    ],
+    "parts_used": [],
+    "status": "resolved",
+    "created_date": "2026-03-09",
+    "resolved_date": "2026-03-09",
+    "agent_id": "AGT-3344"
+  }
+]
