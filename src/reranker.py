@@ -2,6 +2,7 @@ import os
 import time
 from typing import List, Dict, Any, Optional
 
+# pyrefly: ignore [missing-import]
 from sentence_transformers import CrossEncoder
 
 

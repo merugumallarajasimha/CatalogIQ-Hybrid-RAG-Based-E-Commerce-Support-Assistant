@@ -1,6 +1,6 @@
 import re
 from typing import List, Dict, Any, Optional
-from extract_ids import extract_ids
+from .extract_ids import extract_ids
 
 
 def split_into_chunks(text: str, max_sentences: int = 5, min_sentences: int = 3) -> List[str]:

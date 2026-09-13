@@ -2,6 +2,7 @@ import os
 import re
 from typing import List, Dict, Any
 
+# pyrefly: ignore [missing-import]
 from openai import OpenAI
 
 
@@ -9,7 +10,7 @@ OMNIROUTE_BASE_URL = "http://localhost:20128/v1"
 OMNIROUTE_MODEL = "auto"  # Let Omniroute choose
 
 
-_client: OpenAI = None
+_client: OpenAI | None = None
 
 
 def get_omniroute_client() -> OpenAI:
@@ -18,10 +19,13 @@ def get_omniroute_client() -> OpenAI:
         api_key = os.environ.get("OMNIROUTE_API_KEY")
         if not api_key:
             raise ValueError("OMNIROUTE_API_KEY environment variable not set")
-        _client = OpenAI(
-            api_key=api_key,
-            base_url=OMNIROUTE_BASE_URL,
-        )
+        try:
+            _client = OpenAI(
+                api_key=api_key,
+                base_url=OMNIROUTE_BASE_URL,
+            )
+        except Exception as e:
+            raise ConnectionError(f"Failed to create Omniroute client: {e}") from e
     return _client
 
 
@@ -60,6 +64,7 @@ def generate_answer(query: str, top_docs: List[Dict[str, Any]]) -> str:
             messages=[{"role": "user", "content": prompt}],
             max_tokens=1024,
             temperature=0.1,
+            stream=False,
         )
 
         answer = response.choices[0].message.content

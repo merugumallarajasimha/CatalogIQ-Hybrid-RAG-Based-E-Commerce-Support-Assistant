@@ -4,9 +4,12 @@ import zlib
 from typing import List, Tuple, Dict, Any, Optional
 from collections import Counter
 
+# pyrefly: ignore [missing-import]
 from qdrant_client import QdrantClient
+# pyrefly: ignore [missing-import]
 from qdrant_client.models import SparseVector
 
+# pyrefly: ignore [missing-import]
 from sentence_transformers import SentenceTransformer
 
 

@@ -1,5 +1,6 @@
 import os
 from typing import Optional, List, Dict, Any
+# pyrefly: ignore [missing-import]
 from openai import OpenAI
 
 

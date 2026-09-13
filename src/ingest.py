@@ -4,7 +4,9 @@ import zlib
 from typing import List, Dict, Any, Optional
 from collections import Counter
 
+# pyrefly: ignore [missing-import]
 from qdrant_client import QdrantClient
+# pyrefly: ignore [missing-import]
 from qdrant_client.models import (
     Distance,
     VectorParams,
@@ -12,6 +14,7 @@ from qdrant_client.models import (
     PointStruct,
     SparseVector,
 )
+# pyrefly: ignore [missing-import]
 from sentence_transformers import SentenceTransformer
 
 
@@ -208,8 +211,8 @@ def run_ingestion(
     chunk_size: int = 5
 ) -> None:
 
-    from load_dataset import load_dataset
-    from chunker import chunk_records
+    from .load_dataset import load_dataset
+    from .chunker import chunk_records
 
     print("Loading dataset...")
 

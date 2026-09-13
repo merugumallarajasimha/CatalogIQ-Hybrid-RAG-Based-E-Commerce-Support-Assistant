@@ -1,9 +1,16 @@
 import os
+import sys
 import time
 from typing import Dict, Any, List
 
+# Add the src directory to Python path so we can import sibling modules
+sys.path.insert(0, os.path.dirname(__file__))
+
+# pyrefly: ignore [missing-import]
 from dotenv import load_dotenv
+# pyrefly: ignore [missing-import]
 from fastapi import FastAPI, HTTPException
+# pyrefly: ignore [missing-import]
 from pydantic import BaseModel, field_validator
 
 
@@ -11,7 +18,6 @@ from pydantic import BaseModel, field_validator
 # 1. LOAD ENVIRONMENT VARIABLES
 # ============================================================
 
-# .env is located in the same directory as this main.py
 ENV_PATH = os.path.join(os.path.dirname(__file__), ".env")
 load_dotenv(ENV_PATH)
 
@@ -22,7 +28,7 @@ load_dotenv(ENV_PATH)
 
 REQUIRED_ENV_VARS = [
     "QDRANT_URL",
-    "OPENROUTER_API_KEY",
+    "OMNIROUTE_API_KEY",
 ]
 
 for var in REQUIRED_ENV_VARS:
@@ -36,9 +42,9 @@ for var in REQUIRED_ENV_VARS:
 # 3. IMPORT RAG COMPONENTS
 # ============================================================
 
-from src.search import hybrid_search, get_document
-from src.reranker import rerank
-from src.generation import generate_answer, validate_citations
+from .search import hybrid_search, get_document
+from .reranker import rerank
+from .generation import generate_answer, validate_citations
 
 
 # ============================================================
@@ -62,7 +68,6 @@ class AskRequest(BaseModel):
     @field_validator("question")
     @classmethod
     def validate_question(cls, v: str) -> str:
-
         if not v or not v.strip():
             raise ValueError("Question cannot be empty")
 
@@ -121,7 +126,6 @@ def enrich_candidates_with_content(
     enriched = []
 
     for candidate in candidates:
-
         doc_id = candidate.get("doc_id")
 
         if not doc_id:
@@ -130,7 +134,6 @@ def enrich_candidates_with_content(
         doc = get_document(doc_id)
 
         if doc:
-
             enriched_candidate = dict(candidate)
 
             enriched_candidate["content"] = doc.get(
@@ -195,7 +198,6 @@ def ask(request: AskRequest) -> AskResponse:
         ) * 1000
 
         if not candidates:
-
             raise HTTPException(
                 status_code=503,
                 detail=(
@@ -204,7 +206,6 @@ def ask(request: AskRequest) -> AskResponse:
                     "contains data"
                 ),
             )
-
 
         # ----------------------------------------------------
         # STEP 2: GET DOCUMENT CONTENT
@@ -215,7 +216,6 @@ def ask(request: AskRequest) -> AskResponse:
         )
 
         if not candidates:
-
             raise HTTPException(
                 status_code=503,
                 detail=(
@@ -224,7 +224,6 @@ def ask(request: AskRequest) -> AskResponse:
                     "from Qdrant"
                 ),
             )
-
 
         # ----------------------------------------------------
         # STEP 3: RERANK
@@ -243,15 +242,13 @@ def ask(request: AskRequest) -> AskResponse:
         ) * 1000
 
         if not top_docs:
-
             raise HTTPException(
                 status_code=503,
                 detail="Reranker returned no results",
             )
 
-
         # ----------------------------------------------------
-        # STEP 4: GENERATE ANSWER WITH OPENROUTER
+        # STEP 4: GENERATE ANSWER
         # ----------------------------------------------------
 
         generation_start = time.perf_counter()
@@ -264,7 +261,6 @@ def ask(request: AskRequest) -> AskResponse:
         generation_elapsed = (
             time.perf_counter() - generation_start
         ) * 1000
-
 
         # ----------------------------------------------------
         # STEP 5: VALIDATE CITATIONS
@@ -281,7 +277,6 @@ def ask(request: AskRequest) -> AskResponse:
             valid_doc_ids
         )
 
-
         # ----------------------------------------------------
         # STEP 6: BUILD SOURCE INFORMATION
         # ----------------------------------------------------
@@ -289,7 +284,6 @@ def ask(request: AskRequest) -> AskResponse:
         sources = []
 
         for document in top_docs:
-
             sources.append(
                 SourceInfo(
                     doc_id=document.get(
@@ -307,7 +301,6 @@ def ask(request: AskRequest) -> AskResponse:
                 )
             )
 
-
         # ----------------------------------------------------
         # STEP 7: TOTAL TIMING
         # ----------------------------------------------------
@@ -316,33 +309,23 @@ def ask(request: AskRequest) -> AskResponse:
             time.perf_counter() - total_start
         ) * 1000
 
-
         # ----------------------------------------------------
         # STEP 8: RETURN RESPONSE
         # ----------------------------------------------------
 
         return AskResponse(
-
             answer=answer,
-
             sources=sources,
-
             citation_check=CitationCheck(
                 **citation_result
             ),
-
             timing_ms=TimingInfo(
-
                 sparse_dense_search_ms=search_elapsed,
-
                 rerank_ms=rerank_elapsed,
-
                 generation_ms=generation_elapsed,
-
                 total_ms=total_elapsed,
             ),
         )
-
 
     # ========================================================
     # ERROR HANDLING
@@ -351,9 +334,7 @@ def ask(request: AskRequest) -> AskResponse:
     except HTTPException:
         raise
 
-
     except ConnectionError as e:
-
         raise HTTPException(
             status_code=503,
             detail=(
@@ -362,9 +343,7 @@ def ask(request: AskRequest) -> AskResponse:
             ),
         )
 
-
     except Exception as e:
-
         raise HTTPException(
             status_code=500,
             detail=(
@@ -395,6 +374,7 @@ def health() -> HealthResponse:
 
 if __name__ == "__main__":
 
+    # pyrefly: ignore [missing-import]
     import uvicorn
 
     uvicorn.run(
@@ -402,4 +382,3 @@ if __name__ == "__main__":
         host="0.0.0.0",
         port=8000
     )
-```

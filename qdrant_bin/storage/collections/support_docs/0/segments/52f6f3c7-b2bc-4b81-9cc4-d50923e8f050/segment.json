@@ -1,0 +1,1 @@
+{"version":0,"config":{"vector_data":{"dense_vector":{"size":384,"distance":"Cosine","storage_type":"Memory","index":{"type":"plain","options":{}},"quantization_config":null}},"sparse_vector_data":{"sparse_vector":{"index":{"full_scan_threshold":null,"index_type":"MutableRam"}}},"payload_storage_type":{"type":"on_disk"}}}
