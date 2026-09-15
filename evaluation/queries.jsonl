@@ -1,0 +1,18 @@
+{"query": "What is the torque spec for screw S-4012-SCRW?", "relevant_skus": ["CHAIR-ERG-X99"], "_flagged": false}
+{"query": "Which part number is the gas lift cylinder for CHAIR-ERG-X99?", "relevant_skus": ["CHAIR-ERG-X99"], "_flagged": false}
+{"query": "What does error E02 mean on DESK-STD-MOTO?", "relevant_skus": ["DESK-STD-MOTO"], "_flagged": false}
+{"query": "Part number for monitor arm gas spring GS-9901-GSP?", "relevant_skus": ["MON-ARM-DUAL", "GS-9901-GSP"], "_flagged": false}
+{"query": "Keyboard switch SW-2201-SWT actuation force?", "relevant_skus": ["KB-ERGO-SPLIT", "SW-2201-SWT"], "_flagged": false}
+{"query": "Mouse sensor SN-8801-SNS max DPI?", "relevant_skus": ["MOUSE-VERT-PRO", "SN-8801-SNS"], "_flagged": false}
+{"query": "Headset driver DR-2201-DRV impedance?", "relevant_skus": ["HEADSET-WL-PRO", "DR-2201-DRV"], "_flagged": false}
+{"query": "Bolt B-3301-BLT torque for chair base?", "relevant_skus": ["CHAIR-ERG-X99"], "_flagged": false}
+{"query": "My chair squeaks when I lean back, how do I fix it?", "relevant_skus": ["CHAIR-ERG-X99"], "_flagged": true}
+{"query": "Standing desk won't move up or down, shows error E01", "relevant_skus": ["DESK-STD-MOTO"], "_flagged": true}
+{"query": "Left side of desk lags behind right when raising", "relevant_skus": ["DESK-STD-MOTO"], "_flagged": true}
+{"query": "Monitor arm slowly tilts downward over time", "relevant_skus": ["MON-ARM-DUAL"], "_flagged": true}
+{"query": "Key registers double press on my split keyboard", "relevant_skus": ["KB-ERGO-SPLIT"], "_flagged": true}
+{"query": "Right half of keyboard randomly disconnects", "relevant_skus": ["KB-ERGO-SPLIT"], "_flagged": true}
+{"query": "Mouse cursor jumps around on glass desk", "relevant_skus": ["MOUSE-VERT-PRO"], "_flagged": true}
+{"query": "Teammates can't hear me, mic not working on headset", "relevant_skus": ["HEADSET-WL-PRO"], "_flagged": true}
+{"query": "X99 chair squeak", "relevant_skus": ["CHAIR-ERG-X99"], "_flagged": true}
+{"query": "What is the warranty on CHAIR-ERG-X99?", "relevant_skus": ["CHAIR-ERG-X99"], "_flagged": true}

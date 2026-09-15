@@ -7,6 +7,11 @@ SKU_PATTERN = re.compile(
     re.IGNORECASE
 )
 
+ASIN_PATTERN = re.compile(
+    r'\b(B0[A-Z0-9]{6,10})\b',
+    re.IGNORECASE
+)
+
 PART_NUMBER_PATTERN = re.compile(
     r'\b(?:part|Part|PART)\s*(?:number|#|no\.?)\s*[:#]?\s*([A-Z0-9][A-Z0-9\-_\.]{2,})\b',
     re.IGNORECASE
@@ -29,6 +34,13 @@ PN_PREFIX_PATTERN = re.compile(
     r'\bPN\s*[:#]\s*([A-Z0-9][A-Z0-9\-_\.]{2,})\b',
     re.IGNORECASE
 )
+
+
+def extract_asins(text: str) -> List[str]:
+    asins: Set[str] = set()
+    for match in ASIN_PATTERN.finditer(text):
+        asins.add(match.group(1).upper())
+    return sorted(asins)
 
 
 def extract_skus(text: str) -> List[str]:
@@ -64,6 +76,7 @@ def extract_part_numbers(text: str) -> List[str]:
 def extract_ids(text: str) -> Dict[str, List[str]]:
     return {
         "skus": extract_skus(text),
+        "asins": extract_asins(text),
         "part_numbers": extract_part_numbers(text)
     }
 

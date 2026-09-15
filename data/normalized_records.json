@@ -1,464 +1,515 @@
 [
   {
-    "sku": "CHAIR-ERG-X99",
+    "sku": "P-9913-BASE",
     "product_name": "Chair base assembly, aluminum, 5-star, 60mm caster sockets",
     "category": "Furniture/Seating",
-    "text": "Chair base assembly, aluminum, 5-star, 60mm caster sockets\n\nReplacement: Remove 5 bolts B-3301-BLT, swap base, torque to 15 Nm\n\nCompatible SKUs: CHAIR-ERG-X99",
-    "source_file": "parts_catalog.csv"
+    "text": "Chair base assembly, aluminum, 5-star, 60mm caster sockets\n\nCategory: Furniture/Seating\n\nReplacement procedure: Remove 5 bolts B-3301-BLT, swap base, torque to 15 Nm\n\nPart numbers: P-9913-BASE\n\nCompatible SKUs: CHAIR-ERG-X99\n\nRelated parts: B-3301-BLT, C-5500-CAST, S-4012-SCRW",
+    "source_file": "parts_catalog.csv",
+    "extraction_method": "content_field+part_number_field+compatible_skus_field+related_parts_field",
+    "confidence_flags": [],
+    "has_sku": true,
+    "has_category": true
   },
   {
-    "sku": "CHAIR-ERG-X99",
+    "sku": "P-9912-ARM",
     "product_name": "Armrest bracket assembly, left/right specific, includes pivot",
     "category": "Furniture/Seating",
-    "text": "Armrest bracket assembly, left/right specific, includes pivot\n\nReplacement: Remove armrest cap, unbolt 2x B-3301-BLT, swap bracket\n\nCompatible SKUs: CHAIR-ERG-X99",
-    "source_file": "parts_catalog.csv"
+    "text": "Armrest bracket assembly, left/right specific, includes pivot\n\nCategory: Furniture/Seating\n\nReplacement procedure: Remove armrest cap, unbolt 2x B-3301-BLT, swap bracket\n\nPart numbers: P-9912-ARM\n\nCompatible SKUs: CHAIR-ERG-X99\n\nRelated parts: B-3301-BLT, PT-1101-PVT",
+    "source_file": "parts_catalog.csv",
+    "extraction_method": "content_field+part_number_field+compatible_skus_field+related_parts_field",
+    "confidence_flags": [],
+    "has_sku": true,
+    "has_category": true
   },
   {
-    "sku": "CHAIR-ERG-X99",
+    "sku": "S-4012-SCRW",
     "product_name": "M6x20 socket head cap screw, grade 12.9, zinc plated",
     "category": "Fasteners",
-    "text": "M6x20 socket head cap screw, grade 12.9, zinc plated\n\nReplacement: Torque to 12.5 Nm with 5mm hex key\n\nCompatible SKUs: CHAIR-ERG-X99, DESK-STD-MOTO",
-    "source_file": "parts_catalog.csv"
+    "text": "M6x20 socket head cap screw, grade 12.9, zinc plated\n\nCategory: Fasteners\n\nReplacement procedure: Torque to 12.5 Nm with 5mm hex key\n\nPart numbers: S-4012-SCRW\n\nCompatible SKUs: CHAIR-ERG-X99, DESK-STD-MOTO\n\nRelated parts: P-9913-BASE",
+    "source_file": "parts_catalog.csv",
+    "extraction_method": "content_field+part_number_field+compatible_skus_field+related_parts_field",
+    "confidence_flags": [],
+    "has_sku": true,
+    "has_category": true
   },
   {
-    "sku": "CHAIR-ERG-X99",
+    "sku": "C-7721-GL",
     "product_name": "Gas lift cylinder, 120mm stroke, 28mm diameter, 1000N force",
     "category": "Furniture/Seating",
-    "text": "Gas lift cylinder, 120mm stroke, 28mm diameter, 1000N force\n\nReplacement: Remove base, pull cylinder, insert new, reassemble base\n\nCompatible SKUs: CHAIR-ERG-X99",
-    "source_file": "parts_catalog.csv"
+    "text": "Gas lift cylinder, 120mm stroke, 28mm diameter, 1000N force\n\nCategory: Furniture/Seating\n\nReplacement procedure: Remove base, pull cylinder, insert new, reassemble base\n\nPart numbers: C-7721-GL\n\nCompatible SKUs: CHAIR-ERG-X99\n\nRelated parts: P-9913-BASE, B-3301-BLT",
+    "source_file": "parts_catalog.csv",
+    "extraction_method": "content_field+part_number_field+compatible_skus_field+related_parts_field",
+    "confidence_flags": [],
+    "has_sku": true,
+    "has_category": true
   },
   {
-    "sku": "CHAIR-ERG-X99",
+    "sku": "B-3301-BLT",
     "product_name": "M8x25 flange bolt, grade 10.9, black oxide",
     "category": "Fasteners",
-    "text": "M8x25 flange bolt, grade 10.9, black oxide\n\nReplacement: Torque to 15 Nm (chair/desk) or 8 Nm (monitor arm)\n\nCompatible SKUs: CHAIR-ERG-X99, DESK-STD-MOTO, MON-ARM-DUAL",
-    "source_file": "parts_catalog.csv"
+    "text": "M8x25 flange bolt, grade 10.9, black oxide\n\nCategory: Fasteners\n\nReplacement procedure: Torque to 15 Nm (chair/desk) or 8 Nm (monitor arm)\n\nPart numbers: B-3301-BLT\n\nCompatible SKUs: CHAIR-ERG-X99, DESK-STD-MOTO, MON-ARM-DUAL\n\nRelated parts: P-9913-BASE, SP-4402-SPND, BP-6601-BP",
+    "source_file": "parts_catalog.csv",
+    "extraction_method": "content_field+part_number_field+compatible_skus_field+related_parts_field",
+    "confidence_flags": [],
+    "has_sku": true,
+    "has_category": true
   },
   {
-    "sku": "CHAIR-ERG-X99",
+    "sku": "C-5500-CAST",
     "product_name": "60mm nylon caster, stem mount, 50kg load rating",
     "category": "Furniture/Seating",
-    "text": "60mm nylon caster, stem mount, 50kg load rating\n\nReplacement: Pull old caster, press new until click\n\nCompatible SKUs: CHAIR-ERG-X99",
-    "source_file": "parts_catalog.csv"
+    "text": "60mm nylon caster, stem mount, 50kg load rating\n\nCategory: Furniture/Seating\n\nReplacement procedure: Pull old caster, press new until click\n\nPart numbers: C-5500-CAST\n\nCompatible SKUs: CHAIR-ERG-X99\n\nRelated parts: P-9913-BASE",
+    "source_file": "parts_catalog.csv",
+    "extraction_method": "content_field+part_number_field+compatible_skus_field+related_parts_field",
+    "confidence_flags": [],
+    "has_sku": true,
+    "has_category": true
   },
   {
-    "sku": "DESK-STD-MOTO",
+    "sku": "M-8841-MOT",
     "product_name": "Dual motor kit, 24V DC, 6000N per motor, hall sensor integrated",
     "category": "Furniture/Desks",
-    "text": "Dual motor kit, 24V DC, 6000N per motor, hall sensor integrated\n\nReplacement: Disconnect cables, unbolt 4x B-3301-BLT, swap motors\n\nCompatible SKUs: DESK-STD-MOTO",
-    "source_file": "parts_catalog.csv"
+    "text": "Dual motor kit, 24V DC, 6000N per motor, hall sensor integrated\n\nCategory: Furniture/Desks\n\nReplacement procedure: Disconnect cables, unbolt 4x B-3301-BLT, swap motors\n\nPart numbers: M-8841-MOT\n\nCompatible SKUs: DESK-STD-MOTO\n\nRelated parts: CB-2201-CTL, SP-4402-SPND, B-3301-BLT",
+    "source_file": "parts_catalog.csv",
+    "extraction_method": "content_field+part_number_field+compatible_skus_field+related_parts_field",
+    "confidence_flags": [],
+    "has_sku": true,
+    "has_category": true
   },
   {
-    "sku": "DESK-STD-MOTO",
+    "sku": "CB-2201-CTL",
     "product_name": "Control box with Bluetooth, dual motor driver, anti-collision",
     "category": "Electronics",
-    "text": "Control box with Bluetooth, dual motor driver, anti-collision\n\nReplacement: Unplug all cables, unmount, swap box, re-pair app\n\nCompatible SKUs: DESK-STD-MOTO",
-    "source_file": "parts_catalog.csv"
+    "text": "Control box with Bluetooth, dual motor driver, anti-collision\n\nCategory: Electronics\n\nReplacement procedure: Unplug all cables, unmount, swap box, re-pair app\n\nPart numbers: CB-2201-CTL\n\nCompatible SKUs: DESK-STD-MOTO\n\nRelated parts: M-8841-MOT, SN-1101-HGT, DG-1101-DGL",
+    "source_file": "parts_catalog.csv",
+    "extraction_method": "content_field+part_number_field+compatible_skus_field+related_parts_field",
+    "confidence_flags": [],
+    "has_sku": true,
+    "has_category": true
   },
   {
-    "sku": "DESK-STD-MOTO",
+    "sku": "SP-4402-SPND",
     "product_name": "Lifting spindle, 600mm travel, Tr10x3 trapezoidal thread",
     "category": "Furniture/Desks",
-    "text": "Lifting spindle, 600mm travel, Tr10x3 trapezoidal thread\n\nReplacement: Extend desk, uncouple motor, unscrew spindle, reverse\n\nCompatible SKUs: DESK-STD-MOTO",
-    "source_file": "parts_catalog.csv"
+    "text": "Lifting spindle, 600mm travel, Tr10x3 trapezoidal thread\n\nCategory: Furniture/Desks\n\nReplacement procedure: Extend desk, uncouple motor, unscrew spindle, reverse\n\nPart numbers: SP-4402-SPND\n\nCompatible SKUs: DESK-STD-MOTO\n\nRelated parts: M-8841-MOT, GR-9901-GRS",
+    "source_file": "parts_catalog.csv",
+    "extraction_method": "content_field+part_number_field+compatible_skus_field+related_parts_field",
+    "confidence_flags": [],
+    "has_sku": true,
+    "has_category": true
   },
   {
-    "sku": "DESK-STD-MOTO",
+    "sku": "SN-1101-HGT",
     "product_name": "Hall effect height sensor, 0-650mm range, 0.1mm resolution",
     "category": "Electronics",
-    "text": "Hall effect height sensor, 0-650mm range, 0.1mm resolution\n\nReplacement: Unclip from spindle, disconnect 3-pin, clip new\n\nCompatible SKUs: DESK-STD-MOTO",
-    "source_file": "parts_catalog.csv"
+    "text": "Hall effect height sensor, 0-650mm range, 0.1mm resolution\n\nCategory: Electronics\n\nReplacement procedure: Unclip from spindle, disconnect 3-pin, clip new\n\nPart numbers: SN-1101-HGT\n\nCompatible SKUs: DESK-STD-MOTO\n\nRelated parts: CB-2201-CTL",
+    "source_file": "parts_catalog.csv",
+    "extraction_method": "content_field+part_number_field+compatible_skus_field+related_parts_field",
+    "confidence_flags": [],
+    "has_sku": true,
+    "has_category": true
   },
   {
-    "sku": "DESK-STD-MOTO",
+    "sku": "GR-9901-GRS",
     "product_name": "PTFE spindle grease, 50g syringe, food grade",
     "category": "Maintenance",
-    "text": "PTFE spindle grease, 50g syringe, food grade\n\nReplacement: Apply thin coat to spindle threads every 6 months\n\nCompatible SKUs: DESK-STD-MOTO",
-    "source_file": "parts_catalog.csv"
+    "text": "PTFE spindle grease, 50g syringe, food grade\n\nCategory: Maintenance\n\nReplacement procedure: Apply thin coat to spindle threads every 6 months\n\nPart numbers: GR-9901-GRS\n\nCompatible SKUs: DESK-STD-MOTO\n\nRelated parts: SP-4402-SPND",
+    "source_file": "parts_catalog.csv",
+    "extraction_method": "content_field+part_number_field+compatible_skus_field+related_parts_field",
+    "confidence_flags": [],
+    "has_sku": true,
+    "has_category": true
   },
   {
-    "sku": "MON-ARM-DUAL",
+    "sku": "GS-9901-GSP",
     "product_name": "Gas spring, 2-9kg force range, 200mm stroke, M6 ends",
     "category": "Furniture/Mounts",
-    "text": "Gas spring, 2-9kg force range, 200mm stroke, M6 ends\n\nReplacement: Support monitor, remove pivot bolts PT-1101-PVT, swap spring\n\nCompatible SKUs: MON-ARM-DUAL",
-    "source_file": "parts_catalog.csv"
+    "text": "Gas spring, 2-9kg force range, 200mm stroke, M6 ends\n\nCategory: Furniture/Mounts\n\nReplacement procedure: Support monitor, remove pivot bolts PT-1101-PVT, swap spring\n\nPart numbers: GS-9901-GSP\n\nCompatible SKUs: MON-ARM-DUAL\n\nRelated parts: PT-1101-PVT, KN-2201-KNB",
+    "source_file": "parts_catalog.csv",
+    "extraction_method": "content_field+part_number_field+compatible_skus_field+related_parts_field",
+    "confidence_flags": [],
+    "has_sku": true,
+    "has_category": true
   },
   {
-    "sku": "MON-ARM-DUAL",
+    "sku": "PT-1101-PVT",
     "product_name": "Pivot bolt, M6x12, shouldered, with nylon patch",
     "category": "Fasteners",
-    "text": "Pivot bolt, M6x12, shouldered, with nylon patch\n\nReplacement: Torque to 5 Nm, apply blue thread locker\n\nCompatible SKUs: MON-ARM-DUAL",
-    "source_file": "parts_catalog.csv"
+    "text": "Pivot bolt, M6x12, shouldered, with nylon patch\n\nCategory: Fasteners\n\nReplacement procedure: Torque to 5 Nm, apply blue thread locker\n\nPart numbers: PT-1101-PVT\n\nCompatible SKUs: MON-ARM-DUAL\n\nRelated parts: GS-9901-GSP, MB-4401-MB",
+    "source_file": "parts_catalog.csv",
+    "extraction_method": "content_field+part_number_field+compatible_skus_field+related_parts_field",
+    "confidence_flags": [],
+    "has_sku": true,
+    "has_category": true
   },
   {
-    "sku": "KB-ERGO-SPLIT",
+    "sku": "SW-2201-SWT",
     "product_name": "Cherry MX Brown tactile switch, PCB mount, 55g actuation",
     "category": "Peripherals/Keyboards",
-    "text": "Cherry MX Brown tactile switch, PCB mount, 55g actuation\n\nReplacement: Desolder old, solder new, test with firmware\n\nCompatible SKUs: KB-ERGO-SPLIT",
-    "source_file": "parts_catalog.csv"
+    "text": "Cherry MX Brown tactile switch, PCB mount, 55g actuation\n\nCategory: Peripherals/Keyboards\n\nReplacement procedure: Desolder old, solder new, test with firmware\n\nPart numbers: SW-2201-SWT\n\nCompatible SKUs: KB-ERGO-SPLIT\n\nRelated parts: PC-6601-PCB-L, PC-6601-PCB-R",
+    "source_file": "parts_catalog.csv",
+    "extraction_method": "content_field+part_number_field+compatible_skus_field+related_parts_field",
+    "confidence_flags": [],
+    "has_sku": true,
+    "has_category": true
   },
   {
-    "sku": "KB-ERGO-SPLIT",
+    "sku": "WM-4401-WLS",
     "product_name": "Wireless module, nRF52840, Bluetooth 5.0 + 2.4GHz proprietary",
     "category": "Electronics",
-    "text": "Wireless module, nRF52840, Bluetooth 5.0 + 2.4GHz proprietary\n\nReplacement: Desolder 4 pads, solder new, re-pair halves\n\nCompatible SKUs: KB-ERGO-SPLIT",
-    "source_file": "parts_catalog.csv"
+    "text": "Wireless module, nRF52840, Bluetooth 5.0 + 2.4GHz proprietary\n\nCategory: Electronics\n\nReplacement procedure: Desolder 4 pads, solder new, re-pair halves\n\nPart numbers: WM-4401-WLS\n\nCompatible SKUs: KB-ERGO-SPLIT\n\nRelated parts: PC-6601-PCB-L, PC-6601-PCB-R, BT-7701-BAT",
+    "source_file": "parts_catalog.csv",
+    "extraction_method": "content_field+part_number_field+compatible_skus_field+related_parts_field",
+    "confidence_flags": [],
+    "has_sku": true,
+    "has_category": true
   },
   {
-    "sku": "MOUSE-VERT-PRO",
+    "sku": "SN-8801-SNS",
     "product_name": "PixArt PAW3395 optical sensor, 26000 DPI, 650 IPS",
     "category": "Peripherals/Mice",
-    "text": "PixArt PAW3395 optical sensor, 26000 DPI, 650 IPS\n\nReplacement: Requires hot air rework, replace PCB PC-6601-PCB if damaged\n\nCompatible SKUs: MOUSE-VERT-PRO",
-    "source_file": "parts_catalog.csv"
+    "text": "PixArt PAW3395 optical sensor, 26000 DPI, 650 IPS\n\nCategory: Peripherals/Mice\n\nReplacement procedure: Requires hot air rework, replace PCB PC-6601-PCB if damaged\n\nPart numbers: SN-8801-SNS\n\nCompatible SKUs: MOUSE-VERT-PRO\n\nRelated parts: SW-3301-SWT, DG-1101-DGL",
+    "source_file": "parts_catalog.csv",
+    "extraction_method": "content_field+part_number_field+compatible_skus_field+related_parts_field",
+    "confidence_flags": [],
+    "has_sku": true,
+    "has_category": true
   },
   {
-    "sku": "HEADSET-WL-PRO",
+    "sku": "DR-2201-DRV",
     "product_name": "40mm dynamic driver, 32 ohm, 105dB SPL, neodymium magnet",
     "category": "Peripherals/Audio",
-    "text": "40mm dynamic driver, 32 ohm, 105dB SPL, neodymium magnet\n\nReplacement: Remove earpad EP-5501-EPD, unscrew driver, solder leads\n\nCompatible SKUs: HEADSET-WL-PRO",
-    "source_file": "parts_catalog.csv"
-  },
-  {
-    "sku": "CHAIR-ERG-X99",
-    "product_name": "Chair base assembly, aluminum, 5-star, 60mm caster sockets",
-    "category": "Furniture/Seating",
-    "text": "Chair base assembly, aluminum, 5-star, 60mm caster sockets\n\nReplacement: Remove 5 bolts B-3301-BLT, swap base, torque to 15 Nm\n\nCompatible SKUs: CHAIR-ERG-X99",
-    "source_file": "parts_catalog.json"
-  },
-  {
-    "sku": "CHAIR-ERG-X99",
-    "product_name": "Armrest bracket assembly, left/right specific, includes pivot",
-    "category": "Furniture/Seating",
-    "text": "Armrest bracket assembly, left/right specific, includes pivot\n\nReplacement: Remove armrest cap, unbolt 2x B-3301-BLT, swap bracket\n\nCompatible SKUs: CHAIR-ERG-X99",
-    "source_file": "parts_catalog.json"
-  },
-  {
-    "sku": "CHAIR-ERG-X99",
-    "product_name": "M6x20 socket head cap screw, grade 12.9, zinc plated",
-    "category": "Fasteners",
-    "text": "M6x20 socket head cap screw, grade 12.9, zinc plated\n\nReplacement: Torque to 12.5 Nm with 5mm hex key\n\nCompatible SKUs: CHAIR-ERG-X99, DESK-STD-MOTO",
-    "source_file": "parts_catalog.json"
-  },
-  {
-    "sku": "CHAIR-ERG-X99",
-    "product_name": "Gas lift cylinder, 120mm stroke, 28mm diameter, 1000N force",
-    "category": "Furniture/Seating",
-    "text": "Gas lift cylinder, 120mm stroke, 28mm diameter, 1000N force\n\nReplacement: Remove base, pull cylinder, insert new, reassemble base\n\nCompatible SKUs: CHAIR-ERG-X99",
-    "source_file": "parts_catalog.json"
-  },
-  {
-    "sku": "CHAIR-ERG-X99",
-    "product_name": "M8x25 flange bolt, grade 10.9, black oxide",
-    "category": "Fasteners",
-    "text": "M8x25 flange bolt, grade 10.9, black oxide\n\nReplacement: Torque to 15 Nm (chair/desk) or 8 Nm (monitor arm)\n\nCompatible SKUs: CHAIR-ERG-X99, DESK-STD-MOTO, MON-ARM-DUAL",
-    "source_file": "parts_catalog.json"
-  },
-  {
-    "sku": "CHAIR-ERG-X99",
-    "product_name": "60mm nylon caster, stem mount, 50kg load rating",
-    "category": "Furniture/Seating",
-    "text": "60mm nylon caster, stem mount, 50kg load rating\n\nReplacement: Pull old caster, press new until click\n\nCompatible SKUs: CHAIR-ERG-X99",
-    "source_file": "parts_catalog.json"
-  },
-  {
-    "sku": "DESK-STD-MOTO",
-    "product_name": "Dual motor kit, 24V DC, 6000N per motor, hall sensor integrated",
-    "category": "Furniture/Desks",
-    "text": "Dual motor kit, 24V DC, 6000N per motor, hall sensor integrated\n\nReplacement: Disconnect cables, unbolt 4x B-3301-BLT, swap motors\n\nCompatible SKUs: DESK-STD-MOTO",
-    "source_file": "parts_catalog.json"
-  },
-  {
-    "sku": "DESK-STD-MOTO",
-    "product_name": "Control box with Bluetooth, dual motor driver, anti-collision",
-    "category": "Electronics",
-    "text": "Control box with Bluetooth, dual motor driver, anti-collision\n\nReplacement: Unplug all cables, unmount, swap box, re-pair app\n\nCompatible SKUs: DESK-STD-MOTO",
-    "source_file": "parts_catalog.json"
-  },
-  {
-    "sku": "DESK-STD-MOTO",
-    "product_name": "Lifting spindle, 600mm travel, Tr10x3 trapezoidal thread",
-    "category": "Furniture/Desks",
-    "text": "Lifting spindle, 600mm travel, Tr10x3 trapezoidal thread\n\nReplacement: Extend desk, uncouple motor, unscrew spindle, reverse\n\nCompatible SKUs: DESK-STD-MOTO",
-    "source_file": "parts_catalog.json"
-  },
-  {
-    "sku": "DESK-STD-MOTO",
-    "product_name": "Hall effect height sensor, 0-650mm range, 0.1mm resolution",
-    "category": "Electronics",
-    "text": "Hall effect height sensor, 0-650mm range, 0.1mm resolution\n\nReplacement: Unclip from spindle, disconnect 3-pin, clip new\n\nCompatible SKUs: DESK-STD-MOTO",
-    "source_file": "parts_catalog.json"
-  },
-  {
-    "sku": "DESK-STD-MOTO",
-    "product_name": "PTFE spindle grease, 50g syringe, food grade",
-    "category": "Maintenance",
-    "text": "PTFE spindle grease, 50g syringe, food grade\n\nReplacement: Apply thin coat to spindle threads every 6 months\n\nCompatible SKUs: DESK-STD-MOTO",
-    "source_file": "parts_catalog.json"
-  },
-  {
-    "sku": "MON-ARM-DUAL",
-    "product_name": "Gas spring, 2-9kg force range, 200mm stroke, M6 ends",
-    "category": "Furniture/Mounts",
-    "text": "Gas spring, 2-9kg force range, 200mm stroke, M6 ends\n\nReplacement: Support monitor, remove pivot bolts PT-1101-PVT, swap spring\n\nCompatible SKUs: MON-ARM-DUAL",
-    "source_file": "parts_catalog.json"
-  },
-  {
-    "sku": "MON-ARM-DUAL",
-    "product_name": "Pivot bolt, M6x12, shouldered, with nylon patch",
-    "category": "Fasteners",
-    "text": "Pivot bolt, M6x12, shouldered, with nylon patch\n\nReplacement: Torque to 5 Nm, apply blue thread locker\n\nCompatible SKUs: MON-ARM-DUAL",
-    "source_file": "parts_catalog.json"
-  },
-  {
-    "sku": "KB-ERGO-SPLIT",
-    "product_name": "Cherry MX Brown tactile switch, PCB mount, 55g actuation",
-    "category": "Peripherals/Keyboards",
-    "text": "Cherry MX Brown tactile switch, PCB mount, 55g actuation\n\nReplacement: Desolder old, solder new, test with firmware\n\nCompatible SKUs: KB-ERGO-SPLIT",
-    "source_file": "parts_catalog.json"
-  },
-  {
-    "sku": "KB-ERGO-SPLIT",
-    "product_name": "Wireless module, nRF52840, Bluetooth 5.0 + 2.4GHz proprietary",
-    "category": "Electronics",
-    "text": "Wireless module, nRF52840, Bluetooth 5.0 + 2.4GHz proprietary\n\nReplacement: Desolder 4 pads, solder new, re-pair halves\n\nCompatible SKUs: KB-ERGO-SPLIT",
-    "source_file": "parts_catalog.json"
-  },
-  {
-    "sku": "MOUSE-VERT-PRO",
-    "product_name": "PixArt PAW3395 optical sensor, 26000 DPI, 650 IPS",
-    "category": "Peripherals/Mice",
-    "text": "PixArt PAW3395 optical sensor, 26000 DPI, 650 IPS\n\nReplacement: Requires hot air rework, replace PCB PC-6601-PCB if damaged\n\nCompatible SKUs: MOUSE-VERT-PRO",
-    "source_file": "parts_catalog.json"
-  },
-  {
-    "sku": "HEADSET-WL-PRO",
-    "product_name": "40mm dynamic driver, 32 ohm, 105dB SPL, neodymium magnet",
-    "category": "Peripherals/Audio",
-    "text": "40mm dynamic driver, 32 ohm, 105dB SPL, neodymium magnet\n\nReplacement: Remove earpad EP-5501-EPD, unscrew driver, solder leads\n\nCompatible SKUs: HEADSET-WL-PRO",
-    "source_file": "parts_catalog.json"
+    "text": "40mm dynamic driver, 32 ohm, 105dB SPL, neodymium magnet\n\nCategory: Peripherals/Audio\n\nReplacement procedure: Remove earpad EP-5501-EPD, unscrew driver, solder leads\n\nPart numbers: DR-2201-DRV\n\nCompatible SKUs: HEADSET-WL-PRO\n\nRelated parts: EP-5501-EPD, MC-4401-MIC",
+    "source_file": "parts_catalog.csv",
+    "extraction_method": "content_field+part_number_field+compatible_skus_field+related_parts_field",
+    "confidence_flags": [],
+    "has_sku": true,
+    "has_category": true
   },
   {
     "sku": "CHAIR-ERG-X99",
     "product_name": "ErgoFlex Pro Office Chair",
     "category": "Furniture/Seating",
-    "text": "TROUBLESHOOTING GUIDE - ErgoFlex Pro Office Chair (SKU: CHAIR-ERG-X99)\n\nCOMMON ISSUES AND RESOLUTIONS:\n\n1. RECLINE SQUEAKING NOISE\nSymptom: Audible squeaking when leaning back in the chair.\nRoot Cause: Loose screw set S-4012-SCRW under base P-9913-BASE or worn pivot bearings.\nResolution:\n  a) Turn chair upside down on protective surface.\n  b) Locate screw set S-4012-SCRW (4 screws) securing base P-9913-BASE to seat frame.\n  c) Tighten all 4 screws to 12.5 Nm torque using 5mm hex key.\n  d) If squeaking persists, inspect pivot bearings P-9912-ARM for wear.\n  e) Replace worn bearings with part number P-9912-ARM (2 per chair).\n\n2. HEIGHT ADJUSTMENT FAILURE\nSymptom: Chair sinks slowly or will not hold height position.\nRoot Cause: Gas lift cylinder C-7721-GL internal seal failure.\nResolution:\n  a) Remove base P-9913-BASE by unscrewing 5 bolts B-3301-BLT.\n  b) Extract gas lift cylinder C-7721-GL from column.\n  c) Replace with new cylinder C-7721-GL.\n  d) Reassemble in reverse order. Torque bolts B-3301-BLT to 15 Nm.\n\n3. ARMREST WOBBLE\nSymptom: Excessive lateral movement in armrests.\nRoot Cause: Loose armrest mounting brackets P-9912-ARM.\nResolution:\n  a) Remove armrest caps to access mounting bolts.\n  b) Tighten bracket bolts B-3301-BLT to 8 Nm.\n  c) If brackets are cracked, replace P-9912-ARM (left and right specific).\n\n4. CASTER REPLACEMENT\nSymptom: Damaged or non-rolling casters.\nRoot Cause: Debris buildup or wheel fracture.\nResolution:\n  a) Pull caster C-5500-CAST straight out from base P-9913-BASE.\n  b) Insert new caster C-5500-CAST until audible click.\n  c) Test all 5 casters for smooth rotation.\n\nPART NUMBERS REFERENCED:\n- P-9913-BASE (Chair base assembly)\n- P-9912-ARM (Armrest bracket, left/right)\n- S-4012-SCRW (M6x20 socket head cap screw, qty 4)\n- C-7721-GL (Gas lift cylinder, 120mm stroke)\n- B-3301-BLT (M8x25 flange bolt, qty 5)\n- C-5500-CAST (60mm nylon caster, qty 5)\n\nWARRANTY: 5-year structural, 2-year moving parts. Contact support with SKU CHAIR-ERG-X99 and serial number.",
-    "source_file": "product_manuals.csv"
+    "text": "TROUBLESHOOTING GUIDE - ErgoFlex Pro Office Chair (SKU: CHAIR-ERG-X99) COMMON ISSUES AND RESOLUTIONS: 1. RECLINE SQUEAKING NOISE Symptom: Audible squeaking when leaning back in the chair. Root Cause: Loose screw set S-4012-SCRW under base P-9913-BASE or worn pivot bearings. Resolution: a) Turn chair upside down on protective surface. b) Locate screw set S-4012-SCRW (4 screws) securing base P-9913-BASE to seat frame. c) Tighten all 4 screws to 12.5 Nm torque using 5mm hex key. d) If squeaking persists, inspect pivot bearings P-9912-ARM for wear. e) Replace worn bearings with part number P-9912-ARM (2 per chair). 2. HEIGHT ADJUSTMENT FAILURE Symptom: Chair sinks slowly or will not hold height position. Root Cause: Gas lift cylinder C-7721-GL internal seal failure. Resolution: a) Remove base P-9913-BASE by unscrewing 5 bolts B-3301-BLT. b) Extract gas lift cylinder C-7721-GL from column. c) Replace with new cylinder C-7721-GL. d) Reassemble in reverse order. Torque bolts B-3301-BLT to 15 Nm. 3. ARMREST WOBBLE Symptom: Excessive lateral movement in armrests. Root Cause: Loose armrest mounting brackets P-9912-ARM. Resolution: a) Remove armrest caps to access mounting bolts. b) Tighten bracket bolts B-3301-BLT to 8 Nm. c) If brackets are cracked, replace P-9912-ARM (left and right specific). 4. CASTER REPLACEMENT Symptom: Damaged or non-rolling casters. Root Cause: Debris buildup or wheel fracture. Resolution: a) Pull caster C-5500-CAST straight out from base P-9913-BASE. b) Insert new caster C-5500-CAST until audible click. c) Test all 5 casters for smooth rotation. PART NUMBERS REFERENCED: - P-9913-BASE (Chair base assembly) - P-9912-ARM (Armrest bracket, left/right) - S-4012-SCRW (M6x20 socket head cap screw, qty 4) - C-7721-GL (Gas lift cylinder, 120mm stroke) - B-3301-BLT (M8x25 flange bolt, qty 5) - C-5500-CAST (60mm nylon caster, qty 5) WARRANTY: 5-year structural, 2-year moving parts. Contact support with SKU CHAIR-ERG-X99 and serial number.\n\nProduct name: ErgoFlex Pro Office Chair\n\nCategory: Furniture/Seating",
+    "source_file": "product_manuals.csv",
+    "extraction_method": "content_field",
+    "confidence_flags": [],
+    "has_sku": true,
+    "has_category": true
   },
   {
     "sku": "DESK-STD-MOTO",
     "product_name": "Motorized Standing Desk Standard",
     "category": "Furniture/Desks",
-    "text": "TROUBLESHOOTING GUIDE - Motorized Standing Desk Standard (SKU: DESK-STD-MOTO)\n\nCOMMON ISSUES AND RESOLUTIONS:\n\n1. DESK WON'T MOVE UP/DOWN\nSymptom: Control panel shows error E01 or no response.\nRoot Cause: Motor M-8841-MOT overload or control box CB-2201-CTL fault.\nResolution:\n  a) Unplug desk for 60 seconds (hard reset).\n  b) Check all cable connections at control box CB-2201-CTL.\n  c) Verify motor M-8841-MOT cables not pinched.\n  d) Run calibration: Hold DOWN button 10 seconds until display shows CAL.\n  e) If error persists, replace control box CB-2201-CTL.\n\n2. UNEVEN LIFTING (ONE SIDE LAGS)\nSymptom: Left or right leg moves slower, desk becomes unlevel.\nRoot Cause: Spindle SP-4402-SPND binding or motor M-8841-MOT synchronization lost.\nResolution:\n  a) Inspect spindle SP-4402-SPND for debris or damage.\n  b) Lubricate spindle with PTFE grease (part GR-9901-GRS).\n  c) Re-run calibration procedure.\n  d) If persistent, replace spindle SP-4402-SPND on affected side.\n\n3. CONTROL PANEL ERROR CODES\nE01: Motor overload - reduce load, check for obstructions\nE02: Control box fault - replace CB-2201-CTL\nE03: Height sensor error - check sensor SN-1101-HGT wiring\nE04: Anti-collision triggered - clear obstruction, reset\nE05: Motor sync lost - run full calibration\n\n4. MEMORY PRESET NOT WORKING\nSymptom: Saved positions not recalling correctly.\nRoot Cause: Control box CB-2201-CTL memory corruption.\nResolution:\n  a) Clear all presets: Hold M button 5 seconds.\n  b) Re-program positions using UP/DOWN then M + number.\n  c) If fails, replace control box CB-2201-CTL.\n\nPART NUMBERS REFERENCED:\n- M-8841-MOT (Dual motor kit, 24V DC)\n- CB-2201-CTL (Control box with Bluetooth)\n- SP-4402-SPND (Lifting spindle, 600mm)\n- SN-1101-HGT (Hall effect height sensor)\n- B-3301-BLT (M8x30 mounting bolt, qty 8)\n- GR-9901-GRS (PTFE spindle grease, 50g tube)\n\nSPECIFICATIONS:\n- Height range: 620mm - 1270mm\n- Load capacity: 100kg\n- Speed: 32mm/s\n- Duty cycle: 2 min on / 18 min off\n\nWARRANTY: 7-year frame, 3-year electronics. SKU DESK-STD-MOTO.",
-    "source_file": "product_manuals.csv"
+    "text": "TROUBLESHOOTING GUIDE - Motorized Standing Desk Standard (SKU: DESK-STD-MOTO) COMMON ISSUES AND RESOLUTIONS: 1. DESK WON'T MOVE UP/DOWN Symptom: Control panel shows error E01 or no response. Root Cause: Motor M-8841-MOT overload or control box CB-2201-CTL fault. Resolution: a) Unplug desk for 60 seconds (hard reset). b) Check all cable connections at control box CB-2201-CTL. c) Verify motor M-8841-MOT cables not pinched. d) Run calibration: Hold DOWN button 10 seconds until display shows CAL. e) If error persists, replace control box CB-2201-CTL. 2. UNEVEN LIFTING (ONE SIDE LAGS) Symptom: Left or right leg moves slower, desk becomes unlevel. Root Cause: Spindle SP-4402-SPND binding or motor M-8841-MOT synchronization lost. Resolution: a) Inspect spindle SP-4402-SPND for debris or damage. b) Lubricate spindle with PTFE grease (part GR-9901-GRS). c) Re-run calibration procedure. d) If persistent, replace spindle SP-4402-SPND on affected side. 3. CONTROL PANEL ERROR CODES E01: Motor overload - reduce load, check for obstructions E02: Control box fault - replace CB-2201-CTL E03: Height sensor error - check sensor SN-1101-HGT wiring E04: Anti-collision triggered - clear obstruction, reset E05: Motor sync lost - run full calibration 4. MEMORY PRESET NOT WORKING Symptom: Saved positions not recalling correctly. Root Cause: Control box CB-2201-CTL memory corruption. Resolution: a) Clear all presets: Hold M button 5 seconds. b) Re-program positions using UP/DOWN then M + number. c) If fails, replace control box CB-2201-CTL. PART NUMBERS REFERENCED: - M-8841-MOT (Dual motor kit, 24V DC) - CB-2201-CTL (Control box with Bluetooth) - SP-4402-SPND (Lifting spindle, 600mm) - SN-1101-HGT (Hall effect height sensor) - B-3301-BLT (M8x30 mounting bolt, qty 8) - GR-9901-GRS (PTFE spindle grease, 50g tube) SPECIFICATIONS: - Height range: 620mm - 1270mm - Load capacity: 100kg - Speed: 32mm/s - Duty cycle: 2 min on / 18 min off WARRANTY: 7-year frame, 3-year electronics. SKU DESK-STD-MOTO.\n\nProduct name: Motorized Standing Desk Standard\n\nCategory: Furniture/Desks",
+    "source_file": "product_manuals.csv",
+    "extraction_method": "content_field",
+    "confidence_flags": [],
+    "has_sku": true,
+    "has_category": true
   },
   {
     "sku": "MON-ARM-DUAL",
     "product_name": "Dual Monitor Arm Heavy Duty",
     "category": "Furniture/Mounts",
-    "text": "INSTALLATION & TROUBLESHOOTING - Dual Monitor Arm Heavy Duty (SKU: MON-ARM-DUAL)\n\nINSTALLATION STEPS:\n1. Choose mounting method: C-clamp (desk thickness 10-85mm) or Grommet (hole 8-10mm).\n2. For C-clamp: Attach base plate BP-6601-BP using clamp CM-7701-CMP.\n3. For Grommet: Insert bolt GM-8801-GMT through desk, secure with nut.\n3. Mount vertical pole VP-5501-VP to base plate BP-6601-BP.\n4. Attach monitor brackets MB-4401-MB to VESA 75x75 or 100x100 patterns.\n5. Slide brackets onto pole VP-5501-VP, set height, tighten knobs KN-2201-KNB.\n6. Route cables through cable management clips CM-3301-CMC.\n\nTROUBLESHOOTING:\n\n1. MONITOR SAGS OVER TIME\nSymptom: Monitor slowly tilts down after adjustment.\nRoot Cause: Gas spring GS-9901-GSP losing pressure or knob KN-2201-KNB loose.\nResolution:\n  a) Tighten tension adjustment knob KN-2201-KNB clockwise.\n  b) If monitor > 8kg, verify gas spring GS-9901-GSP rating (supports 2-9kg per arm).\n  c) Replace gas spring GS-9901-GSP if internal pressure lost.\n\n2. ARM WON'T STAY IN POSITION\nSymptom: Joints drift, monitor moves unintentionally.\nRoot Cause: Pivot bolts PT-1101-PVT loose or worn.\nResolution:\n  a) Tighten all pivot bolts PT-1101-PVT to 5 Nm.\n  b) Apply thread locker (blue) to PT-1101-PVT threads.\n  c) If bolts stripped, replace pivot assembly PT-1101-PVT.\n\n3. VESA BRACKET MISALIGNMENT\nSymptom: Monitor sits crooked or bracket doesn't align.\nRoot Cause: VESA adapter AD-2202-ADP incorrect orientation.\nResolution:\n  a) Remove bracket MB-4401-MB.\n  b) Rotate VESA adapter AD-2202-ADP 90 degrees.\n  c) Reattach and verify level.\n\nPART NUMBERS REFERENCED:\n- BP-6601-BP (Base plate, steel)\n- CM-7701-CMP (C-clamp assembly)\n- GM-8801-GMT (Grommet mount bolt)\n- VP-5501-VP (Vertical pole, 400mm)\n- MB-4401-MB (Monitor bracket, VESA 75/100)\n- KN-2201-KNB (Tension adjustment knob)\n- GS-9901-GSP (Gas spring, 2-9kg range)\n- PT-1101-PVT (Pivot bolt, M6)\n- AD-2202-ADP (VESA adapter plate)\n- CM-3301-CMC (Cable management clip, qty 4)\n\nLOAD RATING: 9kg per arm (18kg total). VESA 75x75 / 100x100.\nWARRANTY: 3-year mechanical. SKU MON-ARM-DUAL.",
-    "source_file": "product_manuals.csv"
+    "text": "INSTALLATION & TROUBLESHOOTING - Dual Monitor Arm Heavy Duty (SKU: MON-ARM-DUAL) INSTALLATION STEPS: 1. Choose mounting method: C-clamp (desk thickness 10-85mm) or Grommet (hole 8-10mm). 2. For C-clamp: Attach base plate BP-6601-BP using clamp CM-7701-CMP. 3. For Grommet: Insert bolt GM-8801-GMT through desk, secure with nut. 3. Mount vertical pole VP-5501-VP to base plate BP-6601-BP. 4. Attach monitor brackets MB-4401-MB to VESA 75x75 or 100x100 patterns. 5. Slide brackets onto pole VP-5501-VP, set height, tighten knobs KN-2201-KNB. 6. Route cables through cable management clips CM-3301-CMC. TROUBLESHOOTING: 1. MONITOR SAGS OVER TIME Symptom: Monitor slowly tilts down after adjustment. Root Cause: Gas spring GS-9901-GSP losing pressure or knob KN-2201-KNB loose. Resolution: a) Tighten tension adjustment knob KN-2201-KNB clockwise. b) If monitor > 8kg, verify gas spring GS-9901-GSP rating (supports 2-9kg per arm). c) Replace gas spring GS-9901-GSP if internal pressure lost. 2. ARM WON'T STAY IN POSITION Symptom: Joints drift, monitor moves unintentionally. Root Cause: Pivot bolts PT-1101-PVT loose or worn. Resolution: a) Tighten all pivot bolts PT-1101-PVT to 5 Nm. b) Apply thread locker (blue) to PT-1101-PVT threads. c) If bolts stripped, replace pivot assembly PT-1101-PVT. 3. VESA BRACKET MISALIGNMENT Symptom: Monitor sits crooked or bracket doesn't align. Root Cause: VESA adapter AD-2202-ADP incorrect orientation. Resolution: a) Remove bracket MB-4401-MB. b) Rotate VESA adapter AD-2202-ADP 90 degrees. c) Reattach and verify level. PART NUMBERS REFERENCED: - BP-6601-BP (Base plate, steel) - CM-7701-CMP (C-clamp assembly) - GM-8801-GMT (Grommet mount bolt) - VP-5501-VP (Vertical pole, 400mm) - MB-4401-MB (Monitor bracket, VESA 75/100) - KN-2201-KNB (Tension adjustment knob) - GS-9901-GSP (Gas spring, 2-9kg range) - PT-1101-PVT (Pivot bolt, M6) - AD-2202-ADP (VESA adapter plate) - CM-3301-CMC (Cable management clip, qty 4) LOAD RATING: 9kg per arm (18kg total). VESA 75x75 / 100x100. WARRANTY: 3-year mechanical. SKU MON-ARM-DUAL.\n\nProduct name: Dual Monitor Arm Heavy Duty\n\nCategory: Furniture/Mounts",
+    "source_file": "product_manuals.csv",
+    "extraction_method": "content_field",
+    "confidence_flags": [],
+    "has_sku": true,
+    "has_category": true
   },
   {
     "sku": "KB-ERGO-SPLIT",
     "product_name": "ErgoSplit Mechanical Keyboard",
     "category": "Peripherals/Keyboards",
-    "text": "TROUBLESHOOTING GUIDE - ErgoSplit Mechanical Keyboard (SKU: KB-ERGO-SPLIT)\n\nCOMMON ISSUES AND RESOLUTIONS:\n\n1. KEY CHATTER / DOUBLE INPUT\nSymptom: Single keypress registers multiple times.\nRoot Cause: Switch debounce failure or dirty switch contacts.\nResolution:\n  a) Remove keycap using puller KP-1101-PUL.\n  b) Use compressed air to clean switch SW-2201-SWT.\n  c) If persistent, desolder and replace switch SW-2201-SWT (Cherry MX compatible).\n  d) Update firmware to v2.3+ for improved debounce algorithm.\n\n2. LEFT/RIGHT HALF NOT CONNECTING\nSymptom: One half unpaired, LED flashing red.\nRoot Cause: TRRS cable CB-3301-CBL damaged or wireless module WM-4401-WLS fault.\nResolution:\n  a) Inspect TRRS cable CB-3301-CBL for bent pins or cuts.\n  b) Test with known good cable CB-3301-CBL.\n  c) For wireless: Re-pair by holding PAIR button 3s on both halves.\n  d) Replace wireless module WM-4401-WLS if pairing fails.\n\n3. RGB LIGHTING ISSUES\nSymptom: LEDs stuck, wrong colors, or not responding.\nRoot Cause: LED driver LD-5501-LDR fault or firmware bug.\nResolution:\n  a) Reset to default: Hold FN + ESC 5 seconds.\n  b) Update firmware via USB to latest version.\n  c) If hardware fault, replace PCB PC-6601-PCB (left or right specific).\n\n4. KEYCAP STEM BREAKAGE\nSymptom: Keycap loose or falls off.\nRoot Cause: Stem fracture on keycap KP-1101-KCP.\nResolution:\n  a) Replace keycap KP-1101-KCP (standard MX stem).\n  b) Available in sets: KP-1101-KCP-SET (base), KP-1101-KCP-MOD (modifiers).\n\nPART NUMBERS REFERENCED:\n- SW-2201-SWT (Cherry MX Brown switch, qty 70)\n- SW-2201-SWT-RED (Cherry MX Red switch, qty 70)\n- SW-2201-SWT-BLU (Cherry MX Blue switch, qty 70)\n- CB-3301-CBL (TRRS interconnect cable, 300mm)\n- WM-4401-WLS (Wireless module, Bluetooth 5.0/2.4GHz)\n- LD-5501-LDR (LED driver IC, WS2812B compatible)\n- PC-6601-PCB-L (Left half PCB)\n- PC-6601-PCB-R (Right half PCB)\n- KP-1101-KCP (Keycap, PBT, Cherry profile)\n- KP-1101-PUL (Keycap puller, wire type)\n- BT-7701-BAT (Li-ion battery, 2000mAh, per half)\n\nFIRMWARE: QMK compatible. Latest: v2.4.1\nWARRANTY: 2-year electronics. SKU KB-ERGO-SPLIT.",
-    "source_file": "product_manuals.csv"
+    "text": "TROUBLESHOOTING GUIDE - ErgoSplit Mechanical Keyboard (SKU: KB-ERGO-SPLIT) COMMON ISSUES AND RESOLUTIONS: 1. KEY CHATTER / DOUBLE INPUT Symptom: Single keypress registers multiple times. Root Cause: Switch debounce failure or dirty switch contacts. Resolution: a) Remove keycap using puller KP-1101-PUL. b) Use compressed air to clean switch SW-2201-SWT. c) If persistent, desolder and replace switch SW-2201-SWT (Cherry MX compatible). d) Update firmware to v2.3+ for improved debounce algorithm. 2. LEFT/RIGHT HALF NOT CONNECTING Symptom: One half unpaired, LED flashing red. Root Cause: TRRS cable CB-3301-CBL damaged or wireless module WM-4401-WLS fault. Resolution: a) Inspect TRRS cable CB-3301-CBL for bent pins or cuts. b) Test with known good cable CB-3301-CBL. c) For wireless: Re-pair by holding PAIR button 3s on both halves. d) Replace wireless module WM-4401-WLS if pairing fails. 3. RGB LIGHTING ISSUES Symptom: LEDs stuck, wrong colors, or not responding. Root Cause: LED driver LD-5501-LDR fault or firmware bug. Resolution: a) Reset to default: Hold FN + ESC 5 seconds. b) Update firmware via USB to latest version. c) If hardware fault, replace PCB PC-6601-PCB (left or right specific). 4. KEYCAP STEM BREAKAGE Symptom: Keycap loose or falls off. Root Cause: Stem fracture on keycap KP-1101-KCP. Resolution: a) Replace keycap KP-1101-KCP (standard MX stem). b) Available in sets: KP-1101-KCP-SET (base), KP-1101-KCP-MOD (modifiers). PART NUMBERS REFERENCED: - SW-2201-SWT (Cherry MX Brown switch, qty 70) - SW-2201-SWT-RED (Cherry MX Red switch, qty 70) - SW-2201-SWT-BLU (Cherry MX Blue switch, qty 70) - CB-3301-CBL (TRRS interconnect cable, 300mm) - WM-4401-WLS (Wireless module, Bluetooth 5.0/2.4GHz) - LD-5501-LDR (LED driver IC, WS2812B compatible) - PC-6601-PCB-L (Left half PCB) - PC-6601-PCB-R (Right half PCB) - KP-1101-KCP (Keycap, PBT, Cherry profile) - KP-1101-PUL (Keycap puller, wire type) - BT-7701-BAT (Li-ion battery, 2000mAh, per half) FIRMWARE: QMK compatible. Latest: v2.4.1 WARRANTY: 2-year electronics. SKU KB-ERGO-SPLIT.\n\nProduct name: ErgoSplit Mechanical Keyboard\n\nCategory: Peripherals/Keyboards",
+    "source_file": "product_manuals.csv",
+    "extraction_method": "content_field",
+    "confidence_flags": [],
+    "has_sku": true,
+    "has_category": true
   },
   {
     "sku": "MOUSE-VERT-PRO",
     "product_name": "Vertical Ergonomic Mouse Pro",
     "category": "Peripherals/Mice",
-    "text": "TROUBLESHOOTING GUIDE - Vertical Ergonomic Mouse Pro (SKU: MOUSE-VERT-PRO)\n\nCOMMON ISSUES AND RESOLUTIONS:\n\n1. CURSOR JITTER / ERRATIC MOVEMENT\nSymptom: Cursor jumps, stutters, or moves randomly.\nRoot Cause: Sensor lens dirty, surface incompatibility, or sensor SN-8801-SNS fault.\nResolution:\n  a) Clean sensor lens with microfiber cloth (no liquids).\n  b) Use on non-reflective mouse pad MP-9901-MPD.\n  c) Adjust DPI via button or software (400-26000 DPI).\n  d) If persistent, sensor SN-8801-SNS (PixArt PAW3395) may need replacement.\n\n2. WIRELESS DISCONNECTIONS\nSymptom: Mouse disconnects frequently, LED blinks amber.\nRoot Cause: 2.4GHz dongle DG-1101-DGL interference or battery BT-2201-BAT low.\nResolution:\n  a) Move dongle DG-1101-DGL to front USB port (use extension if needed).\n  b) Replace battery BT-2201-BAT (AA, 1.5V alkaline or NiMH).\n  c) Re-pair: Hold DPI + RIGHT click 3s, plug dongle.\n  d) Update firmware via manufacturer software.\n\n3. BUTTON DOUBLE-CLICK ISSUE\nSymptom: Single click registers as double-click.\nRoot Cause: Switch SW-3301-SWT (Omron 50M) contact bounce.\nResolution:\n  a) Update firmware for improved debounce (v1.2+).\n  b) If hardware fault, replace switch SW-3301-SWT (requires soldering).\n  c) Contact support for RMA if under warranty.\n\n4. CHARGING NOT WORKING (WIRELESS MODEL)\nSymptom: No charging indicator, battery drains fast.\nRoot Cause: USB-C port PT-4401-PRT damaged or charging IC CH-5501-CHG fault.\nResolution:\n  a) Test with known good USB-C cable CB-6601-CBL.\n  b) Clean port PT-4401-PRT with compressed air.\n  c) If no charge, replace charging board CH-5501-CHG.\n\nPART NUMBERS REFERENCED:\n- SN-8801-SNS (PixArt PAW3395 optical sensor)\n- SW-3301-SWT (Omron 50M switch, left/right/main)\n- DG-1101-DGL (2.4GHz USB dongle)\n- BT-2201-BAT (AA battery compartment)\n- PT-4401-PRT (USB-C charging port)\n- CH-5501-CHG (Charging controller IC)\n- CB-6601-CBL (USB-C to USB-A cable, 1.8m)\n- MP-9901-MPD (Mouse pad, cloth, 300x250mm)\n- SK-7701-SKT (PTFE mouse feet, set of 4)\n\nSPECIFICATIONS:\n- Sensor: PixArt PAW3395\n- DPI: 400-26000 (50 DPI steps)\n- Polling: 1000Hz (wired/2.4GHz), 125Hz (Bluetooth)\n- Battery: 70 hours (2.4GHz), 120 hours (Bluetooth)\n- Weight: 78g (without battery)\n\nWARRANTY: 2-year. SKU MOUSE-VERT-PRO.",
-    "source_file": "product_manuals.csv"
+    "text": "TROUBLESHOOTING GUIDE - Vertical Ergonomic Mouse Pro (SKU: MOUSE-VERT-PRO) COMMON ISSUES AND RESOLUTIONS: 1. CURSOR JITTER / ERRATIC MOVEMENT Symptom: Cursor jumps, stutters, or moves randomly. Root Cause: Sensor lens dirty, surface incompatibility, or sensor SN-8801-SNS fault. Resolution: a) Clean sensor lens with microfiber cloth (no liquids). b) Use on non-reflective mouse pad MP-9901-MPD. c) Adjust DPI via button or software (400-26000 DPI). d) If persistent, sensor SN-8801-SNS (PixArt PAW3395) may need replacement. 2. WIRELESS DISCONNECTIONS Symptom: Mouse disconnects frequently, LED blinks amber. Root Cause: 2.4GHz dongle DG-1101-DGL interference or battery BT-2201-BAT low. Resolution: a) Move dongle DG-1101-DGL to front USB port (use extension if needed). b) Replace battery BT-2201-BAT (AA, 1.5V alkaline or NiMH). c) Re-pair: Hold DPI + RIGHT click 3s, plug dongle. d) Update firmware via manufacturer software. 3. BUTTON DOUBLE-CLICK ISSUE Symptom: Single click registers as double-click. Root Cause: Switch SW-3301-SWT (Omron 50M) contact bounce. Resolution: a) Update firmware for improved debounce (v1.2+). b) If hardware fault, replace switch SW-3301-SWT (requires soldering). c) Contact support for RMA if under warranty. 4. CHARGING NOT WORKING (WIRELESS MODEL) Symptom: No charging indicator, battery drains fast. Root Cause: USB-C port PT-4401-PRT damaged or charging IC CH-5501-CHG fault. Resolution: a) Test with known good USB-C cable CB-6601-CBL. b) Clean port PT-4401-PRT with compressed air. c) If no charge, replace charging board CH-5501-CHG. PART NUMBERS REFERENCED: - SN-8801-SNS (PixArt PAW3395 optical sensor) - SW-3301-SWT (Omron 50M switch, left/right/main) - DG-1101-DGL (2.4GHz USB dongle) - BT-2201-BAT (AA battery compartment) - PT-4401-PRT (USB-C charging port) - CH-5501-CHG (Charging controller IC) - CB-6601-CBL (USB-C to USB-A cable, 1.8m) - MP-9901-MPD (Mouse pad, cloth, 300x250mm) - SK-7701-SKT (PTFE mouse feet, set of 4) SPECIFICATIONS: - Sensor: PixArt PAW3395 - DPI: 400-26000 (50 DPI steps) - Polling: 1000Hz (wired/2.4GHz), 125Hz (Bluetooth) - Battery: 70 hours (2.4GHz), 120 hours (Bluetooth) - Weight: 78g (without battery) WARRANTY: 2-year. SKU MOUSE-VERT-PRO.\n\nProduct name: Vertical Ergonomic Mouse Pro\n\nCategory: Peripherals/Mice",
+    "source_file": "product_manuals.csv",
+    "extraction_method": "content_field",
+    "confidence_flags": [],
+    "has_sku": true,
+    "has_category": true
   },
   {
     "sku": "HEADSET-WL-PRO",
     "product_name": "Wireless Pro Headset",
     "category": "Peripherals/Audio",
-    "text": "TROUBLESHOOTING GUIDE - Wireless Pro Headset (SKU: HEADSET-WL-PRO)\n\nCOMMON ISSUES AND RESOLUTIONS:\n\n1. NO AUDIO / ONE SIDE ONLY\nSymptom: No sound or only left/right channel working.\nRoot Cause: Audio cable AC-1101-CBL loose, driver DR-2201-DRV failure, or wireless interference.\nResolution:\n  a) For wired mode: Check 3.5mm cable AC-1101-CBL connection.\n  b) For wireless: Re-pair dongle DG-2201-DGL (hold power 5s).\n  c) Test on another device to isolate.\n  d) If one driver dead, replace driver unit DR-2201-DRV (40mm dynamic).\n\n2. MICROPHONE NOT WORKING\nSymptom: Mic muted, low volume, or static.\nRoot Cause: Mic boom MB-3301-BM not seated, mic capsule MC-4401-MIC fault, or software settings.\nResolution:\n  a) Ensure mic boom MB-3301-BM fully inserted (click feel).\n  b) Check mute switch on left earcup (LED red = muted).\n  c) In OS sound settings, select HEADSET-WL-PRO mic, set level 80%.\n  d) If static persists, replace mic capsule MC-4401-MIC (unidirectional).\n\n3. WIRELESS RANGE / DROPOUTS\nSymptom: Audio cuts out beyond 3m or near WiFi router.\nRoot Cause: 2.4GHz congestion or dongle DG-2201-DGL placement.\nResolution:\n  a) Use USB extension to move dongle DG-2201-DGL away from PC case.\n  b) Switch WiFi to 5GHz band.\n  c) Update headset firmware (addresses coexistence).\n  d) Try Bluetooth mode (lower latency tolerance).\n\n4. EARPAD DETERIORATION\nSymptom: Peeling, cracking, or comfort loss.\nRoot Cause: Protein leather wear.\nResolution:\n  a) Replace earpads EP-5501-EPD (protein leather) or EP-5501-EPD-VEL (velour).\n  b) Pull old pads off, align new pads, press firmly.\n\n5. BATTERY LIFE DEGRADATION\nSymptom: Runtime significantly reduced from rated 40h.\nRoot Cause: Battery BT-6601-BAT aging.\nResolution:\n  a) Full discharge/charge cycle 3x to recalibrate gauge.\n  b) If < 50% rated life, replace battery BT-6601-BAT (service center only).\n\nPART NUMBERS REFERENCED:\n- DR-2201-DRV (40mm dynamic driver, 32 ohm)\n- MC-4401-MIC (Unidirectional mic capsule)\n- DG-2201-DGL (2.4GHz USB-C dongle)\n- MB-3301-BM (Detachable mic boom)\n- EP-5501-EPD (Earpads, protein leather, pair)\n- EP-5501-EPD-VEL (Earpads, velour, pair)\n- BT-6601-BAT (Li-ion battery, 1200mAh)\n- AC-1101-CBL (3.5mm audio cable, 1.5m)\n- CB-7701-CBL (USB-C charging cable, 1.2m)\n- HD-8801-HDB (Headband padding replacement)\n\nSPECIFICATIONS:\n- Driver: 40mm dynamic, 20Hz-20kHz\n- Mic: Unidirectional, -38dB sensitivity\n- Wireless: 2.4GHz (dongle) + Bluetooth 5.3\n- Battery: 40h (2.4GHz), 50h (Bluetooth)\n- Weight: 298g\n\nWARRANTY: 2-year. SKU HEADSET-WL-PRO.",
-    "source_file": "product_manuals.csv"
+    "text": "TROUBLESHOOTING GUIDE - Wireless Pro Headset (SKU: HEADSET-WL-PRO) COMMON ISSUES AND RESOLUTIONS: 1. NO AUDIO / ONE SIDE ONLY Symptom: No sound or only left/right channel working. Root Cause: Audio cable AC-1101-CBL loose, driver DR-2201-DRV failure, or wireless interference. Resolution: a) For wired mode: Check 3.5mm cable AC-1101-CBL connection. b) For wireless: Re-pair dongle DG-2201-DGL (hold power 5s). c) Test on another device to isolate. d) If one driver dead, replace driver unit DR-2201-DRV (40mm dynamic). 2. MICROPHONE NOT WORKING Symptom: Mic muted, low volume, or static. Root Cause: Mic boom MB-3301-BM not seated, mic capsule MC-4401-MIC fault, or software settings. Resolution: a) Ensure mic boom MB-3301-BM fully inserted (click feel). b) Check mute switch on left earcup (LED red = muted). c) In OS sound settings, select HEADSET-WL-PRO mic, set level 80%. d) If static persists, replace mic capsule MC-4401-MIC (unidirectional). 3. WIRELESS RANGE / DROPOUTS Symptom: Audio cuts out beyond 3m or near WiFi router. Root Cause: 2.4GHz congestion or dongle DG-2201-DGL placement. Resolution: a) Use USB extension to move dongle DG-2201-DGL away from PC case. b) Switch WiFi to 5GHz band. c) Update headset firmware (addresses coexistence). d) Try Bluetooth mode (lower latency tolerance). 4. EARPAD DETERIORATION Symptom: Peeling, cracking, or comfort loss. Root Cause: Protein leather wear. Resolution: a) Replace earpads EP-5501-EPD (protein leather) or EP-5501-EPD-VEL (velour). b) Pull old pads off, align new pads, press firmly. 5. BATTERY LIFE DEGRADATION Symptom: Runtime significantly reduced from rated 40h. Root Cause: Battery BT-6601-BAT aging. Resolution: a) Full discharge/charge cycle 3x to recalibrate gauge. b) If < 50% rated life, replace battery BT-6601-BAT (service center only). PART NUMBERS REFERENCED: - DR-2201-DRV (40mm dynamic driver, 32 ohm) - MC-4401-MIC (Unidirectional mic capsule) - DG-2201-DGL (2.4GHz USB-C dongle) - MB-3301-BM (Detachable mic boom) - EP-5501-EPD (Earpads, protein leather, pair) - EP-5501-EPD-VEL (Earpads, velour, pair) - BT-6601-BAT (Li-ion battery, 1200mAh) - AC-1101-CBL (3.5mm audio cable, 1.5m) - CB-7701-CBL (USB-C charging cable, 1.2m) - HD-8801-HDB (Headband padding replacement) SPECIFICATIONS: - Driver: 40mm dynamic, 20Hz-20kHz - Mic: Unidirectional, -38dB sensitivity - Wireless: 2.4GHz (dongle) + Bluetooth 5.3 - Battery: 40h (2.4GHz), 50h (Bluetooth) - Weight: 298g WARRANTY: 2-year. SKU HEADSET-WL-PRO.\n\nProduct name: Wireless Pro Headset\n\nCategory: Peripherals/Audio",
+    "source_file": "product_manuals.csv",
+    "extraction_method": "content_field",
+    "confidence_flags": [],
+    "has_sku": true,
+    "has_category": true
   },
   {
     "sku": "CHAIR-ERG-X99",
     "product_name": "ErgoFlex Pro Office Chair",
     "category": "Furniture/Seating",
-    "text": "TROUBLESHOOTING GUIDE - ErgoFlex Pro Office Chair (SKU: CHAIR-ERG-X99)\n\nCOMMON ISSUES AND RESOLUTIONS:\n\n1. RECLINE SQUEAKING NOISE\nSymptom: Audible squeaking when leaning back in the chair.\nRoot Cause: Loose screw set S-4012-SCRW under base P-9913-BASE or worn pivot bearings.\nResolution:\n  a) Turn chair upside down on protective surface.\n  b) Locate screw set S-4012-SCRW (4 screws) securing base P-9913-BASE to seat frame.\n  c) Tighten all 4 screws to 12.5 Nm torque using 5mm hex key.\n  d) If squeaking persists, inspect pivot bearings P-9912-ARM for wear.\n  e) Replace worn bearings with part number P-9912-ARM (2 per chair).\n\n2. HEIGHT ADJUSTMENT FAILURE\nSymptom: Chair sinks slowly or will not hold height position.\nRoot Cause: Gas lift cylinder C-7721-GL internal seal failure.\nResolution:\n  a) Remove base P-9913-BASE by unscrewing 5 bolts B-3301-BLT.\n  b) Extract gas lift cylinder C-7721-GL from column.\n  c) Replace with new cylinder C-7721-GL.\n  d) Reassemble in reverse order. Torque bolts B-3301-BLT to 15 Nm.\n\n3. ARMREST WOBBLE\nSymptom: Excessive lateral movement in armrests.\nRoot Cause: Loose armrest mounting brackets P-9912-ARM.\nResolution:\n  a) Remove armrest caps to access mounting bolts.\n  b) Tighten bracket bolts B-3301-BLT to 8 Nm.\n  c) If brackets are cracked, replace P-9912-ARM (left and right specific).\n\n4. CASTER REPLACEMENT\nSymptom: Damaged or non-rolling casters.\nRoot Cause: Debris buildup or wheel fracture.\nResolution:\n  a) Pull caster C-5500-CAST straight out from base P-9913-BASE.\n  b) Insert new caster C-5500-CAST until audible click.\n  c) Test all 5 casters for smooth rotation.\n\nPART NUMBERS REFERENCED:\n- P-9913-BASE (Chair base assembly)\n- P-9912-ARM (Armrest bracket, left/right)\n- S-4012-SCRW (M6x20 socket head cap screw, qty 4)\n- C-7721-GL (Gas lift cylinder, 120mm stroke)\n- B-3301-BLT (M8x25 flange bolt, qty 5)\n- C-5500-CAST (60mm nylon caster, qty 5)\n\nWARRANTY: 5-year structural, 2-year moving parts. Contact support with SKU CHAIR-ERG-X99 and serial number.",
-    "source_file": "product_manuals.json"
+    "text": "Product name: ErgoFlex Pro Office Chair\n\nCategory: Furniture/Seating\n\nResolution steps: Turn chair upside down on protective surface | Locate screw set S-4012-SCRW (4 screws) securing base P-9913-BASE | Tighten all 4 screws to 12.5 Nm torque using 5mm hex key | Test recline motion for noise\n\nCustomer issue: Chair makes loud squeaking sound when I lean back. Started about 2 weeks ago. Very annoying during meetings.\n\nResolution: Identified loose screw set S-4012-SCRW under base P-9913-BASE. Instructed customer to tighten 4 screws to 12.5 Nm torque using 5mm hex key. Issue resolved.\n\nIssue type: squeaking_noise\n\nPart numbers: P-9913-BASE, S-4012-SCRW\n\nParts used: S-4012-SCRW",
+    "source_file": "troubleshooting_tickets.csv",
+    "extraction_method": "part_numbers_field",
+    "confidence_flags": [
+      "no_content"
+    ],
+    "has_sku": true,
+    "has_category": true
+  },
+  {
+    "sku": "CHAIR-ERG-X99",
+    "product_name": "ErgoFlex Pro Office Chair",
+    "category": "Furniture/Seating",
+    "text": "Product name: ErgoFlex Pro Office Chair\n\nCategory: Furniture/Seating\n\nResolution steps: Remove base P-9913-BASE by unscrewing 5 bolts B-3301-BLT | Extract gas lift cylinder C-7721-GL from column | Replace with new cylinder C-7721-GL | Reassemble in reverse order, torque bolts B-3301-BLT to 15 Nm\n\nCustomer issue: Chair slowly sinks down throughout the day. Have to pump it up every hour. Gas lift seems broken.\n\nResolution: Diagnosed gas lift cylinder C-7721-GL internal seal failure. Shipped replacement cylinder C-7721-GL. Customer replaced following guide: remove base bolts B-3301-BLT, swap cylinder, reassemble.\n\nIssue type: height_adjustment_failure\n\nPart numbers: C-7721-GL, B-3301-BLT\n\nParts used: C-7721-GL",
+    "source_file": "troubleshooting_tickets.csv",
+    "extraction_method": "part_numbers_field",
+    "confidence_flags": [
+      "no_content"
+    ],
+    "has_sku": true,
+    "has_category": true
   },
   {
     "sku": "DESK-STD-MOTO",
     "product_name": "Motorized Standing Desk Standard",
     "category": "Furniture/Desks",
-    "text": "TROUBLESHOOTING GUIDE - Motorized Standing Desk Standard (SKU: DESK-STD-MOTO)\n\nCOMMON ISSUES AND RESOLUTIONS:\n\n1. DESK WON'T MOVE UP/DOWN\nSymptom: Control panel shows error E01 or no response.\nRoot Cause: Motor M-8841-MOT overload or control box CB-2201-CTL fault.\nResolution:\n  a) Unplug desk for 60 seconds (hard reset).\n  b) Check all cable connections at control box CB-2201-CTL.\n  c) Verify motor M-8841-MOT cables not pinched.\n  d) Run calibration: Hold DOWN button 10 seconds until display shows CAL.\n  e) If error persists, replace control box CB-2201-CTL.\n\n2. UNEVEN LIFTING (ONE SIDE LAGS)\nSymptom: Left or right leg moves slower, desk becomes unlevel.\nRoot Cause: Spindle SP-4402-SPND binding or motor M-8841-MOT synchronization lost.\nResolution:\n  a) Inspect spindle SP-4402-SPND for debris or damage.\n  b) Lubricate spindle with PTFE grease (part GR-9901-GRS).\n  c) Re-run calibration procedure.\n  d) If persistent, replace spindle SP-4402-SPND on affected side.\n\n3. CONTROL PANEL ERROR CODES\nE01: Motor overload - reduce load, check for obstructions\nE02: Control box fault - replace CB-2201-CTL\nE03: Height sensor error - check sensor SN-1101-HGT wiring\nE04: Anti-collision triggered - clear obstruction, reset\nE05: Motor sync lost - run full calibration\n\n4. MEMORY PRESET NOT WORKING\nSymptom: Saved positions not recalling correctly.\nRoot Cause: Control box CB-2201-CTL memory corruption.\nResolution:\n  a) Clear all presets: Hold M button 5 seconds.\n  b) Re-program positions using UP/DOWN then M + number.\n  c) If fails, replace control box CB-2201-CTL.\n\nPART NUMBERS REFERENCED:\n- M-8841-MOT (Dual motor kit, 24V DC)\n- CB-2201-CTL (Control box with Bluetooth)\n- SP-4402-SPND (Lifting spindle, 600mm)\n- SN-1101-HGT (Hall effect height sensor)\n- B-3301-BLT (M8x30 mounting bolt, qty 8)\n- GR-9901-GRS (PTFE spindle grease, 50g tube)\n\nSPECIFICATIONS:\n- Height range: 620mm - 1270mm\n- Load capacity: 100kg\n- Speed: 32mm/s\n- Duty cycle: 2 min on / 18 min off\n\nWARRANTY: 7-year frame, 3-year electronics. SKU DESK-STD-MOTO.",
-    "source_file": "product_manuals.json"
+    "text": "Product name: Motorized Standing Desk Standard\n\nCategory: Furniture/Desks\n\nResolution steps: Unplug all cables from control box CB-2201-CTL | Unmount control box from desk frame | Install replacement control box CB-2201-CTL | Reconnect all motor and sensor cables | Re-pair with mobile app via Bluetooth\n\nCustomer issue: Desk shows error E02 on control panel. Won't move up or down. Tried unplugging for a minute but error comes back.\n\nResolution: Error E02 indicates control box CB-2201-CTL fault. Shipped replacement control box. Customer swapped unit and re-paired Bluetooth app.\n\nIssue type: control_box_fault\n\nPart numbers: CB-2201-CTL, M-8841-MOT\n\nParts used: CB-2201-CTL",
+    "source_file": "troubleshooting_tickets.csv",
+    "extraction_method": "part_numbers_field",
+    "confidence_flags": [
+      "no_content"
+    ],
+    "has_sku": true,
+    "has_category": true
+  },
+  {
+    "sku": "DESK-STD-MOTO",
+    "product_name": "Motorized Standing Desk Standard",
+    "category": "Furniture/Desks",
+    "text": "Product name: Motorized Standing Desk Standard\n\nCategory: Furniture/Desks\n\nResolution steps: Lower desk fully | Apply PTFE grease GR-9901-GRS to left spindle SP-4402-SPND threads | Run calibration: hold DOWN button 10 seconds until CAL appears | Test full up/down cycle for even movement\n\nCustomer issue: Left side of desk lags behind right side. Desk gets crooked when raising. Makes grinding noise on left side.\n\nResolution: Left spindle SP-4402-SPND binding. Instructed customer to lubricate with PTFE grease GR-9901-GRS and run calibration. If persistent, replace spindle.\n\nIssue type: uneven_lifting\n\nPart numbers: SP-4402-SPND, GR-9901-GRS\n\nParts used: GR-9901-GRS",
+    "source_file": "troubleshooting_tickets.csv",
+    "extraction_method": "part_numbers_field",
+    "confidence_flags": [
+      "no_content"
+    ],
+    "has_sku": true,
+    "has_category": true
   },
   {
     "sku": "MON-ARM-DUAL",
     "product_name": "Dual Monitor Arm Heavy Duty",
     "category": "Furniture/Mounts",
-    "text": "INSTALLATION & TROUBLESHOOTING - Dual Monitor Arm Heavy Duty (SKU: MON-ARM-DUAL)\n\nINSTALLATION STEPS:\n1. Choose mounting method: C-clamp (desk thickness 10-85mm) or Grommet (hole 8-10mm).\n2. For C-clamp: Attach base plate BP-6601-BP using clamp CM-7701-CMP.\n3. For Grommet: Insert bolt GM-8801-GMT through desk, secure with nut.\n3. Mount vertical pole VP-5501-VP to base plate BP-6601-BP.\n4. Attach monitor brackets MB-4401-MB to VESA 75x75 or 100x100 patterns.\n5. Slide brackets onto pole VP-5501-VP, set height, tighten knobs KN-2201-KNB.\n6. Route cables through cable management clips CM-3301-CMC.\n\nTROUBLESHOOTING:\n\n1. MONITOR SAGS OVER TIME\nSymptom: Monitor slowly tilts down after adjustment.\nRoot Cause: Gas spring GS-9901-GSP losing pressure or knob KN-2201-KNB loose.\nResolution:\n  a) Tighten tension adjustment knob KN-2201-KNB clockwise.\n  b) If monitor > 8kg, verify gas spring GS-9901-GSP rating (supports 2-9kg per arm).\n  c) Replace gas spring GS-9901-GSP if internal pressure lost.\n\n2. ARM WON'T STAY IN POSITION\nSymptom: Joints drift, monitor moves unintentionally.\nRoot Cause: Pivot bolts PT-1101-PVT loose or worn.\nResolution:\n  a) Tighten all pivot bolts PT-1101-PVT to 5 Nm.\n  b) Apply thread locker (blue) to PT-1101-PVT threads.\n  c) If bolts stripped, replace pivot assembly PT-1101-PVT.\n\n3. VESA BRACKET MISALIGNMENT\nSymptom: Monitor sits crooked or bracket doesn't align.\nRoot Cause: VESA adapter AD-2202-ADP incorrect orientation.\nResolution:\n  a) Remove bracket MB-4401-MB.\n  b) Rotate VESA adapter AD-2202-ADP 90 degrees.\n  c) Reattach and verify level.\n\nPART NUMBERS REFERENCED:\n- BP-6601-BP (Base plate, steel)\n- CM-7701-CMP (C-clamp assembly)\n- GM-8801-GMT (Grommet mount bolt)\n- VP-5501-VP (Vertical pole, 400mm)\n- MB-4401-MB (Monitor bracket, VESA 75/100)\n- KN-2201-KNB (Tension adjustment knob)\n- GS-9901-GSP (Gas spring, 2-9kg range)\n- PT-1101-PVT (Pivot bolt, M6)\n- AD-2202-ADP (VESA adapter plate)\n- CM-3301-CMC (Cable management clip, qty 4)\n\nLOAD RATING: 9kg per arm (18kg total). VESA 75x75 / 100x100.\nWARRANTY: 3-year mechanical. SKU MON-ARM-DUAL.",
-    "source_file": "product_manuals.json"
+    "text": "Product name: Dual Monitor Arm Heavy Duty\n\nCategory: Furniture/Mounts\n\nResolution steps: Support monitor weight while working | Remove pivot bolts PT-1101-PVT (M6) on right arm | Swap gas spring GS-9901-GSP | Reinstall pivot bolts PT-1101-PVT with blue thread locker, torque 5 Nm | Adjust tension knob KN-2201-KNB for monitor weight\n\nCustomer issue: Right monitor slowly tilts downward over the course of the day. Have to readjust every morning. Monitor weighs about 7kg.\n\nResolution: Gas spring GS-9901-GSP losing pressure on right arm. 7kg is within 2-9kg range but spring may be defective. Shipped replacement GS-9901-GSP. Customer replaced pivot bolts PT-1101-PVT at same time.\n\nIssue type: monitor_sag\n\nPart numbers: GS-9901-GSP, PT-1101-PVT\n\nParts used: GS-9901-GSP, PT-1101-PVT",
+    "source_file": "troubleshooting_tickets.csv",
+    "extraction_method": "part_numbers_field",
+    "confidence_flags": [
+      "no_content"
+    ],
+    "has_sku": true,
+    "has_category": true
   },
   {
     "sku": "KB-ERGO-SPLIT",
     "product_name": "ErgoSplit Mechanical Keyboard",
     "category": "Peripherals/Keyboards",
-    "text": "TROUBLESHOOTING GUIDE - ErgoSplit Mechanical Keyboard (SKU: KB-ERGO-SPLIT)\n\nCOMMON ISSUES AND RESOLUTIONS:\n\n1. KEY CHATTER / DOUBLE INPUT\nSymptom: Single keypress registers multiple times.\nRoot Cause: Switch debounce failure or dirty switch contacts.\nResolution:\n  a) Remove keycap using puller KP-1101-PUL.\n  b) Use compressed air to clean switch SW-2201-SWT.\n  c) If persistent, desolder and replace switch SW-2201-SWT (Cherry MX compatible).\n  d) Update firmware to v2.3+ for improved debounce algorithm.\n\n2. LEFT/RIGHT HALF NOT CONNECTING\nSymptom: One half unpaired, LED flashing red.\nRoot Cause: TRRS cable CB-3301-CBL damaged or wireless module WM-4401-WLS fault.\nResolution:\n  a) Inspect TRRS cable CB-3301-CBL for bent pins or cuts.\n  b) Test with known good cable CB-3301-CBL.\n  c) For wireless: Re-pair by holding PAIR button 3s on both halves.\n  d) Replace wireless module WM-4401-WLS if pairing fails.\n\n3. RGB LIGHTING ISSUES\nSymptom: LEDs stuck, wrong colors, or not responding.\nRoot Cause: LED driver LD-5501-LDR fault or firmware bug.\nResolution:\n  a) Reset to default: Hold FN + ESC 5 seconds.\n  b) Update firmware via USB to latest version.\n  c) If hardware fault, replace PCB PC-6601-PCB (left or right specific).\n\n4. KEYCAP STEM BREAKAGE\nSymptom: Keycap loose or falls off.\nRoot Cause: Stem fracture on keycap KP-1101-KCP.\nResolution:\n  a) Replace keycap KP-1101-KCP (standard MX stem).\n  b) Available in sets: KP-1101-KCP-SET (base), KP-1101-KCP-MOD (modifiers).\n\nPART NUMBERS REFERENCED:\n- SW-2201-SWT (Cherry MX Brown switch, qty 70)\n- SW-2201-SWT-RED (Cherry MX Red switch, qty 70)\n- SW-2201-SWT-BLU (Cherry MX Blue switch, qty 70)\n- CB-3301-CBL (TRRS interconnect cable, 300mm)\n- WM-4401-WLS (Wireless module, Bluetooth 5.0/2.4GHz)\n- LD-5501-LDR (LED driver IC, WS2812B compatible)\n- PC-6601-PCB-L (Left half PCB)\n- PC-6601-PCB-R (Right half PCB)\n- KP-1101-KCP (Keycap, PBT, Cherry profile)\n- KP-1101-PUL (Keycap puller, wire type)\n- BT-7701-BAT (Li-ion battery, 2000mAh, per half)\n\nFIRMWARE: QMK compatible. Latest: v2.4.1\nWARRANTY: 2-year electronics. SKU KB-ERGO-SPLIT.",
-    "source_file": "product_manuals.json"
+    "text": "Product name: ErgoSplit Mechanical Keyboard\n\nCategory: Peripherals/Keyboards\n\nResolution steps: Update firmware to v2.4.1 via USB | Test E key for chatter | If persistent: remove keycap with KP-1101-PUL | Desolder switch SW-2201-SWT, solder replacement | Test with firmware debounce enabled\n\nCustomer issue: E key on left half registering double presses. Makes typing very difficult. Tried cleaning with air but no change.\n\nResolution: Switch SW-2201-SWT (Cherry MX Brown) on E key showing chatter. Firmware v2.3+ has improved debounce. Advised firmware update first, then switch replacement if needed.\n\nIssue type: key_chatter\n\nPart numbers: SW-2201-SWT, CB-3301-CBL\n\nParts used: SW-2201-SWT",
+    "source_file": "troubleshooting_tickets.csv",
+    "extraction_method": "part_numbers_field",
+    "confidence_flags": [
+      "no_content"
+    ],
+    "has_sku": true,
+    "has_category": true
+  },
+  {
+    "sku": "KB-ERGO-SPLIT",
+    "product_name": "ErgoSplit Mechanical Keyboard",
+    "category": "Peripherals/Keyboards",
+    "text": "Product name: ErgoSplit Mechanical Keyboard\n\nCategory: Peripherals/Keyboards\n\nResolution steps: Test with wired TRRS cable CB-3301-CBL to isolate wireless | Right half fails wireless, works wired | Desolder wireless module WM-4401-WLS (4 pads) | Replace battery BT-7701-BAT | Solder new WM-4401-WLS, re-pair halves\n\nCustomer issue: Right half of keyboard randomly disconnects. LED flashes red. Have to unplug/replug TRRS cable to reconnect. Happens 3-4 times per day.\n\nResolution: Wireless module WM-4401-WLS on right half showing intermittent connectivity. Battery BT-7701-BAT also tested low. Replaced both wireless module and battery on right half.\n\nIssue type: half_disconnect\n\nPart numbers: WM-4401-WLS, BT-7701-BAT\n\nParts used: WM-4401-WLS, BT-7701-BAT",
+    "source_file": "troubleshooting_tickets.csv",
+    "extraction_method": "part_numbers_field",
+    "confidence_flags": [
+      "no_content"
+    ],
+    "has_sku": true,
+    "has_category": true
   },
   {
     "sku": "MOUSE-VERT-PRO",
     "product_name": "Vertical Ergonomic Mouse Pro",
     "category": "Peripherals/Mice",
-    "text": "TROUBLESHOOTING GUIDE - Vertical Ergonomic Mouse Pro (SKU: MOUSE-VERT-PRO)\n\nCOMMON ISSUES AND RESOLUTIONS:\n\n1. CURSOR JITTER / ERRATIC MOVEMENT\nSymptom: Cursor jumps, stutters, or moves randomly.\nRoot Cause: Sensor lens dirty, surface incompatibility, or sensor SN-8801-SNS fault.\nResolution:\n  a) Clean sensor lens with microfiber cloth (no liquids).\n  b) Use on non-reflective mouse pad MP-9901-MPD.\n  c) Adjust DPI via button or software (400-26000 DPI).\n  d) If persistent, sensor SN-8801-SNS (PixArt PAW3395) may need replacement.\n\n2. WIRELESS DISCONNECTIONS\nSymptom: Mouse disconnects frequently, LED blinks amber.\nRoot Cause: 2.4GHz dongle DG-1101-DGL interference or battery BT-2201-BAT low.\nResolution:\n  a) Move dongle DG-1101-DGL to front USB port (use extension if needed).\n  b) Replace battery BT-2201-BAT (AA, 1.5V alkaline or NiMH).\n  c) Re-pair: Hold DPI + RIGHT click 3s, plug dongle.\n  d) Update firmware via manufacturer software.\n\n3. BUTTON DOUBLE-CLICK ISSUE\nSymptom: Single click registers as double-click.\nRoot Cause: Switch SW-3301-SWT (Omron 50M) contact bounce.\nResolution:\n  a) Update firmware for improved debounce (v1.2+).\n  b) If hardware fault, replace switch SW-3301-SWT (requires soldering).\n  c) Contact support for RMA if under warranty.\n\n4. CHARGING NOT WORKING (WIRELESS MODEL)\nSymptom: No charging indicator, battery drains fast.\nRoot Cause: USB-C port PT-4401-PRT damaged or charging IC CH-5501-CHG fault.\nResolution:\n  a) Test with known good USB-C cable CB-6601-CBL.\n  b) Clean port PT-4401-PRT with compressed air.\n  c) If no charge, replace charging board CH-5501-CHG.\n\nPART NUMBERS REFERENCED:\n- SN-8801-SNS (PixArt PAW3395 optical sensor)\n- SW-3301-SWT (Omron 50M switch, left/right/main)\n- DG-1101-DGL (2.4GHz USB dongle)\n- BT-2201-BAT (AA battery compartment)\n- PT-4401-PRT (USB-C charging port)\n- CH-5501-CHG (Charging controller IC)\n- CB-6601-CBL (USB-C to USB-A cable, 1.8m)\n- MP-9901-MPD (Mouse pad, cloth, 300x250mm)\n- SK-7701-SKT (PTFE mouse feet, set of 4)\n\nSPECIFICATIONS:\n- Sensor: PixArt PAW3395\n- DPI: 400-26000 (50 DPI steps)\n- Polling: 1000Hz (wired/2.4GHz), 125Hz (Bluetooth)\n- Battery: 70 hours (2.4GHz), 120 hours (Bluetooth)\n- Weight: 78g (without battery)\n\nWARRANTY: 2-year. SKU MOUSE-VERT-PRO.",
-    "source_file": "product_manuals.json"
+    "text": "Product name: Vertical Ergonomic Mouse Pro\n\nCategory: Peripherals/Mice\n\nResolution steps: Clean sensor lens with microfiber cloth | Use on cloth mouse pad MP-9901-MPD (not glass/reflective) | Update firmware to v1.3+ for improved surface tracking | Lower DPI to 1600 for better stability\n\nCustomer issue: Cursor jumps around randomly, especially on my glass desk. Works fine on mousepad but I prefer using directly on desk.\n\nResolution: Sensor SN-8801-SNS (PAW3395) has issues on reflective surfaces. Recommended mouse pad MP-9901-MPD. Also updated firmware for better surface adaptation.\n\nIssue type: cursor_jitter\n\nPart numbers: SN-8801-SNS, DG-1101-DGL",
+    "source_file": "troubleshooting_tickets.csv",
+    "extraction_method": "part_numbers_field",
+    "confidence_flags": [
+      "no_content"
+    ],
+    "has_sku": true,
+    "has_category": true
+  },
+  {
+    "sku": "MOUSE-VERT-PRO",
+    "product_name": "Vertical Ergonomic Mouse Pro",
+    "category": "Peripherals/Mice",
+    "text": "Product name: Vertical Ergonomic Mouse Pro\n\nCategory: Peripherals/Mice\n\nResolution steps: Update firmware to v1.4 via manufacturer software | Test left button for double-click | If persistent: initiate RMA for switch SW-3301-SWT replacement | Note: requires soldering, not user-serviceable\n\nCustomer issue: Left mouse button registering double clicks when I only click once. Very frustrating for drag operations and gaming.\n\nResolution: Omron switch SW-3301-SWT contact bounce. Firmware v1.2+ has software debounce. Advised firmware update first. If hardware fault, RMA for switch replacement.\n\nIssue type: double_click\n\nPart numbers: SW-3301-SWT, CH-5501-CHG",
+    "source_file": "troubleshooting_tickets.csv",
+    "extraction_method": "part_numbers_field",
+    "confidence_flags": [
+      "no_content"
+    ],
+    "has_sku": true,
+    "has_category": true
   },
   {
     "sku": "HEADSET-WL-PRO",
     "product_name": "Wireless Pro Headset",
     "category": "Peripherals/Audio",
-    "text": "TROUBLESHOOTING GUIDE - Wireless Pro Headset (SKU: HEADSET-WL-PRO)\n\nCOMMON ISSUES AND RESOLUTIONS:\n\n1. NO AUDIO / ONE SIDE ONLY\nSymptom: No sound or only left/right channel working.\nRoot Cause: Audio cable AC-1101-CBL loose, driver DR-2201-DRV failure, or wireless interference.\nResolution:\n  a) For wired mode: Check 3.5mm cable AC-1101-CBL connection.\n  b) For wireless: Re-pair dongle DG-2201-DGL (hold power 5s).\n  c) Test on another device to isolate.\n  d) If one driver dead, replace driver unit DR-2201-DRV (40mm dynamic).\n\n2. MICROPHONE NOT WORKING\nSymptom: Mic muted, low volume, or static.\nRoot Cause: Mic boom MB-3301-BM not seated, mic capsule MC-4401-MIC fault, or software settings.\nResolution:\n  a) Ensure mic boom MB-3301-BM fully inserted (click feel).\n  b) Check mute switch on left earcup (LED red = muted).\n  c) In OS sound settings, select HEADSET-WL-PRO mic, set level 80%.\n  d) If static persists, replace mic capsule MC-4401-MIC (unidirectional).\n\n3. WIRELESS RANGE / DROPOUTS\nSymptom: Audio cuts out beyond 3m or near WiFi router.\nRoot Cause: 2.4GHz congestion or dongle DG-2201-DGL placement.\nResolution:\n  a) Use USB extension to move dongle DG-2201-DGL away from PC case.\n  b) Switch WiFi to 5GHz band.\n  c) Update headset firmware (addresses coexistence).\n  d) Try Bluetooth mode (lower latency tolerance).\n\n4. EARPAD DETERIORATION\nSymptom: Peeling, cracking, or comfort loss.\nRoot Cause: Protein leather wear.\nResolution:\n  a) Replace earpads EP-5501-EPD (protein leather) or EP-5501-EPD-VEL (velour).\n  b) Pull old pads off, align new pads, press firmly.\n\n5. BATTERY LIFE DEGRADATION\nSymptom: Runtime significantly reduced from rated 40h.\nRoot Cause: Battery BT-6601-BAT aging.\nResolution:\n  a) Full discharge/charge cycle 3x to recalibrate gauge.\n  b) If < 50% rated life, replace battery BT-6601-BAT (service center only).\n\nPART NUMBERS REFERENCED:\n- DR-2201-DRV (40mm dynamic driver, 32 ohm)\n- MC-4401-MIC (Unidirectional mic capsule)\n- DG-2201-DGL (2.4GHz USB-C dongle)\n- MB-3301-BM (Detachable mic boom)\n- EP-5501-EPD (Earpads, protein leather, pair)\n- EP-5501-EPD-VEL (Earpads, velour, pair)\n- BT-6601-BAT (Li-ion battery, 1200mAh)\n- AC-1101-CBL (3.5mm audio cable, 1.5m)\n- CB-7701-CBL (USB-C charging cable, 1.2m)\n- HD-8801-HDB (Headband padding replacement)\n\nSPECIFICATIONS:\n- Driver: 40mm dynamic, 20Hz-20kHz\n- Mic: Unidirectional, -38dB sensitivity\n- Wireless: 2.4GHz (dongle) + Bluetooth 5.3\n- Battery: 40h (2.4GHz), 50h (Bluetooth)\n- Weight: 298g\n\nWARRANTY: 2-year. SKU HEADSET-WL-PRO.",
-    "source_file": "product_manuals.json"
+    "text": "Product name: Wireless Pro Headset\n\nCategory: Peripherals/Audio\n\nResolution steps: Remove and firmly re-insert mic boom MB-3301-BM until click | Verify mute switch shows white (not red) | In Discord/OS: select HEADSET-WL-PRO as input, set volume 80% | Re-pair dongle DG-2201-DGL: hold power 5 seconds\n\nCustomer issue: Teammates can't hear me on Discord. Mic shows as connected but no input. Mute light is off (white).\n\nResolution: Mic boom MB-3301-BM not fully seated - needs firm click. Also verified mic capsule MC-4401-MIC functional. Dongle DG-2201-DGL re-paired.\n\nIssue type: mic_not_working\n\nPart numbers: MC-4401-MIC, DG-2201-DGL",
+    "source_file": "troubleshooting_tickets.csv",
+    "extraction_method": "part_numbers_field",
+    "confidence_flags": [
+      "no_content"
+    ],
+    "has_sku": true,
+    "has_category": true
   },
   {
     "sku": "CHAIR-ERG-X99",
     "product_name": "ErgoFlex Pro Office Chair",
     "category": "Furniture/Seating",
-    "text": "Turn chair upside down on protective surface\n\nLocate screw set S-4012-SCRW (4 screws) securing base P-9913-BASE\n\nTighten all 4 screws to 12.5 Nm torque using 5mm hex key\n\nTest recline motion for noise\n\nCustomer issue: Chair makes loud squeaking sound when I lean back. Started about 2 weeks ago. Very annoying during meetings.\n\nResolution: Identified loose screw set S-4012-SCRW under base P-9913-BASE. Instructed customer to tighten 4 screws to 12.5 Nm torque using 5mm hex key. Issue resolved.\n\nIssue type: squeaking_noise\n\nPart numbers: P-9913-BASE, S-4012-SCRW",
-    "source_file": "troubleshooting_tickets.csv"
+    "text": "Product name: ErgoFlex Pro Office Chair\n\nCategory: Furniture/Seating\n\nResolution steps:\n- Turn chair upside down on protective surface\n- Locate screw set S-4012-SCRW (4 screws) securing base P-9913-BASE\n- Tighten all 4 screws to 12.5 Nm torque using 5mm hex key\n- Test recline motion for noise\n\nCustomer issue: Chair makes loud squeaking sound when I lean back. Started about 2 weeks ago. Very annoying during meetings.\n\nResolution: Identified loose screw set S-4012-SCRW under base P-9913-BASE. Instructed customer to tighten 4 screws to 12.5 Nm torque using 5mm hex key. Issue resolved.\n\nIssue type: squeaking_noise\n\nPart numbers: P-9913-BASE, S-4012-SCRW\n\nParts used: S-4012-SCRW",
+    "source_file": "troubleshooting_tickets.json",
+    "extraction_method": "part_numbers_field",
+    "confidence_flags": [
+      "no_content"
+    ],
+    "has_sku": true,
+    "has_category": true
   },
   {
     "sku": "CHAIR-ERG-X99",
     "product_name": "ErgoFlex Pro Office Chair",
     "category": "Furniture/Seating",
-    "text": "Remove base P-9913-BASE by unscrewing 5 bolts B-3301-BLT\n\nExtract gas lift cylinder C-7721-GL from column\n\nReplace with new cylinder C-7721-GL\n\nReassemble in reverse order, torque bolts B-3301-BLT to 15 Nm\n\nCustomer issue: Chair slowly sinks down throughout the day. Have to pump it up every hour. Gas lift seems broken.\n\nResolution: Diagnosed gas lift cylinder C-7721-GL internal seal failure. Shipped replacement cylinder C-7721-GL. Customer replaced following guide: remove base bolts B-3301-BLT, swap cylinder, reassemble.\n\nIssue type: height_adjustment_failure\n\nPart numbers: C-7721-GL, B-3301-BLT",
-    "source_file": "troubleshooting_tickets.csv"
+    "text": "Product name: ErgoFlex Pro Office Chair\n\nCategory: Furniture/Seating\n\nResolution steps:\n- Remove base P-9913-BASE by unscrewing 5 bolts B-3301-BLT\n- Extract gas lift cylinder C-7721-GL from column\n- Replace with new cylinder C-7721-GL\n- Reassemble in reverse order, torque bolts B-3301-BLT to 15 Nm\n\nCustomer issue: Chair slowly sinks down throughout the day. Have to pump it up every hour. Gas lift seems broken.\n\nResolution: Diagnosed gas lift cylinder C-7721-GL internal seal failure. Shipped replacement cylinder C-7721-GL. Customer replaced following guide: remove base bolts B-3301-BLT, swap cylinder, reassemble.\n\nIssue type: height_adjustment_failure\n\nPart numbers: C-7721-GL, B-3301-BLT\n\nParts used: C-7721-GL",
+    "source_file": "troubleshooting_tickets.json",
+    "extraction_method": "part_numbers_field",
+    "confidence_flags": [
+      "no_content"
+    ],
+    "has_sku": true,
+    "has_category": true
   },
   {
     "sku": "DESK-STD-MOTO",
     "product_name": "Motorized Standing Desk Standard",
     "category": "Furniture/Desks",
-    "text": "Unplug all cables from control box CB-2201-CTL\n\nUnmount control box from desk frame\n\nInstall replacement control box CB-2201-CTL\n\nReconnect all motor and sensor cables\n\nRe-pair with mobile app via Bluetooth\n\nCustomer issue: Desk shows error E02 on control panel. Won't move up or down. Tried unplugging for a minute but error comes back.\n\nResolution: Error E02 indicates control box CB-2201-CTL fault. Shipped replacement control box. Customer swapped unit and re-paired Bluetooth app.\n\nIssue type: control_box_fault\n\nPart numbers: CB-2201-CTL, M-8841-MOT",
-    "source_file": "troubleshooting_tickets.csv"
+    "text": "Product name: Motorized Standing Desk Standard\n\nCategory: Furniture/Desks\n\nResolution steps:\n- Unplug all cables from control box CB-2201-CTL\n- Unmount control box from desk frame\n- Install replacement control box CB-2201-CTL\n- Reconnect all motor and sensor cables\n- Re-pair with mobile app via Bluetooth\n\nCustomer issue: Desk shows error E02 on control panel. Won't move up or down. Tried unplugging for a minute but error comes back.\n\nResolution: Error E02 indicates control box CB-2201-CTL fault. Shipped replacement control box. Customer swapped unit and re-paired Bluetooth app.\n\nIssue type: control_box_fault\n\nPart numbers: CB-2201-CTL, M-8841-MOT\n\nParts used: CB-2201-CTL",
+    "source_file": "troubleshooting_tickets.json",
+    "extraction_method": "part_numbers_field",
+    "confidence_flags": [
+      "no_content"
+    ],
+    "has_sku": true,
+    "has_category": true
   },
   {
     "sku": "DESK-STD-MOTO",
     "product_name": "Motorized Standing Desk Standard",
     "category": "Furniture/Desks",
-    "text": "Lower desk fully\n\nApply PTFE grease GR-9901-GRS to left spindle SP-4402-SPND threads\n\nRun calibration: hold DOWN button 10 seconds until CAL appears\n\nTest full up/down cycle for even movement\n\nCustomer issue: Left side of desk lags behind right side. Desk gets crooked when raising. Makes grinding noise on left side.\n\nResolution: Left spindle SP-4402-SPND binding. Instructed customer to lubricate with PTFE grease GR-9901-GRS and run calibration. If persistent, replace spindle.\n\nIssue type: uneven_lifting\n\nPart numbers: SP-4402-SPND, GR-9901-GRS",
-    "source_file": "troubleshooting_tickets.csv"
+    "text": "Product name: Motorized Standing Desk Standard\n\nCategory: Furniture/Desks\n\nResolution steps:\n- Lower desk fully\n- Apply PTFE grease GR-9901-GRS to left spindle SP-4402-SPND threads\n- Run calibration: hold DOWN button 10 seconds until CAL appears\n- Test full up/down cycle for even movement\n\nCustomer issue: Left side of desk lags behind right side. Desk gets crooked when raising. Makes grinding noise on left side.\n\nResolution: Left spindle SP-4402-SPND binding. Instructed customer to lubricate with PTFE grease GR-9901-GRS and run calibration. If persistent, replace spindle.\n\nIssue type: uneven_lifting\n\nPart numbers: SP-4402-SPND, GR-9901-GRS\n\nParts used: GR-9901-GRS",
+    "source_file": "troubleshooting_tickets.json",
+    "extraction_method": "part_numbers_field",
+    "confidence_flags": [
+      "no_content"
+    ],
+    "has_sku": true,
+    "has_category": true
   },
   {
     "sku": "MON-ARM-DUAL",
     "product_name": "Dual Monitor Arm Heavy Duty",
     "category": "Furniture/Mounts",
-    "text": "Support monitor weight while working\n\nRemove pivot bolts PT-1101-PVT (M6) on right arm\n\nSwap gas spring GS-9901-GSP\n\nReinstall pivot bolts PT-1101-PVT with blue thread locker, torque 5 Nm\n\nAdjust tension knob KN-2201-KNB for monitor weight\n\nCustomer issue: Right monitor slowly tilts downward over the course of the day. Have to readjust every morning. Monitor weighs about 7kg.\n\nResolution: Gas spring GS-9901-GSP losing pressure on right arm. 7kg is within 2-9kg range but spring may be defective. Shipped replacement GS-9901-GSP. Customer replaced pivot bolts PT-1101-PVT at same time.\n\nIssue type: monitor_sag\n\nPart numbers: GS-9901-GSP, PT-1101-PVT",
-    "source_file": "troubleshooting_tickets.csv"
+    "text": "Product name: Dual Monitor Arm Heavy Duty\n\nCategory: Furniture/Mounts\n\nResolution steps:\n- Support monitor weight while working\n- Remove pivot bolts PT-1101-PVT (M6) on right arm\n- Swap gas spring GS-9901-GSP\n- Reinstall pivot bolts PT-1101-PVT with blue thread locker, torque 5 Nm\n- Adjust tension knob KN-2201-KNB for monitor weight\n\nCustomer issue: Right monitor slowly tilts downward over the course of the day. Have to readjust every morning. Monitor weighs about 7kg.\n\nResolution: Gas spring GS-9901-GSP losing pressure on right arm. 7kg is within 2-9kg range but spring may be defective. Shipped replacement GS-9901-GSP. Customer replaced pivot bolts PT-1101-PVT at same time.\n\nIssue type: monitor_sag\n\nPart numbers: GS-9901-GSP, PT-1101-PVT\n\nParts used: GS-9901-GSP, PT-1101-PVT",
+    "source_file": "troubleshooting_tickets.json",
+    "extraction_method": "part_numbers_field",
+    "confidence_flags": [
+      "no_content"
+    ],
+    "has_sku": true,
+    "has_category": true
   },
   {
     "sku": "KB-ERGO-SPLIT",
     "product_name": "ErgoSplit Mechanical Keyboard",
     "category": "Peripherals/Keyboards",
-    "text": "Update firmware to v2.4.1 via USB\n\nTest E key for chatter\n\nIf persistent: remove keycap with KP-1101-PUL\n\nDesolder switch SW-2201-SWT, solder replacement\n\nTest with firmware debounce enabled\n\nCustomer issue: E key on left half registering double presses. Makes typing very difficult. Tried cleaning with air but no change.\n\nResolution: Switch SW-2201-SWT (Cherry MX Brown) on E key showing chatter. Firmware v2.3+ has improved debounce. Advised firmware update first, then switch replacement if needed.\n\nIssue type: key_chatter\n\nPart numbers: SW-2201-SWT, CB-3301-CBL",
-    "source_file": "troubleshooting_tickets.csv"
+    "text": "Product name: ErgoSplit Mechanical Keyboard\n\nCategory: Peripherals/Keyboards\n\nResolution steps:\n- Update firmware to v2.4.1 via USB\n- Test E key for chatter\n- If persistent: remove keycap with KP-1101-PUL\n- Desolder switch SW-2201-SWT, solder replacement\n- Test with firmware debounce enabled\n\nCustomer issue: E key on left half registering double presses. Makes typing very difficult. Tried cleaning with air but no change.\n\nResolution: Switch SW-2201-SWT (Cherry MX Brown) on E key showing chatter. Firmware v2.3+ has improved debounce. Advised firmware update first, then switch replacement if needed.\n\nIssue type: key_chatter\n\nPart numbers: SW-2201-SWT, CB-3301-CBL\n\nParts used: SW-2201-SWT",
+    "source_file": "troubleshooting_tickets.json",
+    "extraction_method": "part_numbers_field",
+    "confidence_flags": [
+      "no_content"
+    ],
+    "has_sku": true,
+    "has_category": true
   },
   {
     "sku": "KB-ERGO-SPLIT",
     "product_name": "ErgoSplit Mechanical Keyboard",
     "category": "Peripherals/Keyboards",
-    "text": "Test with wired TRRS cable CB-3301-CBL to isolate wireless\n\nRight half fails wireless, works wired\n\nDesolder wireless module WM-4401-WLS (4 pads)\n\nReplace battery BT-7701-BAT\n\nSolder new WM-4401-WLS, re-pair halves\n\nCustomer issue: Right half of keyboard randomly disconnects. LED flashes red. Have to unplug/replug TRRS cable to reconnect. Happens 3-4 times per day.\n\nResolution: Wireless module WM-4401-WLS on right half showing intermittent connectivity. Battery BT-7701-BAT also tested low. Replaced both wireless module and battery on right half.\n\nIssue type: half_disconnect\n\nPart numbers: WM-4401-WLS, BT-7701-BAT",
-    "source_file": "troubleshooting_tickets.csv"
+    "text": "Product name: ErgoSplit Mechanical Keyboard\n\nCategory: Peripherals/Keyboards\n\nResolution steps:\n- Test with wired TRRS cable CB-3301-CBL to isolate wireless\n- Right half fails wireless, works wired\n- Desolder wireless module WM-4401-WLS (4 pads)\n- Replace battery BT-7701-BAT\n- Solder new WM-4401-WLS, re-pair halves\n\nCustomer issue: Right half of keyboard randomly disconnects. LED flashes red. Have to unplug/replug TRRS cable to reconnect. Happens 3-4 times per day.\n\nResolution: Wireless module WM-4401-WLS on right half showing intermittent connectivity. Battery BT-7701-BAT also tested low. Replaced both wireless module and battery on right half.\n\nIssue type: half_disconnect\n\nPart numbers: WM-4401-WLS, BT-7701-BAT\n\nParts used: WM-4401-WLS, BT-7701-BAT",
+    "source_file": "troubleshooting_tickets.json",
+    "extraction_method": "part_numbers_field",
+    "confidence_flags": [
+      "no_content"
+    ],
+    "has_sku": true,
+    "has_category": true
   },
   {
     "sku": "MOUSE-VERT-PRO",
     "product_name": "Vertical Ergonomic Mouse Pro",
     "category": "Peripherals/Mice",
-    "text": "Clean sensor lens with microfiber cloth\n\nUse on cloth mouse pad MP-9901-MPD (not glass/reflective)\n\nUpdate firmware to v1.3+ for improved surface tracking\n\nLower DPI to 1600 for better stability\n\nCustomer issue: Cursor jumps around randomly, especially on my glass desk. Works fine on mousepad but I prefer using directly on desk.\n\nResolution: Sensor SN-8801-SNS (PAW3395) has issues on reflective surfaces. Recommended mouse pad MP-9901-MPD. Also updated firmware for better surface adaptation.\n\nIssue type: cursor_jitter\n\nPart numbers: SN-8801-SNS, DG-1101-DGL",
-    "source_file": "troubleshooting_tickets.csv"
+    "text": "Product name: Vertical Ergonomic Mouse Pro\n\nCategory: Peripherals/Mice\n\nResolution steps:\n- Clean sensor lens with microfiber cloth\n- Use on cloth mouse pad MP-9901-MPD (not glass/reflective)\n- Update firmware to v1.3+ for improved surface tracking\n- Lower DPI to 1600 for better stability\n\nCustomer issue: Cursor jumps around randomly, especially on my glass desk. Works fine on mousepad but I prefer using directly on desk.\n\nResolution: Sensor SN-8801-SNS (PAW3395) has issues on reflective surfaces. Recommended mouse pad MP-9901-MPD. Also updated firmware for better surface adaptation.\n\nIssue type: cursor_jitter\n\nPart numbers: SN-8801-SNS, DG-1101-DGL",
+    "source_file": "troubleshooting_tickets.json",
+    "extraction_method": "part_numbers_field",
+    "confidence_flags": [
+      "no_content"
+    ],
+    "has_sku": true,
+    "has_category": true
   },
   {
     "sku": "MOUSE-VERT-PRO",
     "product_name": "Vertical Ergonomic Mouse Pro",
     "category": "Peripherals/Mice",
-    "text": "Update firmware to v1.4 via manufacturer software\n\nTest left button for double-click\n\nIf persistent: initiate RMA for switch SW-3301-SWT replacement\n\nNote: requires soldering, not user-serviceable\n\nCustomer issue: Left mouse button registering double clicks when I only click once. Very frustrating for drag operations and gaming.\n\nResolution: Omron switch SW-3301-SWT contact bounce. Firmware v1.2+ has software debounce. Advised firmware update first. If hardware fault, RMA for switch replacement.\n\nIssue type: double_click\n\nPart numbers: SW-3301-SWT, CH-5501-CHG",
-    "source_file": "troubleshooting_tickets.csv"
+    "text": "Product name: Vertical Ergonomic Mouse Pro\n\nCategory: Peripherals/Mice\n\nResolution steps:\n- Update firmware to v1.4 via manufacturer software\n- Test left button for double-click\n- If persistent: initiate RMA for switch SW-3301-SWT replacement\n- Note: requires soldering, not user-serviceable\n\nCustomer issue: Left mouse button registering double clicks when I only click once. Very frustrating for drag operations and gaming.\n\nResolution: Omron switch SW-3301-SWT contact bounce. Firmware v1.2+ has software debounce. Advised firmware update first. If hardware fault, RMA for switch replacement.\n\nIssue type: double_click\n\nPart numbers: SW-3301-SWT, CH-5501-CHG",
+    "source_file": "troubleshooting_tickets.json",
+    "extraction_method": "part_numbers_field",
+    "confidence_flags": [
+      "no_content"
+    ],
+    "has_sku": true,
+    "has_category": true
   },
   {
     "sku": "HEADSET-WL-PRO",
     "product_name": "Wireless Pro Headset",
     "category": "Peripherals/Audio",
-    "text": "Remove and firmly re-insert mic boom MB-3301-BM until click\n\nVerify mute switch shows white (not red)\n\nIn Discord/OS: select HEADSET-WL-PRO as input, set volume 80%\n\nRe-pair dongle DG-2201-DGL: hold power 5 seconds\n\nCustomer issue: Teammates can't hear me on Discord. Mic shows as connected but no input. Mute light is off (white).\n\nResolution: Mic boom MB-3301-BM not fully seated - needs firm click. Also verified mic capsule MC-4401-MIC functional. Dongle DG-2201-DGL re-paired.\n\nIssue type: mic_not_working\n\nPart numbers: MC-4401-MIC, DG-2201-DGL",
-    "source_file": "troubleshooting_tickets.csv"
-  },
-  {
-    "sku": "CHAIR-ERG-X99",
-    "product_name": "ErgoFlex Pro Office Chair",
-    "category": "Furniture/Seating",
-    "text": "Turn chair upside down on protective surface\n\nLocate screw set S-4012-SCRW (4 screws) securing base P-9913-BASE\n\nTighten all 4 screws to 12.5 Nm torque using 5mm hex key\n\nTest recline motion for noise\n\nCustomer issue: Chair makes loud squeaking sound when I lean back. Started about 2 weeks ago. Very annoying during meetings.\n\nResolution: Identified loose screw set S-4012-SCRW under base P-9913-BASE. Instructed customer to tighten 4 screws to 12.5 Nm torque using 5mm hex key. Issue resolved.\n\nIssue type: squeaking_noise\n\nPart numbers: P-9913-BASE, S-4012-SCRW",
-    "source_file": "troubleshooting_tickets.json"
-  },
-  {
-    "sku": "CHAIR-ERG-X99",
-    "product_name": "ErgoFlex Pro Office Chair",
-    "category": "Furniture/Seating",
-    "text": "Remove base P-9913-BASE by unscrewing 5 bolts B-3301-BLT\n\nExtract gas lift cylinder C-7721-GL from column\n\nReplace with new cylinder C-7721-GL\n\nReassemble in reverse order, torque bolts B-3301-BLT to 15 Nm\n\nCustomer issue: Chair slowly sinks down throughout the day. Have to pump it up every hour. Gas lift seems broken.\n\nResolution: Diagnosed gas lift cylinder C-7721-GL internal seal failure. Shipped replacement cylinder C-7721-GL. Customer replaced following guide: remove base bolts B-3301-BLT, swap cylinder, reassemble.\n\nIssue type: height_adjustment_failure\n\nPart numbers: C-7721-GL, B-3301-BLT",
-    "source_file": "troubleshooting_tickets.json"
-  },
-  {
-    "sku": "DESK-STD-MOTO",
-    "product_name": "Motorized Standing Desk Standard",
-    "category": "Furniture/Desks",
-    "text": "Unplug all cables from control box CB-2201-CTL\n\nUnmount control box from desk frame\n\nInstall replacement control box CB-2201-CTL\n\nReconnect all motor and sensor cables\n\nRe-pair with mobile app via Bluetooth\n\nCustomer issue: Desk shows error E02 on control panel. Won't move up or down. Tried unplugging for a minute but error comes back.\n\nResolution: Error E02 indicates control box CB-2201-CTL fault. Shipped replacement control box. Customer swapped unit and re-paired Bluetooth app.\n\nIssue type: control_box_fault\n\nPart numbers: CB-2201-CTL, M-8841-MOT",
-    "source_file": "troubleshooting_tickets.json"
-  },
-  {
-    "sku": "DESK-STD-MOTO",
-    "product_name": "Motorized Standing Desk Standard",
-    "category": "Furniture/Desks",
-    "text": "Lower desk fully\n\nApply PTFE grease GR-9901-GRS to left spindle SP-4402-SPND threads\n\nRun calibration: hold DOWN button 10 seconds until CAL appears\n\nTest full up/down cycle for even movement\n\nCustomer issue: Left side of desk lags behind right side. Desk gets crooked when raising. Makes grinding noise on left side.\n\nResolution: Left spindle SP-4402-SPND binding. Instructed customer to lubricate with PTFE grease GR-9901-GRS and run calibration. If persistent, replace spindle.\n\nIssue type: uneven_lifting\n\nPart numbers: SP-4402-SPND, GR-9901-GRS",
-    "source_file": "troubleshooting_tickets.json"
-  },
-  {
-    "sku": "MON-ARM-DUAL",
-    "product_name": "Dual Monitor Arm Heavy Duty",
-    "category": "Furniture/Mounts",
-    "text": "Support monitor weight while working\n\nRemove pivot bolts PT-1101-PVT (M6) on right arm\n\nSwap gas spring GS-9901-GSP\n\nReinstall pivot bolts PT-1101-PVT with blue thread locker, torque 5 Nm\n\nAdjust tension knob KN-2201-KNB for monitor weight\n\nCustomer issue: Right monitor slowly tilts downward over the course of the day. Have to readjust every morning. Monitor weighs about 7kg.\n\nResolution: Gas spring GS-9901-GSP losing pressure on right arm. 7kg is within 2-9kg range but spring may be defective. Shipped replacement GS-9901-GSP. Customer replaced pivot bolts PT-1101-PVT at same time.\n\nIssue type: monitor_sag\n\nPart numbers: GS-9901-GSP, PT-1101-PVT",
-    "source_file": "troubleshooting_tickets.json"
-  },
-  {
-    "sku": "KB-ERGO-SPLIT",
-    "product_name": "ErgoSplit Mechanical Keyboard",
-    "category": "Peripherals/Keyboards",
-    "text": "Update firmware to v2.4.1 via USB\n\nTest E key for chatter\n\nIf persistent: remove keycap with KP-1101-PUL\n\nDesolder switch SW-2201-SWT, solder replacement\n\nTest with firmware debounce enabled\n\nCustomer issue: E key on left half registering double presses. Makes typing very difficult. Tried cleaning with air but no change.\n\nResolution: Switch SW-2201-SWT (Cherry MX Brown) on E key showing chatter. Firmware v2.3+ has improved debounce. Advised firmware update first, then switch replacement if needed.\n\nIssue type: key_chatter\n\nPart numbers: SW-2201-SWT, CB-3301-CBL",
-    "source_file": "troubleshooting_tickets.json"
-  },
-  {
-    "sku": "KB-ERGO-SPLIT",
-    "product_name": "ErgoSplit Mechanical Keyboard",
-    "category": "Peripherals/Keyboards",
-    "text": "Test with wired TRRS cable CB-3301-CBL to isolate wireless\n\nRight half fails wireless, works wired\n\nDesolder wireless module WM-4401-WLS (4 pads)\n\nReplace battery BT-7701-BAT\n\nSolder new WM-4401-WLS, re-pair halves\n\nCustomer issue: Right half of keyboard randomly disconnects. LED flashes red. Have to unplug/replug TRRS cable to reconnect. Happens 3-4 times per day.\n\nResolution: Wireless module WM-4401-WLS on right half showing intermittent connectivity. Battery BT-7701-BAT also tested low. Replaced both wireless module and battery on right half.\n\nIssue type: half_disconnect\n\nPart numbers: WM-4401-WLS, BT-7701-BAT",
-    "source_file": "troubleshooting_tickets.json"
-  },
-  {
-    "sku": "MOUSE-VERT-PRO",
-    "product_name": "Vertical Ergonomic Mouse Pro",
-    "category": "Peripherals/Mice",
-    "text": "Clean sensor lens with microfiber cloth\n\nUse on cloth mouse pad MP-9901-MPD (not glass/reflective)\n\nUpdate firmware to v1.3+ for improved surface tracking\n\nLower DPI to 1600 for better stability\n\nCustomer issue: Cursor jumps around randomly, especially on my glass desk. Works fine on mousepad but I prefer using directly on desk.\n\nResolution: Sensor SN-8801-SNS (PAW3395) has issues on reflective surfaces. Recommended mouse pad MP-9901-MPD. Also updated firmware for better surface adaptation.\n\nIssue type: cursor_jitter\n\nPart numbers: SN-8801-SNS, DG-1101-DGL",
-    "source_file": "troubleshooting_tickets.json"
-  },
-  {
-    "sku": "MOUSE-VERT-PRO",
-    "product_name": "Vertical Ergonomic Mouse Pro",
-    "category": "Peripherals/Mice",
-    "text": "Update firmware to v1.4 via manufacturer software\n\nTest left button for double-click\n\nIf persistent: initiate RMA for switch SW-3301-SWT replacement\n\nNote: requires soldering, not user-serviceable\n\nCustomer issue: Left mouse button registering double clicks when I only click once. Very frustrating for drag operations and gaming.\n\nResolution: Omron switch SW-3301-SWT contact bounce. Firmware v1.2+ has software debounce. Advised firmware update first. If hardware fault, RMA for switch replacement.\n\nIssue type: double_click\n\nPart numbers: SW-3301-SWT, CH-5501-CHG",
-    "source_file": "troubleshooting_tickets.json"
-  },
-  {
-    "sku": "HEADSET-WL-PRO",
-    "product_name": "Wireless Pro Headset",
-    "category": "Peripherals/Audio",
-    "text": "Remove and firmly re-insert mic boom MB-3301-BM until click\n\nVerify mute switch shows white (not red)\n\nIn Discord/OS: select HEADSET-WL-PRO as input, set volume 80%\n\nRe-pair dongle DG-2201-DGL: hold power 5 seconds\n\nCustomer issue: Teammates can't hear me on Discord. Mic shows as connected but no input. Mute light is off (white).\n\nResolution: Mic boom MB-3301-BM not fully seated - needs firm click. Also verified mic capsule MC-4401-MIC functional. Dongle DG-2201-DGL re-paired.\n\nIssue type: mic_not_working\n\nPart numbers: MC-4401-MIC, DG-2201-DGL",
-    "source_file": "troubleshooting_tickets.json"
+    "text": "Product name: Wireless Pro Headset\n\nCategory: Peripherals/Audio\n\nResolution steps:\n- Remove and firmly re-insert mic boom MB-3301-BM until click\n- Verify mute switch shows white (not red)\n- In Discord/OS: select HEADSET-WL-PRO as input, set volume 80%\n- Re-pair dongle DG-2201-DGL: hold power 5 seconds\n\nCustomer issue: Teammates can't hear me on Discord. Mic shows as connected but no input. Mute light is off (white).\n\nResolution: Mic boom MB-3301-BM not fully seated - needs firm click. Also verified mic capsule MC-4401-MIC functional. Dongle DG-2201-DGL re-paired.\n\nIssue type: mic_not_working\n\nPart numbers: MC-4401-MIC, DG-2201-DGL",
+    "source_file": "troubleshooting_tickets.json",
+    "extraction_method": "part_numbers_field",
+    "confidence_flags": [
+      "no_content"
+    ],
+    "has_sku": true,
+    "has_category": true
   }
 ]

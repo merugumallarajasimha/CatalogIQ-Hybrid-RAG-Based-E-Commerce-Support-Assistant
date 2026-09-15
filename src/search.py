@@ -1,8 +1,14 @@
 import os
 import zlib
-
+import time
+import sys
+import json
 from typing import List, Tuple, Dict, Any, Optional
 from collections import Counter
+
+from dotenv import load_dotenv
+
+load_dotenv()
 
 # pyrefly: ignore [missing-import]
 from qdrant_client import QdrantClient
@@ -12,6 +18,8 @@ from qdrant_client.models import SparseVector
 # pyrefly: ignore [missing-import]
 from sentence_transformers import SentenceTransformer
 
+sys.path.insert(0, os.path.join(os.path.dirname(__file__)))
+
 
 COLLECTION_NAME = "support_docs"
 
@@ -20,7 +28,15 @@ QDRANT_URL = os.getenv(
     "http://localhost:6333"
 )
 
-EMBEDDING_MODEL = "all-MiniLM-L6-v2"
+EMBEDDING_MODEL = os.getenv(
+    "EMBEDDING_MODEL",
+    "sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2"
+)
+
+DENSE_TOP_K = 20
+BM25_TOP_K = 20
+RRF_TOP_K = 15
+FINAL_TOP_K = 5
 
 
 _client: Optional[QdrantClient] = None
@@ -176,36 +192,99 @@ def dense_search(
 
 def hybrid_search(
     query: str,
-    top_k: int = 20,
-    k: int = 60
+    top_k: int = RRF_TOP_K,
+    k: int = RRF_TOP_K,
 ) -> List[Dict[str, Any]]:
+
+    print("\n" + "=" * 60)
+    print("HYBRID SEARCH DEBUG")
+    print("=" * 60)
+
+    # -----------------------------
+    # Sparse search
+    # -----------------------------
+    start = time.perf_counter()
 
     sparse_results = sparse_search(
         query,
-        top_k * 2
+        DENSE_TOP_K
     )
+
+    sparse_time = (
+        time.perf_counter() - start
+    ) * 1000
+
+    print(
+        f"Sparse search: {sparse_time:.2f} ms"
+    )
+
+    # -----------------------------
+    # Dense search
+    # -----------------------------
+    start = time.perf_counter()
 
     dense_results = dense_search(
         query,
-        top_k * 2
+        DENSE_TOP_K
     )
+
+    dense_time = (
+        time.perf_counter() - start
+    ) * 1000
+
+    print(
+        f"Dense search: {dense_time:.2f} ms"
+    )
+
+    # -----------------------------
+    # BM25 search (offline/local)
+    # -----------------------------
+    start = time.perf_counter()
+
+    try:
+        from bm25_search import BM25Search
+
+        bm25 = BM25Search()
+        records_path = os.path.join(
+            os.path.dirname(__file__),
+            "..",
+            "data",
+            "normalized_records.json",
+        )
+        if os.path.exists(records_path):
+            with open(records_path, encoding="utf-8", errors="replace") as f:
+                normalized_records = json.load(f)
+            bm25.build_from_records(normalized_records)
+        bm25_results_raw = bm25.search(query, top_k=BM25_TOP_K)
+        bm25_results = [doc_id for doc_id, _ in bm25_results_raw]
+        bm25_time = (time.perf_counter() - start) * 1000
+        print(f"BM25 search: {bm25_time:.2f} ms")
+    except Exception as bm25_error:
+        bm25_results = []
+        bm25_time = 0.0
+        print(f"BM25 search: SKIPPED ({bm25_error})")
+
+    # -----------------------------
+    # RRF
+    # -----------------------------
+    start = time.perf_counter()
 
     sparse_ranks = {
         doc_id: rank
-        for doc_id, rank
-        in sparse_results
+        for doc_id, rank in sparse_results
     }
 
     dense_ranks = {
         doc_id: rank
-        for doc_id, rank
-        in dense_results
+        for doc_id, rank in dense_results
     }
 
     all_doc_ids = (
         set(sparse_ranks.keys())
         |
         set(dense_ranks.keys())
+        |
+        set(bm25_results)
     )
 
     fused = []
@@ -215,32 +294,60 @@ def hybrid_search(
         score = 0.0
 
         if doc_id in sparse_ranks:
-
             score += 1.0 / (
                 k + sparse_ranks[doc_id]
             )
 
         if doc_id in dense_ranks:
-
             score += 1.0 / (
                 k + dense_ranks[doc_id]
             )
 
+        if doc_id in bm25_results:
+            bm25_rank = bm25_results.index(doc_id) + 1
+            score += 1.0 / (k + bm25_rank)
+
+        retrieval_sources = []
+        if doc_id in sparse_ranks:
+            retrieval_sources.append("sparse")
+        if doc_id in dense_ranks:
+            retrieval_sources.append("dense")
+        if doc_id in bm25_results:
+            retrieval_sources.append("bm25")
+
         fused.append({
             "doc_id": doc_id,
-            "combined_score": score,
-            "rank_in_sparse":
-                sparse_ranks.get(doc_id),
-            "rank_in_dense":
-                dense_ranks.get(doc_id)
+            "rrf_score": score,
+            "dense_rank": dense_ranks.get(doc_id),
+            "bm25_rank": (
+                bm25_results.index(doc_id) + 1
+                if doc_id in bm25_results
+                else None
+            ),
+            "retrieval_sources": retrieval_sources,
         })
 
     fused.sort(
-        key=lambda x: x["combined_score"],
+        key=lambda x: x["rrf_score"],
         reverse=True
     )
 
-    return fused[:top_k]
+    rrf_time = (
+        time.perf_counter() - start
+    ) * 1000
+
+    print(
+        f"RRF fusion: {rrf_time:.2f} ms"
+    )
+
+    print(
+        f"Total hybrid search: "
+        f"{sparse_time + dense_time + bm25_time + rrf_time:.2f} ms"
+    )
+
+    print("=" * 60)
+
+    return fused[:RRF_TOP_K]
 
 
 def get_document(

@@ -189,8 +189,7 @@ def ask(request: AskRequest) -> AskResponse:
         search_start = time.perf_counter()
 
         candidates = hybrid_search(
-            question,
-            top_k=20
+            question
         )
 
         search_elapsed = (

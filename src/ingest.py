@@ -1,12 +1,19 @@
+
+
 import os
 import uuid
 import zlib
+import json
+from pathlib import Path
 from typing import List, Dict, Any, Optional
 from collections import Counter
 
-# pyrefly: ignore [missing-import]
+from dotenv import load_dotenv
+
+# Load .env
+load_dotenv()
+
 from qdrant_client import QdrantClient
-# pyrefly: ignore [missing-import]
 from qdrant_client.models import (
     Distance,
     VectorParams,
@@ -14,60 +21,164 @@ from qdrant_client.models import (
     PointStruct,
     SparseVector,
 )
-# pyrefly: ignore [missing-import]
 from sentence_transformers import SentenceTransformer
 
 
-EMBEDDING_MODEL = "all-MiniLM-L6-v2"
-EMBEDDING_DIM = 384
-COLLECTION_NAME = "support_docs"
-QDRANT_URL = os.getenv("QDRANT_URL", "http://localhost:6333")
+# ============================================================
+# CONFIGURATION
+# ============================================================
 
+PROJECT_ROOT = Path(__file__).resolve().parent.parent
+
+DATA_DIR = PROJECT_ROOT / "data"
+
+NORMALIZED_FILE = DATA_DIR / "normalized_records.json"
+
+EMBEDDING_MODEL = os.getenv(
+    "EMBEDDING_MODEL",
+    "sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2"
+)
+
+EMBEDDING_DIM = 384
+
+COLLECTION_NAME = os.getenv(
+    "QDRANT_COLLECTION",
+    "support_docs"
+)
+
+QDRANT_URL = os.getenv(
+    "QDRANT_URL",
+    "http://localhost:6333"
+)
+
+# Start with only 1000 records.
+# Set to 0 later if you want to ingest everything.
+MAX_RECORDS = int(
+    os.getenv(
+        "MAX_INGEST_RECORDS",
+        "1000"
+    )
+)
+
+# Number of texts sent to the embedding model at once.
+EMBED_BATCH_SIZE = int(
+    os.getenv(
+        "EMBED_BATCH_SIZE",
+        "16"
+    )
+)
+
+# Number of Qdrant points uploaded at once.
+UPLOAD_BATCH_SIZE = int(
+    os.getenv(
+        "UPLOAD_BATCH_SIZE",
+        "64"
+    )
+)
+
+
+# Global embedding model
 _embedder: Optional[SentenceTransformer] = None
 
 
+# ============================================================
+# EMBEDDING MODEL
+# ============================================================
+
 def get_embedder() -> SentenceTransformer:
+    """
+    Load the embedding model only once.
+    """
+
     global _embedder
 
     if _embedder is None:
-        print(f"Loading embedding model: {EMBEDDING_MODEL}...")
-        _embedder = SentenceTransformer(EMBEDDING_MODEL)
+
+        print()
         print(
-            f"Model loaded. Embedding dimension: "
-            f"{_embedder.get_sentence_embedding_dimension()}"
+            f"Loading embedding model: {EMBEDDING_MODEL}"
         )
+
+        _embedder = SentenceTransformer(
+            EMBEDDING_MODEL
+        )
+
+        dimension = (
+            _embedder
+            .get_sentence_embedding_dimension()
+        )
+
+        print(
+            f"Embedding model loaded."
+        )
+
+        print(
+            f"Embedding dimension: {dimension}"
+        )
+
+        if dimension != EMBEDDING_DIM:
+
+            raise ValueError(
+                f"Expected embedding dimension "
+                f"{EMBEDDING_DIM}, "
+                f"but model returned "
+                f"{dimension}."
+            )
 
     return _embedder
 
 
+# ============================================================
+# SPARSE VECTOR
+# ============================================================
+
 def token_to_index(token: str) -> int:
     """
-    Convert a token into a deterministic uint32 sparse-vector index.
-
-    The same token always gets the same index across
-    ingestion and search.
+    Convert a token into a deterministic
+    sparse-vector index.
     """
-    return zlib.crc32(token.encode("utf-8"))
+
+    return zlib.crc32(
+        token.encode("utf-8")
+    )
 
 
-def compute_sparse_vector(text: str) -> SparseVector:
+def compute_sparse_vector(
+    text: str
+) -> SparseVector:
+    """
+    Create a simple TF-based sparse vector.
+    """
+
     words = text.lower().split()
 
     if not words:
-        return SparseVector(indices=[], values=[])
+
+        return SparseVector(
+            indices=[],
+            values=[]
+        )
 
     word_counts = Counter(words)
-    total_words = sum(word_counts.values())
+
+    total_words = sum(
+        word_counts.values()
+    )
 
     indices = []
     values = []
 
     for word, count in word_counts.items():
+
         index = token_to_index(word)
+
         score = count / total_words
 
         indices.append(index)
-        values.append(score)
+
+        values.append(
+            float(score)
+        )
 
     return SparseVector(
         indices=indices,
@@ -75,24 +186,124 @@ def compute_sparse_vector(text: str) -> SparseVector:
     )
 
 
-def create_collection(client: QdrantClient) -> None:
-    collections = client.get_collections().collections
+# ============================================================
+# LOAD NORMALIZED DATA
+# ============================================================
 
-    exists = any(c.name == COLLECTION_NAME for c in collections)
+def load_normalized_records(
+    filepath: Path = NORMALIZED_FILE,
+    max_records: int = MAX_RECORDS
+) -> List[Dict[str, Any]]:
+    """
+    Load records from normalized_records.json.
+
+    We use the normalized JSON instead of reading the
+    original Parquet files again.
+    """
+
+    if not filepath.exists():
+
+        raise FileNotFoundError(
+            f"\nNormalized dataset not found:\n"
+            f"{filepath}\n\n"
+            f"Run this first:\n"
+            f".\\venv\\Scripts\\python.exe "
+            f"-m src.load_dataset"
+        )
+
+    print()
+    print(
+        "Loading normalized records from:"
+    )
+
+    print(filepath)
+
+    with open(
+        filepath,
+        "r",
+        encoding="utf-8"
+    ) as file:
+
+        records = json.load(file)
+
+    if not isinstance(records, list):
+
+        raise ValueError(
+            "normalized_records.json "
+            "must contain a list of records."
+        )
+
+    original_count = len(records)
+
+    print(
+        f"Total normalized records available: "
+        f"{original_count}"
+    )
+
+    if max_records > 0:
+
+        records = records[:max_records]
+
+    print(
+        f"Records selected for ingestion: "
+        f"{len(records)}"
+    )
+
+    return records
+
+
+# ============================================================
+# QDRANT COLLECTION
+# ============================================================
+
+def create_collection(
+    client: QdrantClient
+) -> None:
+    """
+    Create the Qdrant collection if it doesn't exist.
+    """
+
+    collections = (
+        client
+        .get_collections()
+        .collections
+    )
+
+    exists = any(
+        collection.name == COLLECTION_NAME
+        for collection in collections
+    )
 
     if exists:
-        info = client.get_collection(COLLECTION_NAME)
 
-        print(f"Collection '{COLLECTION_NAME}' already exists:")
-        print(f"  Status: {info.status}")
-        print(f"  Vectors: {info.config.params.vectors}")
-        print(f"  Sparse vectors: {info.config.params.sparse_vectors}")
+        info = client.get_collection(
+            COLLECTION_NAME
+        )
+
+        print()
+        print(
+            f"Collection '{COLLECTION_NAME}' "
+            f"already exists."
+        )
+
+        print(
+            f"Status: {info.status}"
+        )
+
+        print(
+            f"Points: {info.points_count}"
+        )
 
         return
 
-    print(f"Creating collection '{COLLECTION_NAME}'...")
+    print()
+    print(
+        f"Creating collection "
+        f"'{COLLECTION_NAME}'..."
+    )
 
     client.create_collection(
+
         collection_name=COLLECTION_NAME,
 
         vectors_config={
@@ -108,131 +319,438 @@ def create_collection(client: QdrantClient) -> None:
     )
 
     print(
-        f"Collection created with dense_vector "
-        f"({EMBEDDING_DIM}d) and sparse_vector"
+        "Collection created successfully."
+    )
+
+    print(
+        f"Dense vector dimension: "
+        f"{EMBEDDING_DIM}"
+    )
+
+    print(
+        "Sparse vector: enabled"
     )
 
 
+# ============================================================
+# TEXT EXTRACTION
+# ============================================================
+
+def get_record_text(
+    record: Dict[str, Any]
+) -> str:
+    """
+    Extract searchable text from a record.
+    """
+
+    content = (
+
+        record.get("content")
+
+        or record.get("text")
+
+        or record.get("description")
+
+        or record.get("product_name")
+
+        or record.get("title")
+
+        or ""
+    )
+
+    return str(content).strip()
+
+
+# ============================================================
+# PAYLOAD
+# ============================================================
+
+def create_payload(
+    record: Dict[str, Any],
+    content: str
+) -> Dict[str, Any]:
+    """
+    Create the payload stored in Qdrant.
+    """
+
+    return {
+
+        "doc_id": str(
+            record.get("id")
+            or record.get("doc_id")
+            or uuid.uuid4()
+        ),
+
+        "sku": str(
+            record.get("sku")
+            or record.get("product_id")
+            or "unknown"
+        ),
+
+        "part_numbers": record.get(
+            "part_numbers",
+            []
+        ),
+
+        "product_name": str(
+            record.get("product_name")
+            or record.get("title")
+            or "unknown"
+        ),
+
+        "category": str(
+            record.get("category")
+            or "unknown"
+        ),
+
+        "doc_type": str(
+            record.get("doc_type")
+            or "product"
+        ),
+
+        "content": content,
+
+        "source_file": str(
+            record.get("source_file")
+            or ""
+        ),
+
+        "chunk_index": int(
+            record.get(
+                "chunk_index",
+                0
+            )
+            or 0
+        ),
+
+        "total_chunks": int(
+            record.get(
+                "total_chunks",
+                1
+            )
+            or 1
+        ),
+
+        "confidence_flags": record.get(
+            "confidence_flags",
+            []
+        ),
+
+        "extraction_method": str(
+            record.get("extraction_method")
+            or "none"
+        ),
+    }
+
+
+# ============================================================
+# PREPARE POINTS
+# ============================================================
+
 def prepare_points(
-    chunks: List[Dict[str, Any]],
+    records: List[Dict[str, Any]],
     embedder: SentenceTransformer
 ) -> List[PointStruct]:
+    """
+    Convert records into Qdrant points.
+    """
 
-    points = []
+    valid_records = []
 
-    for chunk in chunks:
+    texts = []
 
-        content = chunk.get("content", "") or chunk.get("text", "")
+    for record in records:
+
+        content = get_record_text(
+            record
+        )
 
         if not content:
             continue
 
-        dense_vec = embedder.encode(content).tolist()
+        valid_records.append(
+            record
+        )
 
-        sparse_vec = compute_sparse_vector(content)
+        texts.append(
+            content
+        )
 
-        payload = {
-            "doc_id": chunk.get("id", str(uuid.uuid4())),
-            "sku": chunk.get("sku", "unknown"),
-            "part_numbers": chunk.get("part_numbers", []),
-            "product_name": chunk.get("product_name", "unknown"),
-            "category": chunk.get("category", "unknown"),
-            "doc_type": chunk.get("doc_type", "unknown"),
-            "content": content,
-            "source_file": chunk.get("source_file", ""),
-            "chunk_index": chunk.get("chunk_index", 0),
-            "total_chunks": chunk.get("total_chunks", 1)
-        }
+    if not texts:
+
+        print(
+            "No valid text found."
+        )
+
+        return []
+
+    print()
+    print(
+        f"Generating dense embeddings "
+        f"for {len(texts)} records..."
+    )
+
+    dense_embeddings = embedder.encode(
+
+        texts,
+
+        batch_size=EMBED_BATCH_SIZE,
+
+        show_progress_bar=True,
+
+        convert_to_numpy=True,
+
+        normalize_embeddings=True
+    )
+
+    points = []
+
+    for index, (
+        record,
+        content
+    ) in enumerate(
+        zip(
+            valid_records,
+            texts
+        )
+    ):
+
+        dense_vector = (
+            dense_embeddings[index]
+            .tolist()
+        )
+
+        sparse_vector = (
+            compute_sparse_vector(
+                content
+            )
+        )
+
+        payload = create_payload(
+            record,
+            content
+        )
+
+        stable_key = (
+
+            f"{payload['sku']}_"
+
+            f"{payload['source_file']}_"
+
+            f"{payload['chunk_index']}_"
+
+            f"{index}"
+        )
+
+        point_id = str(
+            uuid.uuid5(
+                uuid.NAMESPACE_URL,
+                stable_key
+            )
+        )
 
         point = PointStruct(
-            id=str(uuid.uuid4()),
+
+            id=point_id,
 
             vector={
-                "dense_vector": dense_vec,
-                "sparse_vector": sparse_vec
+
+                "dense_vector":
+                    dense_vector,
+
+                "sparse_vector":
+                    sparse_vector
             },
 
             payload=payload
         )
 
-        points.append(point)
+        points.append(
+            point
+        )
+
+    print()
+    print(
+        f"Prepared {len(points)} "
+        f"Qdrant points."
+    )
 
     return points
 
 
-def ingest_chunks(
-    chunks: List[Dict[str, Any]],
-    batch_size: int = 64
+# ============================================================
+# UPLOAD TO QDRANT
+# ============================================================
+
+def upload_points(
+    client: QdrantClient,
+    points: List[PointStruct]
 ) -> None:
+    """
+    Upload points to Qdrant in batches.
+    """
+
+    total_points = len(points)
+
+    if total_points == 0:
+
+        print(
+            "No points to upload."
+        )
+
+        return
+
+    print()
+    print(
+        f"Uploading {total_points} points "
+        f"in batches of "
+        f"{UPLOAD_BATCH_SIZE}..."
+    )
+
+    for start in range(
+        0,
+        total_points,
+        UPLOAD_BATCH_SIZE
+    ):
+
+        end = min(
+            start + UPLOAD_BATCH_SIZE,
+            total_points
+        )
+
+        batch = points[
+            start:end
+        ]
+
+        client.upsert(
+
+            collection_name=COLLECTION_NAME,
+
+            points=batch,
+
+            wait=True
+        )
+
+        print(
+            f"Uploaded "
+            f"{end}/{total_points}"
+        )
+
+    print()
+    print(
+        "All points uploaded successfully."
+    )
+
+
+# ============================================================
+# INGESTION PIPELINE
+# ============================================================
+
+def ingest_records(
+    records: List[Dict[str, Any]]
+) -> None:
+    """
+    Complete ingestion pipeline.
+    """
+
+    print()
+    print(
+        "Connecting to Qdrant..."
+    )
+
+    print(
+        f"Qdrant URL: {QDRANT_URL}"
+    )
 
     client = QdrantClient(
         url=QDRANT_URL,
-        timeout=60
+        timeout=120
     )
 
-    create_collection(client)
+    # Test connection
+    client.get_collections()
+
+    print(
+        "Connected to Qdrant successfully."
+    )
+
+    create_collection(
+        client
+    )
 
     embedder = get_embedder()
 
     points = prepare_points(
-        chunks,
+        records,
         embedder
     )
 
-    print(
-        f"Uploading {len(points)} points "
-        f"in batches of {batch_size}..."
+    upload_points(
+        client,
+        points
     )
 
-    for i in range(0, len(points), batch_size):
-
-        batch = points[i:i + batch_size]
-
-        client.upsert(
-            collection_name=COLLECTION_NAME,
-            points=batch
-        )
-
-        print(
-            f"  Uploaded "
-            f"{min(i + batch_size, len(points))}/{len(points)}"
-        )
-
-    info = client.get_collection(COLLECTION_NAME)
-
-    print(
-        f"Ingestion complete. "
-        f"Collection now has {info.points_count} points."
+    info = client.get_collection(
+        COLLECTION_NAME
     )
 
-
-def run_ingestion(
-    dataset_dir: str = "data",
-    chunk_size: int = 5
-) -> None:
-
-    from .load_dataset import load_dataset
-    from .chunker import chunk_records
-
-    print("Loading dataset...")
-
-    records = load_dataset(dataset_dir)
+    print()
+    print("=" * 60)
+    print("INGESTION COMPLETE")
+    print("=" * 60)
 
     print(
-        f"Chunking {len(records)} records..."
-    )
-
-    chunks = chunk_records(
-        records,
-        chunk_size
+        f"Collection: "
+        f"{COLLECTION_NAME}"
     )
 
     print(
-        f"Created {len(chunks)} chunks"
+        f"Points in collection: "
+        f"{info.points_count}"
     )
 
-    ingest_chunks(chunks)
+    print(
+        f"Embedding model: "
+        f"{EMBEDDING_MODEL}"
+    )
 
+    print(
+        f"Qdrant URL: "
+        f"{QDRANT_URL}"
+    )
+
+    print("=" * 60)
+
+
+# ============================================================
+# RUN INGESTION
+# ============================================================
+
+def run_ingestion() -> None:
+    """
+    Main ingestion entry point.
+    """
+
+    records = load_normalized_records(
+        filepath=NORMALIZED_FILE,
+        max_records=MAX_RECORDS
+    )
+
+    print()
+    print(
+        f"Starting ingestion for "
+        f"{len(records)} records..."
+    )
+
+    ingest_records(
+        records
+    )
+
+
+# ============================================================
+# MAIN
+# ============================================================
 
 if __name__ == "__main__":
+
     run_ingestion()
