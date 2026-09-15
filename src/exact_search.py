@@ -12,12 +12,32 @@ from typing import Dict, List, Any, Optional, Tuple
 sys.path.insert(0, os.path.join(os.path.dirname(__file__)))
 from extract_ids import extract_ids
 
+# pyrefly: ignore [missing-import]
+from qdrant_client import QdrantClient
+from qdrant_client.models import Filter, FieldCondition, MatchValue
+
 DATA_PATH = os.path.join(
     os.path.dirname(__file__),
     "..",
     "data",
     "normalized_records.json",
 )
+
+COLLECTION_NAME = "support_docs"
+
+QDRANT_URL = os.getenv(
+    "QDRANT_URL",
+    "http://localhost:6333"
+)
+
+_exact_client: Optional[QdrantClient] = None
+
+
+def get_exact_client() -> QdrantClient:
+    global _exact_client
+    if _exact_client is None:
+        _exact_client = QdrantClient(url=QDRANT_URL, timeout=30)
+    return _exact_client
 
 
 def load_records() -> List[Dict[str, Any]]:
@@ -107,6 +127,96 @@ def exact_search_with_metadata(
 
     scored.sort(key=lambda x: x["score"], reverse=True)
     return scored[:top_k]
+
+
+def exact_qdrant_lookup(
+    query: str,
+    top_k: int = 5,
+) -> List[Dict[str, Any]]:
+    """
+    Exact Qdrant payload lookup for identifiers.
+    Skips semantic search entirely when an identifier is detected.
+    Returns results in the same format as hybrid_search for seamless integration.
+    """
+    client = get_exact_client()
+    query_ids = extract_ids(query)
+
+    all_identifiers = []
+    for id_type in ("skus", "asins", "part_numbers"):
+        all_identifiers.extend(query_ids.get(id_type, []))
+
+    if not all_identifiers:
+        return []
+
+    results = []
+    seen_doc_ids = set()
+    for identifier in all_identifiers:
+        # Search by sku field
+        sku_results = client.scroll(
+            collection_name=COLLECTION_NAME,
+            scroll_filter=Filter(
+                must=[
+                    FieldCondition(key="sku", match=MatchValue(value=identifier))
+                ]
+            ),
+            limit=top_k,
+            with_payload=True
+        )
+        points, _ = sku_results
+        for point in points:
+            payload = point.payload
+            doc_id = payload.get("doc_id", identifier)
+            if doc_id not in seen_doc_ids:
+                seen_doc_ids.add(doc_id)
+                results.append({
+                    "doc_id": doc_id,
+                    "score": 100.0,  # Exact match gets highest score
+                    "sku": payload.get("sku", ""),
+                    "product_name": payload.get("product_name", ""),
+                    "category": payload.get("category", ""),
+                    "content": payload.get("content", payload.get("text", "")),
+                    "matched_identifier": identifier,
+                    "match_type": "sku"
+                })
+
+        # Search by part_number field (if different from sku)
+        pn_results = client.scroll(
+            collection_name=COLLECTION_NAME,
+            scroll_filter=Filter(
+                must=[
+                    FieldCondition(key="part_number", match=MatchValue(value=identifier))
+                ]
+            ),
+            limit=top_k,
+            with_payload=True
+        )
+        points, _ = pn_results
+        for point in points:
+            payload = point.payload
+            doc_id = payload.get("doc_id", identifier)
+            if doc_id not in seen_doc_ids:
+                seen_doc_ids.add(doc_id)
+                results.append({
+                    "doc_id": doc_id,
+                    "score": 100.0,
+                    "sku": payload.get("sku", ""),
+                    "product_name": payload.get("product_name", ""),
+                    "category": payload.get("category", ""),
+                    "content": payload.get("content", payload.get("text", "")),
+                    "matched_identifier": identifier,
+                    "match_type": "part_number"
+                })
+
+    return results[:top_k]
+
+
+def has_identifier(query: str) -> bool:
+    """Check if query contains any identifiable SKU, ASIN, or part number."""
+    query_ids = extract_ids(query)
+    for id_type in ("skus", "asins", "part_numbers"):
+        if query_ids.get(id_type):
+            return True
+    return False
 
 
 if __name__ == "__main__":
