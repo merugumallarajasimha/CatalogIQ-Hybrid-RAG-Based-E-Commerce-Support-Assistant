@@ -1,0 +1,15 @@
+{
+  "model": "BAAI/bge-base-en-v1.5",
+  "source_collection": "support_docs",
+  "collection": "support_docs_bge_base",
+  "dimension": 768,
+  "source_points": 300,
+  "target_points": 300,
+  "model_load_seconds": 7.558,
+  "embedding_seconds": 516.402,
+  "embedding_ms_per_doc": 1721.34,
+  "upload_seconds": 5.027,
+  "total_ingest_seconds": 521.492,
+  "batch_size": 16,
+  "upload_batch_size": 64
+}

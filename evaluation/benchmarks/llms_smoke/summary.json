@@ -1,0 +1,23 @@
+[
+  {
+    "model": "groq/openai/gpt-oss-120b",
+    "retrieval_collection": "support_docs",
+    "retrieval_embedder": "sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2",
+    "reranker": "BAAI/bge-reranker-v2-m3",
+    "queries": 1,
+    "relevant_queries": 1,
+    "irrelevant_queries": 0,
+    "warmup_queries": 0,
+    "generation_errors": 0,
+    "citation_validity_rate": 0.0,
+    "citation_completeness": 1.0,
+    "answer_relevance": 0.0,
+    "faithfulness": 0.0,
+    "no_answer_accuracy": 0.0,
+    "unsupported_claim_rate": 0.0,
+    "unsupported_claims_per_query": 0.0,
+    "generation_latency_ms": 6776.763600006234,
+    "generation_latency_p50_ms": 6776.763600006234,
+    "generation_latency_p95_ms": 6776.763600006234
+  }
+]

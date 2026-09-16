@@ -1,0 +1,15 @@
+{
+  "model": "sentence-transformers/all-MiniLM-L6-v2",
+  "source_collection": "support_docs",
+  "collection": "support_docs",
+  "dimension": 384,
+  "source_points": 300,
+  "target_points": 300,
+  "model_load_seconds": 10.118,
+  "embedding_seconds": 137.386,
+  "embedding_ms_per_doc": 457.955,
+  "upload_seconds": 2.952,
+  "total_ingest_seconds": 140.368,
+  "batch_size": 16,
+  "upload_batch_size": 64
+}

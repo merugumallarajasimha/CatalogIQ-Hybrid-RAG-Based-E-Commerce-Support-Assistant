@@ -3,188 +3,296 @@
     "sku": "P-9913-BASE",
     "product_name": "Chair base assembly, aluminum, 5-star, 60mm caster sockets",
     "category": "Furniture/Seating",
-    "text": "Chair base assembly, aluminum, 5-star, 60mm caster sockets\n\nCategory: Furniture/Seating\n\nReplacement procedure: Remove 5 bolts B-3301-BLT, swap base, torque to 15 Nm\n\nPart numbers: P-9913-BASE\n\nCompatible SKUs: CHAIR-ERG-X99\n\nRelated parts: B-3301-BLT, C-5500-CAST, S-4012-SCRW",
+    "text": "Part of: ErgoFlex Pro Office Chair (SKUs: CHAIR-ERG-X99). Chair base assembly, aluminum, 5-star, 60mm caster sockets\n\nCategory: Furniture/Seating\n\nReplacement procedure: Remove 5 bolts B-3301-BLT, swap base, torque to 15 Nm\n\nPart numbers: P-9913-BASE\n\nCompatible SKUs: CHAIR-ERG-X99\n\nRelated parts: B-3301-BLT, C-5500-CAST, S-4012-SCRW",
     "source_file": "parts_catalog.csv",
     "extraction_method": "content_field+part_number_field+compatible_skus_field+related_parts_field",
     "confidence_flags": [],
     "has_sku": true,
-    "has_category": true
+    "has_category": true,
+    "parent_skus": [
+      "CHAIR-ERG-X99"
+    ],
+    "parent_product_names": [
+      "ErgoFlex Pro Office Chair"
+    ]
   },
   {
     "sku": "P-9912-ARM",
     "product_name": "Armrest bracket assembly, left/right specific, includes pivot",
     "category": "Furniture/Seating",
-    "text": "Armrest bracket assembly, left/right specific, includes pivot\n\nCategory: Furniture/Seating\n\nReplacement procedure: Remove armrest cap, unbolt 2x B-3301-BLT, swap bracket\n\nPart numbers: P-9912-ARM\n\nCompatible SKUs: CHAIR-ERG-X99\n\nRelated parts: B-3301-BLT, PT-1101-PVT",
+    "text": "Part of: ErgoFlex Pro Office Chair (SKUs: CHAIR-ERG-X99). Armrest bracket assembly, left/right specific, includes pivot\n\nCategory: Furniture/Seating\n\nReplacement procedure: Remove armrest cap, unbolt 2x B-3301-BLT, swap bracket\n\nPart numbers: P-9912-ARM\n\nCompatible SKUs: CHAIR-ERG-X99\n\nRelated parts: B-3301-BLT, PT-1101-PVT",
     "source_file": "parts_catalog.csv",
     "extraction_method": "content_field+part_number_field+compatible_skus_field+related_parts_field",
     "confidence_flags": [],
     "has_sku": true,
-    "has_category": true
+    "has_category": true,
+    "parent_skus": [
+      "CHAIR-ERG-X99"
+    ],
+    "parent_product_names": [
+      "ErgoFlex Pro Office Chair"
+    ]
   },
   {
     "sku": "S-4012-SCRW",
     "product_name": "M6x20 socket head cap screw, grade 12.9, zinc plated",
     "category": "Fasteners",
-    "text": "M6x20 socket head cap screw, grade 12.9, zinc plated\n\nCategory: Fasteners\n\nReplacement procedure: Torque to 12.5 Nm with 5mm hex key\n\nPart numbers: S-4012-SCRW\n\nCompatible SKUs: CHAIR-ERG-X99, DESK-STD-MOTO\n\nRelated parts: P-9913-BASE",
+    "text": "Part of: ErgoFlex Pro Office Chair, Motorized Standing Desk Standard (SKUs: CHAIR-ERG-X99, DESK-STD-MOTO). M6x20 socket head cap screw, grade 12.9, zinc plated\n\nCategory: Fasteners\n\nReplacement procedure: Torque to 12.5 Nm with 5mm hex key\n\nPart numbers: S-4012-SCRW\n\nCompatible SKUs: CHAIR-ERG-X99, DESK-STD-MOTO\n\nRelated parts: P-9913-BASE",
     "source_file": "parts_catalog.csv",
     "extraction_method": "content_field+part_number_field+compatible_skus_field+related_parts_field",
     "confidence_flags": [],
     "has_sku": true,
-    "has_category": true
+    "has_category": true,
+    "parent_skus": [
+      "CHAIR-ERG-X99",
+      "DESK-STD-MOTO"
+    ],
+    "parent_product_names": [
+      "ErgoFlex Pro Office Chair",
+      "Motorized Standing Desk Standard"
+    ]
   },
   {
     "sku": "C-7721-GL",
     "product_name": "Gas lift cylinder, 120mm stroke, 28mm diameter, 1000N force",
     "category": "Furniture/Seating",
-    "text": "Gas lift cylinder, 120mm stroke, 28mm diameter, 1000N force\n\nCategory: Furniture/Seating\n\nReplacement procedure: Remove base, pull cylinder, insert new, reassemble base\n\nPart numbers: C-7721-GL\n\nCompatible SKUs: CHAIR-ERG-X99\n\nRelated parts: P-9913-BASE, B-3301-BLT",
+    "text": "Part of: ErgoFlex Pro Office Chair (SKUs: CHAIR-ERG-X99). Gas lift cylinder, 120mm stroke, 28mm diameter, 1000N force\n\nCategory: Furniture/Seating\n\nReplacement procedure: Remove base, pull cylinder, insert new, reassemble base\n\nPart numbers: C-7721-GL\n\nCompatible SKUs: CHAIR-ERG-X99\n\nRelated parts: P-9913-BASE, B-3301-BLT",
     "source_file": "parts_catalog.csv",
     "extraction_method": "content_field+part_number_field+compatible_skus_field+related_parts_field",
     "confidence_flags": [],
     "has_sku": true,
-    "has_category": true
+    "has_category": true,
+    "parent_skus": [
+      "CHAIR-ERG-X99"
+    ],
+    "parent_product_names": [
+      "ErgoFlex Pro Office Chair"
+    ]
   },
   {
     "sku": "B-3301-BLT",
     "product_name": "M8x25 flange bolt, grade 10.9, black oxide",
     "category": "Fasteners",
-    "text": "M8x25 flange bolt, grade 10.9, black oxide\n\nCategory: Fasteners\n\nReplacement procedure: Torque to 15 Nm (chair/desk) or 8 Nm (monitor arm)\n\nPart numbers: B-3301-BLT\n\nCompatible SKUs: CHAIR-ERG-X99, DESK-STD-MOTO, MON-ARM-DUAL\n\nRelated parts: P-9913-BASE, SP-4402-SPND, BP-6601-BP",
+    "text": "Part of: ErgoFlex Pro Office Chair, Motorized Standing Desk Standard, Dual Monitor Arm Heavy Duty (SKUs: CHAIR-ERG-X99, DESK-STD-MOTO, MON-ARM-DUAL). M8x25 flange bolt, grade 10.9, black oxide\n\nCategory: Fasteners\n\nReplacement procedure: Torque to 15 Nm (chair/desk) or 8 Nm (monitor arm)\n\nPart numbers: B-3301-BLT\n\nCompatible SKUs: CHAIR-ERG-X99, DESK-STD-MOTO, MON-ARM-DUAL\n\nRelated parts: P-9913-BASE, SP-4402-SPND, BP-6601-BP",
     "source_file": "parts_catalog.csv",
     "extraction_method": "content_field+part_number_field+compatible_skus_field+related_parts_field",
     "confidence_flags": [],
     "has_sku": true,
-    "has_category": true
+    "has_category": true,
+    "parent_skus": [
+      "CHAIR-ERG-X99",
+      "DESK-STD-MOTO",
+      "MON-ARM-DUAL"
+    ],
+    "parent_product_names": [
+      "ErgoFlex Pro Office Chair",
+      "Motorized Standing Desk Standard",
+      "Dual Monitor Arm Heavy Duty"
+    ]
   },
   {
     "sku": "C-5500-CAST",
     "product_name": "60mm nylon caster, stem mount, 50kg load rating",
     "category": "Furniture/Seating",
-    "text": "60mm nylon caster, stem mount, 50kg load rating\n\nCategory: Furniture/Seating\n\nReplacement procedure: Pull old caster, press new until click\n\nPart numbers: C-5500-CAST\n\nCompatible SKUs: CHAIR-ERG-X99\n\nRelated parts: P-9913-BASE",
+    "text": "Part of: ErgoFlex Pro Office Chair (SKUs: CHAIR-ERG-X99). 60mm nylon caster, stem mount, 50kg load rating\n\nCategory: Furniture/Seating\n\nReplacement procedure: Pull old caster, press new until click\n\nPart numbers: C-5500-CAST\n\nCompatible SKUs: CHAIR-ERG-X99\n\nRelated parts: P-9913-BASE",
     "source_file": "parts_catalog.csv",
     "extraction_method": "content_field+part_number_field+compatible_skus_field+related_parts_field",
     "confidence_flags": [],
     "has_sku": true,
-    "has_category": true
+    "has_category": true,
+    "parent_skus": [
+      "CHAIR-ERG-X99"
+    ],
+    "parent_product_names": [
+      "ErgoFlex Pro Office Chair"
+    ]
   },
   {
     "sku": "M-8841-MOT",
     "product_name": "Dual motor kit, 24V DC, 6000N per motor, hall sensor integrated",
     "category": "Furniture/Desks",
-    "text": "Dual motor kit, 24V DC, 6000N per motor, hall sensor integrated\n\nCategory: Furniture/Desks\n\nReplacement procedure: Disconnect cables, unbolt 4x B-3301-BLT, swap motors\n\nPart numbers: M-8841-MOT\n\nCompatible SKUs: DESK-STD-MOTO\n\nRelated parts: CB-2201-CTL, SP-4402-SPND, B-3301-BLT",
+    "text": "Part of: Motorized Standing Desk Standard (SKUs: DESK-STD-MOTO). Dual motor kit, 24V DC, 6000N per motor, hall sensor integrated\n\nCategory: Furniture/Desks\n\nReplacement procedure: Disconnect cables, unbolt 4x B-3301-BLT, swap motors\n\nPart numbers: M-8841-MOT\n\nCompatible SKUs: DESK-STD-MOTO\n\nRelated parts: CB-2201-CTL, SP-4402-SPND, B-3301-BLT",
     "source_file": "parts_catalog.csv",
     "extraction_method": "content_field+part_number_field+compatible_skus_field+related_parts_field",
     "confidence_flags": [],
     "has_sku": true,
-    "has_category": true
+    "has_category": true,
+    "parent_skus": [
+      "DESK-STD-MOTO"
+    ],
+    "parent_product_names": [
+      "Motorized Standing Desk Standard"
+    ]
   },
   {
     "sku": "CB-2201-CTL",
     "product_name": "Control box with Bluetooth, dual motor driver, anti-collision",
     "category": "Electronics",
-    "text": "Control box with Bluetooth, dual motor driver, anti-collision\n\nCategory: Electronics\n\nReplacement procedure: Unplug all cables, unmount, swap box, re-pair app\n\nPart numbers: CB-2201-CTL\n\nCompatible SKUs: DESK-STD-MOTO\n\nRelated parts: M-8841-MOT, SN-1101-HGT, DG-1101-DGL",
+    "text": "Part of: Motorized Standing Desk Standard (SKUs: DESK-STD-MOTO). Control box with Bluetooth, dual motor driver, anti-collision\n\nCategory: Electronics\n\nReplacement procedure: Unplug all cables, unmount, swap box, re-pair app\n\nPart numbers: CB-2201-CTL\n\nCompatible SKUs: DESK-STD-MOTO\n\nRelated parts: M-8841-MOT, SN-1101-HGT, DG-1101-DGL",
     "source_file": "parts_catalog.csv",
     "extraction_method": "content_field+part_number_field+compatible_skus_field+related_parts_field",
     "confidence_flags": [],
     "has_sku": true,
-    "has_category": true
+    "has_category": true,
+    "parent_skus": [
+      "DESK-STD-MOTO"
+    ],
+    "parent_product_names": [
+      "Motorized Standing Desk Standard"
+    ]
   },
   {
     "sku": "SP-4402-SPND",
     "product_name": "Lifting spindle, 600mm travel, Tr10x3 trapezoidal thread",
     "category": "Furniture/Desks",
-    "text": "Lifting spindle, 600mm travel, Tr10x3 trapezoidal thread\n\nCategory: Furniture/Desks\n\nReplacement procedure: Extend desk, uncouple motor, unscrew spindle, reverse\n\nPart numbers: SP-4402-SPND\n\nCompatible SKUs: DESK-STD-MOTO\n\nRelated parts: M-8841-MOT, GR-9901-GRS",
+    "text": "Part of: Motorized Standing Desk Standard (SKUs: DESK-STD-MOTO). Lifting spindle, 600mm travel, Tr10x3 trapezoidal thread\n\nCategory: Furniture/Desks\n\nReplacement procedure: Extend desk, uncouple motor, unscrew spindle, reverse\n\nPart numbers: SP-4402-SPND\n\nCompatible SKUs: DESK-STD-MOTO\n\nRelated parts: M-8841-MOT, GR-9901-GRS",
     "source_file": "parts_catalog.csv",
     "extraction_method": "content_field+part_number_field+compatible_skus_field+related_parts_field",
     "confidence_flags": [],
     "has_sku": true,
-    "has_category": true
+    "has_category": true,
+    "parent_skus": [
+      "DESK-STD-MOTO"
+    ],
+    "parent_product_names": [
+      "Motorized Standing Desk Standard"
+    ]
   },
   {
     "sku": "SN-1101-HGT",
     "product_name": "Hall effect height sensor, 0-650mm range, 0.1mm resolution",
     "category": "Electronics",
-    "text": "Hall effect height sensor, 0-650mm range, 0.1mm resolution\n\nCategory: Electronics\n\nReplacement procedure: Unclip from spindle, disconnect 3-pin, clip new\n\nPart numbers: SN-1101-HGT\n\nCompatible SKUs: DESK-STD-MOTO\n\nRelated parts: CB-2201-CTL",
+    "text": "Part of: Motorized Standing Desk Standard (SKUs: DESK-STD-MOTO). Hall effect height sensor, 0-650mm range, 0.1mm resolution\n\nCategory: Electronics\n\nReplacement procedure: Unclip from spindle, disconnect 3-pin, clip new\n\nPart numbers: SN-1101-HGT\n\nCompatible SKUs: DESK-STD-MOTO\n\nRelated parts: CB-2201-CTL",
     "source_file": "parts_catalog.csv",
     "extraction_method": "content_field+part_number_field+compatible_skus_field+related_parts_field",
     "confidence_flags": [],
     "has_sku": true,
-    "has_category": true
+    "has_category": true,
+    "parent_skus": [
+      "DESK-STD-MOTO"
+    ],
+    "parent_product_names": [
+      "Motorized Standing Desk Standard"
+    ]
   },
   {
     "sku": "GR-9901-GRS",
     "product_name": "PTFE spindle grease, 50g syringe, food grade",
     "category": "Maintenance",
-    "text": "PTFE spindle grease, 50g syringe, food grade\n\nCategory: Maintenance\n\nReplacement procedure: Apply thin coat to spindle threads every 6 months\n\nPart numbers: GR-9901-GRS\n\nCompatible SKUs: DESK-STD-MOTO\n\nRelated parts: SP-4402-SPND",
+    "text": "Part of: Motorized Standing Desk Standard (SKUs: DESK-STD-MOTO). PTFE spindle grease, 50g syringe, food grade\n\nCategory: Maintenance\n\nReplacement procedure: Apply thin coat to spindle threads every 6 months\n\nPart numbers: GR-9901-GRS\n\nCompatible SKUs: DESK-STD-MOTO\n\nRelated parts: SP-4402-SPND",
     "source_file": "parts_catalog.csv",
     "extraction_method": "content_field+part_number_field+compatible_skus_field+related_parts_field",
     "confidence_flags": [],
     "has_sku": true,
-    "has_category": true
+    "has_category": true,
+    "parent_skus": [
+      "DESK-STD-MOTO"
+    ],
+    "parent_product_names": [
+      "Motorized Standing Desk Standard"
+    ]
   },
   {
     "sku": "GS-9901-GSP",
     "product_name": "Gas spring, 2-9kg force range, 200mm stroke, M6 ends",
     "category": "Furniture/Mounts",
-    "text": "Gas spring, 2-9kg force range, 200mm stroke, M6 ends\n\nCategory: Furniture/Mounts\n\nReplacement procedure: Support monitor, remove pivot bolts PT-1101-PVT, swap spring\n\nPart numbers: GS-9901-GSP\n\nCompatible SKUs: MON-ARM-DUAL\n\nRelated parts: PT-1101-PVT, KN-2201-KNB",
+    "text": "Part of: Dual Monitor Arm Heavy Duty (SKUs: MON-ARM-DUAL). Gas spring, 2-9kg force range, 200mm stroke, M6 ends\n\nCategory: Furniture/Mounts\n\nReplacement procedure: Support monitor, remove pivot bolts PT-1101-PVT, swap spring\n\nPart numbers: GS-9901-GSP\n\nCompatible SKUs: MON-ARM-DUAL\n\nRelated parts: PT-1101-PVT, KN-2201-KNB",
     "source_file": "parts_catalog.csv",
     "extraction_method": "content_field+part_number_field+compatible_skus_field+related_parts_field",
     "confidence_flags": [],
     "has_sku": true,
-    "has_category": true
+    "has_category": true,
+    "parent_skus": [
+      "MON-ARM-DUAL"
+    ],
+    "parent_product_names": [
+      "Dual Monitor Arm Heavy Duty"
+    ]
   },
   {
     "sku": "PT-1101-PVT",
     "product_name": "Pivot bolt, M6x12, shouldered, with nylon patch",
     "category": "Fasteners",
-    "text": "Pivot bolt, M6x12, shouldered, with nylon patch\n\nCategory: Fasteners\n\nReplacement procedure: Torque to 5 Nm, apply blue thread locker\n\nPart numbers: PT-1101-PVT\n\nCompatible SKUs: MON-ARM-DUAL\n\nRelated parts: GS-9901-GSP, MB-4401-MB",
+    "text": "Part of: Dual Monitor Arm Heavy Duty (SKUs: MON-ARM-DUAL). Pivot bolt, M6x12, shouldered, with nylon patch\n\nCategory: Fasteners\n\nReplacement procedure: Torque to 5 Nm, apply blue thread locker\n\nPart numbers: PT-1101-PVT\n\nCompatible SKUs: MON-ARM-DUAL\n\nRelated parts: GS-9901-GSP, MB-4401-MB",
     "source_file": "parts_catalog.csv",
     "extraction_method": "content_field+part_number_field+compatible_skus_field+related_parts_field",
     "confidence_flags": [],
     "has_sku": true,
-    "has_category": true
+    "has_category": true,
+    "parent_skus": [
+      "MON-ARM-DUAL"
+    ],
+    "parent_product_names": [
+      "Dual Monitor Arm Heavy Duty"
+    ]
   },
   {
     "sku": "SW-2201-SWT",
     "product_name": "Cherry MX Brown tactile switch, PCB mount, 55g actuation",
     "category": "Peripherals/Keyboards",
-    "text": "Cherry MX Brown tactile switch, PCB mount, 55g actuation\n\nCategory: Peripherals/Keyboards\n\nReplacement procedure: Desolder old, solder new, test with firmware\n\nPart numbers: SW-2201-SWT\n\nCompatible SKUs: KB-ERGO-SPLIT\n\nRelated parts: PC-6601-PCB-L, PC-6601-PCB-R",
+    "text": "Part of: ErgoSplit Mechanical Keyboard (SKUs: KB-ERGO-SPLIT). Cherry MX Brown tactile switch, PCB mount, 55g actuation\n\nCategory: Peripherals/Keyboards\n\nReplacement procedure: Desolder old, solder new, test with firmware\n\nPart numbers: SW-2201-SWT\n\nCompatible SKUs: KB-ERGO-SPLIT\n\nRelated parts: PC-6601-PCB-L, PC-6601-PCB-R",
     "source_file": "parts_catalog.csv",
     "extraction_method": "content_field+part_number_field+compatible_skus_field+related_parts_field",
     "confidence_flags": [],
     "has_sku": true,
-    "has_category": true
+    "has_category": true,
+    "parent_skus": [
+      "KB-ERGO-SPLIT"
+    ],
+    "parent_product_names": [
+      "ErgoSplit Mechanical Keyboard"
+    ]
   },
   {
     "sku": "WM-4401-WLS",
     "product_name": "Wireless module, nRF52840, Bluetooth 5.0 + 2.4GHz proprietary",
     "category": "Electronics",
-    "text": "Wireless module, nRF52840, Bluetooth 5.0 + 2.4GHz proprietary\n\nCategory: Electronics\n\nReplacement procedure: Desolder 4 pads, solder new, re-pair halves\n\nPart numbers: WM-4401-WLS\n\nCompatible SKUs: KB-ERGO-SPLIT\n\nRelated parts: PC-6601-PCB-L, PC-6601-PCB-R, BT-7701-BAT",
+    "text": "Part of: ErgoSplit Mechanical Keyboard (SKUs: KB-ERGO-SPLIT). Wireless module, nRF52840, Bluetooth 5.0 + 2.4GHz proprietary\n\nCategory: Electronics\n\nReplacement procedure: Desolder 4 pads, solder new, re-pair halves\n\nPart numbers: WM-4401-WLS\n\nCompatible SKUs: KB-ERGO-SPLIT\n\nRelated parts: PC-6601-PCB-L, PC-6601-PCB-R, BT-7701-BAT",
     "source_file": "parts_catalog.csv",
     "extraction_method": "content_field+part_number_field+compatible_skus_field+related_parts_field",
     "confidence_flags": [],
     "has_sku": true,
-    "has_category": true
+    "has_category": true,
+    "parent_skus": [
+      "KB-ERGO-SPLIT"
+    ],
+    "parent_product_names": [
+      "ErgoSplit Mechanical Keyboard"
+    ]
   },
   {
     "sku": "SN-8801-SNS",
     "product_name": "PixArt PAW3395 optical sensor, 26000 DPI, 650 IPS",
     "category": "Peripherals/Mice",
-    "text": "PixArt PAW3395 optical sensor, 26000 DPI, 650 IPS\n\nCategory: Peripherals/Mice\n\nReplacement procedure: Requires hot air rework, replace PCB PC-6601-PCB if damaged\n\nPart numbers: SN-8801-SNS\n\nCompatible SKUs: MOUSE-VERT-PRO\n\nRelated parts: SW-3301-SWT, DG-1101-DGL",
+    "text": "Part of: Vertical Ergonomic Mouse Pro (SKUs: MOUSE-VERT-PRO). PixArt PAW3395 optical sensor, 26000 DPI, 650 IPS\n\nCategory: Peripherals/Mice\n\nReplacement procedure: Requires hot air rework, replace PCB PC-6601-PCB if damaged\n\nPart numbers: SN-8801-SNS\n\nCompatible SKUs: MOUSE-VERT-PRO\n\nRelated parts: SW-3301-SWT, DG-1101-DGL",
     "source_file": "parts_catalog.csv",
     "extraction_method": "content_field+part_number_field+compatible_skus_field+related_parts_field",
     "confidence_flags": [],
     "has_sku": true,
-    "has_category": true
+    "has_category": true,
+    "parent_skus": [
+      "MOUSE-VERT-PRO"
+    ],
+    "parent_product_names": [
+      "Vertical Ergonomic Mouse Pro"
+    ]
   },
   {
     "sku": "DR-2201-DRV",
     "product_name": "40mm dynamic driver, 32 ohm, 105dB SPL, neodymium magnet",
     "category": "Peripherals/Audio",
-    "text": "40mm dynamic driver, 32 ohm, 105dB SPL, neodymium magnet\n\nCategory: Peripherals/Audio\n\nReplacement procedure: Remove earpad EP-5501-EPD, unscrew driver, solder leads\n\nPart numbers: DR-2201-DRV\n\nCompatible SKUs: HEADSET-WL-PRO\n\nRelated parts: EP-5501-EPD, MC-4401-MIC",
+    "text": "Part of: Wireless Pro Headset (SKUs: HEADSET-WL-PRO). 40mm dynamic driver, 32 ohm, 105dB SPL, neodymium magnet\n\nCategory: Peripherals/Audio\n\nReplacement procedure: Remove earpad EP-5501-EPD, unscrew driver, solder leads\n\nPart numbers: DR-2201-DRV\n\nCompatible SKUs: HEADSET-WL-PRO\n\nRelated parts: EP-5501-EPD, MC-4401-MIC",
     "source_file": "parts_catalog.csv",
     "extraction_method": "content_field+part_number_field+compatible_skus_field+related_parts_field",
     "confidence_flags": [],
     "has_sku": true,
-    "has_category": true
+    "has_category": true,
+    "parent_skus": [
+      "HEADSET-WL-PRO"
+    ],
+    "parent_product_names": [
+      "Wireless Pro Headset"
+    ]
   },
   {
     "sku": "CHAIR-ERG-X99",

@@ -1,0 +1,3930 @@
+{
+  "model": "BAAI/bge-reranker-base",
+  "retrieval_collection": "support_docs",
+  "retrieval_embedder": "sentence-transformers/all-MiniLM-L6-v2",
+  "rrf_top_k": 15,
+  "rerank_top_k": 5,
+  "queries": 100,
+  "warmup_queries": 1,
+  "model_load_seconds": 19.862,
+  "recall@5": 0.8633333333333333,
+  "mrr": 0.8425,
+  "ndcg@5": 0.8397432484110162,
+  "rerank_latency_ms": 3628.526236997568,
+  "rerank_latency_p50_ms": 2827.546100015752,
+  "rerank_latency_p95_ms": 12095.310600008816,
+  "per_query": [
+    {
+      "query_idx": 1,
+      "query": "What is the torque spec for screw S-4012-SCRW?",
+      "relevant_skus": [
+        "CHAIR-ERG-X99",
+        "DESK-STD-MOTO"
+      ],
+      "candidate_doc_ids": [
+        "S-4012-SCRW",
+        "MON-ARM-DUAL",
+        "P-9913-BASE",
+        "CHAIR-ERG-X99",
+        "HEADSET-WL-PRO",
+        "PT-1101-PVT",
+        "CHAIR-ERG-X99-parts-catalog-0",
+        "B-3301-BLT",
+        "MON-ARM-DUAL-product-manuals-6",
+        "MOUSE-VERT-PRO",
+        "DESK-STD-MOTO",
+        "KB-ERGO-SPLIT",
+        "MON-ARM-DUAL-parts-catalog-0"
+      ],
+      "reranked_doc_ids": [
+        "CHAIR-ERG-X99-parts-catalog-0",
+        "MON-ARM-DUAL-parts-catalog-0",
+        "MON-ARM-DUAL-product-manuals-6"
+      ],
+      "retrieved_skus": [
+        "CHAIR-ERG-X99",
+        "MON-ARM-DUAL"
+      ],
+      "recall@5": 0.5,
+      "recall@10": 0.5,
+      "precision@5": 0.2,
+      "mrr": 1.0,
+      "ndcg@5": 0.6131471927654584,
+      "hit_rate": 1.0,
+      "latency_ms": 15215.497600031085
+    },
+    {
+      "query_idx": 2,
+      "query": "Which part number is the gas lift cylinder for CHAIR-ERG-X99?",
+      "relevant_skus": [
+        "CHAIR-ERG-X99"
+      ],
+      "candidate_doc_ids": [
+        "CHAIR-ERG-X99",
+        "C-7721-GL",
+        "C-5500-CAST",
+        "CHAIR-ERG-X99-troubleshooting-tick-0",
+        "P-9912-ARM",
+        "P-9913-BASE",
+        "S-4012-SCRW",
+        "B-3301-BLT",
+        "CHAIR-ERG-X99-product-manuals-5",
+        "GS-9901-GSP",
+        "HEADSET-WL-PRO",
+        "MON-ARM-DUAL",
+        "DESK-STD-MOTO",
+        "WM-4401-WLS",
+        "SN-1101-HGT"
+      ],
+      "reranked_doc_ids": [
+        "CHAIR-ERG-X99-product-manuals-5",
+        "CHAIR-ERG-X99-troubleshooting-tick-0"
+      ],
+      "retrieved_skus": [
+        "CHAIR-ERG-X99"
+      ],
+      "recall@5": 1.0,
+      "recall@10": 1.0,
+      "precision@5": 0.2,
+      "mrr": 1.0,
+      "ndcg@5": 1.0,
+      "hit_rate": 1.0,
+      "latency_ms": 11978.341299982276
+    },
+    {
+      "query_idx": 3,
+      "query": "What does error E02 mean on DESK-STD-MOTO?",
+      "relevant_skus": [
+        "DESK-STD-MOTO"
+      ],
+      "candidate_doc_ids": [
+        "DESK-STD-MOTO",
+        "DESK-STD-MOTO-product-manuals-0",
+        "SN-1101-HGT",
+        "GR-9901-GRS",
+        "SP-4402-SPND",
+        "CB-2201-CTL",
+        "DESK-STD-MOTO-troubleshooting-tick-0",
+        "M-8841-MOT",
+        "S-4012-SCRW",
+        "B-3301-BLT",
+        "MOUSE-VERT-PRO",
+        "DESK-STD-MOTO-product-manuals-3",
+        "DESK-STD-MOTO-parts-catalog-0",
+        "KB-ERGO-SPLIT",
+        "MON-ARM-DUAL"
+      ],
+      "reranked_doc_ids": [
+        "DESK-STD-MOTO-troubleshooting-tick-0",
+        "DESK-STD-MOTO-product-manuals-3",
+        "DESK-STD-MOTO-product-manuals-0",
+        "DESK-STD-MOTO-parts-catalog-0"
+      ],
+      "retrieved_skus": [
+        "DESK-STD-MOTO"
+      ],
+      "recall@5": 1.0,
+      "recall@10": 1.0,
+      "precision@5": 0.2,
+      "mrr": 1.0,
+      "ndcg@5": 1.0,
+      "hit_rate": 1.0,
+      "latency_ms": 14576.336099999025
+    },
+    {
+      "query_idx": 4,
+      "query": "Part number for monitor arm gas spring GS-9901-GSP?",
+      "relevant_skus": [
+        "MON-ARM-DUAL"
+      ],
+      "candidate_doc_ids": [
+        "GS-9901-GSP",
+        "MON-ARM-DUAL",
+        "MON-ARM-DUAL-troubleshooting-tick-1",
+        "PT-1101-PVT",
+        "B-3301-BLT",
+        "MON-ARM-DUAL-parts-catalog-0",
+        "C-7721-GL",
+        "CHAIR-ERG-X99",
+        "DESK-STD-MOTO",
+        "WM-4401-WLS",
+        "MON-ARM-DUAL-troubleshooting-tick-0",
+        "SN-1101-HGT",
+        "GR-9901-GRS",
+        "C-5500-CAST",
+        "SP-4402-SPND"
+      ],
+      "reranked_doc_ids": [
+        "MON-ARM-DUAL-troubleshooting-tick-1",
+        "MON-ARM-DUAL-troubleshooting-tick-0",
+        "MON-ARM-DUAL-parts-catalog-0"
+      ],
+      "retrieved_skus": [
+        "MON-ARM-DUAL"
+      ],
+      "recall@5": 1.0,
+      "recall@10": 1.0,
+      "precision@5": 0.2,
+      "mrr": 1.0,
+      "ndcg@5": 1.0,
+      "hit_rate": 1.0,
+      "latency_ms": 12095.310600008816
+    },
+    {
+      "query_idx": 5,
+      "query": "Keyboard switch SW-2201-SWT actuation force?",
+      "relevant_skus": [
+        "KB-ERGO-SPLIT"
+      ],
+      "candidate_doc_ids": [
+        "SW-2201-SWT",
+        "KB-ERGO-SPLIT-parts-catalog-0",
+        "C-7721-GL",
+        "GS-9901-GSP",
+        "KB-ERGO-SPLIT",
+        "MOUSE-VERT-PRO-troubleshooting-tick-1",
+        "WM-4401-WLS",
+        "MOUSE-VERT-PRO",
+        "KB-ERGO-SPLIT-product-manuals-0",
+        "HEADSET-WL-PRO",
+        "MOUSE-VERT-PRO-troubleshooting-tick-0",
+        "MOUSE-VERT-PRO-product-manuals-3"
+      ],
+      "reranked_doc_ids": [
+        "KB-ERGO-SPLIT-product-manuals-0",
+        "MOUSE-VERT-PRO-troubleshooting-tick-1",
+        "MOUSE-VERT-PRO-product-manuals-3",
+        "KB-ERGO-SPLIT-parts-catalog-0",
+        "MOUSE-VERT-PRO-troubleshooting-tick-0"
+      ],
+      "retrieved_skus": [
+        "KB-ERGO-SPLIT",
+        "MOUSE-VERT-PRO"
+      ],
+      "recall@5": 1.0,
+      "recall@10": 1.0,
+      "precision@5": 0.2,
+      "mrr": 1.0,
+      "ndcg@5": 1.0,
+      "hit_rate": 1.0,
+      "latency_ms": 15105.725999979768
+    },
+    {
+      "query_idx": 6,
+      "query": "Mouse sensor SN-8801-SNS max DPI?",
+      "relevant_skus": [
+        "MOUSE-VERT-PRO"
+      ],
+      "candidate_doc_ids": [
+        "MOUSE-VERT-PRO-product-manuals-1",
+        "SN-8801-SNS",
+        "MOUSE-VERT-PRO",
+        "SN-1101-HGT",
+        "M-8841-MOT",
+        "MOUSE-VERT-PRO-troubleshooting-tick-0",
+        "DESK-STD-MOTO",
+        "MOUSE-VERT-PRO-parts-catalog-0",
+        "MOUSE-VERT-PRO-product-manuals-0",
+        "MOUSE-VERT-PRO-troubleshooting-tick-1"
+      ],
+      "reranked_doc_ids": [
+        "MOUSE-VERT-PRO-troubleshooting-tick-0",
+        "MOUSE-VERT-PRO-product-manuals-1",
+        "MOUSE-VERT-PRO-product-manuals-0",
+        "MOUSE-VERT-PRO-parts-catalog-0",
+        "MOUSE-VERT-PRO-troubleshooting-tick-1"
+      ],
+      "retrieved_skus": [
+        "MOUSE-VERT-PRO"
+      ],
+      "recall@5": 1.0,
+      "recall@10": 1.0,
+      "precision@5": 0.2,
+      "mrr": 1.0,
+      "ndcg@5": 1.0,
+      "hit_rate": 1.0,
+      "latency_ms": 14574.33360000141
+    },
+    {
+      "query_idx": 7,
+      "query": "Headset driver DR-2201-DRV impedance?",
+      "relevant_skus": [
+        "HEADSET-WL-PRO"
+      ],
+      "candidate_doc_ids": [
+        "DR-2201-DRV",
+        "CB-2201-CTL",
+        "HEADSET-WL-PRO-parts-catalog-0",
+        "HEADSET-WL-PRO",
+        "KB-ERGO-SPLIT",
+        "HEADSET-WL-PRO-product-manuals-0",
+        "HEADSET-WL-PRO-product-manuals-1",
+        "HEADSET-WL-PRO-product-manuals-6",
+        "HEADSET-WL-PRO-troubleshooting-tick-1"
+      ],
+      "reranked_doc_ids": [
+        "HEADSET-WL-PRO-product-manuals-0",
+        "HEADSET-WL-PRO-product-manuals-6",
+        "HEADSET-WL-PRO-product-manuals-1",
+        "HEADSET-WL-PRO-parts-catalog-0",
+        "HEADSET-WL-PRO-troubleshooting-tick-1"
+      ],
+      "retrieved_skus": [
+        "HEADSET-WL-PRO"
+      ],
+      "recall@5": 1.0,
+      "recall@10": 1.0,
+      "precision@5": 0.2,
+      "mrr": 1.0,
+      "ndcg@5": 1.0,
+      "hit_rate": 1.0,
+      "latency_ms": 17033.010000013746
+    },
+    {
+      "query_idx": 8,
+      "query": "Bolt B-3301-BLT torque for chair base?",
+      "relevant_skus": [
+        "CHAIR-ERG-X99",
+        "DESK-STD-MOTO",
+        "MON-ARM-DUAL"
+      ],
+      "candidate_doc_ids": [
+        "P-9913-BASE",
+        "B-3301-BLT",
+        "C-7721-GL",
+        "CHAIR-ERG-X99",
+        "CHAIR-ERG-X99-parts-catalog-0",
+        "PT-1101-PVT",
+        "P-9912-ARM",
+        "CHAIR-ERG-X99-troubleshooting-tick-0",
+        "S-4012-SCRW",
+        "M-8841-MOT",
+        "DESK-STD-MOTO",
+        "C-5500-CAST",
+        "CHAIR-ERG-X99-product-manuals-5",
+        "MON-ARM-DUAL",
+        "KB-ERGO-SPLIT"
+      ],
+      "reranked_doc_ids": [
+        "CHAIR-ERG-X99-troubleshooting-tick-0",
+        "CHAIR-ERG-X99-product-manuals-5",
+        "CHAIR-ERG-X99-parts-catalog-0"
+      ],
+      "retrieved_skus": [
+        "CHAIR-ERG-X99"
+      ],
+      "recall@5": 0.3333333333333333,
+      "recall@10": 0.3333333333333333,
+      "precision@5": 0.2,
+      "mrr": 1.0,
+      "ndcg@5": 0.46927872602275644,
+      "hit_rate": 1.0,
+      "latency_ms": 2989.6600999636576
+    },
+    {
+      "query_idx": 9,
+      "query": "What is the part number for the chair base assembly?",
+      "relevant_skus": [
+        "CHAIR-ERG-X99"
+      ],
+      "candidate_doc_ids": [
+        "P-9913-BASE",
+        "P-9912-ARM",
+        "C-7721-GL",
+        "CHAIR-ERG-X99-product-manuals-5",
+        "CHAIR-ERG-X99",
+        "MON-ARM-DUAL",
+        "HEADSET-WL-PRO",
+        "B-3301-BLT",
+        "C-5500-CAST",
+        "S-4012-SCRW",
+        "DESK-STD-MOTO",
+        "KB-ERGO-SPLIT",
+        "WM-4401-WLS",
+        "CHAIR-ERG-X99-parts-catalog-0",
+        "SN-1101-HGT"
+      ],
+      "reranked_doc_ids": [
+        "CHAIR-ERG-X99-product-manuals-5",
+        "CHAIR-ERG-X99-parts-catalog-0"
+      ],
+      "retrieved_skus": [
+        "CHAIR-ERG-X99"
+      ],
+      "recall@5": 1.0,
+      "recall@10": 1.0,
+      "precision@5": 0.2,
+      "mrr": 1.0,
+      "ndcg@5": 1.0,
+      "hit_rate": 1.0,
+      "latency_ms": 2225.040999997873
+    },
+    {
+      "query_idx": 10,
+      "query": "Which control box does DESK-STD-MOTO use?",
+      "relevant_skus": [
+        "DESK-STD-MOTO"
+      ],
+      "candidate_doc_ids": [
+        "CB-2201-CTL",
+        "DESK-STD-MOTO",
+        "SN-1101-HGT",
+        "GR-9901-GRS",
+        "SP-4402-SPND",
+        "M-8841-MOT",
+        "S-4012-SCRW",
+        "B-3301-BLT",
+        "DESK-STD-MOTO-product-manuals-0",
+        "MOUSE-VERT-PRO",
+        "KB-ERGO-SPLIT",
+        "HEADSET-WL-PRO",
+        "DESK-STD-MOTO-parts-catalog-0"
+      ],
+      "reranked_doc_ids": [
+        "DESK-STD-MOTO-product-manuals-0",
+        "DESK-STD-MOTO-parts-catalog-0"
+      ],
+      "retrieved_skus": [
+        "DESK-STD-MOTO"
+      ],
+      "recall@5": 1.0,
+      "recall@10": 1.0,
+      "precision@5": 0.2,
+      "mrr": 1.0,
+      "ndcg@5": 1.0,
+      "hit_rate": 1.0,
+      "latency_ms": 1165.147399995476
+    },
+    {
+      "query_idx": 11,
+      "query": "What is the replacement part number for caster C-5500-CAST?",
+      "relevant_skus": [
+        "CHAIR-ERG-X99"
+      ],
+      "candidate_doc_ids": [
+        "C-5500-CAST",
+        "P-9913-BASE",
+        "CHAIR-ERG-X99-product-manuals-5",
+        "MON-ARM-DUAL",
+        "CHAIR-ERG-X99",
+        "HEADSET-WL-PRO",
+        "DESK-STD-MOTO",
+        "WM-4401-WLS",
+        "SN-1101-HGT",
+        "CHAIR-ERG-X99-product-manuals-4",
+        "GR-9901-GRS",
+        "SP-4402-SPND",
+        "PT-1101-PVT",
+        "CHAIR-ERG-X99-parts-catalog-0",
+        "SW-2201-SWT"
+      ],
+      "reranked_doc_ids": [
+        "CHAIR-ERG-X99-product-manuals-5",
+        "CHAIR-ERG-X99-parts-catalog-0",
+        "CHAIR-ERG-X99-product-manuals-4"
+      ],
+      "retrieved_skus": [
+        "CHAIR-ERG-X99"
+      ],
+      "recall@5": 1.0,
+      "recall@10": 1.0,
+      "precision@5": 0.2,
+      "mrr": 1.0,
+      "ndcg@5": 1.0,
+      "hit_rate": 1.0,
+      "latency_ms": 3230.187399953138
+    },
+    {
+      "query_idx": 12,
+      "query": "Motor M-8841-MOT voltage and force rating",
+      "relevant_skus": [
+        "DESK-STD-MOTO"
+      ],
+      "candidate_doc_ids": [
+        "M-8841-MOT",
+        "SP-4402-SPND",
+        "CB-2201-CTL",
+        "DESK-STD-MOTO-product-manuals-4",
+        "C-5500-CAST",
+        "DESK-STD-MOTO-parts-catalog-0",
+        "C-7721-GL",
+        "GS-9901-GSP",
+        "MON-ARM-DUAL",
+        "CHAIR-ERG-X99",
+        "MON-ARM-DUAL-product-manuals-6",
+        "MOUSE-VERT-PRO",
+        "HEADSET-WL-PRO",
+        "MON-ARM-DUAL-parts-catalog-0",
+        "DESK-STD-MOTO"
+      ],
+      "reranked_doc_ids": [
+        "DESK-STD-MOTO-product-manuals-4",
+        "DESK-STD-MOTO-parts-catalog-0",
+        "MON-ARM-DUAL-product-manuals-6",
+        "MON-ARM-DUAL-parts-catalog-0"
+      ],
+      "retrieved_skus": [
+        "DESK-STD-MOTO",
+        "MON-ARM-DUAL"
+      ],
+      "recall@5": 1.0,
+      "recall@10": 1.0,
+      "precision@5": 0.2,
+      "mrr": 1.0,
+      "ndcg@5": 1.0,
+      "hit_rate": 1.0,
+      "latency_ms": 4234.0558000141755
+    },
+    {
+      "query_idx": 13,
+      "query": "Pivot bolt PT-1101-PVT specifications for monitor arm",
+      "relevant_skus": [
+        "MON-ARM-DUAL"
+      ],
+      "candidate_doc_ids": [
+        "PT-1101-PVT",
+        "MON-ARM-DUAL",
+        "MON-ARM-DUAL-troubleshooting-tick-1",
+        "GS-9901-GSP",
+        "B-3301-BLT",
+        "P-9912-ARM",
+        "CHAIR-ERG-X99",
+        "MON-ARM-DUAL-troubleshooting-tick-0",
+        "HEADSET-WL-PRO",
+        "MON-ARM-DUAL-product-manuals-6",
+        "MOUSE-VERT-PRO",
+        "MON-ARM-DUAL-product-manuals-4",
+        "KB-ERGO-SPLIT",
+        "MON-ARM-DUAL-product-manuals-5",
+        "DESK-STD-MOTO"
+      ],
+      "reranked_doc_ids": [
+        "MON-ARM-DUAL-troubleshooting-tick-0",
+        "MON-ARM-DUAL-product-manuals-6",
+        "MON-ARM-DUAL-product-manuals-4",
+        "MON-ARM-DUAL-troubleshooting-tick-1",
+        "MON-ARM-DUAL-product-manuals-5"
+      ],
+      "retrieved_skus": [
+        "MON-ARM-DUAL"
+      ],
+      "recall@5": 1.0,
+      "recall@10": 1.0,
+      "precision@5": 0.2,
+      "mrr": 1.0,
+      "ndcg@5": 1.0,
+      "hit_rate": 1.0,
+      "latency_ms": 4878.854699956719
+    },
+    {
+      "query_idx": 14,
+      "query": "Tell me about the ErgoFlex Pro Office Chair",
+      "relevant_skus": [
+        "CHAIR-ERG-X99"
+      ],
+      "candidate_doc_ids": [
+        "CHAIR-ERG-X99-product-manuals-0",
+        "CHAIR-ERG-X99",
+        "MON-ARM-DUAL",
+        "P-9913-BASE",
+        "B-3301-BLT",
+        "C-5500-CAST",
+        "P-9912-ARM",
+        "CHAIR-ERG-X99-troubleshooting-tick-0",
+        "C-7721-GL",
+        "S-4012-SCRW",
+        "HEADSET-WL-PRO",
+        "CHAIR-ERG-X99-parts-catalog-0",
+        "DR-2201-DRV",
+        "SN-8801-SNS",
+        "MOUSE-VERT-PRO"
+      ],
+      "reranked_doc_ids": [
+        "CHAIR-ERG-X99-product-manuals-0",
+        "CHAIR-ERG-X99-parts-catalog-0",
+        "CHAIR-ERG-X99-troubleshooting-tick-0"
+      ],
+      "retrieved_skus": [
+        "CHAIR-ERG-X99"
+      ],
+      "recall@5": 1.0,
+      "recall@10": 1.0,
+      "precision@5": 0.2,
+      "mrr": 1.0,
+      "ndcg@5": 1.0,
+      "hit_rate": 1.0,
+      "latency_ms": 2035.5408999603242
+    },
+    {
+      "query_idx": 15,
+      "query": "Motorized Standing Desk Standard overview and key details",
+      "relevant_skus": [
+        "DESK-STD-MOTO"
+      ],
+      "candidate_doc_ids": [
+        "S-4012-SCRW",
+        "SP-4402-SPND",
+        "SN-1101-HGT",
+        "DESK-STD-MOTO-product-manuals-0",
+        "GR-9901-GRS",
+        "CB-2201-CTL",
+        "M-8841-MOT",
+        "B-3301-BLT",
+        "DESK-STD-MOTO",
+        "CHAIR-ERG-X99-parts-catalog-0",
+        "CHAIR-ERG-X99-product-manuals-5",
+        "KB-ERGO-SPLIT",
+        "CHAIR-ERG-X99",
+        "MOUSE-VERT-PRO",
+        "DESK-STD-MOTO-parts-catalog-0"
+      ],
+      "reranked_doc_ids": [
+        "DESK-STD-MOTO-product-manuals-0",
+        "CHAIR-ERG-X99-product-manuals-5",
+        "DESK-STD-MOTO-parts-catalog-0",
+        "CHAIR-ERG-X99-parts-catalog-0"
+      ],
+      "retrieved_skus": [
+        "DESK-STD-MOTO",
+        "CHAIR-ERG-X99"
+      ],
+      "recall@5": 1.0,
+      "recall@10": 1.0,
+      "precision@5": 0.2,
+      "mrr": 1.0,
+      "ndcg@5": 1.0,
+      "hit_rate": 1.0,
+      "latency_ms": 3775.4294000333175
+    },
+    {
+      "query_idx": 16,
+      "query": "Dual Monitor Arm Heavy Duty product description",
+      "relevant_skus": [
+        "MON-ARM-DUAL"
+      ],
+      "candidate_doc_ids": [
+        "GS-9901-GSP",
+        "B-3301-BLT",
+        "PT-1101-PVT",
+        "MON-ARM-DUAL-product-manuals-0",
+        "MON-ARM-DUAL",
+        "CB-2201-CTL",
+        "MON-ARM-DUAL-product-manuals-7",
+        "M-8841-MOT",
+        "MON-ARM-DUAL-parts-catalog-0",
+        "HEADSET-WL-PRO",
+        "MOUSE-VERT-PRO",
+        "MON-ARM-DUAL-troubleshooting-tick-0",
+        "KB-ERGO-SPLIT",
+        "DESK-STD-MOTO",
+        "CHAIR-ERG-X99-parts-catalog-0"
+      ],
+      "reranked_doc_ids": [
+        "MON-ARM-DUAL-product-manuals-0",
+        "CHAIR-ERG-X99-parts-catalog-0",
+        "MON-ARM-DUAL-product-manuals-7",
+        "MON-ARM-DUAL-parts-catalog-0",
+        "MON-ARM-DUAL-troubleshooting-tick-0"
+      ],
+      "retrieved_skus": [
+        "MON-ARM-DUAL",
+        "CHAIR-ERG-X99"
+      ],
+      "recall@5": 1.0,
+      "recall@10": 1.0,
+      "precision@5": 0.2,
+      "mrr": 1.0,
+      "ndcg@5": 1.0,
+      "hit_rate": 1.0,
+      "latency_ms": 3193.3425000170246
+    },
+    {
+      "query_idx": 17,
+      "query": "ErgoSplit Mechanical Keyboard features and layout",
+      "relevant_skus": [
+        "KB-ERGO-SPLIT"
+      ],
+      "candidate_doc_ids": [
+        "WM-4401-WLS",
+        "SW-2201-SWT",
+        "KB-ERGO-SPLIT-product-manuals-0",
+        "KB-ERGO-SPLIT",
+        "MON-ARM-DUAL",
+        "KB-ERGO-SPLIT-troubleshooting-tick-0",
+        "CHAIR-ERG-X99",
+        "CHAIR-ERG-X99-product-manuals-0",
+        "KB-ERGO-SPLIT-parts-catalog-0",
+        "DESK-STD-MOTO",
+        "MOUSE-VERT-PRO",
+        "HEADSET-WL-PRO",
+        "MON-ARM-DUAL-product-manuals-1"
+      ],
+      "reranked_doc_ids": [
+        "KB-ERGO-SPLIT-product-manuals-0",
+        "KB-ERGO-SPLIT-parts-catalog-0",
+        "MON-ARM-DUAL-product-manuals-1",
+        "CHAIR-ERG-X99-product-manuals-0",
+        "KB-ERGO-SPLIT-troubleshooting-tick-0"
+      ],
+      "retrieved_skus": [
+        "KB-ERGO-SPLIT",
+        "MON-ARM-DUAL",
+        "CHAIR-ERG-X99"
+      ],
+      "recall@5": 1.0,
+      "recall@10": 1.0,
+      "precision@5": 0.2,
+      "mrr": 1.0,
+      "ndcg@5": 1.0,
+      "hit_rate": 1.0,
+      "latency_ms": 2993.101099971682
+    },
+    {
+      "query_idx": 18,
+      "query": "Vertical Ergonomic Mouse Pro design and specifications",
+      "relevant_skus": [
+        "MOUSE-VERT-PRO"
+      ],
+      "candidate_doc_ids": [
+        "SN-8801-SNS",
+        "MOUSE-VERT-PRO-product-manuals-0",
+        "MOUSE-VERT-PRO",
+        "MON-ARM-DUAL",
+        "CHAIR-ERG-X99",
+        "HEADSET-WL-PRO",
+        "DESK-STD-MOTO-parts-catalog-0",
+        "DESK-STD-MOTO",
+        "KB-ERGO-SPLIT",
+        "C-5500-CAST",
+        "MOUSE-VERT-PRO-troubleshooting-tick-0"
+      ],
+      "reranked_doc_ids": [
+        "MOUSE-VERT-PRO-product-manuals-0",
+        "DESK-STD-MOTO-parts-catalog-0",
+        "MOUSE-VERT-PRO-troubleshooting-tick-0"
+      ],
+      "retrieved_skus": [
+        "MOUSE-VERT-PRO",
+        "DESK-STD-MOTO"
+      ],
+      "recall@5": 1.0,
+      "recall@10": 1.0,
+      "precision@5": 0.2,
+      "mrr": 1.0,
+      "ndcg@5": 1.0,
+      "hit_rate": 1.0,
+      "latency_ms": 1953.687000030186
+    },
+    {
+      "query_idx": 19,
+      "query": "Wireless Pro Headset audio capabilities and battery",
+      "relevant_skus": [
+        "HEADSET-WL-PRO"
+      ],
+      "candidate_doc_ids": [
+        "DR-2201-DRV",
+        "HEADSET-WL-PRO-product-manuals-0",
+        "HEADSET-WL-PRO",
+        "HEADSET-WL-PRO-product-manuals-6",
+        "KB-ERGO-SPLIT",
+        "WM-4401-WLS",
+        "HEADSET-WL-PRO-parts-catalog-0",
+        "CHAIR-ERG-X99",
+        "MOUSE-VERT-PRO",
+        "HEADSET-WL-PRO-product-manuals-3",
+        "DESK-STD-MOTO",
+        "MON-ARM-DUAL",
+        "C-5500-CAST",
+        "HEADSET-WL-PRO-product-manuals-2",
+        "P-9912-ARM"
+      ],
+      "reranked_doc_ids": [
+        "HEADSET-WL-PRO-product-manuals-0",
+        "HEADSET-WL-PRO-product-manuals-6",
+        "HEADSET-WL-PRO-product-manuals-2",
+        "HEADSET-WL-PRO-parts-catalog-0",
+        "HEADSET-WL-PRO-product-manuals-3"
+      ],
+      "retrieved_skus": [
+        "HEADSET-WL-PRO"
+      ],
+      "recall@5": 1.0,
+      "recall@10": 1.0,
+      "precision@5": 0.2,
+      "mrr": 1.0,
+      "ndcg@5": 1.0,
+      "hit_rate": 1.0,
+      "latency_ms": 6065.648299991153
+    },
+    {
+      "query_idx": 20,
+      "query": "What comes included with ErgoFlex Pro Office Chair?",
+      "relevant_skus": [
+        "CHAIR-ERG-X99"
+      ],
+      "candidate_doc_ids": [
+        "S-4012-SCRW",
+        "P-9913-BASE",
+        "CHAIR-ERG-X99-product-manuals-0",
+        "B-3301-BLT",
+        "C-5500-CAST",
+        "P-9912-ARM",
+        "C-7721-GL",
+        "CHAIR-ERG-X99",
+        "DESK-STD-MOTO",
+        "KB-ERGO-SPLIT",
+        "PT-1101-PVT",
+        "SW-2201-SWT",
+        "CB-2201-CTL",
+        "MOUSE-VERT-PRO",
+        "CHAIR-ERG-X99-parts-catalog-0"
+      ],
+      "reranked_doc_ids": [
+        "CHAIR-ERG-X99-product-manuals-0",
+        "CHAIR-ERG-X99-parts-catalog-0"
+      ],
+      "retrieved_skus": [
+        "CHAIR-ERG-X99"
+      ],
+      "recall@5": 1.0,
+      "recall@10": 1.0,
+      "precision@5": 0.2,
+      "mrr": 1.0,
+      "ndcg@5": 1.0,
+      "hit_rate": 1.0,
+      "latency_ms": 1615.2513999841176
+    },
+    {
+      "query_idx": 21,
+      "query": "Motorized Standing Desk Standard dual motor setup",
+      "relevant_skus": [
+        "DESK-STD-MOTO"
+      ],
+      "candidate_doc_ids": [
+        "M-8841-MOT",
+        "CB-2201-CTL",
+        "SP-4402-SPND",
+        "DESK-STD-MOTO-product-manuals-0",
+        "B-3301-BLT",
+        "SN-1101-HGT",
+        "GR-9901-GRS",
+        "S-4012-SCRW",
+        "DESK-STD-MOTO",
+        "DESK-STD-MOTO-product-manuals-4",
+        "PT-1101-PVT",
+        "GS-9901-GSP",
+        "DESK-STD-MOTO-parts-catalog-0",
+        "MON-ARM-DUAL",
+        "MOUSE-VERT-PRO"
+      ],
+      "reranked_doc_ids": [
+        "DESK-STD-MOTO-product-manuals-0",
+        "DESK-STD-MOTO-parts-catalog-0",
+        "DESK-STD-MOTO-product-manuals-4"
+      ],
+      "retrieved_skus": [
+        "DESK-STD-MOTO"
+      ],
+      "recall@5": 1.0,
+      "recall@10": 1.0,
+      "precision@5": 0.2,
+      "mrr": 1.0,
+      "ndcg@5": 1.0,
+      "hit_rate": 1.0,
+      "latency_ms": 2833.5416999761946
+    },
+    {
+      "query_idx": 22,
+      "query": "Dual Monitor Arm Heavy Duty mounting options",
+      "relevant_skus": [
+        "MON-ARM-DUAL"
+      ],
+      "candidate_doc_ids": [
+        "GS-9901-GSP",
+        "B-3301-BLT",
+        "PT-1101-PVT",
+        "MON-ARM-DUAL-product-manuals-0",
+        "MON-ARM-DUAL",
+        "DESK-STD-MOTO",
+        "CHAIR-ERG-X99",
+        "MON-ARM-DUAL-product-manuals-1",
+        "CB-2201-CTL",
+        "M-8841-MOT",
+        "CHAIR-ERG-X99-parts-catalog-0",
+        "MON-ARM-DUAL-troubleshooting-tick-0",
+        "MON-ARM-DUAL-product-manuals-6"
+      ],
+      "reranked_doc_ids": [
+        "MON-ARM-DUAL-product-manuals-0",
+        "MON-ARM-DUAL-product-manuals-6",
+        "CHAIR-ERG-X99-parts-catalog-0",
+        "MON-ARM-DUAL-product-manuals-1",
+        "MON-ARM-DUAL-troubleshooting-tick-0"
+      ],
+      "retrieved_skus": [
+        "MON-ARM-DUAL",
+        "CHAIR-ERG-X99"
+      ],
+      "recall@5": 1.0,
+      "recall@10": 1.0,
+      "precision@5": 0.2,
+      "mrr": 1.0,
+      "ndcg@5": 1.0,
+      "hit_rate": 1.0,
+      "latency_ms": 4634.468199976254
+    },
+    {
+      "query_idx": 23,
+      "query": "ErgoSplit Mechanical Keyboard firmware and connectivity",
+      "relevant_skus": [
+        "KB-ERGO-SPLIT"
+      ],
+      "candidate_doc_ids": [
+        "SW-2201-SWT",
+        "KB-ERGO-SPLIT-product-manuals-0",
+        "WM-4401-WLS",
+        "KB-ERGO-SPLIT",
+        "KB-ERGO-SPLIT-troubleshooting-tick-0",
+        "MOUSE-VERT-PRO",
+        "KB-ERGO-SPLIT-troubleshooting-tick-1",
+        "MON-ARM-DUAL",
+        "MOUSE-VERT-PRO-troubleshooting-tick-0",
+        "CHAIR-ERG-X99",
+        "HEADSET-WL-PRO",
+        "KB-ERGO-SPLIT-parts-catalog-0",
+        "DESK-STD-MOTO"
+      ],
+      "reranked_doc_ids": [
+        "KB-ERGO-SPLIT-product-manuals-0",
+        "KB-ERGO-SPLIT-parts-catalog-0",
+        "KB-ERGO-SPLIT-troubleshooting-tick-1",
+        "MOUSE-VERT-PRO-troubleshooting-tick-0",
+        "KB-ERGO-SPLIT-troubleshooting-tick-0"
+      ],
+      "retrieved_skus": [
+        "KB-ERGO-SPLIT",
+        "MOUSE-VERT-PRO"
+      ],
+      "recall@5": 1.0,
+      "recall@10": 1.0,
+      "precision@5": 0.2,
+      "mrr": 1.0,
+      "ndcg@5": 1.0,
+      "hit_rate": 1.0,
+      "latency_ms": 2883.927599992603
+    },
+    {
+      "query_idx": 24,
+      "query": "Vertical Ergonomic Mouse Pro sensor and ergonomic angle",
+      "relevant_skus": [
+        "MOUSE-VERT-PRO"
+      ],
+      "candidate_doc_ids": [
+        "SN-8801-SNS",
+        "MOUSE-VERT-PRO-product-manuals-0",
+        "MOUSE-VERT-PRO",
+        "MOUSE-VERT-PRO-troubleshooting-tick-0",
+        "SN-1101-HGT",
+        "M-8841-MOT",
+        "DESK-STD-MOTO-parts-catalog-0",
+        "MON-ARM-DUAL",
+        "CHAIR-ERG-X99",
+        "HEADSET-WL-PRO",
+        "MOUSE-VERT-PRO-parts-catalog-0",
+        "DESK-STD-MOTO",
+        "KB-ERGO-SPLIT",
+        "MOUSE-VERT-PRO-product-manuals-1"
+      ],
+      "reranked_doc_ids": [
+        "MOUSE-VERT-PRO-product-manuals-0",
+        "MOUSE-VERT-PRO-parts-catalog-0",
+        "MOUSE-VERT-PRO-product-manuals-1",
+        "MOUSE-VERT-PRO-troubleshooting-tick-0",
+        "DESK-STD-MOTO-parts-catalog-0"
+      ],
+      "retrieved_skus": [
+        "MOUSE-VERT-PRO",
+        "DESK-STD-MOTO"
+      ],
+      "recall@5": 1.0,
+      "recall@10": 1.0,
+      "precision@5": 0.2,
+      "mrr": 1.0,
+      "ndcg@5": 1.0,
+      "hit_rate": 1.0,
+      "latency_ms": 2871.076500043273
+    },
+    {
+      "query_idx": 25,
+      "query": "Wireless Pro Headset microphone and sound quality",
+      "relevant_skus": [
+        "HEADSET-WL-PRO"
+      ],
+      "candidate_doc_ids": [
+        "DR-2201-DRV",
+        "HEADSET-WL-PRO-product-manuals-0",
+        "HEADSET-WL-PRO",
+        "HEADSET-WL-PRO-product-manuals-2",
+        "KB-ERGO-SPLIT",
+        "WM-4401-WLS",
+        "HEADSET-WL-PRO-product-manuals-3",
+        "CHAIR-ERG-X99",
+        "MOUSE-VERT-PRO",
+        "HEADSET-WL-PRO-troubleshooting-tick-0",
+        "DESK-STD-MOTO",
+        "HEADSET-WL-PRO-parts-catalog-0",
+        "MON-ARM-DUAL"
+      ],
+      "reranked_doc_ids": [
+        "HEADSET-WL-PRO-product-manuals-0",
+        "HEADSET-WL-PRO-product-manuals-2",
+        "HEADSET-WL-PRO-parts-catalog-0",
+        "HEADSET-WL-PRO-troubleshooting-tick-0",
+        "HEADSET-WL-PRO-product-manuals-3"
+      ],
+      "retrieved_skus": [
+        "HEADSET-WL-PRO"
+      ],
+      "recall@5": 1.0,
+      "recall@10": 1.0,
+      "precision@5": 0.2,
+      "mrr": 1.0,
+      "ndcg@5": 1.0,
+      "hit_rate": 1.0,
+      "latency_ms": 3117.45369998971
+    },
+    {
+      "query_idx": 26,
+      "query": "What is the warranty coverage on CHAIR-ERG-X99?",
+      "relevant_skus": [
+        "CHAIR-ERG-X99"
+      ],
+      "candidate_doc_ids": [
+        "C-5500-CAST",
+        "CHAIR-ERG-X99-product-manuals-0",
+        "P-9912-ARM",
+        "C-7721-GL",
+        "P-9913-BASE",
+        "CHAIR-ERG-X99-product-manuals-5",
+        "S-4012-SCRW",
+        "B-3301-BLT",
+        "CHAIR-ERG-X99-troubleshooting-tick-0",
+        "CHAIR-ERG-X99",
+        "DESK-STD-MOTO",
+        "KB-ERGO-SPLIT",
+        "MON-ARM-DUAL",
+        "HEADSET-WL-PRO",
+        "MOUSE-VERT-PRO"
+      ],
+      "reranked_doc_ids": [
+        "CHAIR-ERG-X99-product-manuals-5",
+        "CHAIR-ERG-X99-product-manuals-0",
+        "CHAIR-ERG-X99-troubleshooting-tick-0"
+      ],
+      "retrieved_skus": [
+        "CHAIR-ERG-X99"
+      ],
+      "recall@5": 1.0,
+      "recall@10": 1.0,
+      "precision@5": 0.2,
+      "mrr": 1.0,
+      "ndcg@5": 1.0,
+      "hit_rate": 1.0,
+      "latency_ms": 2774.6427999809384
+    },
+    {
+      "query_idx": 27,
+      "query": "What is the height adjustment range of DESK-STD-MOTO?",
+      "relevant_skus": [
+        "DESK-STD-MOTO"
+      ],
+      "candidate_doc_ids": [
+        "SN-1101-HGT",
+        "MON-ARM-DUAL",
+        "DESK-STD-MOTO-product-manuals-0",
+        "DESK-STD-MOTO",
+        "GR-9901-GRS",
+        "SP-4402-SPND",
+        "CB-2201-CTL",
+        "M-8841-MOT",
+        "S-4012-SCRW",
+        "B-3301-BLT",
+        "DESK-STD-MOTO-product-manuals-4",
+        "GS-9901-GSP",
+        "HEADSET-WL-PRO",
+        "DESK-STD-MOTO-parts-catalog-0",
+        "CHAIR-ERG-X99"
+      ],
+      "reranked_doc_ids": [
+        "DESK-STD-MOTO-product-manuals-4",
+        "DESK-STD-MOTO-product-manuals-0",
+        "DESK-STD-MOTO-parts-catalog-0"
+      ],
+      "retrieved_skus": [
+        "DESK-STD-MOTO"
+      ],
+      "recall@5": 1.0,
+      "recall@10": 1.0,
+      "precision@5": 0.2,
+      "mrr": 1.0,
+      "ndcg@5": 1.0,
+      "hit_rate": 1.0,
+      "latency_ms": 3118.166400003247
+    },
+    {
+      "query_idx": 28,
+      "query": "What is the maximum monitor weight capacity of MON-ARM-DUAL?",
+      "relevant_skus": [
+        "MON-ARM-DUAL"
+      ],
+      "candidate_doc_ids": [
+        "GS-9901-GSP",
+        "B-3301-BLT",
+        "MON-ARM-DUAL-product-manuals-0",
+        "PT-1101-PVT",
+        "MON-ARM-DUAL",
+        "MON-ARM-DUAL-troubleshooting-tick-0",
+        "DESK-STD-MOTO",
+        "MOUSE-VERT-PRO",
+        "MON-ARM-DUAL-product-manuals-7",
+        "CHAIR-ERG-X99",
+        "HEADSET-WL-PRO",
+        "WM-4401-WLS",
+        "SN-1101-HGT",
+        "MON-ARM-DUAL-product-manuals-6",
+        "GR-9901-GRS"
+      ],
+      "reranked_doc_ids": [
+        "MON-ARM-DUAL-product-manuals-0",
+        "MON-ARM-DUAL-troubleshooting-tick-0",
+        "MON-ARM-DUAL-product-manuals-6",
+        "MON-ARM-DUAL-product-manuals-7"
+      ],
+      "retrieved_skus": [
+        "MON-ARM-DUAL"
+      ],
+      "recall@5": 1.0,
+      "recall@10": 1.0,
+      "precision@5": 0.2,
+      "mrr": 1.0,
+      "ndcg@5": 1.0,
+      "hit_rate": 1.0,
+      "latency_ms": 4196.221399994101
+    },
+    {
+      "query_idx": 29,
+      "query": "Does KB-ERGO-SPLIT support wireless Bluetooth connectivity?",
+      "relevant_skus": [
+        "KB-ERGO-SPLIT"
+      ],
+      "candidate_doc_ids": [
+        "WM-4401-WLS",
+        "KB-ERGO-SPLIT-parts-catalog-0",
+        "KB-ERGO-SPLIT",
+        "SW-2201-SWT",
+        "MOUSE-VERT-PRO",
+        "GS-9901-GSP",
+        "KB-ERGO-SPLIT-troubleshooting-tick-0",
+        "CB-2201-CTL",
+        "KB-ERGO-SPLIT-product-manuals-0",
+        "MON-ARM-DUAL",
+        "DR-2201-DRV",
+        "HEADSET-WL-PRO",
+        "KB-ERGO-SPLIT-product-manuals-5",
+        "CHAIR-ERG-X99",
+        "DESK-STD-MOTO"
+      ],
+      "reranked_doc_ids": [
+        "KB-ERGO-SPLIT-product-manuals-5",
+        "KB-ERGO-SPLIT-product-manuals-0",
+        "KB-ERGO-SPLIT-parts-catalog-0",
+        "KB-ERGO-SPLIT-troubleshooting-tick-0"
+      ],
+      "retrieved_skus": [
+        "KB-ERGO-SPLIT"
+      ],
+      "recall@5": 1.0,
+      "recall@10": 1.0,
+      "precision@5": 0.2,
+      "mrr": 1.0,
+      "ndcg@5": 1.0,
+      "hit_rate": 1.0,
+      "latency_ms": 4043.7609999789856
+    },
+    {
+      "query_idx": 30,
+      "query": "What is the ergonomic grip angle on MOUSE-VERT-PRO?",
+      "relevant_skus": [
+        "MOUSE-VERT-PRO"
+      ],
+      "candidate_doc_ids": [
+        "SN-8801-SNS",
+        "MON-ARM-DUAL",
+        "MOUSE-VERT-PRO-product-manuals-0",
+        "HEADSET-WL-PRO",
+        "MOUSE-VERT-PRO-troubleshooting-tick-0",
+        "MOUSE-VERT-PRO",
+        "CHAIR-ERG-X99-product-manuals-0",
+        "CHAIR-ERG-X99",
+        "DESK-STD-MOTO-troubleshooting-tick-0",
+        "KB-ERGO-SPLIT",
+        "DESK-STD-MOTO",
+        "MON-ARM-DUAL-troubleshooting-tick-0"
+      ],
+      "reranked_doc_ids": [
+        "MOUSE-VERT-PRO-product-manuals-0",
+        "CHAIR-ERG-X99-product-manuals-0",
+        "DESK-STD-MOTO-troubleshooting-tick-0",
+        "MOUSE-VERT-PRO-troubleshooting-tick-0",
+        "MON-ARM-DUAL-troubleshooting-tick-0"
+      ],
+      "retrieved_skus": [
+        "MOUSE-VERT-PRO",
+        "CHAIR-ERG-X99",
+        "DESK-STD-MOTO",
+        "MON-ARM-DUAL"
+      ],
+      "recall@5": 1.0,
+      "recall@10": 1.0,
+      "precision@5": 0.2,
+      "mrr": 1.0,
+      "ndcg@5": 1.0,
+      "hit_rate": 1.0,
+      "latency_ms": 3276.9835999934003
+    },
+    {
+      "query_idx": 31,
+      "query": "What is the battery run time on HEADSET-WL-PRO?",
+      "relevant_skus": [
+        "HEADSET-WL-PRO"
+      ],
+      "candidate_doc_ids": [
+        "HEADSET-WL-PRO-product-manuals-6",
+        "HEADSET-WL-PRO",
+        "DR-2201-DRV",
+        "HEADSET-WL-PRO-product-manuals-0",
+        "HEADSET-WL-PRO-parts-catalog-0",
+        "DESK-STD-MOTO",
+        "MON-ARM-DUAL",
+        "HEADSET-WL-PRO-product-manuals-2",
+        "CHAIR-ERG-X99",
+        "MOUSE-VERT-PRO",
+        "KB-ERGO-SPLIT",
+        "HEADSET-WL-PRO-troubleshooting-tick-0"
+      ],
+      "reranked_doc_ids": [
+        "HEADSET-WL-PRO-product-manuals-6",
+        "HEADSET-WL-PRO-product-manuals-0",
+        "HEADSET-WL-PRO-troubleshooting-tick-0",
+        "HEADSET-WL-PRO-parts-catalog-0",
+        "HEADSET-WL-PRO-product-manuals-2"
+      ],
+      "retrieved_skus": [
+        "HEADSET-WL-PRO"
+      ],
+      "recall@5": 1.0,
+      "recall@10": 1.0,
+      "precision@5": 0.2,
+      "mrr": 1.0,
+      "ndcg@5": 1.0,
+      "hit_rate": 1.0,
+      "latency_ms": 6233.88650000561
+    },
+    {
+      "query_idx": 32,
+      "query": "Can the armrests on CHAIR-ERG-X99 be adjusted in height?",
+      "relevant_skus": [
+        "CHAIR-ERG-X99"
+      ],
+      "candidate_doc_ids": [
+        "CHAIR-ERG-X99-parts-catalog-0",
+        "CHAIR-ERG-X99",
+        "CHAIR-ERG-X99-product-manuals-1",
+        "SN-1101-HGT",
+        "C-5500-CAST",
+        "P-9912-ARM",
+        "C-7721-GL",
+        "CHAIR-ERG-X99-product-manuals-3",
+        "P-9913-BASE",
+        "S-4012-SCRW",
+        "B-3301-BLT",
+        "DESK-STD-MOTO",
+        "MON-ARM-DUAL",
+        "CHAIR-ERG-X99-product-manuals-0",
+        "KB-ERGO-SPLIT"
+      ],
+      "reranked_doc_ids": [
+        "CHAIR-ERG-X99-parts-catalog-0",
+        "CHAIR-ERG-X99-product-manuals-1",
+        "CHAIR-ERG-X99-product-manuals-0",
+        "CHAIR-ERG-X99-product-manuals-3"
+      ],
+      "retrieved_skus": [
+        "CHAIR-ERG-X99"
+      ],
+      "recall@5": 1.0,
+      "recall@10": 1.0,
+      "precision@5": 0.2,
+      "mrr": 1.0,
+      "ndcg@5": 1.0,
+      "hit_rate": 1.0,
+      "latency_ms": 2709.72260000417
+    },
+    {
+      "query_idx": 33,
+      "query": "Does the DESK-STD-MOTO control box have Bluetooth pairing?",
+      "relevant_skus": [
+        "DESK-STD-MOTO"
+      ],
+      "candidate_doc_ids": [
+        "CB-2201-CTL",
+        "DESK-STD-MOTO",
+        "MON-ARM-DUAL",
+        "DESK-STD-MOTO-troubleshooting-tick-1",
+        "CHAIR-ERG-X99",
+        "SN-1101-HGT",
+        "GR-9901-GRS",
+        "SP-4402-SPND",
+        "DESK-STD-MOTO-troubleshooting-tick-0",
+        "M-8841-MOT",
+        "S-4012-SCRW",
+        "B-3301-BLT",
+        "DESK-STD-MOTO-parts-catalog-0",
+        "WM-4401-WLS",
+        "KB-ERGO-SPLIT"
+      ],
+      "reranked_doc_ids": [
+        "DESK-STD-MOTO-troubleshooting-tick-1",
+        "DESK-STD-MOTO-parts-catalog-0",
+        "DESK-STD-MOTO-troubleshooting-tick-0"
+      ],
+      "retrieved_skus": [
+        "DESK-STD-MOTO"
+      ],
+      "recall@5": 1.0,
+      "recall@10": 1.0,
+      "precision@5": 0.2,
+      "mrr": 1.0,
+      "ndcg@5": 1.0,
+      "hit_rate": 1.0,
+      "latency_ms": 1807.624900015071
+    },
+    {
+      "query_idx": 34,
+      "query": "Is MON-ARM-DUAL compatible with 32 inch monitors?",
+      "relevant_skus": [
+        "MON-ARM-DUAL"
+      ],
+      "candidate_doc_ids": [
+        "PT-1101-PVT",
+        "DR-2201-DRV",
+        "GS-9901-GSP",
+        "B-3301-BLT",
+        "MON-ARM-DUAL-product-manuals-0",
+        "MON-ARM-DUAL",
+        "MON-ARM-DUAL-product-manuals-7",
+        "HEADSET-WL-PRO",
+        "SW-2201-SWT",
+        "CB-2201-CTL",
+        "CHAIR-ERG-X99-parts-catalog-0",
+        "S-4012-SCRW",
+        "CHAIR-ERG-X99",
+        "MON-ARM-DUAL-product-manuals-1",
+        "KB-ERGO-SPLIT"
+      ],
+      "reranked_doc_ids": [
+        "CHAIR-ERG-X99-parts-catalog-0",
+        "MON-ARM-DUAL-product-manuals-0",
+        "MON-ARM-DUAL-product-manuals-7",
+        "MON-ARM-DUAL-product-manuals-1"
+      ],
+      "retrieved_skus": [
+        "CHAIR-ERG-X99",
+        "MON-ARM-DUAL"
+      ],
+      "recall@5": 1.0,
+      "recall@10": 1.0,
+      "precision@5": 0.2,
+      "mrr": 0.5,
+      "ndcg@5": 0.6309297535714575,
+      "hit_rate": 1.0,
+      "latency_ms": 1762.9457999719307
+    },
+    {
+      "query_idx": 35,
+      "query": "Are the switches on KB-ERGO-SPLIT hot-swappable?",
+      "relevant_skus": [
+        "KB-ERGO-SPLIT"
+      ],
+      "candidate_doc_ids": [
+        "WM-4401-WLS",
+        "SW-2201-SWT",
+        "KB-ERGO-SPLIT-product-manuals-0",
+        "MON-ARM-DUAL",
+        "KB-ERGO-SPLIT-parts-catalog-0",
+        "CHAIR-ERG-X99",
+        "MOUSE-VERT-PRO",
+        "KB-ERGO-SPLIT-product-manuals-5",
+        "KB-ERGO-SPLIT",
+        "HEADSET-WL-PRO",
+        "MOUSE-VERT-PRO-troubleshooting-tick-1",
+        "DESK-STD-MOTO",
+        "MOUSE-VERT-PRO-troubleshooting-tick-0"
+      ],
+      "reranked_doc_ids": [
+        "KB-ERGO-SPLIT-product-manuals-5",
+        "KB-ERGO-SPLIT-product-manuals-0",
+        "KB-ERGO-SPLIT-parts-catalog-0",
+        "MOUSE-VERT-PRO-troubleshooting-tick-1",
+        "MOUSE-VERT-PRO-troubleshooting-tick-0"
+      ],
+      "retrieved_skus": [
+        "KB-ERGO-SPLIT",
+        "MOUSE-VERT-PRO"
+      ],
+      "recall@5": 1.0,
+      "recall@10": 1.0,
+      "precision@5": 0.2,
+      "mrr": 1.0,
+      "ndcg@5": 1.0,
+      "hit_rate": 1.0,
+      "latency_ms": 5369.182399997953
+    },
+    {
+      "query_idx": 36,
+      "query": "Does MOUSE-VERT-PRO have adjustable DPI on the fly?",
+      "relevant_skus": [
+        "MOUSE-VERT-PRO"
+      ],
+      "candidate_doc_ids": [
+        "SN-8801-SNS",
+        "MON-ARM-DUAL",
+        "MOUSE-VERT-PRO-product-manuals-0",
+        "MOUSE-VERT-PRO",
+        "MOUSE-VERT-PRO-product-manuals-1",
+        "MOUSE-VERT-PRO-troubleshooting-tick-0",
+        "KB-ERGO-SPLIT",
+        "HEADSET-WL-PRO",
+        "MOUSE-VERT-PRO-parts-catalog-0",
+        "DESK-STD-MOTO",
+        "MOUSE-VERT-PRO-product-manuals-2",
+        "CHAIR-ERG-X99"
+      ],
+      "reranked_doc_ids": [
+        "MOUSE-VERT-PRO-parts-catalog-0",
+        "MOUSE-VERT-PRO-product-manuals-1",
+        "MOUSE-VERT-PRO-product-manuals-0",
+        "MOUSE-VERT-PRO-troubleshooting-tick-0",
+        "MOUSE-VERT-PRO-product-manuals-2"
+      ],
+      "retrieved_skus": [
+        "MOUSE-VERT-PRO"
+      ],
+      "recall@5": 1.0,
+      "recall@10": 1.0,
+      "precision@5": 0.2,
+      "mrr": 1.0,
+      "ndcg@5": 1.0,
+      "hit_rate": 1.0,
+      "latency_ms": 3023.7639999832027
+    },
+    {
+      "query_idx": 37,
+      "query": "Does HEADSET-WL-PRO include a detachable boom microphone?",
+      "relevant_skus": [
+        "HEADSET-WL-PRO"
+      ],
+      "candidate_doc_ids": [
+        "HEADSET-WL-PRO",
+        "DR-2201-DRV",
+        "HEADSET-WL-PRO-product-manuals-2",
+        "HEADSET-WL-PRO-troubleshooting-tick-0",
+        "HEADSET-WL-PRO-product-manuals-1",
+        "HEADSET-WL-PRO-parts-catalog-0",
+        "HEADSET-WL-PRO-product-manuals-6"
+      ],
+      "reranked_doc_ids": [
+        "HEADSET-WL-PRO-product-manuals-6",
+        "HEADSET-WL-PRO-troubleshooting-tick-0",
+        "HEADSET-WL-PRO-product-manuals-2",
+        "HEADSET-WL-PRO-parts-catalog-0",
+        "HEADSET-WL-PRO-product-manuals-1"
+      ],
+      "retrieved_skus": [
+        "HEADSET-WL-PRO"
+      ],
+      "recall@5": 1.0,
+      "recall@10": 1.0,
+      "precision@5": 0.2,
+      "mrr": 1.0,
+      "ndcg@5": 1.0,
+      "hit_rate": 1.0,
+      "latency_ms": 6030.639700009488
+    },
+    {
+      "query_idx": 38,
+      "query": "Can DESK-STD-MOTO save preset height positions?",
+      "relevant_skus": [
+        "DESK-STD-MOTO"
+      ],
+      "candidate_doc_ids": [
+        "DESK-STD-MOTO",
+        "SN-1101-HGT",
+        "HEADSET-WL-PRO",
+        "DESK-STD-MOTO-product-manuals-0",
+        "GR-9901-GRS",
+        "SP-4402-SPND",
+        "CB-2201-CTL",
+        "M-8841-MOT",
+        "S-4012-SCRW",
+        "B-3301-BLT",
+        "CHAIR-ERG-X99",
+        "MON-ARM-DUAL",
+        "DESK-STD-MOTO-product-manuals-1",
+        "DESK-STD-MOTO-parts-catalog-0",
+        "DESK-STD-MOTO-product-manuals-4"
+      ],
+      "reranked_doc_ids": [
+        "DESK-STD-MOTO-product-manuals-4",
+        "DESK-STD-MOTO-product-manuals-0",
+        "DESK-STD-MOTO-parts-catalog-0",
+        "DESK-STD-MOTO-product-manuals-1"
+      ],
+      "retrieved_skus": [
+        "DESK-STD-MOTO"
+      ],
+      "recall@5": 1.0,
+      "recall@10": 1.0,
+      "precision@5": 0.2,
+      "mrr": 1.0,
+      "ndcg@5": 1.0,
+      "hit_rate": 1.0,
+      "latency_ms": 3679.6511999564245
+    },
+    {
+      "query_idx": 39,
+      "query": "Desk lifting speed 32mm/s and 24V DC motor specs",
+      "relevant_skus": [
+        "DESK-STD-MOTO"
+      ],
+      "candidate_doc_ids": [
+        "M-8841-MOT",
+        "SP-4402-SPND",
+        "CB-2201-CTL",
+        "DESK-STD-MOTO",
+        "DESK-STD-MOTO-product-manuals-4",
+        "B-3301-BLT",
+        "DESK-STD-MOTO-parts-catalog-0",
+        "SN-1101-HGT",
+        "GR-9901-GRS",
+        "MON-ARM-DUAL",
+        "S-4012-SCRW",
+        "DESK-STD-MOTO-product-manuals-1",
+        "CHAIR-ERG-X99",
+        "MOUSE-VERT-PRO",
+        "CHAIR-ERG-X99-parts-catalog-0"
+      ],
+      "reranked_doc_ids": [
+        "DESK-STD-MOTO-product-manuals-4",
+        "DESK-STD-MOTO-parts-catalog-0",
+        "DESK-STD-MOTO-product-manuals-1",
+        "CHAIR-ERG-X99-parts-catalog-0"
+      ],
+      "retrieved_skus": [
+        "DESK-STD-MOTO",
+        "CHAIR-ERG-X99"
+      ],
+      "recall@5": 1.0,
+      "recall@10": 1.0,
+      "precision@5": 0.2,
+      "mrr": 1.0,
+      "ndcg@5": 1.0,
+      "hit_rate": 1.0,
+      "latency_ms": 3970.326800015755
+    },
+    {
+      "query_idx": 40,
+      "query": "Chair gas lift cylinder 120mm stroke 1000N rating",
+      "relevant_skus": [
+        "CHAIR-ERG-X99"
+      ],
+      "candidate_doc_ids": [
+        "C-7721-GL",
+        "C-5500-CAST",
+        "GS-9901-GSP",
+        "CHAIR-ERG-X99-product-manuals-5",
+        "MON-ARM-DUAL",
+        "P-9913-BASE",
+        "CHAIR-ERG-X99-troubleshooting-tick-0",
+        "CHAIR-ERG-X99",
+        "B-3301-BLT",
+        "P-9912-ARM",
+        "S-4012-SCRW",
+        "DESK-STD-MOTO-product-manuals-4",
+        "CHAIR-ERG-X99-parts-catalog-0"
+      ],
+      "reranked_doc_ids": [
+        "CHAIR-ERG-X99-product-manuals-5",
+        "CHAIR-ERG-X99-troubleshooting-tick-0",
+        "CHAIR-ERG-X99-parts-catalog-0",
+        "DESK-STD-MOTO-product-manuals-4"
+      ],
+      "retrieved_skus": [
+        "CHAIR-ERG-X99",
+        "DESK-STD-MOTO"
+      ],
+      "recall@5": 1.0,
+      "recall@10": 1.0,
+      "precision@5": 0.2,
+      "mrr": 1.0,
+      "ndcg@5": 1.0,
+      "hit_rate": 1.0,
+      "latency_ms": 3673.192799964454
+    },
+    {
+      "query_idx": 41,
+      "query": "Monitor arm VESA pattern 75x75 and 100x100 mounting specs",
+      "relevant_skus": [
+        "MON-ARM-DUAL"
+      ],
+      "candidate_doc_ids": [
+        "MON-ARM-DUAL",
+        "B-3301-BLT",
+        "MON-ARM-DUAL-product-manuals-6",
+        "GS-9901-GSP",
+        "PT-1101-PVT",
+        "CHAIR-ERG-X99",
+        "MON-ARM-DUAL-product-manuals-1",
+        "MON-ARM-DUAL-product-manuals-0",
+        "HEADSET-WL-PRO",
+        "DESK-STD-MOTO",
+        "MON-ARM-DUAL-product-manuals-5",
+        "KB-ERGO-SPLIT",
+        "MOUSE-VERT-PRO",
+        "MON-ARM-DUAL-troubleshooting-tick-0"
+      ],
+      "reranked_doc_ids": [
+        "MON-ARM-DUAL-product-manuals-6",
+        "MON-ARM-DUAL-product-manuals-1",
+        "MON-ARM-DUAL-product-manuals-0",
+        "MON-ARM-DUAL-product-manuals-5",
+        "MON-ARM-DUAL-troubleshooting-tick-0"
+      ],
+      "retrieved_skus": [
+        "MON-ARM-DUAL"
+      ],
+      "recall@5": 1.0,
+      "recall@10": 1.0,
+      "precision@5": 0.2,
+      "mrr": 1.0,
+      "ndcg@5": 1.0,
+      "hit_rate": 1.0,
+      "latency_ms": 4721.738299995195
+    },
+    {
+      "query_idx": 42,
+      "query": "Keyboard switch Cherry MX Brown 55g tactile actuation force",
+      "relevant_skus": [
+        "KB-ERGO-SPLIT"
+      ],
+      "candidate_doc_ids": [
+        "SW-2201-SWT",
+        "KB-ERGO-SPLIT-parts-catalog-0",
+        "C-7721-GL",
+        "GS-9901-GSP",
+        "KB-ERGO-SPLIT",
+        "KB-ERGO-SPLIT-product-manuals-0",
+        "WM-4401-WLS",
+        "MOUSE-VERT-PRO",
+        "MOUSE-VERT-PRO-troubleshooting-tick-1",
+        "HEADSET-WL-PRO",
+        "KB-ERGO-SPLIT-troubleshooting-tick-0",
+        "MOUSE-VERT-PRO-product-manuals-3"
+      ],
+      "reranked_doc_ids": [
+        "KB-ERGO-SPLIT-parts-catalog-0",
+        "KB-ERGO-SPLIT-troubleshooting-tick-0",
+        "MOUSE-VERT-PRO-troubleshooting-tick-1",
+        "KB-ERGO-SPLIT-product-manuals-0",
+        "MOUSE-VERT-PRO-product-manuals-3"
+      ],
+      "retrieved_skus": [
+        "KB-ERGO-SPLIT",
+        "MOUSE-VERT-PRO"
+      ],
+      "recall@5": 1.0,
+      "recall@10": 1.0,
+      "precision@5": 0.2,
+      "mrr": 1.0,
+      "ndcg@5": 1.0,
+      "hit_rate": 1.0,
+      "latency_ms": 2766.153200005647
+    },
+    {
+      "query_idx": 43,
+      "query": "Mouse sensor PixArt PAW3395 26000 DPI and 650 IPS tracking",
+      "relevant_skus": [
+        "MOUSE-VERT-PRO"
+      ],
+      "candidate_doc_ids": [
+        "SN-8801-SNS",
+        "MOUSE-VERT-PRO-parts-catalog-0",
+        "MOUSE-VERT-PRO",
+        "MOUSE-VERT-PRO-product-manuals-1",
+        "SN-1101-HGT",
+        "M-8841-MOT",
+        "MOUSE-VERT-PRO-product-manuals-5",
+        "CHAIR-ERG-X99",
+        "HEADSET-WL-PRO",
+        "DESK-STD-MOTO",
+        "MOUSE-VERT-PRO-troubleshooting-tick-0",
+        "KB-ERGO-SPLIT",
+        "MON-ARM-DUAL",
+        "MOUSE-VERT-PRO-product-manuals-0"
+      ],
+      "reranked_doc_ids": [
+        "MOUSE-VERT-PRO-parts-catalog-0",
+        "MOUSE-VERT-PRO-product-manuals-5",
+        "MOUSE-VERT-PRO-product-manuals-1",
+        "MOUSE-VERT-PRO-troubleshooting-tick-0",
+        "MOUSE-VERT-PRO-product-manuals-0"
+      ],
+      "retrieved_skus": [
+        "MOUSE-VERT-PRO"
+      ],
+      "recall@5": 1.0,
+      "recall@10": 1.0,
+      "precision@5": 0.2,
+      "mrr": 1.0,
+      "ndcg@5": 1.0,
+      "hit_rate": 1.0,
+      "latency_ms": 6221.029299951624
+    },
+    {
+      "query_idx": 44,
+      "query": "Headset 40mm neodymium driver 32 ohm impedance 20Hz-20kHz",
+      "relevant_skus": [
+        "HEADSET-WL-PRO"
+      ],
+      "candidate_doc_ids": [
+        "DR-2201-DRV",
+        "CB-2201-CTL",
+        "HEADSET-WL-PRO-parts-catalog-0",
+        "HEADSET-WL-PRO",
+        "KB-ERGO-SPLIT",
+        "HEADSET-WL-PRO-product-manuals-2",
+        "HEADSET-WL-PRO-product-manuals-0",
+        "HEADSET-WL-PRO-product-manuals-1",
+        "HEADSET-WL-PRO-troubleshooting-tick-0"
+      ],
+      "reranked_doc_ids": [
+        "HEADSET-WL-PRO-parts-catalog-0",
+        "HEADSET-WL-PRO-product-manuals-1",
+        "HEADSET-WL-PRO-product-manuals-2",
+        "HEADSET-WL-PRO-troubleshooting-tick-0",
+        "HEADSET-WL-PRO-product-manuals-0"
+      ],
+      "retrieved_skus": [
+        "HEADSET-WL-PRO"
+      ],
+      "recall@5": 1.0,
+      "recall@10": 1.0,
+      "precision@5": 0.2,
+      "mrr": 1.0,
+      "ndcg@5": 1.0,
+      "hit_rate": 1.0,
+      "latency_ms": 3633.4694999968633
+    },
+    {
+      "query_idx": 45,
+      "query": "Lifting spindle Tr10x3 trapezoidal thread 600mm travel",
+      "relevant_skus": [
+        "DESK-STD-MOTO"
+      ],
+      "candidate_doc_ids": [
+        "SP-4402-SPND",
+        "GR-9901-GRS",
+        "DESK-STD-MOTO-parts-catalog-0",
+        "DESK-STD-MOTO",
+        "PT-1101-PVT",
+        "SN-1101-HGT",
+        "DESK-STD-MOTO-troubleshooting-tick-1",
+        "MON-ARM-DUAL",
+        "DESK-STD-MOTO-product-manuals-4",
+        "CHAIR-ERG-X99-parts-catalog-0",
+        "MON-ARM-DUAL-parts-catalog-0"
+      ],
+      "reranked_doc_ids": [
+        "DESK-STD-MOTO-product-manuals-4",
+        "DESK-STD-MOTO-parts-catalog-0",
+        "MON-ARM-DUAL-parts-catalog-0",
+        "CHAIR-ERG-X99-parts-catalog-0",
+        "DESK-STD-MOTO-troubleshooting-tick-1"
+      ],
+      "retrieved_skus": [
+        "DESK-STD-MOTO",
+        "MON-ARM-DUAL",
+        "CHAIR-ERG-X99"
+      ],
+      "recall@5": 1.0,
+      "recall@10": 1.0,
+      "precision@5": 0.2,
+      "mrr": 1.0,
+      "ndcg@5": 1.0,
+      "hit_rate": 1.0,
+      "latency_ms": 4320.473700005095
+    },
+    {
+      "query_idx": 46,
+      "query": "Caster 60mm nylon stem mount 50kg load capacity",
+      "relevant_skus": [
+        "CHAIR-ERG-X99"
+      ],
+      "candidate_doc_ids": [
+        "C-5500-CAST",
+        "P-9913-BASE",
+        "CHAIR-ERG-X99",
+        "DESK-STD-MOTO",
+        "MON-ARM-DUAL",
+        "PT-1101-PVT",
+        "SW-2201-SWT",
+        "KB-ERGO-SPLIT",
+        "CHAIR-ERG-X99-product-manuals-5",
+        "CHAIR-ERG-X99-product-manuals-4",
+        "CHAIR-ERG-X99-parts-catalog-0",
+        "MON-ARM-DUAL-parts-catalog-0"
+      ],
+      "reranked_doc_ids": [
+        "CHAIR-ERG-X99-product-manuals-5",
+        "CHAIR-ERG-X99-product-manuals-4",
+        "MON-ARM-DUAL-parts-catalog-0",
+        "CHAIR-ERG-X99-parts-catalog-0"
+      ],
+      "retrieved_skus": [
+        "CHAIR-ERG-X99",
+        "MON-ARM-DUAL"
+      ],
+      "recall@5": 1.0,
+      "recall@10": 1.0,
+      "precision@5": 0.2,
+      "mrr": 1.0,
+      "ndcg@5": 1.0,
+      "hit_rate": 1.0,
+      "latency_ms": 3619.4991000229493
+    },
+    {
+      "query_idx": 47,
+      "query": "Gas spring 2-9kg force range 200mm stroke M6 end fitting",
+      "relevant_skus": [
+        "MON-ARM-DUAL"
+      ],
+      "candidate_doc_ids": [
+        "GS-9901-GSP",
+        "C-7721-GL",
+        "MON-ARM-DUAL",
+        "CHAIR-ERG-X99",
+        "SN-1101-HGT",
+        "DESK-STD-MOTO",
+        "HEADSET-WL-PRO",
+        "DESK-STD-MOTO-product-manuals-4",
+        "MON-ARM-DUAL-parts-catalog-0",
+        "CHAIR-ERG-X99-parts-catalog-0"
+      ],
+      "reranked_doc_ids": [
+        "MON-ARM-DUAL-parts-catalog-0",
+        "CHAIR-ERG-X99-parts-catalog-0",
+        "DESK-STD-MOTO-product-manuals-4"
+      ],
+      "retrieved_skus": [
+        "MON-ARM-DUAL",
+        "CHAIR-ERG-X99",
+        "DESK-STD-MOTO"
+      ],
+      "recall@5": 1.0,
+      "recall@10": 1.0,
+      "precision@5": 0.2,
+      "mrr": 1.0,
+      "ndcg@5": 1.0,
+      "hit_rate": 1.0,
+      "latency_ms": 2866.6530000045896
+    },
+    {
+      "query_idx": 48,
+      "query": "Wireless module nRF52840 Bluetooth 5.0 and 2.4GHz",
+      "relevant_skus": [
+        "KB-ERGO-SPLIT"
+      ],
+      "candidate_doc_ids": [
+        "WM-4401-WLS",
+        "KB-ERGO-SPLIT-parts-catalog-0",
+        "KB-ERGO-SPLIT",
+        "KB-ERGO-SPLIT-troubleshooting-tick-1",
+        "CB-2201-CTL",
+        "HEADSET-WL-PRO",
+        "KB-ERGO-SPLIT-troubleshooting-tick-0",
+        "DR-2201-DRV",
+        "CHAIR-ERG-X99",
+        "MOUSE-VERT-PRO",
+        "KB-ERGO-SPLIT-product-manuals-2",
+        "DESK-STD-MOTO",
+        "MON-ARM-DUAL",
+        "DESK-STD-MOTO-troubleshooting-tick-1"
+      ],
+      "reranked_doc_ids": [
+        "KB-ERGO-SPLIT-product-manuals-2",
+        "KB-ERGO-SPLIT-troubleshooting-tick-1",
+        "DESK-STD-MOTO-troubleshooting-tick-1",
+        "KB-ERGO-SPLIT-parts-catalog-0",
+        "KB-ERGO-SPLIT-troubleshooting-tick-0"
+      ],
+      "retrieved_skus": [
+        "KB-ERGO-SPLIT",
+        "DESK-STD-MOTO"
+      ],
+      "recall@5": 1.0,
+      "recall@10": 1.0,
+      "precision@5": 0.2,
+      "mrr": 1.0,
+      "ndcg@5": 1.0,
+      "hit_rate": 1.0,
+      "latency_ms": 2717.0693000080064
+    },
+    {
+      "query_idx": 49,
+      "query": "Mouse polling rate 1000Hz 1ms response time specs",
+      "relevant_skus": [
+        "MOUSE-VERT-PRO"
+      ],
+      "candidate_doc_ids": [
+        "MOUSE-VERT-PRO-product-manuals-1",
+        "MOUSE-VERT-PRO",
+        "SN-8801-SNS",
+        "MOUSE-VERT-PRO-product-manuals-0",
+        "DESK-STD-MOTO",
+        "MON-ARM-DUAL",
+        "MOUSE-VERT-PRO-troubleshooting-tick-0",
+        "MOUSE-VERT-PRO-troubleshooting-tick-1",
+        "MOUSE-VERT-PRO-parts-catalog-0"
+      ],
+      "reranked_doc_ids": [
+        "MOUSE-VERT-PRO-parts-catalog-0",
+        "MOUSE-VERT-PRO-product-manuals-1",
+        "MOUSE-VERT-PRO-product-manuals-0",
+        "MOUSE-VERT-PRO-troubleshooting-tick-0",
+        "MOUSE-VERT-PRO-troubleshooting-tick-1"
+      ],
+      "retrieved_skus": [
+        "MOUSE-VERT-PRO"
+      ],
+      "recall@5": 1.0,
+      "recall@10": 1.0,
+      "precision@5": 0.2,
+      "mrr": 1.0,
+      "ndcg@5": 1.0,
+      "hit_rate": 1.0,
+      "latency_ms": 2815.593900042586
+    },
+    {
+      "query_idx": 50,
+      "query": "Headset battery BT-6601-BAT 1200mAh capacity and charging time",
+      "relevant_skus": [
+        "HEADSET-WL-PRO"
+      ],
+      "candidate_doc_ids": [
+        "HEADSET-WL-PRO-product-manuals-6",
+        "DR-2201-DRV",
+        "HEADSET-WL-PRO",
+        "HEADSET-WL-PRO-product-manuals-5",
+        "MON-ARM-DUAL",
+        "KB-ERGO-SPLIT",
+        "KB-ERGO-SPLIT-troubleshooting-tick-1",
+        "CHAIR-ERG-X99",
+        "HEADSET-WL-PRO-product-manuals-0",
+        "MOUSE-VERT-PRO",
+        "DESK-STD-MOTO",
+        "MOUSE-VERT-PRO-product-manuals-5"
+      ],
+      "reranked_doc_ids": [
+        "HEADSET-WL-PRO-product-manuals-6",
+        "HEADSET-WL-PRO-product-manuals-5",
+        "MOUSE-VERT-PRO-product-manuals-5",
+        "HEADSET-WL-PRO-product-manuals-0",
+        "KB-ERGO-SPLIT-troubleshooting-tick-1"
+      ],
+      "retrieved_skus": [
+        "HEADSET-WL-PRO",
+        "MOUSE-VERT-PRO",
+        "KB-ERGO-SPLIT"
+      ],
+      "recall@5": 1.0,
+      "recall@10": 1.0,
+      "precision@5": 0.2,
+      "mrr": 1.0,
+      "ndcg@5": 1.0,
+      "hit_rate": 1.0,
+      "latency_ms": 6593.517199973576
+    },
+    {
+      "query_idx": 51,
+      "query": "Standing desk weight capacity 100kg evenly distributed load",
+      "relevant_skus": [
+        "DESK-STD-MOTO"
+      ],
+      "candidate_doc_ids": [
+        "C-5500-CAST",
+        "MON-ARM-DUAL-troubleshooting-tick-0",
+        "SP-4402-SPND",
+        "B-3301-BLT",
+        "SN-1101-HGT",
+        "DESK-STD-MOTO-product-manuals-0",
+        "GR-9901-GRS",
+        "CB-2201-CTL",
+        "DESK-STD-MOTO-troubleshooting-tick-0",
+        "M-8841-MOT",
+        "S-4012-SCRW",
+        "DESK-STD-MOTO",
+        "MON-ARM-DUAL",
+        "DESK-STD-MOTO-product-manuals-1",
+        "HEADSET-WL-PRO"
+      ],
+      "reranked_doc_ids": [
+        "DESK-STD-MOTO-product-manuals-0",
+        "DESK-STD-MOTO-product-manuals-1",
+        "DESK-STD-MOTO-troubleshooting-tick-0",
+        "MON-ARM-DUAL-troubleshooting-tick-0"
+      ],
+      "retrieved_skus": [
+        "DESK-STD-MOTO",
+        "MON-ARM-DUAL"
+      ],
+      "recall@5": 1.0,
+      "recall@10": 1.0,
+      "precision@5": 0.2,
+      "mrr": 1.0,
+      "ndcg@5": 1.0,
+      "hit_rate": 1.0,
+      "latency_ms": 2530.2646000054665
+    },
+    {
+      "query_idx": 52,
+      "query": "Show me all products in Furniture/Seating category",
+      "relevant_skus": [
+        "CHAIR-ERG-X99"
+      ],
+      "candidate_doc_ids": [
+        "HEADSET-WL-PRO",
+        "CHAIR-ERG-X99",
+        "CHAIR-ERG-X99-product-manuals-5",
+        "C-5500-CAST",
+        "CB-2201-CTL",
+        "P-9912-ARM",
+        "C-7721-GL",
+        "P-9913-BASE",
+        "MON-ARM-DUAL",
+        "DESK-STD-MOTO",
+        "KB-ERGO-SPLIT",
+        "SP-4402-SPND",
+        "GS-9901-GSP",
+        "M-8841-MOT",
+        "CHAIR-ERG-X99-parts-catalog-0"
+      ],
+      "reranked_doc_ids": [
+        "CHAIR-ERG-X99-parts-catalog-0",
+        "CHAIR-ERG-X99-product-manuals-5"
+      ],
+      "retrieved_skus": [
+        "CHAIR-ERG-X99"
+      ],
+      "recall@5": 1.0,
+      "recall@10": 1.0,
+      "precision@5": 0.2,
+      "mrr": 1.0,
+      "ndcg@5": 1.0,
+      "hit_rate": 1.0,
+      "latency_ms": 1868.0984000093304
+    },
+    {
+      "query_idx": 53,
+      "query": "List all products under Furniture/Desks",
+      "relevant_skus": [
+        "DESK-STD-MOTO"
+      ],
+      "candidate_doc_ids": [
+        "SP-4402-SPND",
+        "M-8841-MOT",
+        "CB-2201-CTL",
+        "DESK-STD-MOTO",
+        "MOUSE-VERT-PRO",
+        "CHAIR-ERG-X99-parts-catalog-0",
+        "MON-ARM-DUAL",
+        "C-5500-CAST",
+        "P-9912-ARM",
+        "DESK-STD-MOTO-parts-catalog-0",
+        "C-7721-GL",
+        "P-9913-BASE",
+        "GS-9901-GSP",
+        "CHAIR-ERG-X99",
+        "CHAIR-ERG-X99-product-manuals-5"
+      ],
+      "reranked_doc_ids": [
+        "CHAIR-ERG-X99-parts-catalog-0",
+        "DESK-STD-MOTO-parts-catalog-0",
+        "CHAIR-ERG-X99-product-manuals-5"
+      ],
+      "retrieved_skus": [
+        "CHAIR-ERG-X99",
+        "DESK-STD-MOTO"
+      ],
+      "recall@5": 1.0,
+      "recall@10": 1.0,
+      "precision@5": 0.2,
+      "mrr": 0.5,
+      "ndcg@5": 0.6309297535714575,
+      "hit_rate": 1.0,
+      "latency_ms": 2788.99079997791
+    },
+    {
+      "query_idx": 54,
+      "query": "What items are available in Furniture/Mounts?",
+      "relevant_skus": [
+        "MON-ARM-DUAL"
+      ],
+      "candidate_doc_ids": [
+        "GS-9901-GSP",
+        "KB-ERGO-SPLIT",
+        "MON-ARM-DUAL",
+        "CHAIR-ERG-X99",
+        "HEADSET-WL-PRO",
+        "C-5500-CAST",
+        "MON-ARM-DUAL-parts-catalog-0",
+        "SP-4402-SPND",
+        "P-9912-ARM",
+        "C-7721-GL",
+        "DESK-STD-MOTO-parts-catalog-0",
+        "P-9913-BASE",
+        "M-8841-MOT",
+        "DESK-STD-MOTO",
+        "CHAIR-ERG-X99-parts-catalog-0"
+      ],
+      "reranked_doc_ids": [
+        "DESK-STD-MOTO-parts-catalog-0",
+        "MON-ARM-DUAL-parts-catalog-0",
+        "CHAIR-ERG-X99-parts-catalog-0"
+      ],
+      "retrieved_skus": [
+        "DESK-STD-MOTO",
+        "MON-ARM-DUAL",
+        "CHAIR-ERG-X99"
+      ],
+      "recall@5": 1.0,
+      "recall@10": 1.0,
+      "precision@5": 0.2,
+      "mrr": 0.5,
+      "ndcg@5": 0.6309297535714575,
+      "hit_rate": 1.0,
+      "latency_ms": 1151.7592000309378
+    },
+    {
+      "query_idx": 55,
+      "query": "Which products belong to Peripherals/Keyboards?",
+      "relevant_skus": [
+        "KB-ERGO-SPLIT"
+      ],
+      "candidate_doc_ids": [
+        "SW-2201-SWT",
+        "KB-ERGO-SPLIT",
+        "KB-ERGO-SPLIT-product-manuals-5",
+        "MOUSE-VERT-PRO",
+        "KB-ERGO-SPLIT-parts-catalog-0",
+        "HEADSET-WL-PRO",
+        "DESK-STD-MOTO-parts-catalog-0",
+        "DESK-STD-MOTO",
+        "CHAIR-ERG-X99",
+        "GR-9901-GRS",
+        "PT-1101-PVT",
+        "CHAIR-ERG-X99-parts-catalog-0"
+      ],
+      "reranked_doc_ids": [
+        "KB-ERGO-SPLIT-parts-catalog-0",
+        "CHAIR-ERG-X99-parts-catalog-0",
+        "DESK-STD-MOTO-parts-catalog-0",
+        "KB-ERGO-SPLIT-product-manuals-5"
+      ],
+      "retrieved_skus": [
+        "KB-ERGO-SPLIT",
+        "CHAIR-ERG-X99",
+        "DESK-STD-MOTO"
+      ],
+      "recall@5": 1.0,
+      "recall@10": 1.0,
+      "precision@5": 0.2,
+      "mrr": 1.0,
+      "ndcg@5": 1.0,
+      "hit_rate": 1.0,
+      "latency_ms": 4484.599099960178
+    },
+    {
+      "query_idx": 56,
+      "query": "What products are in the Peripherals/Mice category?",
+      "relevant_skus": [
+        "MOUSE-VERT-PRO"
+      ],
+      "candidate_doc_ids": [
+        "CHAIR-ERG-X99",
+        "MOUSE-VERT-PRO-product-manuals-0",
+        "SN-8801-SNS",
+        "MON-ARM-DUAL",
+        "KB-ERGO-SPLIT-parts-catalog-0",
+        "SW-2201-SWT",
+        "DR-2201-DRV",
+        "MOUSE-VERT-PRO",
+        "DESK-STD-MOTO-parts-catalog-0",
+        "HEADSET-WL-PRO",
+        "HEADSET-WL-PRO-product-manuals-6",
+        "KB-ERGO-SPLIT"
+      ],
+      "reranked_doc_ids": [
+        "DESK-STD-MOTO-parts-catalog-0",
+        "HEADSET-WL-PRO-product-manuals-6",
+        "KB-ERGO-SPLIT-parts-catalog-0",
+        "MOUSE-VERT-PRO-product-manuals-0"
+      ],
+      "retrieved_skus": [
+        "DESK-STD-MOTO",
+        "HEADSET-WL-PRO",
+        "KB-ERGO-SPLIT",
+        "MOUSE-VERT-PRO"
+      ],
+      "recall@5": 1.0,
+      "recall@10": 1.0,
+      "precision@5": 0.2,
+      "mrr": 0.25,
+      "ndcg@5": 0.43067655807339306,
+      "hit_rate": 1.0,
+      "latency_ms": 5878.319300012663
+    },
+    {
+      "query_idx": 57,
+      "query": "Show me all options under Peripherals/Audio",
+      "relevant_skus": [
+        "HEADSET-WL-PRO"
+      ],
+      "candidate_doc_ids": [
+        "DR-2201-DRV",
+        "HEADSET-WL-PRO-parts-catalog-0",
+        "HEADSET-WL-PRO",
+        "CHAIR-ERG-X99",
+        "DESK-STD-MOTO-parts-catalog-0",
+        "CB-2201-CTL",
+        "DESK-STD-MOTO",
+        "HEADSET-WL-PRO-troubleshooting-tick-0",
+        "MON-ARM-DUAL",
+        "SW-2201-SWT",
+        "SN-8801-SNS",
+        "KB-ERGO-SPLIT-parts-catalog-0",
+        "MOUSE-VERT-PRO",
+        "HEADSET-WL-PRO-product-manuals-0",
+        "KB-ERGO-SPLIT"
+      ],
+      "reranked_doc_ids": [
+        "DESK-STD-MOTO-parts-catalog-0",
+        "HEADSET-WL-PRO-parts-catalog-0",
+        "KB-ERGO-SPLIT-parts-catalog-0",
+        "HEADSET-WL-PRO-product-manuals-0",
+        "HEADSET-WL-PRO-troubleshooting-tick-0"
+      ],
+      "retrieved_skus": [
+        "DESK-STD-MOTO",
+        "HEADSET-WL-PRO",
+        "KB-ERGO-SPLIT"
+      ],
+      "recall@5": 1.0,
+      "recall@10": 1.0,
+      "precision@5": 0.2,
+      "mrr": 0.5,
+      "ndcg@5": 0.6309297535714575,
+      "hit_rate": 1.0,
+      "latency_ms": 2860.478400019929
+    },
+    {
+      "query_idx": 58,
+      "query": "I am looking for office chairs and seating options",
+      "relevant_skus": [
+        "CHAIR-ERG-X99"
+      ],
+      "candidate_doc_ids": [
+        "C-5500-CAST",
+        "P-9912-ARM",
+        "C-7721-GL",
+        "P-9913-BASE",
+        "CHAIR-ERG-X99-parts-catalog-0",
+        "CHAIR-ERG-X99",
+        "S-4012-SCRW",
+        "B-3301-BLT",
+        "CHAIR-ERG-X99-product-manuals-5",
+        "MOUSE-VERT-PRO",
+        "CHAIR-ERG-X99-product-manuals-0",
+        "DESK-STD-MOTO",
+        "KB-ERGO-SPLIT",
+        "HEADSET-WL-PRO",
+        "CHAIR-ERG-X99-troubleshooting-tick-0"
+      ],
+      "reranked_doc_ids": [
+        "CHAIR-ERG-X99-product-manuals-0",
+        "CHAIR-ERG-X99-product-manuals-5",
+        "CHAIR-ERG-X99-parts-catalog-0",
+        "CHAIR-ERG-X99-troubleshooting-tick-0"
+      ],
+      "retrieved_skus": [
+        "CHAIR-ERG-X99"
+      ],
+      "recall@5": 1.0,
+      "recall@10": 1.0,
+      "precision@5": 0.2,
+      "mrr": 1.0,
+      "ndcg@5": 1.0,
+      "hit_rate": 1.0,
+      "latency_ms": 3782.8954000142403
+    },
+    {
+      "query_idx": 59,
+      "query": "Browse motorized ergonomic standing desks",
+      "relevant_skus": [
+        "DESK-STD-MOTO"
+      ],
+      "candidate_doc_ids": [
+        "SP-4402-SPND",
+        "M-8841-MOT",
+        "DESK-STD-MOTO-product-manuals-0",
+        "SN-1101-HGT",
+        "DESK-STD-MOTO-parts-catalog-0",
+        "GR-9901-GRS",
+        "DESK-STD-MOTO",
+        "CB-2201-CTL",
+        "S-4012-SCRW",
+        "CHAIR-ERG-X99-product-manuals-0",
+        "SN-8801-SNS",
+        "B-3301-BLT",
+        "DESK-STD-MOTO-product-manuals-1",
+        "MOUSE-VERT-PRO",
+        "DESK-STD-MOTO-troubleshooting-tick-0"
+      ],
+      "reranked_doc_ids": [
+        "DESK-STD-MOTO-product-manuals-0",
+        "DESK-STD-MOTO-product-manuals-1",
+        "DESK-STD-MOTO-parts-catalog-0",
+        "DESK-STD-MOTO-troubleshooting-tick-0",
+        "CHAIR-ERG-X99-product-manuals-0"
+      ],
+      "retrieved_skus": [
+        "DESK-STD-MOTO",
+        "CHAIR-ERG-X99"
+      ],
+      "recall@5": 1.0,
+      "recall@10": 1.0,
+      "precision@5": 0.2,
+      "mrr": 1.0,
+      "ndcg@5": 1.0,
+      "hit_rate": 1.0,
+      "latency_ms": 3151.4084999798797
+    },
+    {
+      "query_idx": 60,
+      "query": "Show me desk mounts and monitor arms",
+      "relevant_skus": [
+        "MON-ARM-DUAL"
+      ],
+      "candidate_doc_ids": [
+        "GS-9901-GSP",
+        "MON-ARM-DUAL",
+        "MON-ARM-DUAL-product-manuals-0",
+        "B-3301-BLT",
+        "HEADSET-WL-PRO",
+        "MON-ARM-DUAL-product-manuals-1",
+        "PT-1101-PVT",
+        "MON-ARM-DUAL-product-manuals-6",
+        "DESK-STD-MOTO",
+        "SP-4402-SPND",
+        "MOUSE-VERT-PRO",
+        "SN-1101-HGT",
+        "GR-9901-GRS",
+        "CB-2201-CTL",
+        "CHAIR-ERG-X99-parts-catalog-0"
+      ],
+      "reranked_doc_ids": [
+        "CHAIR-ERG-X99-parts-catalog-0",
+        "MON-ARM-DUAL-product-manuals-0",
+        "MON-ARM-DUAL-product-manuals-6",
+        "MON-ARM-DUAL-product-manuals-1"
+      ],
+      "retrieved_skus": [
+        "CHAIR-ERG-X99",
+        "MON-ARM-DUAL"
+      ],
+      "recall@5": 1.0,
+      "recall@10": 1.0,
+      "precision@5": 0.2,
+      "mrr": 0.5,
+      "ndcg@5": 0.6309297535714575,
+      "hit_rate": 1.0,
+      "latency_ms": 2896.600399981253
+    },
+    {
+      "query_idx": 61,
+      "query": "Show me mechanical split keyboards for ergonomic typing",
+      "relevant_skus": [
+        "KB-ERGO-SPLIT"
+      ],
+      "candidate_doc_ids": [
+        "SW-2201-SWT",
+        "KB-ERGO-SPLIT-product-manuals-0",
+        "HEADSET-WL-PRO",
+        "KB-ERGO-SPLIT",
+        "KB-ERGO-SPLIT-product-manuals-4",
+        "SN-8801-SNS",
+        "KB-ERGO-SPLIT-parts-catalog-0",
+        "WM-4401-WLS",
+        "MOUSE-VERT-PRO",
+        "MON-ARM-DUAL",
+        "KB-ERGO-SPLIT-troubleshooting-tick-0",
+        "MON-ARM-DUAL-product-manuals-7",
+        "DESK-STD-MOTO"
+      ],
+      "reranked_doc_ids": [
+        "KB-ERGO-SPLIT-product-manuals-0",
+        "KB-ERGO-SPLIT-parts-catalog-0",
+        "KB-ERGO-SPLIT-troubleshooting-tick-0",
+        "KB-ERGO-SPLIT-product-manuals-4",
+        "MON-ARM-DUAL-product-manuals-7"
+      ],
+      "retrieved_skus": [
+        "KB-ERGO-SPLIT",
+        "MON-ARM-DUAL"
+      ],
+      "recall@5": 1.0,
+      "recall@10": 1.0,
+      "precision@5": 0.2,
+      "mrr": 1.0,
+      "ndcg@5": 1.0,
+      "hit_rate": 1.0,
+      "latency_ms": 2000.3820999991149
+    },
+    {
+      "query_idx": 62,
+      "query": "Looking for vertical ergonomic computer mice",
+      "relevant_skus": [
+        "MOUSE-VERT-PRO"
+      ],
+      "candidate_doc_ids": [
+        "SN-8801-SNS",
+        "MOUSE-VERT-PRO-product-manuals-0",
+        "MOUSE-VERT-PRO",
+        "MOUSE-VERT-PRO-troubleshooting-tick-0",
+        "KB-ERGO-SPLIT",
+        "DESK-STD-MOTO",
+        "DESK-STD-MOTO-parts-catalog-0",
+        "MON-ARM-DUAL",
+        "DESK-STD-MOTO-troubleshooting-tick-0",
+        "CHAIR-ERG-X99"
+      ],
+      "reranked_doc_ids": [
+        "MOUSE-VERT-PRO-product-manuals-0",
+        "MOUSE-VERT-PRO-troubleshooting-tick-0",
+        "DESK-STD-MOTO-parts-catalog-0",
+        "DESK-STD-MOTO-troubleshooting-tick-0"
+      ],
+      "retrieved_skus": [
+        "MOUSE-VERT-PRO",
+        "DESK-STD-MOTO"
+      ],
+      "recall@5": 1.0,
+      "recall@10": 1.0,
+      "precision@5": 0.2,
+      "mrr": 1.0,
+      "ndcg@5": 1.0,
+      "hit_rate": 1.0,
+      "latency_ms": 1601.098200015258
+    },
+    {
+      "query_idx": 63,
+      "query": "Show me wireless headsets for team calls and gaming",
+      "relevant_skus": [
+        "HEADSET-WL-PRO"
+      ],
+      "candidate_doc_ids": [
+        "HEADSET-WL-PRO-product-manuals-0",
+        "KB-ERGO-SPLIT",
+        "HEADSET-WL-PRO",
+        "HEADSET-WL-PRO-product-manuals-3",
+        "WM-4401-WLS",
+        "DR-2201-DRV",
+        "KB-ERGO-SPLIT-parts-catalog-0",
+        "CHAIR-ERG-X99",
+        "HEADSET-WL-PRO-troubleshooting-tick-0",
+        "DESK-STD-MOTO",
+        "MON-ARM-DUAL",
+        "MOUSE-VERT-PRO",
+        "HEADSET-WL-PRO-parts-catalog-0"
+      ],
+      "reranked_doc_ids": [
+        "HEADSET-WL-PRO-product-manuals-0",
+        "HEADSET-WL-PRO-troubleshooting-tick-0",
+        "HEADSET-WL-PRO-product-manuals-3",
+        "HEADSET-WL-PRO-parts-catalog-0",
+        "KB-ERGO-SPLIT-parts-catalog-0"
+      ],
+      "retrieved_skus": [
+        "HEADSET-WL-PRO",
+        "KB-ERGO-SPLIT"
+      ],
+      "recall@5": 1.0,
+      "recall@10": 1.0,
+      "precision@5": 0.2,
+      "mrr": 1.0,
+      "ndcg@5": 1.0,
+      "hit_rate": 1.0,
+      "latency_ms": 1939.9326999555342
+    },
+    {
+      "query_idx": 64,
+      "query": "Compare CHAIR-ERG-X99 vs DESK-STD-MOTO for ergonomic workstation setup",
+      "relevant_skus": [
+        "CHAIR-ERG-X99",
+        "DESK-STD-MOTO"
+      ],
+      "candidate_doc_ids": [
+        "S-4012-SCRW",
+        "B-3301-BLT",
+        "C-5500-CAST",
+        "CHAIR-ERG-X99-product-manuals-0",
+        "P-9912-ARM",
+        "C-7721-GL",
+        "P-9913-BASE",
+        "SN-1101-HGT",
+        "DESK-STD-MOTO-product-manuals-0",
+        "GR-9901-GRS",
+        "SP-4402-SPND",
+        "CB-2201-CTL",
+        "M-8841-MOT",
+        "CHAIR-ERG-X99-parts-catalog-0",
+        "SN-8801-SNS"
+      ],
+      "reranked_doc_ids": [
+        "CHAIR-ERG-X99-parts-catalog-0",
+        "CHAIR-ERG-X99-product-manuals-0",
+        "DESK-STD-MOTO-product-manuals-0"
+      ],
+      "retrieved_skus": [
+        "CHAIR-ERG-X99",
+        "DESK-STD-MOTO"
+      ],
+      "recall@5": 1.0,
+      "recall@10": 1.0,
+      "precision@5": 0.4,
+      "mrr": 1.0,
+      "ndcg@5": 1.0,
+      "hit_rate": 1.0,
+      "latency_ms": 1300.8096999838017
+    },
+    {
+      "query_idx": 65,
+      "query": "Difference between gas lift C-7721-GL and monitor arm gas spring GS-9901-GSP",
+      "relevant_skus": [
+        "CHAIR-ERG-X99",
+        "MON-ARM-DUAL"
+      ],
+      "candidate_doc_ids": [
+        "GS-9901-GSP",
+        "MON-ARM-DUAL",
+        "MON-ARM-DUAL-troubleshooting-tick-0",
+        "C-7721-GL",
+        "CHAIR-ERG-X99",
+        "MON-ARM-DUAL-parts-catalog-0",
+        "PT-1101-PVT",
+        "B-3301-BLT",
+        "MON-ARM-DUAL-product-manuals-3",
+        "MOUSE-VERT-PRO",
+        "HEADSET-WL-PRO",
+        "MON-ARM-DUAL-troubleshooting-tick-1",
+        "DESK-STD-MOTO",
+        "KB-ERGO-SPLIT",
+        "MON-ARM-DUAL-product-manuals-6"
+      ],
+      "reranked_doc_ids": [
+        "MON-ARM-DUAL-troubleshooting-tick-0",
+        "MON-ARM-DUAL-product-manuals-3",
+        "MON-ARM-DUAL-product-manuals-6",
+        "MON-ARM-DUAL-troubleshooting-tick-1",
+        "MON-ARM-DUAL-parts-catalog-0"
+      ],
+      "retrieved_skus": [
+        "MON-ARM-DUAL"
+      ],
+      "recall@5": 0.5,
+      "recall@10": 0.5,
+      "precision@5": 0.2,
+      "mrr": 1.0,
+      "ndcg@5": 0.6131471927654584,
+      "hit_rate": 1.0,
+      "latency_ms": 3544.288899982348
+    },
+    {
+      "query_idx": 66,
+      "query": "How do screw S-4012-SCRW and bolt B-3301-BLT differ in torque and usage?",
+      "relevant_skus": [
+        "CHAIR-ERG-X99",
+        "DESK-STD-MOTO",
+        "MON-ARM-DUAL"
+      ],
+      "candidate_doc_ids": [
+        "MON-ARM-DUAL-parts-catalog-0",
+        "S-4012-SCRW",
+        "P-9913-BASE",
+        "B-3301-BLT",
+        "CHAIR-ERG-X99",
+        "PT-1101-PVT",
+        "MON-ARM-DUAL",
+        "DESK-STD-MOTO-product-manuals-4",
+        "P-9912-ARM",
+        "M-8841-MOT",
+        "C-7721-GL",
+        "MON-ARM-DUAL-product-manuals-6",
+        "KB-ERGO-SPLIT",
+        "DESK-STD-MOTO",
+        "CHAIR-ERG-X99-parts-catalog-0"
+      ],
+      "reranked_doc_ids": [
+        "DESK-STD-MOTO-product-manuals-4",
+        "MON-ARM-DUAL-parts-catalog-0",
+        "CHAIR-ERG-X99-parts-catalog-0",
+        "MON-ARM-DUAL-product-manuals-6"
+      ],
+      "retrieved_skus": [
+        "DESK-STD-MOTO",
+        "MON-ARM-DUAL",
+        "CHAIR-ERG-X99"
+      ],
+      "recall@5": 1.0,
+      "recall@10": 1.0,
+      "precision@5": 0.6,
+      "mrr": 1.0,
+      "ndcg@5": 1.0,
+      "hit_rate": 1.0,
+      "latency_ms": 2395.4461999819614
+    },
+    {
+      "query_idx": 67,
+      "query": "Compare Peripherals/Keyboards KB-ERGO-SPLIT with Peripherals/Mice MOUSE-VERT-PRO",
+      "relevant_skus": [
+        "KB-ERGO-SPLIT",
+        "MOUSE-VERT-PRO"
+      ],
+      "candidate_doc_ids": [
+        "SW-2201-SWT",
+        "SN-8801-SNS",
+        "WM-4401-WLS",
+        "KB-ERGO-SPLIT-product-manuals-0",
+        "MOUSE-VERT-PRO-product-manuals-0",
+        "KB-ERGO-SPLIT",
+        "MOUSE-VERT-PRO",
+        "DR-2201-DRV",
+        "HEADSET-WL-PRO",
+        "KB-ERGO-SPLIT-troubleshooting-tick-0",
+        "PT-1101-PVT",
+        "CB-2201-CTL",
+        "S-4012-SCRW",
+        "KB-ERGO-SPLIT-parts-catalog-0",
+        "CHAIR-ERG-X99"
+      ],
+      "reranked_doc_ids": [
+        "MOUSE-VERT-PRO-product-manuals-0",
+        "KB-ERGO-SPLIT-product-manuals-0",
+        "KB-ERGO-SPLIT-parts-catalog-0",
+        "KB-ERGO-SPLIT-troubleshooting-tick-0"
+      ],
+      "retrieved_skus": [
+        "MOUSE-VERT-PRO",
+        "KB-ERGO-SPLIT"
+      ],
+      "recall@5": 1.0,
+      "recall@10": 1.0,
+      "precision@5": 0.4,
+      "mrr": 1.0,
+      "ndcg@5": 1.0,
+      "hit_rate": 1.0,
+      "latency_ms": 1840.1838999707252
+    },
+    {
+      "query_idx": 68,
+      "query": "Dual monitor arm MON-ARM-DUAL vs single desk stand comparison",
+      "relevant_skus": [
+        "MON-ARM-DUAL"
+      ],
+      "candidate_doc_ids": [
+        "B-3301-BLT",
+        "GS-9901-GSP",
+        "PT-1101-PVT",
+        "MON-ARM-DUAL-product-manuals-0",
+        "MON-ARM-DUAL",
+        "CB-2201-CTL",
+        "M-8841-MOT",
+        "MON-ARM-DUAL-product-manuals-7",
+        "KB-ERGO-SPLIT",
+        "MON-ARM-DUAL-troubleshooting-tick-0",
+        "SP-4402-SPND",
+        "DESK-STD-MOTO",
+        "MON-ARM-DUAL-product-manuals-4",
+        "MOUSE-VERT-PRO",
+        "SN-1101-HGT"
+      ],
+      "reranked_doc_ids": [
+        "MON-ARM-DUAL-product-manuals-0",
+        "MON-ARM-DUAL-product-manuals-7",
+        "MON-ARM-DUAL-product-manuals-4",
+        "MON-ARM-DUAL-troubleshooting-tick-0"
+      ],
+      "retrieved_skus": [
+        "MON-ARM-DUAL"
+      ],
+      "recall@5": 1.0,
+      "recall@10": 1.0,
+      "precision@5": 0.2,
+      "mrr": 1.0,
+      "ndcg@5": 1.0,
+      "hit_rate": 1.0,
+      "latency_ms": 1683.528200024739
+    },
+    {
+      "query_idx": 69,
+      "query": "Compare Cherry MX Brown tactile switches on KB-ERGO-SPLIT vs linear switches",
+      "relevant_skus": [
+        "KB-ERGO-SPLIT"
+      ],
+      "candidate_doc_ids": [
+        "SW-2201-SWT",
+        "KB-ERGO-SPLIT-parts-catalog-0",
+        "WM-4401-WLS",
+        "MOUSE-VERT-PRO",
+        "KB-ERGO-SPLIT-product-manuals-0",
+        "KB-ERGO-SPLIT",
+        "MON-ARM-DUAL",
+        "KB-ERGO-SPLIT-product-manuals-5",
+        "HEADSET-WL-PRO",
+        "KB-ERGO-SPLIT-product-manuals-1",
+        "CHAIR-ERG-X99",
+        "DESK-STD-MOTO",
+        "MOUSE-VERT-PRO-troubleshooting-tick-0"
+      ],
+      "reranked_doc_ids": [
+        "KB-ERGO-SPLIT-product-manuals-5",
+        "KB-ERGO-SPLIT-parts-catalog-0",
+        "KB-ERGO-SPLIT-product-manuals-0",
+        "KB-ERGO-SPLIT-product-manuals-1",
+        "MOUSE-VERT-PRO-troubleshooting-tick-0"
+      ],
+      "retrieved_skus": [
+        "KB-ERGO-SPLIT",
+        "MOUSE-VERT-PRO"
+      ],
+      "recall@5": 1.0,
+      "recall@10": 1.0,
+      "precision@5": 0.2,
+      "mrr": 1.0,
+      "ndcg@5": 1.0,
+      "hit_rate": 1.0,
+      "latency_ms": 3642.7789999870583
+    },
+    {
+      "query_idx": 70,
+      "query": "Vertical mouse MOUSE-VERT-PRO vs standard horizontal mouse ergonomics",
+      "relevant_skus": [
+        "MOUSE-VERT-PRO"
+      ],
+      "candidate_doc_ids": [
+        "SN-8801-SNS",
+        "MOUSE-VERT-PRO-product-manuals-0",
+        "MOUSE-VERT-PRO",
+        "MON-ARM-DUAL",
+        "SN-1101-HGT",
+        "GR-9901-GRS",
+        "SP-4402-SPND",
+        "CB-2201-CTL",
+        "MOUSE-VERT-PRO-parts-catalog-0",
+        "M-8841-MOT",
+        "S-4012-SCRW",
+        "B-3301-BLT",
+        "MOUSE-VERT-PRO-product-manuals-1",
+        "DESK-STD-MOTO",
+        "KB-ERGO-SPLIT"
+      ],
+      "reranked_doc_ids": [
+        "MOUSE-VERT-PRO-product-manuals-0",
+        "MOUSE-VERT-PRO-parts-catalog-0",
+        "MOUSE-VERT-PRO-product-manuals-1"
+      ],
+      "retrieved_skus": [
+        "MOUSE-VERT-PRO"
+      ],
+      "recall@5": 1.0,
+      "recall@10": 1.0,
+      "precision@5": 0.2,
+      "mrr": 1.0,
+      "ndcg@5": 1.0,
+      "hit_rate": 1.0,
+      "latency_ms": 1084.2069000354968
+    },
+    {
+      "query_idx": 71,
+      "query": "Wireless 2.4GHz low latency vs Bluetooth mode on HEADSET-WL-PRO",
+      "relevant_skus": [
+        "HEADSET-WL-PRO"
+      ],
+      "candidate_doc_ids": [
+        "WM-4401-WLS",
+        "HEADSET-WL-PRO-product-manuals-0",
+        "DR-2201-DRV",
+        "HEADSET-WL-PRO-product-manuals-3",
+        "HEADSET-WL-PRO",
+        "CB-2201-CTL",
+        "HEADSET-WL-PRO-product-manuals-4",
+        "MOUSE-VERT-PRO",
+        "HEADSET-WL-PRO-product-manuals-2",
+        "KB-ERGO-SPLIT",
+        "MON-ARM-DUAL",
+        "KB-ERGO-SPLIT-parts-catalog-0",
+        "DESK-STD-MOTO"
+      ],
+      "reranked_doc_ids": [
+        "HEADSET-WL-PRO-product-manuals-0",
+        "HEADSET-WL-PRO-product-manuals-2",
+        "HEADSET-WL-PRO-product-manuals-4",
+        "HEADSET-WL-PRO-product-manuals-3",
+        "KB-ERGO-SPLIT-parts-catalog-0"
+      ],
+      "retrieved_skus": [
+        "HEADSET-WL-PRO",
+        "KB-ERGO-SPLIT"
+      ],
+      "recall@5": 1.0,
+      "recall@10": 1.0,
+      "precision@5": 0.2,
+      "mrr": 1.0,
+      "ndcg@5": 1.0,
+      "hit_rate": 1.0,
+      "latency_ms": 2023.2494000229053
+    },
+    {
+      "query_idx": 72,
+      "query": "ErgoFlex chair CHAIR-ERG-X99 recline mechanism vs standard office chairs",
+      "relevant_skus": [
+        "CHAIR-ERG-X99"
+      ],
+      "candidate_doc_ids": [
+        "B-3301-BLT",
+        "S-4012-SCRW",
+        "P-9913-BASE",
+        "C-5500-CAST",
+        "CHAIR-ERG-X99-product-manuals-0",
+        "P-9912-ARM",
+        "C-7721-GL",
+        "CHAIR-ERG-X99-troubleshooting-tick-0",
+        "CHAIR-ERG-X99",
+        "SN-1101-HGT",
+        "GR-9901-GRS",
+        "SP-4402-SPND",
+        "CB-2201-CTL",
+        "CHAIR-ERG-X99-product-manuals-5",
+        "M-8841-MOT"
+      ],
+      "reranked_doc_ids": [
+        "CHAIR-ERG-X99-product-manuals-0",
+        "CHAIR-ERG-X99-product-manuals-5",
+        "CHAIR-ERG-X99-troubleshooting-tick-0"
+      ],
+      "retrieved_skus": [
+        "CHAIR-ERG-X99"
+      ],
+      "recall@5": 1.0,
+      "recall@10": 1.0,
+      "precision@5": 0.2,
+      "mrr": 1.0,
+      "ndcg@5": 1.0,
+      "hit_rate": 1.0,
+      "latency_ms": 2093.398900004104
+    },
+    {
+      "query_idx": 73,
+      "query": "Motorized standing desk DESK-STD-MOTO dual motor vs single motor desks",
+      "relevant_skus": [
+        "DESK-STD-MOTO"
+      ],
+      "candidate_doc_ids": [
+        "M-8841-MOT",
+        "SP-4402-SPND",
+        "CB-2201-CTL",
+        "DESK-STD-MOTO-product-manuals-0",
+        "B-3301-BLT",
+        "SN-1101-HGT",
+        "GR-9901-GRS",
+        "S-4012-SCRW",
+        "DESK-STD-MOTO",
+        "PT-1101-PVT",
+        "GS-9901-GSP",
+        "DESK-STD-MOTO-parts-catalog-0",
+        "KB-ERGO-SPLIT",
+        "MON-ARM-DUAL",
+        "MOUSE-VERT-PRO"
+      ],
+      "reranked_doc_ids": [
+        "DESK-STD-MOTO-product-manuals-0",
+        "DESK-STD-MOTO-parts-catalog-0"
+      ],
+      "retrieved_skus": [
+        "DESK-STD-MOTO"
+      ],
+      "recall@5": 1.0,
+      "recall@10": 1.0,
+      "precision@5": 0.2,
+      "mrr": 1.0,
+      "ndcg@5": 1.0,
+      "hit_rate": 1.0,
+      "latency_ms": 678.0400000279769
+    },
+    {
+      "query_idx": 74,
+      "query": "Compare wireless module WM-4401-WLS with mouse dongle DG-1101-DGL",
+      "relevant_skus": [
+        "KB-ERGO-SPLIT",
+        "MOUSE-VERT-PRO"
+      ],
+      "candidate_doc_ids": [
+        "WM-4401-WLS",
+        "HEADSET-WL-PRO-troubleshooting-tick-1",
+        "MOUSE-VERT-PRO-product-manuals-1",
+        "SN-8801-SNS",
+        "HEADSET-WL-PRO",
+        "CB-2201-CTL",
+        "KB-ERGO-SPLIT-parts-catalog-0",
+        "MOUSE-VERT-PRO",
+        "DR-2201-DRV",
+        "MOUSE-VERT-PRO-product-manuals-2",
+        "KB-ERGO-SPLIT",
+        "PT-1101-PVT",
+        "SW-2201-SWT",
+        "KB-ERGO-SPLIT-troubleshooting-tick-0",
+        "S-4012-SCRW"
+      ],
+      "reranked_doc_ids": [
+        "HEADSET-WL-PRO-troubleshooting-tick-1",
+        "MOUSE-VERT-PRO-product-manuals-2",
+        "MOUSE-VERT-PRO-product-manuals-1",
+        "KB-ERGO-SPLIT-parts-catalog-0",
+        "KB-ERGO-SPLIT-troubleshooting-tick-0"
+      ],
+      "retrieved_skus": [
+        "HEADSET-WL-PRO",
+        "MOUSE-VERT-PRO",
+        "KB-ERGO-SPLIT"
+      ],
+      "recall@5": 1.0,
+      "recall@10": 1.0,
+      "precision@5": 0.4,
+      "mrr": 0.5,
+      "ndcg@5": 0.6934264036172708,
+      "hit_rate": 1.0,
+      "latency_ms": 1674.3195000453852
+    },
+    {
+      "query_idx": 75,
+      "query": "Compare headset driver DR-2201-DRV 32 ohm with high-impedance headphones",
+      "relevant_skus": [
+        "HEADSET-WL-PRO"
+      ],
+      "candidate_doc_ids": [
+        "DR-2201-DRV",
+        "CB-2201-CTL",
+        "HEADSET-WL-PRO-parts-catalog-0",
+        "HEADSET-WL-PRO",
+        "HEADSET-WL-PRO-product-manuals-0",
+        "KB-ERGO-SPLIT",
+        "PT-1101-PVT",
+        "SW-2201-SWT",
+        "S-4012-SCRW",
+        "HEADSET-WL-PRO-product-manuals-1",
+        "MOUSE-VERT-PRO",
+        "HEADSET-WL-PRO-product-manuals-2",
+        "DESK-STD-MOTO",
+        "HEADSET-WL-PRO-product-manuals-6",
+        "CHAIR-ERG-X99"
+      ],
+      "reranked_doc_ids": [
+        "HEADSET-WL-PRO-product-manuals-6",
+        "HEADSET-WL-PRO-product-manuals-0",
+        "HEADSET-WL-PRO-parts-catalog-0",
+        "HEADSET-WL-PRO-product-manuals-1",
+        "HEADSET-WL-PRO-product-manuals-2"
+      ],
+      "retrieved_skus": [
+        "HEADSET-WL-PRO"
+      ],
+      "recall@5": 1.0,
+      "recall@10": 1.0,
+      "precision@5": 0.2,
+      "mrr": 1.0,
+      "ndcg@5": 1.0,
+      "hit_rate": 1.0,
+      "latency_ms": 3888.5710000176914
+    },
+    {
+      "query_idx": 76,
+      "query": "My chair squeaks when I lean back, how do I fix it?",
+      "relevant_skus": [
+        "CHAIR-ERG-X99"
+      ],
+      "candidate_doc_ids": [
+        "CHAIR-ERG-X99-product-manuals-1",
+        "CHAIR-ERG-X99",
+        "CHAIR-ERG-X99-troubleshooting-tick-0",
+        "P-9913-BASE",
+        "B-3301-BLT",
+        "CHAIR-ERG-X99-product-manuals-0",
+        "MOUSE-VERT-PRO",
+        "DESK-STD-MOTO",
+        "C-5500-CAST",
+        "CHAIR-ERG-X99-troubleshooting-tick-1",
+        "P-9912-ARM",
+        "C-7721-GL",
+        "S-4012-SCRW",
+        "CHAIR-ERG-X99-product-manuals-3"
+      ],
+      "reranked_doc_ids": [
+        "CHAIR-ERG-X99-product-manuals-0",
+        "CHAIR-ERG-X99-product-manuals-1",
+        "CHAIR-ERG-X99-troubleshooting-tick-1",
+        "CHAIR-ERG-X99-troubleshooting-tick-0",
+        "CHAIR-ERG-X99-product-manuals-3"
+      ],
+      "retrieved_skus": [
+        "CHAIR-ERG-X99"
+      ],
+      "recall@5": 1.0,
+      "recall@10": 1.0,
+      "precision@5": 0.2,
+      "mrr": 1.0,
+      "ndcg@5": 1.0,
+      "hit_rate": 1.0,
+      "latency_ms": 1985.8221000176854
+    },
+    {
+      "query_idx": 77,
+      "query": "Standing desk won't move up or down, shows error E01",
+      "relevant_skus": [
+        "DESK-STD-MOTO"
+      ],
+      "candidate_doc_ids": [
+        "DESK-STD-MOTO-product-manuals-0",
+        "DESK-STD-MOTO",
+        "MON-ARM-DUAL",
+        "B-3301-BLT",
+        "DESK-STD-MOTO-product-manuals-1",
+        "MOUSE-VERT-PRO",
+        "HEADSET-WL-PRO",
+        "DESK-STD-MOTO-troubleshooting-tick-0",
+        "SP-4402-SPND",
+        "CHAIR-ERG-X99",
+        "MON-ARM-DUAL-product-manuals-4",
+        "SN-1101-HGT",
+        "GR-9901-GRS",
+        "KB-ERGO-SPLIT",
+        "CB-2201-CTL"
+      ],
+      "reranked_doc_ids": [
+        "DESK-STD-MOTO-product-manuals-0",
+        "DESK-STD-MOTO-troubleshooting-tick-0",
+        "MON-ARM-DUAL-product-manuals-4",
+        "DESK-STD-MOTO-product-manuals-1"
+      ],
+      "retrieved_skus": [
+        "DESK-STD-MOTO",
+        "MON-ARM-DUAL"
+      ],
+      "recall@5": 1.0,
+      "recall@10": 1.0,
+      "precision@5": 0.2,
+      "mrr": 1.0,
+      "ndcg@5": 1.0,
+      "hit_rate": 1.0,
+      "latency_ms": 1347.6124000153504
+    },
+    {
+      "query_idx": 78,
+      "query": "Left side of desk lags behind right when raising",
+      "relevant_skus": [
+        "DESK-STD-MOTO"
+      ],
+      "candidate_doc_ids": [
+        "DESK-STD-MOTO",
+        "DESK-STD-MOTO-product-manuals-1",
+        "P-9912-ARM",
+        "MOUSE-VERT-PRO",
+        "CHAIR-ERG-X99",
+        "DESK-STD-MOTO-troubleshooting-tick-0",
+        "HEADSET-WL-PRO",
+        "KB-ERGO-SPLIT",
+        "DESK-STD-MOTO-product-manuals-0",
+        "MON-ARM-DUAL",
+        "SP-4402-SPND",
+        "B-3301-BLT",
+        "MON-ARM-DUAL-troubleshooting-tick-0",
+        "SN-1101-HGT",
+        "GR-9901-GRS"
+      ],
+      "reranked_doc_ids": [
+        "DESK-STD-MOTO-product-manuals-1",
+        "DESK-STD-MOTO-product-manuals-0",
+        "DESK-STD-MOTO-troubleshooting-tick-0",
+        "MON-ARM-DUAL-troubleshooting-tick-0"
+      ],
+      "retrieved_skus": [
+        "DESK-STD-MOTO",
+        "MON-ARM-DUAL"
+      ],
+      "recall@5": 1.0,
+      "recall@10": 1.0,
+      "precision@5": 0.2,
+      "mrr": 1.0,
+      "ndcg@5": 1.0,
+      "hit_rate": 1.0,
+      "latency_ms": 1656.6473999992013
+    },
+    {
+      "query_idx": 79,
+      "query": "Monitor arm slowly tilts downward over time",
+      "relevant_skus": [
+        "MON-ARM-DUAL"
+      ],
+      "candidate_doc_ids": [
+        "MON-ARM-DUAL",
+        "MON-ARM-DUAL-product-manuals-4",
+        "B-3301-BLT",
+        "GS-9901-GSP",
+        "PT-1101-PVT",
+        "MON-ARM-DUAL-troubleshooting-tick-0",
+        "CHAIR-ERG-X99",
+        "MON-ARM-DUAL-product-manuals-3",
+        "CHAIR-ERG-X99-product-manuals-3",
+        "DESK-STD-MOTO-product-manuals-1"
+      ],
+      "reranked_doc_ids": [
+        "MON-ARM-DUAL-troubleshooting-tick-0",
+        "MON-ARM-DUAL-product-manuals-3",
+        "MON-ARM-DUAL-product-manuals-4",
+        "CHAIR-ERG-X99-product-manuals-3",
+        "DESK-STD-MOTO-product-manuals-1"
+      ],
+      "retrieved_skus": [
+        "MON-ARM-DUAL",
+        "CHAIR-ERG-X99",
+        "DESK-STD-MOTO"
+      ],
+      "recall@5": 1.0,
+      "recall@10": 1.0,
+      "precision@5": 0.2,
+      "mrr": 1.0,
+      "ndcg@5": 1.0,
+      "hit_rate": 1.0,
+      "latency_ms": 1785.2321999962442
+    },
+    {
+      "query_idx": 80,
+      "query": "Key registers double press on my split keyboard",
+      "relevant_skus": [
+        "KB-ERGO-SPLIT"
+      ],
+      "candidate_doc_ids": [
+        "C-5500-CAST",
+        "KB-ERGO-SPLIT-product-manuals-0",
+        "MOUSE-VERT-PRO-product-manuals-3",
+        "KB-ERGO-SPLIT",
+        "WM-4401-WLS",
+        "KB-ERGO-SPLIT-troubleshooting-tick-0",
+        "SW-2201-SWT",
+        "S-4012-SCRW",
+        "MOUSE-VERT-PRO",
+        "KB-ERGO-SPLIT-product-manuals-4",
+        "HEADSET-WL-PRO",
+        "CHAIR-ERG-X99",
+        "MON-ARM-DUAL",
+        "MOUSE-VERT-PRO-troubleshooting-tick-1"
+      ],
+      "reranked_doc_ids": [
+        "KB-ERGO-SPLIT-product-manuals-0",
+        "KB-ERGO-SPLIT-troubleshooting-tick-0",
+        "MOUSE-VERT-PRO-product-manuals-3",
+        "MOUSE-VERT-PRO-troubleshooting-tick-1",
+        "KB-ERGO-SPLIT-product-manuals-4"
+      ],
+      "retrieved_skus": [
+        "KB-ERGO-SPLIT",
+        "MOUSE-VERT-PRO"
+      ],
+      "recall@5": 1.0,
+      "recall@10": 1.0,
+      "precision@5": 0.2,
+      "mrr": 1.0,
+      "ndcg@5": 1.0,
+      "hit_rate": 1.0,
+      "latency_ms": 1452.1246000076644
+    },
+    {
+      "query_idx": 81,
+      "query": "Right half of keyboard randomly disconnects",
+      "relevant_skus": [
+        "KB-ERGO-SPLIT"
+      ],
+      "candidate_doc_ids": [
+        "KB-ERGO-SPLIT",
+        "WM-4401-WLS",
+        "KB-ERGO-SPLIT-product-manuals-0",
+        "SW-2201-SWT",
+        "P-9912-ARM",
+        "MON-ARM-DUAL",
+        "KB-ERGO-SPLIT-product-manuals-4",
+        "MOUSE-VERT-PRO",
+        "DESK-STD-MOTO",
+        "KB-ERGO-SPLIT-product-manuals-1",
+        "SN-1101-HGT",
+        "GR-9901-GRS",
+        "C-5500-CAST",
+        "SP-4402-SPND",
+        "PT-1101-PVT"
+      ],
+      "reranked_doc_ids": [
+        "KB-ERGO-SPLIT-product-manuals-1",
+        "KB-ERGO-SPLIT-product-manuals-0",
+        "KB-ERGO-SPLIT-product-manuals-4"
+      ],
+      "retrieved_skus": [
+        "KB-ERGO-SPLIT"
+      ],
+      "recall@5": 1.0,
+      "recall@10": 1.0,
+      "precision@5": 0.2,
+      "mrr": 1.0,
+      "ndcg@5": 1.0,
+      "hit_rate": 1.0,
+      "latency_ms": 879.102100036107
+    },
+    {
+      "query_idx": 82,
+      "query": "Mouse cursor jumps around on glass desk",
+      "relevant_skus": [
+        "MOUSE-VERT-PRO"
+      ],
+      "candidate_doc_ids": [
+        "MOUSE-VERT-PRO-troubleshooting-tick-0",
+        "MOUSE-VERT-PRO",
+        "SN-8801-SNS",
+        "MOUSE-VERT-PRO-product-manuals-0",
+        "SP-4402-SPND",
+        "B-3301-BLT",
+        "MOUSE-VERT-PRO-troubleshooting-tick-1",
+        "DESK-STD-MOTO",
+        "SN-1101-HGT",
+        "GR-9901-GRS",
+        "CB-2201-CTL",
+        "DESK-STD-MOTO-product-manuals-1",
+        "M-8841-MOT",
+        "S-4012-SCRW",
+        "MON-ARM-DUAL"
+      ],
+      "reranked_doc_ids": [
+        "MOUSE-VERT-PRO-troubleshooting-tick-0",
+        "MOUSE-VERT-PRO-product-manuals-0",
+        "DESK-STD-MOTO-product-manuals-1",
+        "MOUSE-VERT-PRO-troubleshooting-tick-1"
+      ],
+      "retrieved_skus": [
+        "MOUSE-VERT-PRO",
+        "DESK-STD-MOTO"
+      ],
+      "recall@5": 1.0,
+      "recall@10": 1.0,
+      "precision@5": 0.2,
+      "mrr": 1.0,
+      "ndcg@5": 1.0,
+      "hit_rate": 1.0,
+      "latency_ms": 1637.234699970577
+    },
+    {
+      "query_idx": 83,
+      "query": "Teammates can't hear me, mic not working on headset",
+      "relevant_skus": [
+        "HEADSET-WL-PRO"
+      ],
+      "candidate_doc_ids": [
+        "HEADSET-WL-PRO",
+        "DR-2201-DRV",
+        "HEADSET-WL-PRO-troubleshooting-tick-0",
+        "MON-ARM-DUAL",
+        "HEADSET-WL-PRO-product-manuals-2",
+        "MOUSE-VERT-PRO",
+        "HEADSET-WL-PRO-product-manuals-1",
+        "CHAIR-ERG-X99",
+        "HEADSET-WL-PRO-product-manuals-0",
+        "KB-ERGO-SPLIT",
+        "DESK-STD-MOTO",
+        "HEADSET-WL-PRO-troubleshooting-tick-1"
+      ],
+      "reranked_doc_ids": [
+        "HEADSET-WL-PRO-troubleshooting-tick-0",
+        "HEADSET-WL-PRO-troubleshooting-tick-1",
+        "HEADSET-WL-PRO-product-manuals-1",
+        "HEADSET-WL-PRO-product-manuals-0",
+        "HEADSET-WL-PRO-product-manuals-2"
+      ],
+      "retrieved_skus": [
+        "HEADSET-WL-PRO"
+      ],
+      "recall@5": 1.0,
+      "recall@10": 1.0,
+      "precision@5": 0.2,
+      "mrr": 1.0,
+      "ndcg@5": 1.0,
+      "hit_rate": 1.0,
+      "latency_ms": 1728.8658999605104
+    },
+    {
+      "query_idx": 84,
+      "query": "Chair sinks down slowly throughout the day",
+      "relevant_skus": [
+        "CHAIR-ERG-X99"
+      ],
+      "candidate_doc_ids": [
+        "CHAIR-ERG-X99-product-manuals-1",
+        "CHAIR-ERG-X99",
+        "CHAIR-ERG-X99-product-manuals-0",
+        "P-9913-BASE",
+        "KB-ERGO-SPLIT",
+        "B-3301-BLT",
+        "MON-ARM-DUAL",
+        "C-5500-CAST",
+        "CHAIR-ERG-X99-troubleshooting-tick-0",
+        "P-9912-ARM",
+        "C-7721-GL",
+        "S-4012-SCRW",
+        "CHAIR-ERG-X99-product-manuals-3",
+        "DESK-STD-MOTO"
+      ],
+      "reranked_doc_ids": [
+        "CHAIR-ERG-X99-troubleshooting-tick-0",
+        "CHAIR-ERG-X99-product-manuals-1",
+        "CHAIR-ERG-X99-product-manuals-0",
+        "CHAIR-ERG-X99-product-manuals-3"
+      ],
+      "retrieved_skus": [
+        "CHAIR-ERG-X99"
+      ],
+      "recall@5": 1.0,
+      "recall@10": 1.0,
+      "precision@5": 0.2,
+      "mrr": 1.0,
+      "ndcg@5": 1.0,
+      "hit_rate": 1.0,
+      "latency_ms": 1479.1649999679066
+    },
+    {
+      "query_idx": 85,
+      "query": "Desk shows error E02 on control panel and will not lift",
+      "relevant_skus": [
+        "DESK-STD-MOTO"
+      ],
+      "candidate_doc_ids": [
+        "DESK-STD-MOTO-troubleshooting-tick-0",
+        "CB-2201-CTL",
+        "DESK-STD-MOTO-product-manuals-1",
+        "CHAIR-ERG-X99",
+        "C-7721-GL",
+        "DESK-STD-MOTO-product-manuals-0",
+        "DESK-STD-MOTO",
+        "MOUSE-VERT-PRO",
+        "DESK-STD-MOTO-product-manuals-3",
+        "KB-ERGO-SPLIT",
+        "HEADSET-WL-PRO",
+        "SP-4402-SPND",
+        "MOUSE-VERT-PRO-troubleshooting-tick-1",
+        "B-3301-BLT"
+      ],
+      "reranked_doc_ids": [
+        "DESK-STD-MOTO-troubleshooting-tick-0",
+        "DESK-STD-MOTO-product-manuals-0",
+        "DESK-STD-MOTO-product-manuals-3",
+        "MOUSE-VERT-PRO-troubleshooting-tick-1",
+        "DESK-STD-MOTO-product-manuals-1"
+      ],
+      "retrieved_skus": [
+        "DESK-STD-MOTO",
+        "MOUSE-VERT-PRO"
+      ],
+      "recall@5": 1.0,
+      "recall@10": 1.0,
+      "precision@5": 0.2,
+      "mrr": 1.0,
+      "ndcg@5": 1.0,
+      "hit_rate": 1.0,
+      "latency_ms": 2118.4780000476167
+    },
+    {
+      "query_idx": 86,
+      "query": "Desk shows error E03 height sensor desync",
+      "relevant_skus": [
+        "DESK-STD-MOTO"
+      ],
+      "candidate_doc_ids": [
+        "DESK-STD-MOTO-troubleshooting-tick-0",
+        "SN-1101-HGT",
+        "HEADSET-WL-PRO",
+        "DESK-STD-MOTO-product-manuals-1",
+        "M-8841-MOT",
+        "MOUSE-VERT-PRO",
+        "CHAIR-ERG-X99",
+        "MON-ARM-DUAL",
+        "DESK-STD-MOTO-product-manuals-3",
+        "SN-8801-SNS",
+        "DESK-STD-MOTO",
+        "DESK-STD-MOTO-product-manuals-0",
+        "SP-4402-SPND",
+        "B-3301-BLT",
+        "GR-9901-GRS"
+      ],
+      "reranked_doc_ids": [
+        "DESK-STD-MOTO-product-manuals-3",
+        "DESK-STD-MOTO-product-manuals-0",
+        "DESK-STD-MOTO-troubleshooting-tick-0",
+        "DESK-STD-MOTO-product-manuals-1"
+      ],
+      "retrieved_skus": [
+        "DESK-STD-MOTO"
+      ],
+      "recall@5": 1.0,
+      "recall@10": 1.0,
+      "precision@5": 0.2,
+      "mrr": 1.0,
+      "ndcg@5": 1.0,
+      "hit_rate": 1.0,
+      "latency_ms": 1514.199200028088
+    },
+    {
+      "query_idx": 87,
+      "query": "Mouse left button registering double clicks unintentionally",
+      "relevant_skus": [
+        "MOUSE-VERT-PRO"
+      ],
+      "candidate_doc_ids": [
+        "MOUSE-VERT-PRO-product-manuals-3",
+        "KB-ERGO-SPLIT",
+        "MOUSE-VERT-PRO-troubleshooting-tick-0",
+        "MOUSE-VERT-PRO",
+        "SN-8801-SNS",
+        "DESK-STD-MOTO",
+        "MOUSE-VERT-PRO-troubleshooting-tick-1",
+        "MON-ARM-DUAL",
+        "P-9912-ARM",
+        "CHAIR-ERG-X99",
+        "HEADSET-WL-PRO",
+        "MOUSE-VERT-PRO-product-manuals-0",
+        "KB-ERGO-SPLIT-product-manuals-0"
+      ],
+      "reranked_doc_ids": [
+        "MOUSE-VERT-PRO-product-manuals-3",
+        "MOUSE-VERT-PRO-troubleshooting-tick-1",
+        "MOUSE-VERT-PRO-product-manuals-0",
+        "KB-ERGO-SPLIT-product-manuals-0",
+        "MOUSE-VERT-PRO-troubleshooting-tick-0"
+      ],
+      "retrieved_skus": [
+        "MOUSE-VERT-PRO",
+        "KB-ERGO-SPLIT"
+      ],
+      "recall@5": 1.0,
+      "recall@10": 1.0,
+      "precision@5": 0.2,
+      "mrr": 1.0,
+      "ndcg@5": 1.0,
+      "hit_rate": 1.0,
+      "latency_ms": 1707.9741999623366
+    },
+    {
+      "query_idx": 88,
+      "query": "No audio coming from one side of Wireless Pro Headset",
+      "relevant_skus": [
+        "HEADSET-WL-PRO"
+      ],
+      "candidate_doc_ids": [
+        "DR-2201-DRV",
+        "HEADSET-WL-PRO-product-manuals-0",
+        "HEADSET-WL-PRO",
+        "MOUSE-VERT-PRO",
+        "HEADSET-WL-PRO-product-manuals-2",
+        "SN-1101-HGT",
+        "HEADSET-WL-PRO-product-manuals-3",
+        "WM-4401-WLS",
+        "DESK-STD-MOTO",
+        "HEADSET-WL-PRO-troubleshooting-tick-0",
+        "KB-ERGO-SPLIT",
+        "HEADSET-WL-PRO-parts-catalog-0",
+        "CHAIR-ERG-X99"
+      ],
+      "reranked_doc_ids": [
+        "HEADSET-WL-PRO-product-manuals-0",
+        "HEADSET-WL-PRO-product-manuals-3",
+        "HEADSET-WL-PRO-product-manuals-2",
+        "HEADSET-WL-PRO-troubleshooting-tick-0",
+        "HEADSET-WL-PRO-parts-catalog-0"
+      ],
+      "retrieved_skus": [
+        "HEADSET-WL-PRO"
+      ],
+      "recall@5": 1.0,
+      "recall@10": 1.0,
+      "precision@5": 0.2,
+      "mrr": 1.0,
+      "ndcg@5": 1.0,
+      "hit_rate": 1.0,
+      "latency_ms": 1948.3772999956273
+    },
+    {
+      "query_idx": 89,
+      "query": "How do I cook a turkey for Thanksgiving?",
+      "relevant_skus": [],
+      "candidate_doc_ids": [
+        "MON-ARM-DUAL-product-manuals-1",
+        "DESK-STD-MOTO-parts-catalog-0",
+        "KB-ERGO-SPLIT",
+        "DESK-STD-MOTO-troubleshooting-tick-0",
+        "DESK-STD-MOTO",
+        "CHAIR-ERG-X99-product-manuals-1",
+        "CHAIR-ERG-X99",
+        "MON-ARM-DUAL",
+        "MOUSE-VERT-PRO",
+        "HEADSET-WL-PRO",
+        "MON-ARM-DUAL-product-manuals-0"
+      ],
+      "reranked_doc_ids": [
+        "CHAIR-ERG-X99-product-manuals-1",
+        "MON-ARM-DUAL-product-manuals-1",
+        "DESK-STD-MOTO-troubleshooting-tick-0",
+        "DESK-STD-MOTO-parts-catalog-0",
+        "MON-ARM-DUAL-product-manuals-0"
+      ],
+      "retrieved_skus": [
+        "CHAIR-ERG-X99",
+        "MON-ARM-DUAL",
+        "DESK-STD-MOTO"
+      ],
+      "recall@5": 0.0,
+      "recall@10": 0.0,
+      "precision@5": 0.0,
+      "mrr": 0.0,
+      "ndcg@5": 0.0,
+      "hit_rate": 0.0,
+      "latency_ms": 1492.5432999734767
+    },
+    {
+      "query_idx": 90,
+      "query": "What is the meaning of life and universe?",
+      "relevant_skus": [],
+      "candidate_doc_ids": [
+        "MON-ARM-DUAL",
+        "MOUSE-VERT-PRO-product-manuals-5",
+        "HEADSET-WL-PRO",
+        "CHAIR-ERG-X99",
+        "MON-ARM-DUAL-product-manuals-7",
+        "DESK-STD-MOTO",
+        "KB-ERGO-SPLIT",
+        "MON-ARM-DUAL-parts-catalog-0",
+        "WM-4401-WLS",
+        "SN-1101-HGT",
+        "GR-9901-GRS",
+        "HEADSET-WL-PRO-product-manuals-6",
+        "C-5500-CAST",
+        "SP-4402-SPND",
+        "PT-1101-PVT"
+      ],
+      "reranked_doc_ids": [
+        "MON-ARM-DUAL-parts-catalog-0",
+        "HEADSET-WL-PRO-product-manuals-6",
+        "MOUSE-VERT-PRO-product-manuals-5",
+        "MON-ARM-DUAL-product-manuals-7"
+      ],
+      "retrieved_skus": [
+        "MON-ARM-DUAL",
+        "HEADSET-WL-PRO",
+        "MOUSE-VERT-PRO"
+      ],
+      "recall@5": 0.0,
+      "recall@10": 0.0,
+      "precision@5": 0.0,
+      "mrr": 0.0,
+      "ndcg@5": 0.0,
+      "hit_rate": 0.0,
+      "latency_ms": 2869.7537999833003
+    },
+    {
+      "query_idx": 91,
+      "query": "What is the best programming language for machine learning?",
+      "relevant_skus": [],
+      "candidate_doc_ids": [
+        "MON-ARM-DUAL",
+        "HEADSET-WL-PRO",
+        "MON-ARM-DUAL-product-manuals-7",
+        "MOUSE-VERT-PRO",
+        "MOUSE-VERT-PRO-troubleshooting-tick-1",
+        "KB-ERGO-SPLIT",
+        "DESK-STD-MOTO-parts-catalog-0",
+        "DESK-STD-MOTO",
+        "CHAIR-ERG-X99",
+        "MON-ARM-DUAL-parts-catalog-0"
+      ],
+      "reranked_doc_ids": [
+        "MON-ARM-DUAL-product-manuals-7",
+        "MON-ARM-DUAL-parts-catalog-0",
+        "MOUSE-VERT-PRO-troubleshooting-tick-1",
+        "DESK-STD-MOTO-parts-catalog-0"
+      ],
+      "retrieved_skus": [
+        "MON-ARM-DUAL",
+        "MOUSE-VERT-PRO",
+        "DESK-STD-MOTO"
+      ],
+      "recall@5": 0.0,
+      "recall@10": 0.0,
+      "precision@5": 0.0,
+      "mrr": 0.0,
+      "ndcg@5": 0.0,
+      "hit_rate": 0.0,
+      "latency_ms": 932.6978999888524
+    },
+    {
+      "query_idx": 92,
+      "query": "What is the weather forecast for tomorrow morning?",
+      "relevant_skus": [],
+      "candidate_doc_ids": [
+        "MON-ARM-DUAL",
+        "HEADSET-WL-PRO",
+        "MON-ARM-DUAL-product-manuals-6",
+        "MOUSE-VERT-PRO",
+        "MON-ARM-DUAL-product-manuals-1",
+        "KB-ERGO-SPLIT",
+        "MON-ARM-DUAL-product-manuals-7",
+        "DESK-STD-MOTO",
+        "CHAIR-ERG-X99",
+        "MON-ARM-DUAL-parts-catalog-0"
+      ],
+      "reranked_doc_ids": [
+        "MON-ARM-DUAL-product-manuals-7",
+        "MON-ARM-DUAL-parts-catalog-0",
+        "MON-ARM-DUAL-product-manuals-1",
+        "MON-ARM-DUAL-product-manuals-6"
+      ],
+      "retrieved_skus": [
+        "MON-ARM-DUAL"
+      ],
+      "recall@5": 0.0,
+      "recall@10": 0.0,
+      "precision@5": 0.0,
+      "mrr": 0.0,
+      "ndcg@5": 0.0,
+      "hit_rate": 0.0,
+      "latency_ms": 2332.502699980978
+    },
+    {
+      "query_idx": 93,
+      "query": "How should beginners invest in index funds and stocks?",
+      "relevant_skus": [],
+      "candidate_doc_ids": [
+        "KB-ERGO-SPLIT-product-manuals-4",
+        "CHAIR-ERG-X99",
+        "MON-ARM-DUAL",
+        "HEADSET-WL-PRO",
+        "MON-ARM-DUAL-product-manuals-2",
+        "DESK-STD-MOTO-parts-catalog-0",
+        "KB-ERGO-SPLIT",
+        "KB-ERGO-SPLIT-product-manuals-3",
+        "DESK-STD-MOTO",
+        "MOUSE-VERT-PRO",
+        "KB-ERGO-SPLIT-parts-catalog-0"
+      ],
+      "reranked_doc_ids": [
+        "KB-ERGO-SPLIT-product-manuals-3",
+        "KB-ERGO-SPLIT-parts-catalog-0",
+        "DESK-STD-MOTO-parts-catalog-0",
+        "KB-ERGO-SPLIT-product-manuals-4",
+        "MON-ARM-DUAL-product-manuals-2"
+      ],
+      "retrieved_skus": [
+        "KB-ERGO-SPLIT",
+        "DESK-STD-MOTO",
+        "MON-ARM-DUAL"
+      ],
+      "recall@5": 0.0,
+      "recall@10": 0.0,
+      "precision@5": 0.0,
+      "mrr": 0.0,
+      "ndcg@5": 0.0,
+      "hit_rate": 0.0,
+      "latency_ms": 1306.6055999952368
+    },
+    {
+      "query_idx": 94,
+      "query": "What is the capital city of Australia?",
+      "relevant_skus": [],
+      "candidate_doc_ids": [
+        "MON-ARM-DUAL",
+        "HEADSET-WL-PRO",
+        "MON-ARM-DUAL-product-manuals-7",
+        "CHAIR-ERG-X99",
+        "CHAIR-ERG-X99-parts-catalog-0",
+        "WM-4401-WLS",
+        "SN-1101-HGT",
+        "GR-9901-GRS",
+        "C-5500-CAST",
+        "DESK-STD-MOTO-parts-catalog-0",
+        "SP-4402-SPND",
+        "PT-1101-PVT",
+        "SW-2201-SWT",
+        "DR-2201-DRV",
+        "P-9912-ARM"
+      ],
+      "reranked_doc_ids": [
+        "MON-ARM-DUAL-product-manuals-7",
+        "CHAIR-ERG-X99-parts-catalog-0",
+        "DESK-STD-MOTO-parts-catalog-0"
+      ],
+      "retrieved_skus": [
+        "MON-ARM-DUAL",
+        "CHAIR-ERG-X99",
+        "DESK-STD-MOTO"
+      ],
+      "recall@5": 0.0,
+      "recall@10": 0.0,
+      "precision@5": 0.0,
+      "mrr": 0.0,
+      "ndcg@5": 0.0,
+      "hit_rate": 0.0,
+      "latency_ms": 823.0224000290036
+    },
+    {
+      "query_idx": 95,
+      "query": "How do I change the engine oil on a Honda Civic?",
+      "relevant_skus": [],
+      "candidate_doc_ids": [
+        "MON-ARM-DUAL",
+        "CHAIR-ERG-X99-parts-catalog-0",
+        "MON-ARM-DUAL-product-manuals-6",
+        "MOUSE-VERT-PRO",
+        "KB-ERGO-SPLIT",
+        "DESK-STD-MOTO-product-manuals-4",
+        "HEADSET-WL-PRO",
+        "CHAIR-ERG-X99-product-manuals-5",
+        "CHAIR-ERG-X99",
+        "MON-ARM-DUAL-product-manuals-2",
+        "DESK-STD-MOTO"
+      ],
+      "reranked_doc_ids": [
+        "CHAIR-ERG-X99-product-manuals-5",
+        "CHAIR-ERG-X99-parts-catalog-0",
+        "DESK-STD-MOTO-product-manuals-4",
+        "MON-ARM-DUAL-product-manuals-2",
+        "MON-ARM-DUAL-product-manuals-6"
+      ],
+      "retrieved_skus": [
+        "CHAIR-ERG-X99",
+        "DESK-STD-MOTO",
+        "MON-ARM-DUAL"
+      ],
+      "recall@5": 0.0,
+      "recall@10": 0.0,
+      "precision@5": 0.0,
+      "mrr": 0.0,
+      "ndcg@5": 0.0,
+      "hit_rate": 0.0,
+      "latency_ms": 2941.0436000325717
+    },
+    {
+      "query_idx": 96,
+      "query": "What are the official rules of FIFA World Cup soccer?",
+      "relevant_skus": [],
+      "candidate_doc_ids": [
+        "MON-ARM-DUAL",
+        "MON-ARM-DUAL-product-manuals-6",
+        "CHAIR-ERG-X99",
+        "WM-4401-WLS",
+        "SN-1101-HGT",
+        "GR-9901-GRS",
+        "KB-ERGO-SPLIT-product-manuals-5",
+        "C-5500-CAST",
+        "SP-4402-SPND",
+        "PT-1101-PVT",
+        "MOUSE-VERT-PRO-product-manuals-5",
+        "SW-2201-SWT",
+        "DR-2201-DRV",
+        "P-9912-ARM",
+        "CB-2201-CTL"
+      ],
+      "reranked_doc_ids": [
+        "MOUSE-VERT-PRO-product-manuals-5",
+        "KB-ERGO-SPLIT-product-manuals-5",
+        "MON-ARM-DUAL-product-manuals-6"
+      ],
+      "retrieved_skus": [
+        "MOUSE-VERT-PRO",
+        "KB-ERGO-SPLIT",
+        "MON-ARM-DUAL"
+      ],
+      "recall@5": 0.0,
+      "recall@10": 0.0,
+      "precision@5": 0.0,
+      "mrr": 0.0,
+      "ndcg@5": 0.0,
+      "hit_rate": 0.0,
+      "latency_ms": 2083.4787999629043
+    },
+    {
+      "query_idx": 97,
+      "query": "What is the distance between the Earth and the Moon?",
+      "relevant_skus": [],
+      "candidate_doc_ids": [
+        "DESK-STD-MOTO-troubleshooting-tick-1",
+        "CHAIR-ERG-X99",
+        "DESK-STD-MOTO-parts-catalog-0",
+        "CHAIR-ERG-X99-product-manuals-1",
+        "KB-ERGO-SPLIT",
+        "MON-ARM-DUAL-product-manuals-6",
+        "DESK-STD-MOTO",
+        "MON-ARM-DUAL",
+        "MOUSE-VERT-PRO",
+        "HEADSET-WL-PRO",
+        "CHAIR-ERG-X99-parts-catalog-0"
+      ],
+      "reranked_doc_ids": [
+        "DESK-STD-MOTO-parts-catalog-0",
+        "DESK-STD-MOTO-troubleshooting-tick-1",
+        "CHAIR-ERG-X99-parts-catalog-0",
+        "MON-ARM-DUAL-product-manuals-6",
+        "CHAIR-ERG-X99-product-manuals-1"
+      ],
+      "retrieved_skus": [
+        "DESK-STD-MOTO",
+        "CHAIR-ERG-X99",
+        "MON-ARM-DUAL"
+      ],
+      "recall@5": 0.0,
+      "recall@10": 0.0,
+      "precision@5": 0.0,
+      "mrr": 0.0,
+      "ndcg@5": 0.0,
+      "hit_rate": 0.0,
+      "latency_ms": 2997.585800010711
+    },
+    {
+      "query_idx": 98,
+      "query": "How do you make traditional Italian espresso at home?",
+      "relevant_skus": [],
+      "candidate_doc_ids": [
+        "MON-ARM-DUAL",
+        "DESK-STD-MOTO",
+        "DESK-STD-MOTO-parts-catalog-0",
+        "CHAIR-ERG-X99-parts-catalog-0",
+        "MON-ARM-DUAL-product-manuals-1",
+        "CHAIR-ERG-X99-product-manuals-5",
+        "DESK-STD-MOTO-troubleshooting-tick-0"
+      ],
+      "reranked_doc_ids": [
+        "DESK-STD-MOTO-troubleshooting-tick-0",
+        "DESK-STD-MOTO-parts-catalog-0",
+        "MON-ARM-DUAL-product-manuals-1",
+        "CHAIR-ERG-X99-parts-catalog-0",
+        "CHAIR-ERG-X99-product-manuals-5"
+      ],
+      "retrieved_skus": [
+        "DESK-STD-MOTO",
+        "MON-ARM-DUAL",
+        "CHAIR-ERG-X99"
+      ],
+      "recall@5": 0.0,
+      "recall@10": 0.0,
+      "precision@5": 0.0,
+      "mrr": 0.0,
+      "ndcg@5": 0.0,
+      "hit_rate": 0.0,
+      "latency_ms": 2502.4140999885276
+    },
+    {
+      "query_idx": 99,
+      "query": "What are the best organic fertilizers for growing tomatoes?",
+      "relevant_skus": [],
+      "candidate_doc_ids": [
+        "MON-ARM-DUAL-product-manuals-6",
+        "MOUSE-VERT-PRO",
+        "CHAIR-ERG-X99-product-manuals-5",
+        "KB-ERGO-SPLIT",
+        "DESK-STD-MOTO-product-manuals-4",
+        "DESK-STD-MOTO",
+        "CHAIR-ERG-X99",
+        "DESK-STD-MOTO-parts-catalog-0",
+        "MON-ARM-DUAL"
+      ],
+      "reranked_doc_ids": [
+        "CHAIR-ERG-X99-product-manuals-5",
+        "MON-ARM-DUAL-product-manuals-6",
+        "DESK-STD-MOTO-product-manuals-4",
+        "DESK-STD-MOTO-parts-catalog-0"
+      ],
+      "retrieved_skus": [
+        "CHAIR-ERG-X99",
+        "MON-ARM-DUAL",
+        "DESK-STD-MOTO"
+      ],
+      "recall@5": 0.0,
+      "recall@10": 0.0,
+      "precision@5": 0.0,
+      "mrr": 0.0,
+      "ndcg@5": 0.0,
+      "hit_rate": 0.0,
+      "latency_ms": 2499.0675000008196
+    },
+    {
+      "query_idx": 100,
+      "query": "What causes a total solar eclipse?",
+      "relevant_skus": [],
+      "candidate_doc_ids": [
+        "MON-ARM-DUAL",
+        "MON-ARM-DUAL-product-manuals-5",
+        "DESK-STD-MOTO-product-manuals-2",
+        "MON-ARM-DUAL-product-manuals-4",
+        "MOUSE-VERT-PRO-product-manuals-3",
+        "MON-ARM-DUAL-product-manuals-6"
+      ],
+      "reranked_doc_ids": [
+        "MON-ARM-DUAL-product-manuals-4",
+        "DESK-STD-MOTO-product-manuals-2",
+        "MON-ARM-DUAL-product-manuals-5",
+        "MOUSE-VERT-PRO-product-manuals-3",
+        "MON-ARM-DUAL-product-manuals-6"
+      ],
+      "retrieved_skus": [
+        "MON-ARM-DUAL",
+        "DESK-STD-MOTO",
+        "MOUSE-VERT-PRO"
+      ],
+      "recall@5": 0.0,
+      "recall@10": 0.0,
+      "precision@5": 0.0,
+      "mrr": 0.0,
+      "ndcg@5": 0.0,
+      "hit_rate": 0.0,
+      "latency_ms": 2827.546100015752
+    }
+  ]
+}

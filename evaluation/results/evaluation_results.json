@@ -1,0 +1,835 @@
+[
+  {
+    "query_idx": 1,
+    "query": "What is the torque spec for screw S-4012-SCRW?",
+    "query_type": "exact_sku",
+    "relevant_skus": [
+      "CHAIR-ERG-X99",
+      "DESK-STD-MOTO"
+    ],
+    "retrieved_skus": [
+      "CHAIR-ERG-X99",
+      "MON-ARM-DUAL",
+      "DESK-STD-MOTO"
+    ],
+    "hit_at_5": 1,
+    "reciprocal_rank": 1.0,
+    "recall@5": 1.0,
+    "ndcg@5": 0.9197207891481876,
+    "latency_ms": 2402.495300048031
+  },
+  {
+    "query_idx": 2,
+    "query": "Which part number is the gas lift cylinder for CHAIR-ERG-X99?",
+    "query_type": "exact_sku",
+    "relevant_skus": [
+      "CHAIR-ERG-X99"
+    ],
+    "retrieved_skus": [
+      "CHAIR-ERG-X99"
+    ],
+    "hit_at_5": 1,
+    "reciprocal_rank": 1.0,
+    "recall@5": 1.0,
+    "ndcg@5": 1.0,
+    "latency_ms": 16.945399984251708
+  },
+  {
+    "query_idx": 3,
+    "query": "What does error E02 mean on DESK-STD-MOTO?",
+    "query_type": "exact_sku",
+    "relevant_skus": [
+      "DESK-STD-MOTO"
+    ],
+    "retrieved_skus": [
+      "DESK-STD-MOTO"
+    ],
+    "hit_at_5": 1,
+    "reciprocal_rank": 1.0,
+    "recall@5": 1.0,
+    "ndcg@5": 1.0,
+    "latency_ms": 17.186200013384223
+  },
+  {
+    "query_idx": 4,
+    "query": "Part number for monitor arm gas spring GS-9901-GSP?",
+    "query_type": "exact_sku",
+    "relevant_skus": [
+      "MON-ARM-DUAL"
+    ],
+    "retrieved_skus": [
+      "MON-ARM-DUAL"
+    ],
+    "hit_at_5": 1,
+    "reciprocal_rank": 1.0,
+    "recall@5": 1.0,
+    "ndcg@5": 1.0,
+    "latency_ms": 1299.4641000404954
+  },
+  {
+    "query_idx": 5,
+    "query": "Keyboard switch SW-2201-SWT actuation force?",
+    "query_type": "exact_sku",
+    "relevant_skus": [
+      "KB-ERGO-SPLIT"
+    ],
+    "retrieved_skus": [
+      "KB-ERGO-SPLIT",
+      "MOUSE-VERT-PRO"
+    ],
+    "hit_at_5": 1,
+    "reciprocal_rank": 1.0,
+    "recall@5": 1.0,
+    "ndcg@5": 1.0,
+    "latency_ms": 650.686000008136
+  },
+  {
+    "query_idx": 6,
+    "query": "Mouse sensor SN-8801-SNS max DPI?",
+    "query_type": "exact_sku",
+    "relevant_skus": [
+      "MOUSE-VERT-PRO"
+    ],
+    "retrieved_skus": [
+      "MOUSE-VERT-PRO"
+    ],
+    "hit_at_5": 1,
+    "reciprocal_rank": 1.0,
+    "recall@5": 1.0,
+    "ndcg@5": 1.0,
+    "latency_ms": 531.4533999771811
+  },
+  {
+    "query_idx": 7,
+    "query": "Headset driver DR-2201-DRV impedance?",
+    "query_type": "exact_sku",
+    "relevant_skus": [
+      "HEADSET-WL-PRO"
+    ],
+    "retrieved_skus": [
+      "HEADSET-WL-PRO"
+    ],
+    "hit_at_5": 1,
+    "reciprocal_rank": 1.0,
+    "recall@5": 1.0,
+    "ndcg@5": 1.0,
+    "latency_ms": 1564.6969999652356
+  },
+  {
+    "query_idx": 8,
+    "query": "Bolt B-3301-BLT torque for chair base?",
+    "query_type": "exact_sku",
+    "relevant_skus": [
+      "CHAIR-ERG-X99",
+      "DESK-STD-MOTO",
+      "MON-ARM-DUAL"
+    ],
+    "retrieved_skus": [
+      "CHAIR-ERG-X99",
+      "MON-ARM-DUAL"
+    ],
+    "hit_at_5": 1,
+    "reciprocal_rank": 1.0,
+    "recall@5": 0.6666666666666666,
+    "ndcg@5": 0.7653606369886217,
+    "latency_ms": 1084.8332000314258
+  },
+  {
+    "query_idx": 9,
+    "query": "What is the part number for the chair base assembly?",
+    "query_type": "exact_sku",
+    "relevant_skus": [
+      "CHAIR-ERG-X99"
+    ],
+    "retrieved_skus": [
+      "CHAIR-ERG-X99"
+    ],
+    "hit_at_5": 1,
+    "reciprocal_rank": 1.0,
+    "recall@5": 1.0,
+    "ndcg@5": 1.0,
+    "latency_ms": 1137.7913000178523
+  },
+  {
+    "query_idx": 10,
+    "query": "Which control box does DESK-STD-MOTO use?",
+    "query_type": "exact_sku",
+    "relevant_skus": [
+      "DESK-STD-MOTO"
+    ],
+    "retrieved_skus": [
+      "DESK-STD-MOTO"
+    ],
+    "hit_at_5": 1,
+    "reciprocal_rank": 1.0,
+    "recall@5": 1.0,
+    "ndcg@5": 1.0,
+    "latency_ms": 12.842299998737872
+  },
+  {
+    "query_idx": 11,
+    "query": "What is the replacement part number for caster C-5500-CAST?",
+    "query_type": "exact_sku",
+    "relevant_skus": [
+      "CHAIR-ERG-X99"
+    ],
+    "retrieved_skus": [
+      "CHAIR-ERG-X99",
+      "DESK-STD-MOTO",
+      "MON-ARM-DUAL",
+      "KB-ERGO-SPLIT"
+    ],
+    "hit_at_5": 1,
+    "reciprocal_rank": 1.0,
+    "recall@5": 1.0,
+    "ndcg@5": 1.0,
+    "latency_ms": 1171.979199978523
+  },
+  {
+    "query_idx": 12,
+    "query": "Motor M-8841-MOT voltage and force rating",
+    "query_type": "exact_sku",
+    "relevant_skus": [
+      "DESK-STD-MOTO"
+    ],
+    "retrieved_skus": [
+      "DESK-STD-MOTO",
+      "CHAIR-ERG-X99"
+    ],
+    "hit_at_5": 1,
+    "reciprocal_rank": 1.0,
+    "recall@5": 1.0,
+    "ndcg@5": 1.0,
+    "latency_ms": 1238.1776999682188
+  },
+  {
+    "query_idx": 13,
+    "query": "Pivot bolt PT-1101-PVT specifications for monitor arm",
+    "query_type": "exact_sku",
+    "relevant_skus": [
+      "MON-ARM-DUAL"
+    ],
+    "retrieved_skus": [
+      "MON-ARM-DUAL"
+    ],
+    "hit_at_5": 1,
+    "reciprocal_rank": 1.0,
+    "recall@5": 1.0,
+    "ndcg@5": 1.0,
+    "latency_ms": 1191.7437999509275
+  },
+  {
+    "query_idx": 14,
+    "query": "Tell me about the ErgoFlex Pro Office Chair",
+    "query_type": "product_name",
+    "relevant_skus": [
+      "CHAIR-ERG-X99"
+    ],
+    "retrieved_skus": [
+      "CHAIR-ERG-X99",
+      "MON-ARM-DUAL"
+    ],
+    "hit_at_5": 1,
+    "reciprocal_rank": 1.0,
+    "recall@5": 1.0,
+    "ndcg@5": 1.0,
+    "latency_ms": 1086.6619000444189
+  },
+  {
+    "query_idx": 15,
+    "query": "Motorized Standing Desk Standard overview and key details",
+    "query_type": "product_name",
+    "relevant_skus": [
+      "DESK-STD-MOTO"
+    ],
+    "retrieved_skus": [
+      "DESK-STD-MOTO",
+      "CHAIR-ERG-X99"
+    ],
+    "hit_at_5": 1,
+    "reciprocal_rank": 1.0,
+    "recall@5": 1.0,
+    "ndcg@5": 1.0,
+    "latency_ms": 1042.1144000138156
+  },
+  {
+    "query_idx": 16,
+    "query": "Dual Monitor Arm Heavy Duty product description",
+    "query_type": "product_name",
+    "relevant_skus": [
+      "MON-ARM-DUAL"
+    ],
+    "retrieved_skus": [
+      "MON-ARM-DUAL",
+      "CHAIR-ERG-X99"
+    ],
+    "hit_at_5": 1,
+    "reciprocal_rank": 1.0,
+    "recall@5": 1.0,
+    "ndcg@5": 1.0,
+    "latency_ms": 798.282100004144
+  },
+  {
+    "query_idx": 17,
+    "query": "ErgoSplit Mechanical Keyboard features and layout",
+    "query_type": "product_name",
+    "relevant_skus": [
+      "KB-ERGO-SPLIT"
+    ],
+    "retrieved_skus": [
+      "KB-ERGO-SPLIT",
+      "HEADSET-WL-PRO"
+    ],
+    "hit_at_5": 1,
+    "reciprocal_rank": 1.0,
+    "recall@5": 1.0,
+    "ndcg@5": 1.0,
+    "latency_ms": 641.0885999794118
+  },
+  {
+    "query_idx": 18,
+    "query": "Vertical Ergonomic Mouse Pro design and specifications",
+    "query_type": "product_name",
+    "relevant_skus": [
+      "MOUSE-VERT-PRO"
+    ],
+    "retrieved_skus": [
+      "MOUSE-VERT-PRO",
+      "MON-ARM-DUAL",
+      "CHAIR-ERG-X99"
+    ],
+    "hit_at_5": 1,
+    "reciprocal_rank": 1.0,
+    "recall@5": 1.0,
+    "ndcg@5": 1.0,
+    "latency_ms": 539.0860000043176
+  },
+  {
+    "query_idx": 19,
+    "query": "Wireless Pro Headset audio capabilities and battery",
+    "query_type": "product_name",
+    "relevant_skus": [
+      "HEADSET-WL-PRO"
+    ],
+    "retrieved_skus": [
+      "HEADSET-WL-PRO"
+    ],
+    "hit_at_5": 1,
+    "reciprocal_rank": 1.0,
+    "recall@5": 1.0,
+    "ndcg@5": 1.0,
+    "latency_ms": 1629.0774999652058
+  },
+  {
+    "query_idx": 20,
+    "query": "What comes included with ErgoFlex Pro Office Chair?",
+    "query_type": "product_name",
+    "relevant_skus": [
+      "CHAIR-ERG-X99"
+    ],
+    "retrieved_skus": [
+      "CHAIR-ERG-X99",
+      "DESK-STD-MOTO",
+      "MON-ARM-DUAL"
+    ],
+    "hit_at_5": 1,
+    "reciprocal_rank": 1.0,
+    "recall@5": 1.0,
+    "ndcg@5": 1.0,
+    "latency_ms": 782.9266000189818
+  },
+  {
+    "query_idx": 21,
+    "query": "Motorized Standing Desk Standard dual motor setup",
+    "query_type": "product_name",
+    "relevant_skus": [
+      "DESK-STD-MOTO"
+    ],
+    "retrieved_skus": [
+      "DESK-STD-MOTO"
+    ],
+    "hit_at_5": 1,
+    "reciprocal_rank": 1.0,
+    "recall@5": 1.0,
+    "ndcg@5": 1.0,
+    "latency_ms": 1075.7199000217952
+  },
+  {
+    "query_idx": 22,
+    "query": "Dual Monitor Arm Heavy Duty mounting options",
+    "query_type": "product_name",
+    "relevant_skus": [
+      "MON-ARM-DUAL"
+    ],
+    "retrieved_skus": [
+      "MON-ARM-DUAL",
+      "CHAIR-ERG-X99"
+    ],
+    "hit_at_5": 1,
+    "reciprocal_rank": 1.0,
+    "recall@5": 1.0,
+    "ndcg@5": 1.0,
+    "latency_ms": 994.0786000224762
+  },
+  {
+    "query_idx": 23,
+    "query": "ErgoSplit Mechanical Keyboard firmware and connectivity",
+    "query_type": "product_name",
+    "relevant_skus": [
+      "KB-ERGO-SPLIT"
+    ],
+    "retrieved_skus": [
+      "KB-ERGO-SPLIT"
+    ],
+    "hit_at_5": 1,
+    "reciprocal_rank": 1.0,
+    "recall@5": 1.0,
+    "ndcg@5": 1.0,
+    "latency_ms": 664.3646000302397
+  },
+  {
+    "query_idx": 24,
+    "query": "Vertical Ergonomic Mouse Pro sensor and ergonomic angle",
+    "query_type": "product_name",
+    "relevant_skus": [
+      "MOUSE-VERT-PRO"
+    ],
+    "retrieved_skus": [
+      "MOUSE-VERT-PRO"
+    ],
+    "hit_at_5": 1,
+    "reciprocal_rank": 1.0,
+    "recall@5": 1.0,
+    "ndcg@5": 1.0,
+    "latency_ms": 740.8434000099078
+  },
+  {
+    "query_idx": 25,
+    "query": "Wireless Pro Headset microphone and sound quality",
+    "query_type": "product_name",
+    "relevant_skus": [
+      "HEADSET-WL-PRO"
+    ],
+    "retrieved_skus": [
+      "HEADSET-WL-PRO"
+    ],
+    "hit_at_5": 1,
+    "reciprocal_rank": 1.0,
+    "recall@5": 1.0,
+    "ndcg@5": 1.0,
+    "latency_ms": 663.826500007417
+  },
+  {
+    "query_idx": 26,
+    "query": "What is the warranty coverage on CHAIR-ERG-X99?",
+    "query_type": "feature",
+    "relevant_skus": [
+      "CHAIR-ERG-X99"
+    ],
+    "retrieved_skus": [
+      "CHAIR-ERG-X99"
+    ],
+    "hit_at_5": 1,
+    "reciprocal_rank": 1.0,
+    "recall@5": 1.0,
+    "ndcg@5": 1.0,
+    "latency_ms": 11.308900022413582
+  },
+  {
+    "query_idx": 27,
+    "query": "What is the height adjustment range of DESK-STD-MOTO?",
+    "query_type": "feature",
+    "relevant_skus": [
+      "DESK-STD-MOTO"
+    ],
+    "retrieved_skus": [
+      "DESK-STD-MOTO"
+    ],
+    "hit_at_5": 1,
+    "reciprocal_rank": 1.0,
+    "recall@5": 1.0,
+    "ndcg@5": 1.0,
+    "latency_ms": 12.733499985188246
+  },
+  {
+    "query_idx": 28,
+    "query": "What is the maximum monitor weight capacity of MON-ARM-DUAL?",
+    "query_type": "feature",
+    "relevant_skus": [
+      "MON-ARM-DUAL"
+    ],
+    "retrieved_skus": [
+      "MON-ARM-DUAL"
+    ],
+    "hit_at_5": 1,
+    "reciprocal_rank": 1.0,
+    "recall@5": 1.0,
+    "ndcg@5": 1.0,
+    "latency_ms": 10.610199999064207
+  },
+  {
+    "query_idx": 29,
+    "query": "Does KB-ERGO-SPLIT support wireless Bluetooth connectivity?",
+    "query_type": "feature",
+    "relevant_skus": [
+      "KB-ERGO-SPLIT"
+    ],
+    "retrieved_skus": [
+      "KB-ERGO-SPLIT"
+    ],
+    "hit_at_5": 1,
+    "reciprocal_rank": 1.0,
+    "recall@5": 1.0,
+    "ndcg@5": 1.0,
+    "latency_ms": 12.157500023022294
+  },
+  {
+    "query_idx": 30,
+    "query": "What is the ergonomic grip angle on MOUSE-VERT-PRO?",
+    "query_type": "feature",
+    "relevant_skus": [
+      "MOUSE-VERT-PRO"
+    ],
+    "retrieved_skus": [
+      "MOUSE-VERT-PRO",
+      "CHAIR-ERG-X99",
+      "MON-ARM-DUAL",
+      "HEADSET-WL-PRO"
+    ],
+    "hit_at_5": 1,
+    "reciprocal_rank": 1.0,
+    "recall@5": 1.0,
+    "ndcg@5": 1.0,
+    "latency_ms": 1499.869099992793
+  },
+  {
+    "query_idx": 31,
+    "query": "What is the battery run time on HEADSET-WL-PRO?",
+    "query_type": "feature",
+    "relevant_skus": [
+      "HEADSET-WL-PRO"
+    ],
+    "retrieved_skus": [
+      "HEADSET-WL-PRO"
+    ],
+    "hit_at_5": 1,
+    "reciprocal_rank": 1.0,
+    "recall@5": 1.0,
+    "ndcg@5": 1.0,
+    "latency_ms": 2369.2110999836586
+  },
+  {
+    "query_idx": 32,
+    "query": "Can the armrests on CHAIR-ERG-X99 be adjusted in height?",
+    "query_type": "feature",
+    "relevant_skus": [
+      "CHAIR-ERG-X99"
+    ],
+    "retrieved_skus": [
+      "CHAIR-ERG-X99"
+    ],
+    "hit_at_5": 1,
+    "reciprocal_rank": 1.0,
+    "recall@5": 1.0,
+    "ndcg@5": 1.0,
+    "latency_ms": 14.826000027824193
+  },
+  {
+    "query_idx": 33,
+    "query": "Does the DESK-STD-MOTO control box have Bluetooth pairing?",
+    "query_type": "feature",
+    "relevant_skus": [
+      "DESK-STD-MOTO"
+    ],
+    "retrieved_skus": [
+      "DESK-STD-MOTO"
+    ],
+    "hit_at_5": 1,
+    "reciprocal_rank": 1.0,
+    "recall@5": 1.0,
+    "ndcg@5": 1.0,
+    "latency_ms": 15.1791000389494
+  },
+  {
+    "query_idx": 34,
+    "query": "Is MON-ARM-DUAL compatible with 32 inch monitors?",
+    "query_type": "feature",
+    "relevant_skus": [
+      "MON-ARM-DUAL"
+    ],
+    "retrieved_skus": [
+      "MON-ARM-DUAL"
+    ],
+    "hit_at_5": 1,
+    "reciprocal_rank": 1.0,
+    "recall@5": 1.0,
+    "ndcg@5": 1.0,
+    "latency_ms": 13.913200004026294
+  },
+  {
+    "query_idx": 35,
+    "query": "Are the switches on KB-ERGO-SPLIT hot-swappable?",
+    "query_type": "feature",
+    "relevant_skus": [
+      "KB-ERGO-SPLIT"
+    ],
+    "retrieved_skus": [
+      "KB-ERGO-SPLIT"
+    ],
+    "hit_at_5": 1,
+    "reciprocal_rank": 1.0,
+    "recall@5": 1.0,
+    "ndcg@5": 1.0,
+    "latency_ms": 15.188300050795078
+  },
+  {
+    "query_idx": 36,
+    "query": "Does MOUSE-VERT-PRO have adjustable DPI on the fly?",
+    "query_type": "feature",
+    "relevant_skus": [
+      "MOUSE-VERT-PRO"
+    ],
+    "retrieved_skus": [
+      "MOUSE-VERT-PRO"
+    ],
+    "hit_at_5": 1,
+    "reciprocal_rank": 1.0,
+    "recall@5": 1.0,
+    "ndcg@5": 1.0,
+    "latency_ms": 971.9977999920957
+  },
+  {
+    "query_idx": 37,
+    "query": "Does HEADSET-WL-PRO include a detachable boom microphone?",
+    "query_type": "feature",
+    "relevant_skus": [
+      "HEADSET-WL-PRO"
+    ],
+    "retrieved_skus": [
+      "HEADSET-WL-PRO"
+    ],
+    "hit_at_5": 1,
+    "reciprocal_rank": 1.0,
+    "recall@5": 1.0,
+    "ndcg@5": 1.0,
+    "latency_ms": 1740.8140000188723
+  },
+  {
+    "query_idx": 38,
+    "query": "Can DESK-STD-MOTO save preset height positions?",
+    "query_type": "feature",
+    "relevant_skus": [
+      "DESK-STD-MOTO"
+    ],
+    "retrieved_skus": [
+      "DESK-STD-MOTO"
+    ],
+    "hit_at_5": 1,
+    "reciprocal_rank": 1.0,
+    "recall@5": 1.0,
+    "ndcg@5": 1.0,
+    "latency_ms": 17.542999994475394
+  },
+  {
+    "query_idx": 39,
+    "query": "Desk lifting speed 32mm/s and 24V DC motor specs",
+    "query_type": "specification",
+    "relevant_skus": [
+      "DESK-STD-MOTO"
+    ],
+    "retrieved_skus": [
+      "DESK-STD-MOTO"
+    ],
+    "hit_at_5": 1,
+    "reciprocal_rank": 1.0,
+    "recall@5": 1.0,
+    "ndcg@5": 1.0,
+    "latency_ms": 3071.9485000008717
+  },
+  {
+    "query_idx": 40,
+    "query": "Chair gas lift cylinder 120mm stroke 1000N rating",
+    "query_type": "specification",
+    "relevant_skus": [
+      "CHAIR-ERG-X99"
+    ],
+    "retrieved_skus": [
+      "CHAIR-ERG-X99",
+      "DESK-STD-MOTO"
+    ],
+    "hit_at_5": 1,
+    "reciprocal_rank": 1.0,
+    "recall@5": 1.0,
+    "ndcg@5": 1.0,
+    "latency_ms": 1878.831000009086
+  },
+  {
+    "query_idx": 41,
+    "query": "Monitor arm VESA pattern 75x75 and 100x100 mounting specs",
+    "query_type": "specification",
+    "relevant_skus": [
+      "MON-ARM-DUAL"
+    ],
+    "retrieved_skus": [
+      "MON-ARM-DUAL"
+    ],
+    "hit_at_5": 1,
+    "reciprocal_rank": 1.0,
+    "recall@5": 1.0,
+    "ndcg@5": 1.0,
+    "latency_ms": 1631.2768000061624
+  },
+  {
+    "query_idx": 42,
+    "query": "Keyboard switch Cherry MX Brown 55g tactile actuation force",
+    "query_type": "specification",
+    "relevant_skus": [
+      "KB-ERGO-SPLIT"
+    ],
+    "retrieved_skus": [
+      "KB-ERGO-SPLIT",
+      "CHAIR-ERG-X99"
+    ],
+    "hit_at_5": 1,
+    "reciprocal_rank": 1.0,
+    "recall@5": 1.0,
+    "ndcg@5": 1.0,
+    "latency_ms": 1638.2173000019975
+  },
+  {
+    "query_idx": 43,
+    "query": "Mouse sensor PixArt PAW3395 26000 DPI and 650 IPS tracking",
+    "query_type": "specification",
+    "relevant_skus": [
+      "MOUSE-VERT-PRO"
+    ],
+    "retrieved_skus": [
+      "MOUSE-VERT-PRO"
+    ],
+    "hit_at_5": 1,
+    "reciprocal_rank": 1.0,
+    "recall@5": 1.0,
+    "ndcg@5": 1.0,
+    "latency_ms": 1647.8372999699786
+  },
+  {
+    "query_idx": 44,
+    "query": "Headset 40mm neodymium driver 32 ohm impedance 20Hz-20kHz",
+    "query_type": "specification",
+    "relevant_skus": [
+      "HEADSET-WL-PRO"
+    ],
+    "retrieved_skus": [
+      "HEADSET-WL-PRO"
+    ],
+    "hit_at_5": 1,
+    "reciprocal_rank": 1.0,
+    "recall@5": 1.0,
+    "ndcg@5": 1.0,
+    "latency_ms": 588.5439999983646
+  },
+  {
+    "query_idx": 45,
+    "query": "Lifting spindle Tr10x3 trapezoidal thread 600mm travel",
+    "query_type": "specification",
+    "relevant_skus": [
+      "DESK-STD-MOTO"
+    ],
+    "retrieved_skus": [
+      "DESK-STD-MOTO",
+      "MON-ARM-DUAL"
+    ],
+    "hit_at_5": 1,
+    "reciprocal_rank": 1.0,
+    "recall@5": 1.0,
+    "ndcg@5": 1.0,
+    "latency_ms": 1077.27700000396
+  },
+  {
+    "query_idx": 46,
+    "query": "Caster 60mm nylon stem mount 50kg load capacity",
+    "query_type": "specification",
+    "relevant_skus": [
+      "CHAIR-ERG-X99"
+    ],
+    "retrieved_skus": [
+      "CHAIR-ERG-X99"
+    ],
+    "hit_at_5": 1,
+    "reciprocal_rank": 1.0,
+    "recall@5": 1.0,
+    "ndcg@5": 1.0,
+    "latency_ms": 905.7361999875866
+  },
+  {
+    "query_idx": 47,
+    "query": "Gas spring 2-9kg force range 200mm stroke M6 end fitting",
+    "query_type": "specification",
+    "relevant_skus": [
+      "MON-ARM-DUAL"
+    ],
+    "retrieved_skus": [
+      "MON-ARM-DUAL",
+      "CHAIR-ERG-X99",
+      "DESK-STD-MOTO"
+    ],
+    "hit_at_5": 1,
+    "reciprocal_rank": 1.0,
+    "recall@5": 1.0,
+    "ndcg@5": 1.0,
+    "latency_ms": 834.0668000164442
+  },
+  {
+    "query_idx": 48,
+    "query": "Wireless module nRF52840 Bluetooth 5.0 and 2.4GHz",
+    "query_type": "specification",
+    "relevant_skus": [
+      "KB-ERGO-SPLIT"
+    ],
+    "retrieved_skus": [
+      "KB-ERGO-SPLIT",
+      "DESK-STD-MOTO",
+      "HEADSET-WL-PRO"
+    ],
+    "hit_at_5": 1,
+    "reciprocal_rank": 1.0,
+    "recall@5": 1.0,
+    "ndcg@5": 1.0,
+    "latency_ms": 717.7224000333808
+  },
+  {
+    "query_idx": 49,
+    "query": "Mouse polling rate 1000Hz 1ms response time specs",
+    "query_type": "specification",
+    "relevant_skus": [
+      "MOUSE-VERT-PRO"
+    ],
+    "retrieved_skus": [
+      "MOUSE-VERT-PRO",
+      "DESK-STD-MOTO",
+      "MON-ARM-DUAL"
+    ],
+    "hit_at_5": 1,
+    "reciprocal_rank": 1.0,
+    "recall@5": 1.0,
+    "ndcg@5": 1.0,
+    "latency_ms": 405.0795999937691
+  },
+  {
+    "query_idx": 50,
+    "query": "Headset battery BT-6601-BAT 1200mAh capacity and charging time",
+    "query_type": "specification",
+    "relevant_skus": [
+      "HEADSET-WL-PRO"
+    ],
+    "retrieved_skus": [
+      "HEADSET-WL-PRO",
+      "MOUSE-VERT-PRO"
+    ],
+    "hit_at_5": 1,
+    "reciprocal_rank": 1.0,
+    "recall@5": 1.0,
+    "ndcg@5": 1.0,
+    "latency_ms": 1902.3714999784715
+  }
+]

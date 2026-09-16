@@ -6,7 +6,7 @@ from typing import List, Dict, Any, Optional
 from sentence_transformers import CrossEncoder
 
 
-RERANKER_MODEL = "cross-encoder/ms-marco-MiniLM-L-6-v2"
+RERANKER_MODEL = os.getenv("RERANKER_MODEL", "cross-encoder/ms-marco-MiniLM-L-6-v2")
 _reranker: Optional[CrossEncoder] = None
 
 
@@ -15,7 +15,7 @@ def get_reranker() -> CrossEncoder:
     if _reranker is None:
         print(f"Loading reranker model: {RERANKER_MODEL}...")
         start = time.perf_counter()
-        _reranker = CrossEncoder(RERANKER_MODEL)
+        _reranker = CrossEncoder(RERANKER_MODEL, max_length=512)
         elapsed = time.perf_counter() - start
         print(f"Reranker loaded in {elapsed:.3f}s")
     return _reranker

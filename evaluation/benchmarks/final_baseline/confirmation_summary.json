@@ -1,0 +1,43 @@
+{
+  "approved_config": {
+    "embedder": "sentence-transformers/all-MiniLM-L6-v2",
+    "reranker": "cross-encoder/ms-marco-MiniLM-L-6-v2",
+    "llm": "omniroute/auto (out of scope)",
+    "collection": "support_docs",
+    "code_changes": "none \u2014 baselines already in production defaults"
+  },
+  "confirmation_eval_50": {
+    "A_dense_only": {
+      "recall@5": 0.9833,
+      "mrr": 0.99,
+      "ndcg@5": 0.983,
+      "latency_ms": 67.1
+    },
+    "B_bm25_only": {
+      "recall@5": 1.0,
+      "mrr": 0.97,
+      "ndcg@5": 0.9779,
+      "latency_ms": 0.4
+    },
+    "C_concat": {
+      "recall@5": 1.0,
+      "mrr": 0.99,
+      "ndcg@5": 0.9939,
+      "latency_ms": 47.9
+    },
+    "D_rrf": {
+      "recall@5": 1.0,
+      "mrr": 0.99,
+      "ndcg@5": 0.9926,
+      "latency_ms": 33.4
+    },
+    "E_rrf_reranker": {
+      "recall@5": 0.9933,
+      "mrr": 1.0,
+      "ndcg@5": 0.9937,
+      "latency_ms": 919.7
+    },
+    "failures": 0
+  },
+  "sla_note": "Full pipeline E (RRF+reranker) mean 919.7ms under 1.2s SLA on this 50-query run; p95 still can spike above 1.2s based on prior results."
+}

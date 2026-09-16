@@ -1,0 +1,56 @@
+{
+  "model": "auto",
+  "retrieval_collection": "support_docs",
+  "retrieval_embedder": "sentence-transformers/all-MiniLM-L6-v2",
+  "reranker": "cross-encoder/ms-marco-MiniLM-L-6-v2",
+  "queries": 1,
+  "relevant_queries": 1,
+  "irrelevant_queries": 0,
+  "warmup_queries": 0,
+  "generation_errors": 1,
+  "citation_validity_rate": 0.0,
+  "citation_completeness": 0.0,
+  "answer_relevance": 0.0,
+  "faithfulness": 0.0,
+  "no_answer_accuracy": 1.0,
+  "unsupported_claim_rate": 1.0,
+  "unsupported_claims_per_query": 1.0,
+  "generation_latency_ms": 100973.31100003794,
+  "generation_latency_p50_ms": 100973.31100003794,
+  "generation_latency_p95_ms": 100973.31100003794,
+  "per_query": [
+    {
+      "query_idx": 1,
+      "query": "What is the torque spec for screw S-4012-SCRW?",
+      "query_type": "exact_sku",
+      "relevant_skus": [
+        "CHAIR-ERG-X99",
+        "DESK-STD-MOTO"
+      ],
+      "retrieved_doc_ids": [
+        "CHAIR-ERG-X99-parts-catalog-0",
+        "MON-ARM-DUAL-parts-catalog-0"
+      ],
+      "retrieved_skus": [
+        "CHAIR-ERG-X99",
+        "MON-ARM-DUAL"
+      ],
+      "answer": "[ERROR] OmniRoute generation failed: InternalServerError: Error code: 503 - {'error': {'message': 'Maximum combo retry limit reached', 'type': 'server_error', 'code': 'service_unavailable'}, 'diagnostics': {'poolSize': 63, 'attempted': 30, 'excluded': [], 'attemptOrder': [{'provider': 'duckduckgo-web', 'model': 'ddgw/claude-3-5-haiku-20241022'}, {'provider': 'duckduckgo-web', 'model': 'ddgw/mistral-small-2501'}, {'provider': 'duckduckgo-web', 'model': 'ddgw/gpt-4o-mini'}, {'provider': 'duckduckgo-web', 'model': 'ddgw/llama-4-scout'}, {'provider': 'opencode', 'model': 'oc/big-pickle'}, {'provider': 'cloudflare-ai', 'model': 'cloudflare-ai/@cf/meta/llama-3.3-70b-instruct'}, {'provider': 'theoldllm', 'model': 'tllm/GPT_o3_mini'}, {'provider': 'theoldllm', 'model': 'tllm/openrouter_gpt_4_o_mini'}, {'provider': 'theoldllm', 'model': 'tllm/GPT_o4_mini'}, {'provider': 'theoldllm', 'model': 'tllm/GPT_4o'}, {'provider': 'theoldllm', 'model': 'tllm/together_deepseek_v3'}, {'provider': 'theoldllm', 'model': 'tllm/openrouter_deepseek_r1'}, {'provider': 'theoldllm', 'model': 'tllm/openrouter_grok_4'}, {'provider': 'theoldllm', 'model': 'tllm/openrouter_gpt_4_o'}, {'provider': 'opencode', 'model': 'oc/trinity-large-preview-free'}, {'provider': 'opencode', 'model': 'oc/ling-2.6-1t-free'}, {'provider': 'duckduckgo-web', 'model': 'ddgw/o3-mini'}, {'provider': 'duckduckgo-web', 'model': 'ddgw/gpt-5-mini'}, {'provider': 'theoldllm', 'model': 'tllm/CLAUDE_4_6_SONNET'}, {'provider': 'theoldllm', 'model': 'tllm/claude_sonnet_4'}, {'provider': 'theoldllm', 'model': 'tllm/claude_opus_4'}, {'provider': 'theoldllm', 'model': 'tllm/deepseek_v4'}, {'provider': 'theoldllm', 'model': 'tllm/CLAUDE_4_6_OPUS'}, {'provider': 'theoldllm', 'model': 'tllm/claude_haiku_3_5'}, {'provider': 'theoldllm', 'model': 'tllm/CLAUDE_4_5_HAIKU'}, {'provider': 'opencode', 'model': 'oc/deepseek-v4-flash-free'}, {'provider': 'theoldllm', 'model': 'tllm/GPT_5'}, {'provider': 'theoldllm', 'model': 'tllm/GPT_5_4'}, {'provider': 'theoldllm', 'model': 'tllm/GPT_5_3'}, {'provider': 'theoldllm', 'model': 'tllm/GPT_5_2'}], 'terminalReason': 'max_attempts_exceeded'}}",
+      "generation_time_ms": 100973.311,
+      "answer_length": 2144,
+      "is_error": true,
+      "citations_found": 0,
+      "valid_citations": false,
+      "all_citations_valid": false,
+      "invalid_citations": [],
+      "no_answer_correct": true,
+      "no_answer_type": "correct",
+      "unsupported_claims_est": 1,
+      "factual_claims_est": 1,
+      "citation_coverage": 0.0,
+      "faithfulness_score": 0.0,
+      "potentially_hallucinated": 2,
+      "relevance_score": 0.0
+    }
+  ]
+}

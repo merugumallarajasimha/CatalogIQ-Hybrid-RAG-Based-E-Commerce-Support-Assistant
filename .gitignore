@@ -1,0 +1,33 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.egg-info/
+.venv/
+venv/
+.env
+src/.env
+
+# Local Qdrant / runtime data (large; regenerate via ingest)
+storage/
+snapshots/
+qdrant_fresh/
+*.rar
+
+# IDE / tooling
+.kilo/
+.idea/
+.vscode/
+*.swp
+
+# Temp / debug leftovers
+tmp_*.py
+temp_*.txt
+verbose_*.txt
+null
+*.pyc
+
+# OS
+Thumbs.db
+Desktop.ini
+.DS_Store

@@ -1,0 +1,50 @@
+{"query": "What is the torque spec for screw S-4012-SCRW?", "relevant_skus": ["CHAIR-ERG-X99", "DESK-STD-MOTO"], "query_type": "exact_sku"}
+{"query": "Which part number is the gas lift cylinder for CHAIR-ERG-X99?", "relevant_skus": ["CHAIR-ERG-X99"], "query_type": "exact_sku"}
+{"query": "What does error E02 mean on DESK-STD-MOTO?", "relevant_skus": ["DESK-STD-MOTO"], "query_type": "exact_sku"}
+{"query": "Part number for monitor arm gas spring GS-9901-GSP?", "relevant_skus": ["MON-ARM-DUAL"], "query_type": "exact_sku"}
+{"query": "Keyboard switch SW-2201-SWT actuation force?", "relevant_skus": ["KB-ERGO-SPLIT"], "query_type": "exact_sku"}
+{"query": "Mouse sensor SN-8801-SNS max DPI?", "relevant_skus": ["MOUSE-VERT-PRO"], "query_type": "exact_sku"}
+{"query": "Headset driver DR-2201-DRV impedance?", "relevant_skus": ["HEADSET-WL-PRO"], "query_type": "exact_sku"}
+{"query": "Bolt B-3301-BLT torque for chair base?", "relevant_skus": ["CHAIR-ERG-X99", "DESK-STD-MOTO", "MON-ARM-DUAL"], "query_type": "exact_sku"}
+{"query": "What is the part number for the chair base assembly?", "relevant_skus": ["CHAIR-ERG-X99"], "query_type": "exact_sku"}
+{"query": "Which control box does DESK-STD-MOTO use?", "relevant_skus": ["DESK-STD-MOTO"], "query_type": "exact_sku"}
+{"query": "What is the replacement part number for caster C-5500-CAST?", "relevant_skus": ["CHAIR-ERG-X99"], "query_type": "exact_sku"}
+{"query": "Motor M-8841-MOT voltage and force rating", "relevant_skus": ["DESK-STD-MOTO"], "query_type": "exact_sku"}
+{"query": "Pivot bolt PT-1101-PVT specifications for monitor arm", "relevant_skus": ["MON-ARM-DUAL"], "query_type": "exact_sku"}
+{"query": "Tell me about the ErgoFlex Pro Office Chair", "relevant_skus": ["CHAIR-ERG-X99"], "query_type": "product_name"}
+{"query": "Motorized Standing Desk Standard overview and key details", "relevant_skus": ["DESK-STD-MOTO"], "query_type": "product_name"}
+{"query": "Dual Monitor Arm Heavy Duty product description", "relevant_skus": ["MON-ARM-DUAL"], "query_type": "product_name"}
+{"query": "ErgoSplit Mechanical Keyboard features and layout", "relevant_skus": ["KB-ERGO-SPLIT"], "query_type": "product_name"}
+{"query": "Vertical Ergonomic Mouse Pro design and specifications", "relevant_skus": ["MOUSE-VERT-PRO"], "query_type": "product_name"}
+{"query": "Wireless Pro Headset audio capabilities and battery", "relevant_skus": ["HEADSET-WL-PRO"], "query_type": "product_name"}
+{"query": "What comes included with ErgoFlex Pro Office Chair?", "relevant_skus": ["CHAIR-ERG-X99"], "query_type": "product_name"}
+{"query": "Motorized Standing Desk Standard dual motor setup", "relevant_skus": ["DESK-STD-MOTO"], "query_type": "product_name"}
+{"query": "Dual Monitor Arm Heavy Duty mounting options", "relevant_skus": ["MON-ARM-DUAL"], "query_type": "product_name"}
+{"query": "ErgoSplit Mechanical Keyboard firmware and connectivity", "relevant_skus": ["KB-ERGO-SPLIT"], "query_type": "product_name"}
+{"query": "Vertical Ergonomic Mouse Pro sensor and ergonomic angle", "relevant_skus": ["MOUSE-VERT-PRO"], "query_type": "product_name"}
+{"query": "Wireless Pro Headset microphone and sound quality", "relevant_skus": ["HEADSET-WL-PRO"], "query_type": "product_name"}
+{"query": "What is the warranty coverage on CHAIR-ERG-X99?", "relevant_skus": ["CHAIR-ERG-X99"], "query_type": "feature"}
+{"query": "What is the height adjustment range of DESK-STD-MOTO?", "relevant_skus": ["DESK-STD-MOTO"], "query_type": "feature"}
+{"query": "What is the maximum monitor weight capacity of MON-ARM-DUAL?", "relevant_skus": ["MON-ARM-DUAL"], "query_type": "feature"}
+{"query": "Does KB-ERGO-SPLIT support wireless Bluetooth connectivity?", "relevant_skus": ["KB-ERGO-SPLIT"], "query_type": "feature"}
+{"query": "What is the ergonomic grip angle on MOUSE-VERT-PRO?", "relevant_skus": ["MOUSE-VERT-PRO"], "query_type": "feature"}
+{"query": "What is the battery run time on HEADSET-WL-PRO?", "relevant_skus": ["HEADSET-WL-PRO"], "query_type": "feature"}
+{"query": "Can the armrests on CHAIR-ERG-X99 be adjusted in height?", "relevant_skus": ["CHAIR-ERG-X99"], "query_type": "feature"}
+{"query": "Does the DESK-STD-MOTO control box have Bluetooth pairing?", "relevant_skus": ["DESK-STD-MOTO"], "query_type": "feature"}
+{"query": "Is MON-ARM-DUAL compatible with 32 inch monitors?", "relevant_skus": ["MON-ARM-DUAL"], "query_type": "feature"}
+{"query": "Are the switches on KB-ERGO-SPLIT hot-swappable?", "relevant_skus": ["KB-ERGO-SPLIT"], "query_type": "feature"}
+{"query": "Does MOUSE-VERT-PRO have adjustable DPI on the fly?", "relevant_skus": ["MOUSE-VERT-PRO"], "query_type": "feature"}
+{"query": "Does HEADSET-WL-PRO include a detachable boom microphone?", "relevant_skus": ["HEADSET-WL-PRO"], "query_type": "feature"}
+{"query": "Can DESK-STD-MOTO save preset height positions?", "relevant_skus": ["DESK-STD-MOTO"], "query_type": "feature"}
+{"query": "Desk lifting speed 32mm/s and 24V DC motor specs", "relevant_skus": ["DESK-STD-MOTO"], "query_type": "specification"}
+{"query": "Chair gas lift cylinder 120mm stroke 1000N rating", "relevant_skus": ["CHAIR-ERG-X99"], "query_type": "specification"}
+{"query": "Monitor arm VESA pattern 75x75 and 100x100 mounting specs", "relevant_skus": ["MON-ARM-DUAL"], "query_type": "specification"}
+{"query": "Keyboard switch Cherry MX Brown 55g tactile actuation force", "relevant_skus": ["KB-ERGO-SPLIT"], "query_type": "specification"}
+{"query": "Mouse sensor PixArt PAW3395 26000 DPI and 650 IPS tracking", "relevant_skus": ["MOUSE-VERT-PRO"], "query_type": "specification"}
+{"query": "Headset 40mm neodymium driver 32 ohm impedance 20Hz-20kHz", "relevant_skus": ["HEADSET-WL-PRO"], "query_type": "specification"}
+{"query": "Lifting spindle Tr10x3 trapezoidal thread 600mm travel", "relevant_skus": ["DESK-STD-MOTO"], "query_type": "specification"}
+{"query": "Caster 60mm nylon stem mount 50kg load capacity", "relevant_skus": ["CHAIR-ERG-X99"], "query_type": "specification"}
+{"query": "Gas spring 2-9kg force range 200mm stroke M6 end fitting", "relevant_skus": ["MON-ARM-DUAL"], "query_type": "specification"}
+{"query": "Wireless module nRF52840 Bluetooth 5.0 and 2.4GHz", "relevant_skus": ["KB-ERGO-SPLIT"], "query_type": "specification"}
+{"query": "Mouse polling rate 1000Hz 1ms response time specs", "relevant_skus": ["MOUSE-VERT-PRO"], "query_type": "specification"}
+{"query": "Headset battery BT-6601-BAT 1200mAh capacity and charging time", "relevant_skus": ["HEADSET-WL-PRO"], "query_type": "specification"}

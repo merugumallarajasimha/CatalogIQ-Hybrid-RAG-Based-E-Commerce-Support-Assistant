@@ -1,0 +1,56 @@
+{
+  "model": "groq/openai/gpt-oss-120b",
+  "retrieval_collection": "support_docs",
+  "retrieval_embedder": "sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2",
+  "reranker": "BAAI/bge-reranker-v2-m3",
+  "queries": 1,
+  "relevant_queries": 1,
+  "irrelevant_queries": 0,
+  "warmup_queries": 0,
+  "generation_errors": 0,
+  "citation_validity_rate": 0.0,
+  "citation_completeness": 1.0,
+  "answer_relevance": 0.0,
+  "faithfulness": 0.0,
+  "no_answer_accuracy": 0.0,
+  "unsupported_claim_rate": 0.0,
+  "unsupported_claims_per_query": 0.0,
+  "generation_latency_ms": 6776.763600006234,
+  "generation_latency_p50_ms": 6776.763600006234,
+  "generation_latency_p95_ms": 6776.763600006234,
+  "per_query": [
+    {
+      "query_idx": 1,
+      "query": "What is the torque spec for screw S-4012-SCRW?",
+      "query_type": "exact_sku",
+      "relevant_skus": [
+        "CHAIR-ERG-X99",
+        "DESK-STD-MOTO"
+      ],
+      "retrieved_doc_ids": [
+        "CHAIR-ERG-X99-parts-catalog-0",
+        "MON-ARM-DUAL-parts-catalog-0"
+      ],
+      "retrieved_skus": [
+        "CHAIR-ERG-X99",
+        "MON-ARM-DUAL"
+      ],
+      "answer": "The available documentation does not provide that information.",
+      "generation_time_ms": 6776.764,
+      "answer_length": 62,
+      "is_error": false,
+      "citations_found": 0,
+      "valid_citations": false,
+      "all_citations_valid": false,
+      "invalid_citations": [],
+      "no_answer_correct": false,
+      "no_answer_type": "false_decline",
+      "unsupported_claims_est": 0,
+      "factual_claims_est": 0,
+      "citation_coverage": 1.0,
+      "faithfulness_score": 0.0,
+      "potentially_hallucinated": 0,
+      "relevance_score": 0.0
+    }
+  ]
+}

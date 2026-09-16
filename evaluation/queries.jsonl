@@ -1,18 +1,100 @@
-{"query": "What is the torque spec for screw S-4012-SCRW?", "relevant_skus": ["CHAIR-ERG-X99"], "_flagged": false}
-{"query": "Which part number is the gas lift cylinder for CHAIR-ERG-X99?", "relevant_skus": ["CHAIR-ERG-X99"], "_flagged": false}
-{"query": "What does error E02 mean on DESK-STD-MOTO?", "relevant_skus": ["DESK-STD-MOTO"], "_flagged": false}
-{"query": "Part number for monitor arm gas spring GS-9901-GSP?", "relevant_skus": ["MON-ARM-DUAL", "GS-9901-GSP"], "_flagged": false}
-{"query": "Keyboard switch SW-2201-SWT actuation force?", "relevant_skus": ["KB-ERGO-SPLIT", "SW-2201-SWT"], "_flagged": false}
-{"query": "Mouse sensor SN-8801-SNS max DPI?", "relevant_skus": ["MOUSE-VERT-PRO", "SN-8801-SNS"], "_flagged": false}
-{"query": "Headset driver DR-2201-DRV impedance?", "relevant_skus": ["HEADSET-WL-PRO", "DR-2201-DRV"], "_flagged": false}
-{"query": "Bolt B-3301-BLT torque for chair base?", "relevant_skus": ["CHAIR-ERG-X99"], "_flagged": false}
-{"query": "My chair squeaks when I lean back, how do I fix it?", "relevant_skus": ["CHAIR-ERG-X99"], "_flagged": true}
-{"query": "Standing desk won't move up or down, shows error E01", "relevant_skus": ["DESK-STD-MOTO"], "_flagged": true}
-{"query": "Left side of desk lags behind right when raising", "relevant_skus": ["DESK-STD-MOTO"], "_flagged": true}
-{"query": "Monitor arm slowly tilts downward over time", "relevant_skus": ["MON-ARM-DUAL"], "_flagged": true}
-{"query": "Key registers double press on my split keyboard", "relevant_skus": ["KB-ERGO-SPLIT"], "_flagged": true}
-{"query": "Right half of keyboard randomly disconnects", "relevant_skus": ["KB-ERGO-SPLIT"], "_flagged": true}
-{"query": "Mouse cursor jumps around on glass desk", "relevant_skus": ["MOUSE-VERT-PRO"], "_flagged": true}
-{"query": "Teammates can't hear me, mic not working on headset", "relevant_skus": ["HEADSET-WL-PRO"], "_flagged": true}
-{"query": "X99 chair squeak", "relevant_skus": ["CHAIR-ERG-X99"], "_flagged": true}
-{"query": "What is the warranty on CHAIR-ERG-X99?", "relevant_skus": ["CHAIR-ERG-X99"], "_flagged": true}
+{"query": "What is the torque spec for screw S-4012-SCRW?", "relevant_skus": ["CHAIR-ERG-X99", "DESK-STD-MOTO"], "query_type": "exact_sku"}
+{"query": "Which part number is the gas lift cylinder for CHAIR-ERG-X99?", "relevant_skus": ["CHAIR-ERG-X99"], "query_type": "exact_sku"}
+{"query": "What does error E02 mean on DESK-STD-MOTO?", "relevant_skus": ["DESK-STD-MOTO"], "query_type": "exact_sku"}
+{"query": "Part number for monitor arm gas spring GS-9901-GSP?", "relevant_skus": ["MON-ARM-DUAL"], "query_type": "exact_sku"}
+{"query": "Keyboard switch SW-2201-SWT actuation force?", "relevant_skus": ["KB-ERGO-SPLIT"], "query_type": "exact_sku"}
+{"query": "Mouse sensor SN-8801-SNS max DPI?", "relevant_skus": ["MOUSE-VERT-PRO"], "query_type": "exact_sku"}
+{"query": "Headset driver DR-2201-DRV impedance?", "relevant_skus": ["HEADSET-WL-PRO"], "query_type": "exact_sku"}
+{"query": "Bolt B-3301-BLT torque for chair base?", "relevant_skus": ["CHAIR-ERG-X99", "DESK-STD-MOTO", "MON-ARM-DUAL"], "query_type": "exact_sku"}
+{"query": "What is the part number for the chair base assembly?", "relevant_skus": ["CHAIR-ERG-X99"], "query_type": "exact_sku"}
+{"query": "Which control box does DESK-STD-MOTO use?", "relevant_skus": ["DESK-STD-MOTO"], "query_type": "exact_sku"}
+{"query": "What is the replacement part number for caster C-5500-CAST?", "relevant_skus": ["CHAIR-ERG-X99"], "query_type": "exact_sku"}
+{"query": "Motor M-8841-MOT voltage and force rating", "relevant_skus": ["DESK-STD-MOTO"], "query_type": "exact_sku"}
+{"query": "Pivot bolt PT-1101-PVT specifications for monitor arm", "relevant_skus": ["MON-ARM-DUAL"], "query_type": "exact_sku"}
+{"query": "Tell me about the ErgoFlex Pro Office Chair", "relevant_skus": ["CHAIR-ERG-X99"], "query_type": "product_name"}
+{"query": "Motorized Standing Desk Standard overview and key details", "relevant_skus": ["DESK-STD-MOTO"], "query_type": "product_name"}
+{"query": "Dual Monitor Arm Heavy Duty product description", "relevant_skus": ["MON-ARM-DUAL"], "query_type": "product_name"}
+{"query": "ErgoSplit Mechanical Keyboard features and layout", "relevant_skus": ["KB-ERGO-SPLIT"], "query_type": "product_name"}
+{"query": "Vertical Ergonomic Mouse Pro design and specifications", "relevant_skus": ["MOUSE-VERT-PRO"], "query_type": "product_name"}
+{"query": "Wireless Pro Headset audio capabilities and battery", "relevant_skus": ["HEADSET-WL-PRO"], "query_type": "product_name"}
+{"query": "What comes included with ErgoFlex Pro Office Chair?", "relevant_skus": ["CHAIR-ERG-X99"], "query_type": "product_name"}
+{"query": "Motorized Standing Desk Standard dual motor setup", "relevant_skus": ["DESK-STD-MOTO"], "query_type": "product_name"}
+{"query": "Dual Monitor Arm Heavy Duty mounting options", "relevant_skus": ["MON-ARM-DUAL"], "query_type": "product_name"}
+{"query": "ErgoSplit Mechanical Keyboard firmware and connectivity", "relevant_skus": ["KB-ERGO-SPLIT"], "query_type": "product_name"}
+{"query": "Vertical Ergonomic Mouse Pro sensor and ergonomic angle", "relevant_skus": ["MOUSE-VERT-PRO"], "query_type": "product_name"}
+{"query": "Wireless Pro Headset microphone and sound quality", "relevant_skus": ["HEADSET-WL-PRO"], "query_type": "product_name"}
+{"query": "What is the warranty coverage on CHAIR-ERG-X99?", "relevant_skus": ["CHAIR-ERG-X99"], "query_type": "feature"}
+{"query": "What is the height adjustment range of DESK-STD-MOTO?", "relevant_skus": ["DESK-STD-MOTO"], "query_type": "feature"}
+{"query": "What is the maximum monitor weight capacity of MON-ARM-DUAL?", "relevant_skus": ["MON-ARM-DUAL"], "query_type": "feature"}
+{"query": "Does KB-ERGO-SPLIT support wireless Bluetooth connectivity?", "relevant_skus": ["KB-ERGO-SPLIT"], "query_type": "feature"}
+{"query": "What is the ergonomic grip angle on MOUSE-VERT-PRO?", "relevant_skus": ["MOUSE-VERT-PRO"], "query_type": "feature"}
+{"query": "What is the battery run time on HEADSET-WL-PRO?", "relevant_skus": ["HEADSET-WL-PRO"], "query_type": "feature"}
+{"query": "Can the armrests on CHAIR-ERG-X99 be adjusted in height?", "relevant_skus": ["CHAIR-ERG-X99"], "query_type": "feature"}
+{"query": "Does the DESK-STD-MOTO control box have Bluetooth pairing?", "relevant_skus": ["DESK-STD-MOTO"], "query_type": "feature"}
+{"query": "Is MON-ARM-DUAL compatible with 32 inch monitors?", "relevant_skus": ["MON-ARM-DUAL"], "query_type": "feature"}
+{"query": "Are the switches on KB-ERGO-SPLIT hot-swappable?", "relevant_skus": ["KB-ERGO-SPLIT"], "query_type": "feature"}
+{"query": "Does MOUSE-VERT-PRO have adjustable DPI on the fly?", "relevant_skus": ["MOUSE-VERT-PRO"], "query_type": "feature"}
+{"query": "Does HEADSET-WL-PRO include a detachable boom microphone?", "relevant_skus": ["HEADSET-WL-PRO"], "query_type": "feature"}
+{"query": "Can DESK-STD-MOTO save preset height positions?", "relevant_skus": ["DESK-STD-MOTO"], "query_type": "feature"}
+{"query": "Desk lifting speed 32mm/s and 24V DC motor specs", "relevant_skus": ["DESK-STD-MOTO"], "query_type": "specification"}
+{"query": "Chair gas lift cylinder 120mm stroke 1000N rating", "relevant_skus": ["CHAIR-ERG-X99"], "query_type": "specification"}
+{"query": "Monitor arm VESA pattern 75x75 and 100x100 mounting specs", "relevant_skus": ["MON-ARM-DUAL"], "query_type": "specification"}
+{"query": "Keyboard switch Cherry MX Brown 55g tactile actuation force", "relevant_skus": ["KB-ERGO-SPLIT"], "query_type": "specification"}
+{"query": "Mouse sensor PixArt PAW3395 26000 DPI and 650 IPS tracking", "relevant_skus": ["MOUSE-VERT-PRO"], "query_type": "specification"}
+{"query": "Headset 40mm neodymium driver 32 ohm impedance 20Hz-20kHz", "relevant_skus": ["HEADSET-WL-PRO"], "query_type": "specification"}
+{"query": "Lifting spindle Tr10x3 trapezoidal thread 600mm travel", "relevant_skus": ["DESK-STD-MOTO"], "query_type": "specification"}
+{"query": "Caster 60mm nylon stem mount 50kg load capacity", "relevant_skus": ["CHAIR-ERG-X99"], "query_type": "specification"}
+{"query": "Gas spring 2-9kg force range 200mm stroke M6 end fitting", "relevant_skus": ["MON-ARM-DUAL"], "query_type": "specification"}
+{"query": "Wireless module nRF52840 Bluetooth 5.0 and 2.4GHz", "relevant_skus": ["KB-ERGO-SPLIT"], "query_type": "specification"}
+{"query": "Mouse polling rate 1000Hz 1ms response time specs", "relevant_skus": ["MOUSE-VERT-PRO"], "query_type": "specification"}
+{"query": "Headset battery BT-6601-BAT 1200mAh capacity and charging time", "relevant_skus": ["HEADSET-WL-PRO"], "query_type": "specification"}
+{"query": "Standing desk weight capacity 100kg evenly distributed load", "relevant_skus": ["DESK-STD-MOTO"], "query_type": "specification"}
+{"query": "Show me all products in Furniture/Seating category", "relevant_skus": ["CHAIR-ERG-X99"], "query_type": "category"}
+{"query": "List all products under Furniture/Desks", "relevant_skus": ["DESK-STD-MOTO"], "query_type": "category"}
+{"query": "What items are available in Furniture/Mounts?", "relevant_skus": ["MON-ARM-DUAL"], "query_type": "category"}
+{"query": "Which products belong to Peripherals/Keyboards?", "relevant_skus": ["KB-ERGO-SPLIT"], "query_type": "category"}
+{"query": "What products are in the Peripherals/Mice category?", "relevant_skus": ["MOUSE-VERT-PRO"], "query_type": "category"}
+{"query": "Show me all options under Peripherals/Audio", "relevant_skus": ["HEADSET-WL-PRO"], "query_type": "category"}
+{"query": "I am looking for office chairs and seating options", "relevant_skus": ["CHAIR-ERG-X99"], "query_type": "category"}
+{"query": "Browse motorized ergonomic standing desks", "relevant_skus": ["DESK-STD-MOTO"], "query_type": "category"}
+{"query": "Show me desk mounts and monitor arms", "relevant_skus": ["MON-ARM-DUAL"], "query_type": "category"}
+{"query": "Show me mechanical split keyboards for ergonomic typing", "relevant_skus": ["KB-ERGO-SPLIT"], "query_type": "category"}
+{"query": "Looking for vertical ergonomic computer mice", "relevant_skus": ["MOUSE-VERT-PRO"], "query_type": "category"}
+{"query": "Show me wireless headsets for team calls and gaming", "relevant_skus": ["HEADSET-WL-PRO"], "query_type": "category"}
+{"query": "Compare CHAIR-ERG-X99 vs DESK-STD-MOTO for ergonomic workstation setup", "relevant_skus": ["CHAIR-ERG-X99", "DESK-STD-MOTO"], "query_type": "comparison"}
+{"query": "Difference between gas lift C-7721-GL and monitor arm gas spring GS-9901-GSP", "relevant_skus": ["CHAIR-ERG-X99", "MON-ARM-DUAL"], "query_type": "comparison"}
+{"query": "How do screw S-4012-SCRW and bolt B-3301-BLT differ in torque and usage?", "relevant_skus": ["CHAIR-ERG-X99", "DESK-STD-MOTO", "MON-ARM-DUAL"], "query_type": "comparison"}
+{"query": "Compare Peripherals/Keyboards KB-ERGO-SPLIT with Peripherals/Mice MOUSE-VERT-PRO", "relevant_skus": ["KB-ERGO-SPLIT", "MOUSE-VERT-PRO"], "query_type": "comparison"}
+{"query": "Dual monitor arm MON-ARM-DUAL vs single desk stand comparison", "relevant_skus": ["MON-ARM-DUAL"], "query_type": "comparison"}
+{"query": "Compare Cherry MX Brown tactile switches on KB-ERGO-SPLIT vs linear switches", "relevant_skus": ["KB-ERGO-SPLIT"], "query_type": "comparison"}
+{"query": "Vertical mouse MOUSE-VERT-PRO vs standard horizontal mouse ergonomics", "relevant_skus": ["MOUSE-VERT-PRO"], "query_type": "comparison"}
+{"query": "Wireless 2.4GHz low latency vs Bluetooth mode on HEADSET-WL-PRO", "relevant_skus": ["HEADSET-WL-PRO"], "query_type": "comparison"}
+{"query": "ErgoFlex chair CHAIR-ERG-X99 recline mechanism vs standard office chairs", "relevant_skus": ["CHAIR-ERG-X99"], "query_type": "comparison"}
+{"query": "Motorized standing desk DESK-STD-MOTO dual motor vs single motor desks", "relevant_skus": ["DESK-STD-MOTO"], "query_type": "comparison"}
+{"query": "Compare wireless module WM-4401-WLS with mouse dongle DG-1101-DGL", "relevant_skus": ["KB-ERGO-SPLIT", "MOUSE-VERT-PRO"], "query_type": "comparison"}
+{"query": "Compare headset driver DR-2201-DRV 32 ohm with high-impedance headphones", "relevant_skus": ["HEADSET-WL-PRO"], "query_type": "comparison"}
+{"query": "My chair squeaks when I lean back, how do I fix it?", "relevant_skus": ["CHAIR-ERG-X99"], "query_type": "troubleshooting"}
+{"query": "Standing desk won't move up or down, shows error E01", "relevant_skus": ["DESK-STD-MOTO"], "query_type": "troubleshooting"}
+{"query": "Left side of desk lags behind right when raising", "relevant_skus": ["DESK-STD-MOTO"], "query_type": "troubleshooting"}
+{"query": "Monitor arm slowly tilts downward over time", "relevant_skus": ["MON-ARM-DUAL"], "query_type": "troubleshooting"}
+{"query": "Key registers double press on my split keyboard", "relevant_skus": ["KB-ERGO-SPLIT"], "query_type": "troubleshooting"}
+{"query": "Right half of keyboard randomly disconnects", "relevant_skus": ["KB-ERGO-SPLIT"], "query_type": "troubleshooting"}
+{"query": "Mouse cursor jumps around on glass desk", "relevant_skus": ["MOUSE-VERT-PRO"], "query_type": "troubleshooting"}
+{"query": "Teammates can't hear me, mic not working on headset", "relevant_skus": ["HEADSET-WL-PRO"], "query_type": "troubleshooting"}
+{"query": "Chair sinks down slowly throughout the day", "relevant_skus": ["CHAIR-ERG-X99"], "query_type": "troubleshooting"}
+{"query": "Desk shows error E02 on control panel and will not lift", "relevant_skus": ["DESK-STD-MOTO"], "query_type": "troubleshooting"}
+{"query": "Desk shows error E03 height sensor desync", "relevant_skus": ["DESK-STD-MOTO"], "query_type": "troubleshooting"}
+{"query": "Mouse left button registering double clicks unintentionally", "relevant_skus": ["MOUSE-VERT-PRO"], "query_type": "troubleshooting"}
+{"query": "No audio coming from one side of Wireless Pro Headset", "relevant_skus": ["HEADSET-WL-PRO"], "query_type": "troubleshooting"}
+{"query": "How do I cook a turkey for Thanksgiving?", "relevant_skus": [], "query_type": "irrelevant"}
+{"query": "What is the meaning of life and universe?", "relevant_skus": [], "query_type": "irrelevant"}
+{"query": "What is the best programming language for machine learning?", "relevant_skus": [], "query_type": "irrelevant"}
+{"query": "What is the weather forecast for tomorrow morning?", "relevant_skus": [], "query_type": "irrelevant"}
+{"query": "How should beginners invest in index funds and stocks?", "relevant_skus": [], "query_type": "irrelevant"}
+{"query": "What is the capital city of Australia?", "relevant_skus": [], "query_type": "irrelevant"}
+{"query": "How do I change the engine oil on a Honda Civic?", "relevant_skus": [], "query_type": "irrelevant"}
+{"query": "What are the official rules of FIFA World Cup soccer?", "relevant_skus": [], "query_type": "irrelevant"}
+{"query": "What is the distance between the Earth and the Moon?", "relevant_skus": [], "query_type": "irrelevant"}
+{"query": "How do you make traditional Italian espresso at home?", "relevant_skus": [], "query_type": "irrelevant"}
+{"query": "What are the best organic fertilizers for growing tomatoes?", "relevant_skus": [], "query_type": "irrelevant"}
+{"query": "What causes a total solar eclipse?", "relevant_skus": [], "query_type": "irrelevant"}

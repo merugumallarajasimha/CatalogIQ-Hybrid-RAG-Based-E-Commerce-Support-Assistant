@@ -36,7 +36,7 @@ NORMALIZED_FILE = DATA_DIR / "normalized_records.json"
 
 EMBEDDING_MODEL = os.getenv(
     "EMBEDDING_MODEL",
-    "sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2"
+    "sentence-transformers/all-MiniLM-L6-v2"
 )
 
 EMBEDDING_DIM = 384

@@ -2,7 +2,8 @@ import os
 import time
 import sys
 import json
-from typing import List, Tuple, Dict, Any, Optional
+import re
+from typing import List, Tuple, Dict, Any, Optional, Set
 
 from dotenv import load_dotenv
 
@@ -27,7 +28,7 @@ QDRANT_URL = os.getenv(
 
 EMBEDDING_MODEL = os.getenv(
     "EMBEDDING_MODEL",
-    "sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2"
+    "sentence-transformers/all-MiniLM-L6-v2"
 )
 
 DENSE_TOP_K = 20
@@ -40,6 +41,108 @@ RRF_K = 60
 _client: Optional[QdrantClient] = None
 _embedder: Optional[SentenceTransformer] = None
 _bm25_search_instance = None
+
+# Known SKUs and part numbers for identifier-aware routing
+ALL_VALID_SKUS = {
+    "CHAIR-ERG-X99", "DESK-STD-MOTO", "MON-ARM-DUAL",
+    "KB-ERGO-SPLIT", "MOUSE-VERT-PRO", "HEADSET-WL-PRO",
+}
+
+# Part number pattern: X-XXXX-XXX or similar
+PART_NUMBER_PATTERN = re.compile(r'\b[A-Z]{1,3}-\d{4}-[A-Z]{2,4}\b|\b[A-Z]{1,3}-\d{4}\b|\b[A-Z]{1,3}-\d{4}-[A-Z]{3}\b')
+
+# Load part numbers from parts catalog
+_PART_NUMBERS: Optional[Set[str]] = None
+
+
+def load_part_numbers() -> Set[str]:
+    """Load all known part numbers from normalized records."""
+    global _PART_NUMBERS
+    if _PART_NUMBERS is not None:
+        return _PART_NUMBERS
+    
+    _PART_NUMBERS = set()
+    records_path = os.path.join(
+        os.path.dirname(__file__), "..", "data", "normalized_records.json"
+    )
+    if os.path.exists(records_path):
+        with open(records_path, encoding="utf-8", errors="replace") as f:
+            records = json.load(f)
+        for r in records:
+            # SKU field
+            sku = r.get("sku")
+            if sku and sku in ALL_VALID_SKUS:
+                _PART_NUMBERS.add(sku)
+            # Part numbers in text
+            text = r.get("text", "")
+            for match in PART_NUMBER_PATTERN.findall(text):
+                _PART_NUMBERS.add(match)
+            # Explicit part_number field
+            pn = r.get("part_number")
+            if pn:
+                _PART_NUMBERS.add(pn)
+    return _PART_NUMBERS
+
+
+def detect_identifiers(query: str) -> Dict[str, List[str]]:
+    """Detect SKUs and part numbers in query for routing."""
+    part_numbers = load_part_numbers()
+    found_skus = []
+    found_parts = []
+    
+    query_upper = query.upper()
+    
+    # Check for exact SKU mentions
+    for sku in ALL_VALID_SKUS:
+        if sku in query_upper:
+            found_skus.append(sku)
+    
+    # Check for part number mentions
+    for pn in part_numbers:
+        if pn and pn.upper() in query_upper:
+            found_parts.append(pn)
+    
+    # Also check regex pattern for any missed
+    for match in PART_NUMBER_PATTERN.findall(query):
+        if match.upper() not in [p.upper() for p in found_parts]:
+            found_parts.append(match)
+    
+    return {"skus": found_skus, "parts": found_parts}
+
+
+def route_query(query: str) -> str:
+    """
+    Determine retrieval strategy based on query content.
+    Returns: 'exact', 'bm25_only', 'hybrid', 'dense_only'
+    """
+    identifiers = detect_identifiers(query)
+    
+    # Multiple SKUs mentioned -> comparison query, use hybrid to get both
+    if len(identifiers["skus"]) > 1:
+        return "hybrid"
+    
+    # Single SKU + part numbers -> exact lookup for that product
+    if identifiers["skus"] and len(identifiers["skus"]) == 1:
+        return "exact"
+    
+    # Part numbers only (no SKU) -> BM25 only (fast, enriched chunks map to SKU)
+    if identifiers["parts"] and not identifiers["skus"]:
+        return "bm25_only"
+    
+    # Check for comparison queries (without explicit SKUs)
+    comparison_keywords = ["compare", "vs", "versus", "difference", "better", "which is"]
+    if any(kw in query.lower() for kw in comparison_keywords):
+        return "hybrid"
+    
+    # Check for troubleshooting/symptom queries
+    trouble_keywords = ["error", "fix", "repair", "broken", "not working", "issue", "problem", 
+                        "squeak", "sag", "tilt", "disconnect", "jitter", "double",
+                        "won't", "wont", "doesn't", "doesnt", "not moving", "slow"]
+    if any(kw in query.lower() for kw in trouble_keywords):
+        return "hybrid"
+    
+    # Default: full hybrid for semantic queries
+    return "hybrid"
 
 
 def get_client() -> QdrantClient:
@@ -142,18 +245,24 @@ def hybrid_search(
 ) -> List[Dict[str, Any]]:
 
     print("\n" + "=" * 60)
-    print("HYBRID SEARCH DEBUG (Dense + BM25 + Exact)")
+    print("HYBRID SEARCH (Simplified + Identifier-Aware)")
     print("=" * 60)
 
     # -----------------------------
-    # Step 1: Check for exact identifier match
+    # Step 1: Route query to optimal strategy
     # -----------------------------
-    if has_identifier(query):
-        print(f"Exact identifier detected in query: {query}")
+    route = route_query(query)
+    identifiers = detect_identifiers(query)
+    print(f"Route: {route} | Identifiers: SKUs={identifiers['skus']}, Parts={identifiers['parts']}")
+
+    # -----------------------------
+    # Strategy: Exact identifier -> BM25 + exact lookup
+    # -----------------------------
+    if route == "exact":
+        print("Using BM25 + Exact lookup for single-SKU identifier query")
         exact_results = exact_qdrant_lookup(query, top_k=RRF_TOP_K)
         if exact_results:
-            print(f"Exact lookup found {len(exact_results)} results, skipping semantic search")
-            # Format exact results to match hybrid_search output format
+            print(f"Exact lookup found {len(exact_results)} results")
             formatted = []
             for r in exact_results:
                 formatted.append({
@@ -167,51 +276,65 @@ def hybrid_search(
                     "match_type": r.get("match_type"),
                 })
             print("=" * 60)
-            return formatted[:RRF_TOP_K]
+            return formatted[:top_k]
 
     # -----------------------------
+    # Strategy: Part number only -> BM25 only (fast, no dense)
+    # -----------------------------
+    if route == "bm25_only":
+        print("Using BM25 only for part number query")
+        start = time.perf_counter()
+        bm25_raw = bm25_search(query, BM25_TOP_K)
+        bm25_time = (time.perf_counter() - start) * 1000
+        
+        results = []
+        for doc_id, score in bm25_raw[:top_k]:
+            results.append({
+                "doc_id": doc_id,
+                "rrf_score": score,
+                "dense_rank": None,
+                "bm25_rank": len(results) + 1,
+                "retrieval_sources": ["bm25"],
+                "exact_match": False,
+            })
+        print(f"BM25 only: {bm25_time:.2f} ms")
+        print("=" * 60)
+        return results
+
+    # -----------------------------
+    # Strategy: Hybrid (dense + BM25 + RRF) for semantic/troubleshooting/comparison
+    # -----------------------------
+    print("Using Dense + BM25 + RRF hybrid")
+    
     # Dense search
-    # -----------------------------
     start = time.perf_counter()
-
     dense_results = dense_search(query, DENSE_TOP_K)
-
     dense_time = (time.perf_counter() - start) * 1000
     print(f"Dense search: {dense_time:.2f} ms")
 
-    # -----------------------------
     # BM25 search
-    # -----------------------------
     start = time.perf_counter()
-
     bm25_results_raw = bm25_search(query, BM25_TOP_K)
     bm25_results = [doc_id for doc_id, _ in bm25_results_raw]
     bm25_time = (time.perf_counter() - start) * 1000
     print(f"BM25 search: {bm25_time:.2f} ms")
 
-    # -----------------------------
     # RRF Fusion
-    # -----------------------------
     start = time.perf_counter()
-
     dense_ranks = {doc_id: rank for doc_id, rank in dense_results}
     bm25_ranks = {doc_id: i + 1 for i, doc_id in enumerate(bm25_results)}
-
     all_doc_ids = set(dense_ranks.keys()) | set(bm25_ranks.keys())
 
     fused = []
     for doc_id in all_doc_ids:
         score = 0.0
         retrieval_sources = []
-
         if doc_id in dense_ranks:
             score += 1.0 / (k + dense_ranks[doc_id])
             retrieval_sources.append("dense")
-
         if doc_id in bm25_ranks:
             score += 1.0 / (k + bm25_ranks[doc_id])
             retrieval_sources.append("bm25")
-
         fused.append({
             "doc_id": doc_id,
             "rrf_score": score,
@@ -222,13 +345,12 @@ def hybrid_search(
         })
 
     fused.sort(key=lambda x: x["rrf_score"], reverse=True)
-
     rrf_time = (time.perf_counter() - start) * 1000
     print(f"RRF fusion: {rrf_time:.2f} ms")
     print(f"Total hybrid search: {dense_time + bm25_time + rrf_time:.2f} ms")
     print("=" * 60)
 
-    return fused[:RRF_TOP_K]
+    return fused[:top_k]
 
 
 def get_document(
