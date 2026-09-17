@@ -4,6 +4,12 @@ A high-performance Retrieval-Augmented Generation (RAG) backend and interactive 
 
 ---
 
+## System Architecture
+
+<p align="center">
+  <img src="assets/architecture.jpg" alt="CatalogIQ System Architecture" width="100%">
+</p>
+
 ## Overview
 
 E-commerce technical catalogs present unique challenges for traditional RAG systems:
