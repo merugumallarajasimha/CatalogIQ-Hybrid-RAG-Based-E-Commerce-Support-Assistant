@@ -6,8 +6,6 @@ A high-performance Retrieval-Augmented Generation (RAG) backend and interactive 
 
 ## System Architecture
 
-## System Architecture
-
 <p align="center">
   <img src="assets/architecture.jpg" alt="CatalogIQ System Architecture" width="100%">
 </p>
