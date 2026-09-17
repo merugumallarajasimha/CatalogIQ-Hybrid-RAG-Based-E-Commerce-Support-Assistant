@@ -18,6 +18,11 @@ E-commerce technical catalogs present unique challenges for traditional RAG syst
 
 ---
 
+## This Architecture
+
+
+
+
 ## Key Features
 
 * **Identifier-Aware Query Routing:** Automatically detects SKUs and part numbers to bypass or supplement semantic search with precision exact matching.
