@@ -7,6 +7,7 @@ __pycache__/
 venv/
 .env
 src/.env
+*.pyc
 
 # Local Qdrant / runtime data (large; regenerate via ingest)
 storage/
@@ -14,20 +15,50 @@ snapshots/
 qdrant_fresh/
 *.rar
 
+# Model caches (large; re-download on first run)
+~/.cache/huggingface/
+~/.cache/torch/
+*.bin
+*.safetensors
+*.onnx
+
 # IDE / tooling
 .kilo/
 .idea/
 .vscode/
 *.swp
+*.swo
 
 # Temp / debug leftovers
 tmp_*.py
 temp_*.txt
 verbose_*.txt
 null
-*.pyc
+*.log
 
 # OS
 Thumbs.db
 Desktop.ini
 .DS_Store
+
+# Test / coverage artifacts
+.coverage
+.pytest_cache/
+htmlcov/
+.tox/
+*.cover
+
+# Distribution / packaging
+dist/
+build/
+*.egg/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Streamlit
+.streamlit/secrets.toml
+
+# FastAPI / Uvicorn logs
+uvicorn.log
+gunicorn.log

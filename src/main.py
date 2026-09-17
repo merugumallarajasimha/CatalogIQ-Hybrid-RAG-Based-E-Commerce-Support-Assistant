@@ -1,16 +1,14 @@
 import os
 import sys
 import time
-from typing import Dict, Any, List
+from typing import Dict, Any, List, Optional
 
-# Add the src directory to Python path so we can import sibling modules
+# Add the parent and current directory to Python path for seamless imports
 sys.path.insert(0, os.path.dirname(__file__))
+sys.path.insert(0, os.path.join(os.path.dirname(__file__), ".."))
 
-# pyrefly: ignore [missing-import]
 from dotenv import load_dotenv
-# pyrefly: ignore [missing-import]
 from fastapi import FastAPI, HTTPException
-# pyrefly: ignore [missing-import]
 from pydantic import BaseModel, field_validator
 
 
@@ -19,7 +17,14 @@ from pydantic import BaseModel, field_validator
 # ============================================================
 
 ENV_PATH = os.path.join(os.path.dirname(__file__), ".env")
-load_dotenv(ENV_PATH)
+ROOT_ENV_PATH = os.path.join(os.path.dirname(__file__), "..", ".env")
+
+if os.path.exists(ENV_PATH):
+    load_dotenv(ENV_PATH)
+elif os.path.exists(ROOT_ENV_PATH):
+    load_dotenv(ROOT_ENV_PATH)
+else:
+    load_dotenv()
 
 
 # ============================================================
@@ -42,9 +47,15 @@ for var in REQUIRED_ENV_VARS:
 # 3. IMPORT RAG COMPONENTS
 # ============================================================
 
-from .search import hybrid_search, get_document
-from .reranker import rerank
-from .generation import generate_answer, validate_citations
+try:
+    from src.catalog_service import CatalogResult, answer_catalog_question
+    from src.search import get_document
+except ImportError:
+    from catalog_service import CatalogResult, answer_catalog_question
+    try:
+        from search import get_document
+    except ImportError:
+        get_document = None
 
 
 # ============================================================
@@ -109,6 +120,8 @@ class AskResponse(BaseModel):
     sources: List[SourceInfo]
     citation_check: CitationCheck
     timing_ms: TimingInfo
+    out_of_scope: bool = False
+    scope_reason: Optional[str] = None
 
 
 class HealthResponse(BaseModel):
@@ -122,6 +135,8 @@ class HealthResponse(BaseModel):
 def enrich_candidates_with_content(
     candidates: List[Dict[str, Any]]
 ) -> List[Dict[str, Any]]:
+    if get_document is None:
+        return candidates
 
     enriched = []
 
@@ -176,180 +191,30 @@ def enrich_candidates_with_content(
 )
 def ask(request: AskRequest) -> AskResponse:
 
-    question = request.question
+    result = answer_catalog_question(request.question)
 
-    total_start = time.perf_counter()
-
-    try:
-
-        # ----------------------------------------------------
-        # STEP 1: HYBRID SEARCH
-        # ----------------------------------------------------
-
-        search_start = time.perf_counter()
-
-        candidates = hybrid_search(
-            question
-        )
-
-        search_elapsed = (
-            time.perf_counter() - search_start
-        ) * 1000
-
-        if not candidates:
-            raise HTTPException(
-                status_code=503,
-                detail=(
-                    "No candidates found — "
-                    "check that the Qdrant collection "
-                    "contains data"
-                ),
-            )
-
-        # ----------------------------------------------------
-        # STEP 2: GET DOCUMENT CONTENT
-        # ----------------------------------------------------
-
-        candidates = enrich_candidates_with_content(
-            candidates
-        )
-
-        if not candidates:
-            raise HTTPException(
-                status_code=503,
-                detail=(
-                    "Search returned results, but "
-                    "documents could not be retrieved "
-                    "from Qdrant"
-                ),
-            )
-
-        # ----------------------------------------------------
-        # STEP 3: RERANK
-        # ----------------------------------------------------
-
-        rerank_start = time.perf_counter()
-
-        top_docs = rerank(
-            question,
-            candidates,
-            top_n=5
-        )
-
-        rerank_elapsed = (
-            time.perf_counter() - rerank_start
-        ) * 1000
-
-        if not top_docs:
-            raise HTTPException(
-                status_code=503,
-                detail="Reranker returned no results",
-            )
-
-        # ----------------------------------------------------
-        # STEP 4: GENERATE ANSWER
-        # ----------------------------------------------------
-
-        generation_start = time.perf_counter()
-
-        answer = generate_answer(
-            question,
-            top_docs
-        )
-
-        generation_elapsed = (
-            time.perf_counter() - generation_start
-        ) * 1000
-
-        # ----------------------------------------------------
-        # STEP 5: VALIDATE CITATIONS
-        # ----------------------------------------------------
-
-        valid_doc_ids = [
-            document["doc_id"]
-            for document in top_docs
-            if document.get("doc_id")
-        ]
-
-        citation_result = validate_citations(
-            answer,
-            valid_doc_ids
-        )
-
-        # ----------------------------------------------------
-        # STEP 6: BUILD SOURCE INFORMATION
-        # ----------------------------------------------------
-
-        sources = []
-
-        for document in top_docs:
-            sources.append(
-                SourceInfo(
-                    doc_id=document.get(
-                        "doc_id",
-                        "unknown"
-                    ),
-                    sku=document.get(
-                        "sku",
-                        "unknown"
-                    ),
-                    product_name=document.get(
-                        "product_name",
-                        "unknown"
-                    ),
-                )
-            )
-
-        # ----------------------------------------------------
-        # STEP 7: TOTAL TIMING
-        # ----------------------------------------------------
-
-        total_elapsed = (
-            time.perf_counter() - total_start
-        ) * 1000
-
-        # ----------------------------------------------------
-        # STEP 8: RETURN RESPONSE
-        # ----------------------------------------------------
-
-        return AskResponse(
-            answer=answer,
-            sources=sources,
-            citation_check=CitationCheck(
-                **citation_result
-            ),
-            timing_ms=TimingInfo(
-                sparse_dense_search_ms=search_elapsed,
-                rerank_ms=rerank_elapsed,
-                generation_ms=generation_elapsed,
-                total_ms=total_elapsed,
-            ),
-        )
-
-    # ========================================================
-    # ERROR HANDLING
-    # ========================================================
-
-    except HTTPException:
-        raise
-
-    except ConnectionError as e:
+    if getattr(result, "error", None):
+        status_code = getattr(result, "status_code", 500) or 500
         raise HTTPException(
-            status_code=503,
-            detail=(
-                f"Dependency unavailable: "
-                f"{type(e).__name__}: {e}"
-            ),
+            status_code=status_code,
+            detail=result.error,
         )
 
-    except Exception as e:
-        raise HTTPException(
-            status_code=500,
-            detail=(
-                f"Internal error: "
-                f"{type(e).__name__}: {e}"
-            ),
-        )
+    return AskResponse(
+        answer=result.answer,
+        sources=[
+            SourceInfo(**source)
+            for source in result.sources
+        ],
+        citation_check=CitationCheck(
+            **result.citation_check
+        ),
+        timing_ms=TimingInfo(
+            **result.timing_ms
+        ),
+        out_of_scope=getattr(result, "out_of_scope", False),
+        scope_reason=getattr(result, "scope_reason", None),
+    )
 
 
 # ============================================================
@@ -373,7 +238,6 @@ def health() -> HealthResponse:
 
 if __name__ == "__main__":
 
-    # pyrefly: ignore [missing-import]
     import uvicorn
 
     uvicorn.run(

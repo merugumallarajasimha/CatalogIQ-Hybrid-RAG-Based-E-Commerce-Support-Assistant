@@ -1,1 +1,127 @@
+# Git LFS - Large Files
 data/shopping_queries_dataset_products.parquet filter=lfs diff=lfs merge=lfs -text
+data/*.parquet filter=lfs diff=lfs merge=lfs -text
+*.parquet filter=lfs diff=lfs merge=lfs -text
+
+# Model weights and binaries
+*.bin filter=lfs diff=lfs merge=lfs -text
+*.safetensors filter=lfs diff=lfs merge=lfs -text
+*.onnx filter=lfs diff=lfs merge=lfs -text
+*.pt filter=lfs diff=lfs merge=lfs -text
+*.pth filter=lfs diff=lfs merge=lfs -text
+*.pkl filter=lfs diff=lfs merge=lfs -text
+*.pickle filter=lfs diff=lfs merge=lfs -text
+*.joblib filter=lfs diff=lfs merge=lfs -text
+
+# Vector database snapshots
+storage/** filter=lfs diff=lfs merge=lfs -text
+snapshots/** filter=lfs diff=lfs merge=lfs -text
+qdrant_fresh/** filter=lfs diff=lfs merge=lfs -text
+
+# Archives
+*.rar filter=lfs diff=lfs merge=lfs -text
+*.zip filter=lfs diff=lfs merge=lfs -text
+*.tar.gz filter=lfs diff=lfs merge=lfs -text
+*.7z filter=lfs diff=lfs merge=lfs -text
+
+# Tech Stack - Language & Runtime
+*.py linguist-language=Python
+*.pyi linguist-language=Python
+*.pyx linguist-language=Python
+*.pxd linguist-language=Python
+*.pxi linguist-language=Python
+
+# Tech Stack - Configuration & Environment
+*.env linguist-language=INI
+*.ini linguist-language=INI
+*.cfg linguist-language=INI
+*.toml linguist-language=TOML
+*.yaml linguist-language=YAML
+*.yml linguist-language=YAML
+*.json linguist-language=JSON
+*.jsonl linguist-language=JSON
+
+# Tech Stack - Container & Deployment
+Dockerfile* linguist-language=Dockerfile
+*.dockerfile linguist-language=Dockerfile
+docker-compose*.yml linguist-language=YAML
+docker-compose*.yaml linguist-language=YAML
+*.nginx linguist-language=NGINX
+
+# Tech Stack - Documentation
+*.md linguist-language=Markdown
+*.rst linguist-language=reStructuredText
+*.txt linguist-language=Text
+
+# Tech Stack - Shell & Scripts
+*.sh linguist-language=Shell
+*.bash linguist-language=Shell
+*.zsh linguist-language=Shell
+*.ps1 linguist-language=PowerShell
+*.bat linguist-language=Batchfile
+*.cmd linguist-language=Batchfile
+
+# Tech Stack - Data & Serialization
+*.csv linguist-language=CSV
+*.tsv linguist-language=TSV
+*.sql linguist-language=SQL
+*.proto linguist-language=Protobuf
+*.avro linguist-language=Avro
+
+# Tech Stack - Frontend / UI (Streamlit)
+*.streamlit/config.toml linguist-language=TOML
+
+# Tech Stack - API (FastAPI/OpenAPI)
+openapi.json linguist-language=JSON
+openapi.yaml linguist-language=YAML
+openapi.yml linguist-language=YAML
+
+# Tech Stack - Vector Store (Qdrant)
+*.collection.json linguist-language=JSON
+
+# Tech Stack - ML/Models (HuggingFace, PyTorch, Sentence Transformers)
+config.json linguist-language=JSON
+tokenizer.json linguist-language=JSON
+tokenizer_config.json linguist-language=JSON
+special_tokens_map.json linguist-language=JSON
+vocab.txt linguist-language=Text
+vocab.json linguist-language=JSON
+merges.txt linguist-language=Text
+
+# Tech Stack - Testing
+*_test.py linguist-language=Python
+test_*.py linguist-language=Python
+conftest.py linguist-language=Python
+pytest.ini linguist-language=INI
+
+# Line endings
+* text=auto eol=lf
+*.py text eol=lf
+*.md text eol=lf
+*.txt text eol=lf
+*.yaml text eol=lf
+*.yml text eol=lf
+*.json text eol=lf
+*.toml text eol=lf
+*.ini text eol=lf
+*.cfg text eol=lf
+*.env text eol=lf
+*.sh text eol=lf
+*.bat text eol=crlf
+*.cmd text eol=crlf
+*.ps1 text eol=crlf
+
+# Binary files - no diff
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.gif binary
+*.ico binary
+*.svg binary
+*.webp binary
+*.woff binary
+*.woff2 binary
+*.ttf binary
+*.eot binary
+*.otf binary
+*.pdf binary

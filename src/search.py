@@ -3,6 +3,7 @@ import time
 import sys
 import json
 import re
+import logging
 from typing import List, Tuple, Dict, Any, Optional, Set
 
 from dotenv import load_dotenv
@@ -11,13 +12,20 @@ load_dotenv()
 
 # pyrefly: ignore [missing-import]
 from qdrant_client import QdrantClient
+from qdrant_client.http import models
 
 # pyrefly: ignore [missing-import]
 from sentence_transformers import SentenceTransformer
 
-sys.path.insert(0, os.path.join(os.path.dirname(__file__)))
-from exact_search import has_identifier, exact_qdrant_lookup
+sys.path.insert(0, os.path.dirname(__file__))
 
+# Import exact_search functions safely
+try:
+    from src.exact_search import has_identifier, exact_qdrant_lookup
+except ImportError:
+    from exact_search import has_identifier, exact_qdrant_lookup
+
+logger = logging.getLogger("search")
 
 COLLECTION_NAME = "support_docs"
 
@@ -41,6 +49,7 @@ RRF_K = 60
 _client: Optional[QdrantClient] = None
 _embedder: Optional[SentenceTransformer] = None
 _bm25_search_instance = None
+_DOC_CACHE: Optional[Dict[str, Dict[str, Any]]] = None
 
 # Known SKUs and part numbers for identifier-aware routing
 ALL_VALID_SKUS = {
@@ -49,7 +58,9 @@ ALL_VALID_SKUS = {
 }
 
 # Part number pattern: X-XXXX-XXX or similar
-PART_NUMBER_PATTERN = re.compile(r'\b[A-Z]{1,3}-\d{4}-[A-Z]{2,4}\b|\b[A-Z]{1,3}-\d{4}\b|\b[A-Z]{1,3}-\d{4}-[A-Z]{3}\b')
+PART_NUMBER_PATTERN = re.compile(
+    r'\b[A-Z]{1,3}-\d{4}-[A-Z]{2,4}\b|\b[A-Z]{1,3}-\d{4}\b|\b[A-Z]{1,3}-\d{4}-[A-Z]{3}\b'
+)
 
 # Load part numbers from parts catalog
 _PART_NUMBERS: Optional[Set[str]] = None
@@ -66,21 +77,22 @@ def load_part_numbers() -> Set[str]:
         os.path.dirname(__file__), "..", "data", "normalized_records.json"
     )
     if os.path.exists(records_path):
-        with open(records_path, encoding="utf-8", errors="replace") as f:
-            records = json.load(f)
-        for r in records:
-            # SKU field
-            sku = r.get("sku")
-            if sku and sku in ALL_VALID_SKUS:
-                _PART_NUMBERS.add(sku)
-            # Part numbers in text
-            text = r.get("text", "")
-            for match in PART_NUMBER_PATTERN.findall(text):
-                _PART_NUMBERS.add(match)
-            # Explicit part_number field
-            pn = r.get("part_number")
-            if pn:
-                _PART_NUMBERS.add(pn)
+        try:
+            with open(records_path, encoding="utf-8", errors="replace") as f:
+                records = json.load(f)
+            for r in records:
+                sku = r.get("sku")
+                if sku and sku in ALL_VALID_SKUS:
+                    _PART_NUMBERS.add(sku)
+                text = r.get("text", "")
+                for match in PART_NUMBER_PATTERN.findall(text):
+                    _PART_NUMBERS.add(match)
+                pn = r.get("part_number")
+                if pn:
+                    _PART_NUMBERS.add(pn)
+        except Exception as e:
+            logger.error(f"Error reading normalized records for part numbers: {e}")
+            
     return _PART_NUMBERS
 
 
@@ -129,24 +141,24 @@ def route_query(query: str) -> str:
     if identifiers["parts"] and not identifiers["skus"]:
         return "bm25_only"
     
-    # Check for comparison queries (without explicit SKUs)
+    # Check for comparison keywords
     comparison_keywords = ["compare", "vs", "versus", "difference", "better", "which is"]
     if any(kw in query.lower() for kw in comparison_keywords):
         return "hybrid"
     
-    # Check for troubleshooting/symptom queries
-    trouble_keywords = ["error", "fix", "repair", "broken", "not working", "issue", "problem", 
-                        "squeak", "sag", "tilt", "disconnect", "jitter", "double",
-                        "won't", "wont", "doesn't", "doesnt", "not moving", "slow"]
+    # Check for troubleshooting/symptom keywords
+    trouble_keywords = [
+        "error", "fix", "repair", "broken", "not working", "issue", "problem", 
+        "squeak", "sag", "tilt", "disconnect", "jitter", "double",
+        "won't", "wont", "doesn't", "doesnt", "not moving", "slow"
+    ]
     if any(kw in query.lower() for kw in trouble_keywords):
         return "hybrid"
     
-    # Default: full hybrid for semantic queries
     return "hybrid"
 
 
 def get_client() -> QdrantClient:
-
     global _client
 
     if _client is None:
@@ -159,7 +171,6 @@ def get_client() -> QdrantClient:
 
 
 def get_embedder() -> SentenceTransformer:
-
     global _embedder
 
     if _embedder is None:
@@ -174,7 +185,11 @@ def get_bm25_search():
     """Get or create BM25Search instance (cached)."""
     global _bm25_search_instance
     if _bm25_search_instance is None:
-        from bm25_search import BM25Search
+        try:
+            from src.bm25_search import BM25Search
+        except ImportError:
+            from bm25_search import BM25Search
+
         _bm25_search_instance = BM25Search()
         records_path = os.path.join(
             os.path.dirname(__file__),
@@ -195,38 +210,34 @@ def dense_search(
 ) -> List[Tuple[str, int]]:
 
     client = get_client()
-
     embedder = get_embedder()
 
     query_vec = embedder.encode(
         query
     ).tolist()
 
-    results = client.query_points(
-
-        collection_name=COLLECTION_NAME,
-
-        query=query_vec,
-
-        using="dense_vector",
-
-        limit=top_k,
-
-        with_payload=["doc_id"]
-    )
-
-    return [
-        (
-            hit.payload["doc_id"],
-            rank + 1
+    try:
+        results = client.query_points(
+            collection_name=COLLECTION_NAME,
+            query=query_vec,
+            using="dense_vector",
+            limit=top_k,
+            with_payload=["doc_id"]
         )
 
-        for rank, hit
-        in enumerate(results.points)
-
-        if hit.payload
-        and "doc_id" in hit.payload
-    ]
+        return [
+            (
+                hit.payload["doc_id"],
+                rank + 1
+            )
+            for rank, hit
+            in enumerate(results.points)
+            if hit.payload
+            and "doc_id" in hit.payload
+        ]
+    except Exception as e:
+        logger.error(f"Dense vector query failed: {e}")
+        return []
 
 
 def bm25_search(
@@ -236,6 +247,14 @@ def bm25_search(
 
     bm25 = get_bm25_search()
     return bm25.search(query, top_k=top_k)
+
+
+def sparse_search(
+    query: str,
+    top_k: int = BM25_TOP_K
+) -> List[Tuple[str, float]]:
+    """Alias for bm25_search to support backward compatibility and evaluation scripts."""
+    return bm25_search(query, top_k=top_k)
 
 
 def hybrid_search(
@@ -248,16 +267,12 @@ def hybrid_search(
     print("HYBRID SEARCH (Simplified + Identifier-Aware)")
     print("=" * 60)
 
-    # -----------------------------
-    # Step 1: Route query to optimal strategy
-    # -----------------------------
+    # 1. Route query
     route = route_query(query)
     identifiers = detect_identifiers(query)
     print(f"Route: {route} | Identifiers: SKUs={identifiers['skus']}, Parts={identifiers['parts']}")
 
-    # -----------------------------
-    # Strategy: Exact identifier -> BM25 + exact lookup
-    # -----------------------------
+    # 2. Strategy: Exact identifier -> BM25 + exact lookup
     if route == "exact":
         print("Using BM25 + Exact lookup for single-SKU identifier query")
         exact_results = exact_qdrant_lookup(query, top_k=RRF_TOP_K)
@@ -278,9 +293,7 @@ def hybrid_search(
             print("=" * 60)
             return formatted[:top_k]
 
-    # -----------------------------
-    # Strategy: Part number only -> BM25 only (fast, no dense)
-    # -----------------------------
+    # 3. Strategy: Part number only -> BM25 only
     if route == "bm25_only":
         print("Using BM25 only for part number query")
         start = time.perf_counter()
@@ -301,25 +314,20 @@ def hybrid_search(
         print("=" * 60)
         return results
 
-    # -----------------------------
-    # Strategy: Hybrid (dense + BM25 + RRF) for semantic/troubleshooting/comparison
-    # -----------------------------
+    # 4. Strategy: Hybrid (dense + BM25 + RRF)
     print("Using Dense + BM25 + RRF hybrid")
     
-    # Dense search
     start = time.perf_counter()
     dense_results = dense_search(query, DENSE_TOP_K)
     dense_time = (time.perf_counter() - start) * 1000
     print(f"Dense search: {dense_time:.2f} ms")
 
-    # BM25 search
     start = time.perf_counter()
     bm25_results_raw = bm25_search(query, BM25_TOP_K)
     bm25_results = [doc_id for doc_id, _ in bm25_results_raw]
     bm25_time = (time.perf_counter() - start) * 1000
     print(f"BM25 search: {bm25_time:.2f} ms")
 
-    # RRF Fusion
     start = time.perf_counter()
     dense_ranks = {doc_id: rank for doc_id, rank in dense_results}
     bm25_ranks = {doc_id: i + 1 for i, doc_id in enumerate(bm25_results)}
@@ -353,42 +361,83 @@ def hybrid_search(
     return fused[:top_k]
 
 
+def _load_doc_cache() -> Dict[str, Dict[str, Any]]:
+    """Helper to cache normalized records for get_document fallback."""
+    global _DOC_CACHE
+    if _DOC_CACHE is not None:
+        return _DOC_CACHE
+
+    _DOC_CACHE = {}
+    records_path = os.path.join(
+        os.path.dirname(__file__), "..", "data", "normalized_records.json"
+    )
+    if os.path.exists(records_path):
+        try:
+            with open(records_path, encoding="utf-8", errors="replace") as f:
+                records = json.load(f)
+                for r in records:
+                    d_id = r.get("doc_id")
+                    if d_id:
+                        _DOC_CACHE[d_id] = r
+        except Exception as e:
+            logger.error(f"Failed to load document cache: {e}")
+    return _DOC_CACHE
+
+
 def get_document(
     doc_id: str
 ) -> Optional[Dict[str, Any]]:
 
-    client = get_client()
+    if not doc_id:
+        return None
 
-    results = client.scroll(
+    # 1. Try Qdrant client scroll
+    try:
+        client = get_client()
+        results = client.scroll(
+            collection_name=COLLECTION_NAME,
+            scroll_filter=models.Filter(
+                must=[
+                    models.FieldCondition(
+                        key="doc_id",
+                        match=models.MatchValue(value=doc_id)
+                    )
+                ]
+            ),
+            limit=1,
+            with_payload=True
+        )
 
-        collection_name=COLLECTION_NAME,
+        points, _ = results
+        if points and points[0].payload:
+            payload = points[0].payload
+            return {
+                "doc_id": doc_id,
+                "content": payload.get("content") or payload.get("text", ""),
+                "sku": payload.get("sku", "unknown"),
+                "product_name": payload.get("product_name", "unknown"),
+                "category": payload.get("category", "unknown"),
+                "part_numbers": payload.get("part_numbers", []),
+            }
+    except Exception:
+        pass
 
-        scroll_filter={
-            "must": [
-                {
-                    "key": "doc_id",
-                    "match": {
-                        "value": doc_id
-                    }
-                }
-            ]
-        },
-
-        limit=1,
-
-        with_payload=True
-    )
-
-    points, next_page = results
-
-    if points:
-        return points[0].payload
+    # 2. Fallback to local normalized records
+    doc_cache = _load_doc_cache()
+    if doc_id in doc_cache:
+        cached = doc_cache[doc_id]
+        return {
+            "doc_id": doc_id,
+            "content": cached.get("content") or cached.get("text", ""),
+            "sku": cached.get("sku", "unknown"),
+            "product_name": cached.get("product_name", "unknown"),
+            "category": cached.get("category", "unknown"),
+            "part_numbers": cached.get("part_numbers", []),
+        }
 
     return None
 
 
 if __name__ == "__main__":
-
     print("Testing search module...")
-
     print("Run test_individual_search.py after Qdrant is running and data is ingested.")

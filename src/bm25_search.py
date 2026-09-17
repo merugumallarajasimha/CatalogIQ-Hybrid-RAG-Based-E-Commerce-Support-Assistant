@@ -38,7 +38,7 @@ class BM25Search:
         self.corpus = []
         self.doc_ids = []
         for record in records:
-            doc_id = str(record.get('sku', record.get('doc_id', record.get('part_number', ''))))
+            doc_id = str(record.get('doc_id', record.get('sku', record.get('part_number', ''))))
             text = record.get('content', '') or record.get('text', '') or ''
             self.corpus.append(text)
             self.doc_ids.append(doc_id)
