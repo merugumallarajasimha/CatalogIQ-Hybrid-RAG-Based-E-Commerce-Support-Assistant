@@ -1,5 +1,7 @@
 # CatalogIQ - Hybrid RAG-Based E-Commerce Support Assistant
 
+MADE by Shravan Lingampally Not Rajasimha
+
 A high-performance Retrieval-Augmented Generation (RAG) backend and interactive dashboard designed for complex technical e-commerce catalogs. CatalogIQ resolves fuzzy product queries, SKU lookups, and part-number specifications using an identifier-aware hybrid retrieval pipeline.
 
 ---
